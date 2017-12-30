@@ -1,0 +1,19 @@
+.projectPost {
+  max-width: 780px; 
+  width:90%;
+  margin: auto;}
+
+.projectPost h3,h4,h5{
+  margin-top: 13px;
+}
+.projectPost p{
+  margin: 0 0 1rem;
+  text-align: justify;
+}
+.projectPost img{
+  margin: 15px;
+}
+
+.projectPost .timeStamp {
+  color:#888;
+}

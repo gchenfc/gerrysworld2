@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="Gerry Chen's personal website - Projects - Personal Website">
+<link rel="icon" 
+      type="image/png" 
+      href="/img/icon.png">
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107206610-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107206610-1');
+</script>
+<title>Gerry's World - Project Website</title>
+<link rel="canonical" href="http://gerrysworld.com/projects/website/">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/projectPost.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrapper">
+    <div class="about">
+      <h1 id="websiteTitle"><a href="/">Gerry's World</a></h1>
+      <p id="aboutLine">A glimpse into my life</p>
+    </div>
+  </div>
+
+  <nav class="main">
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About&nbsp;Me</a></li>
+      <li><a href="/activities">Activities/Experiences</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- narrow screen menu -->
+  <script>
+    if (window.innerWidth<650) {
+      var el = document.getElementById("aboutLine")
+      el.parentNode.removeChild(el);
+      document.getElementById("websiteTitle").style.paddingBottom="1rem";
+      var men = document.getElementsByClassName("main");
+      for (i=0;i<men.length;i++){
+        men[i].parentNode.removeChild(men[i]);
+      }
+      document.write('<nav class="auxMenu"><ul class="nav"><li class="dropdown"><a href="javascript:void(0)">Menu</a><div class="dropdown-content"><a href="/">Home</a><a href="/about">About&nbsp;Me</a><a href="/activities">Activities/Experiences</a><a href="/projects">Projects</a><a href="/blog">Blog</a></div></li></ul></nav>');
+    }
+  </script>
+
+</header>
+
+<!-- ********** CONTENT *********** -->
+<div class="projectPost">
+  <a href="/projects/website/screenshot2.png"><img src="/projects/website/screenshot2_smaller.png" alt="Website screenshot" align="right" width=30%/></a>
+  <h1>Personal Website</h1>
+  <div class="timeStamp">Summer, 2017 - Present</div>
+  <div class="content">
+    <h2> Intro </h2>
+      <p>I find that I often lose track of the various projects and activities I do with my time so I decided to make a website as a portfolio of sorts to collect all the things I enjoy doing.  I hope that it can also serve as a supplement to my internship applications.  And, of course, I figure learning some basic web development is helpful in today's day and age so it'll be a good learning experience.</p>
+    <h2> The Beginning </h2>
+      <p>Googling "how to make a website" will spit out millions of results for countless different ways to make a website of varying difficulties, professionalisms, and price points.  As a student who primarily just wants to play with the experience and isn't trying to sell a business or anything, the first pre-requisite was that I would only be going for free options (at least to start with).  That said, I had a few options including but not limited to sites like Wordpress, <a href="http://sites.duke.edu">sites.duke.edu</a>, and all the other free website builders out there.  I fiddled around with Sites@Duke for a bit, but my urge for tinkering/customization overcame me and after a short time I realized that if I was going to make a website, I was writing it from "scratch" (HTML + CSS).</p>
+    <h2> Domain Name and Hosting </h2>
+      <p> Having decided this, the next challenge became finding a way to host it for free and get a free domain name.  I let the ideas turn in my head for several months while I passively "researched" (aka read articles I happened to stumble upon relating to web development).  Eventually, I came to find out about a free domain name service called <a href="http://www.freenom.com/en/index.html?lang=en">freenom</a> that would supply me with a free .tk domain name (now <a http://gerrysworld.tk">gerrysworld.tk</a>).  Great!  I had already hosted my <a href="/projects/secretSanta">Secret Santa website</a> last winter on my own laptop so I figured I could whip out one of the $50 computers I had lying around that I bought on sale from NewEgg freshman year to host this website.</p>
+      <p> The caveat was that last winter I used a very temporary service called <a href="http://ngrok.io">ngrok</a> which was absolutely not fit for long-term hosting.  It had all sorts of issues which you can read about in my <a href="/projects/secretSanta">Secret Santa</a> page.  The reason I had resorted to use it was because the ISP at my house would not allow me to open port 80 to my computer and I was too lazy to figure out better alternatives.  After breaking out my $50 computer, reinstalling a fresh Arch Linux, and configuring screen-less ssh remote control stuff, I realized there was no way I was going to be able to run these on the crazy Duke internet I intended to keep these babies running.  This left me with the conundrum of needing a (free) web hoster.</p>
+      <p> Without too much difficulty in searching, I was ecstatic to find out that github runs a service called <a href="http://pages.github.io">Github Pages</a> which hosts sites for free!  I trust Github quite a bit, so it was pretty much decided this was the route I would go.  I read that you could configure the site to with a custom domain name so that was my plan.  Onward!</p>
+    <h2> Web Design... </h2>
+      <p>I'm an engineer.  I don't really have an eye for design.  In fact, I remember in high school when I did science fairs, I invariably got comments from judges saying my poster was too messy or cluttered or too colorful or too bland or just about anything that could possibly be wrong with the way by poster looked.  How in the world was I supposed to make a good looking website???  This wasn't just like my <a href="/projects/secretSanta">Secret Santa</a> website that only my friends would be seeing - this should be professional and stuff!  My first instinct was to ask my older sister, who does product design & management and, as I understand, does a lot of web design for her job now.</p>
+      <p>Well she pretty much just told me it probably wasn't worth the time to design the site myself and that I should just use a premade API (Jekyll???) or template or something.  Meh, I didn't feel like spending the time to learn a new API.  Well I remembered someone telling me web design was easy because you can just see the code of any website to figure out how they did it.  Inspiring.  I decided to find a website that I liked the appearance of and design my own site around it.  I decided upon a website I had stumbled upon while learning CSS: <a href="https://gridbyexample.com/">gridbyexample.com</a>.  It was nice, had nice box-y lists of pages, and just appealed to me.  My process for design was basically to imagine what kind of format I wanted for a particular page and to type letter by letter the code used by <a href="https://gridbyexample.com/">gridbyexample</a>.  Then, I would delete it and rewrite it using my newly learned skills.  Little by little, I made pretty good progress!  And, of course, since this project is listed as in progross, I'm still working on making it better!  Hopefully, as I learn more, I can customize it more to really give it my unique touches until eventually I hope it no longer resembles my template site.</p>
+    <h2> Hosting and Domain... Again </h2>
+      <p>Getting the hosting and domain up and running once I had the first couple pages of my site were pretty rewarding.  It was just so amazing to go on my phone and pull up the page, or text my friends and family the link and tell them I made it myself from scratch.  In all, I think from the point when I decided I would use github pages and freenom to the point when I had my site up and running with the first 5-6 pages, I spent maybe 24ish hours across 3 or so days - most of which re-familiarizing myself with the oddities of HTML and CSS.  The web hosting and domain name configuration took maybe 2 hours total.  That was leading up to the start of school, so ~mid-August 2017.</p>
+      <div style="margin-left:2rem">
+        <h4>*UPDATE*</h4><div class="timeStamp">Sept. 17, 2017</div>
+        <p> Now that I've really gotten a firm grip into the project, I decided to shell out the couple dollars to get a real ".com" domain name.  I'm now accessible at <a href="http://gerrysworld.com">gerrysworld.com</a>!!!  So exciting :)))  This was mostly in preparation for a recruiting event coming up on campus.</p>
+      </div>
+    <h2> The Code </h2>
+      <p> The code for the site is, firstly, served to your web browser so it's of course available, but the <a href="https://github.com/gchenfc/gchenfc.github.io">github repository</a> is also available for all to see if you're interested in how I've organized the files, the history of the site, or anything else.</p>
+    <h2> Reflections </h2>
+      <p>I'm still working on updating all the content and bit-by-bit making the site more beautiful and my own, but I feel pretty comfortable saying the site is officially done and ready to be viewed by the world.  I spent way longer than I probably should have working on this site, but I learned a lot and had a great time with the coding.  I'm all around very happy that I decided to go this route and I'm so much more proud of what I've made now that I made it myself.  I also feel confident that I'll be able to make other sites should the need arise.</p>
+      <p> I don't think this site will ever be perfect, but it's good enough to do its job.  I'm inclined to say that's enough for now.  Go explore my site!</p>
+  </div>
+</div>
+<!-- ********** CONTENT *********** -->
+
+<footer class="footer"><div class="wrapper">
+  <pre style="margin:0">
+  Gerry Chen
+  412-956-3047
+  gerry.chen@duke.edu
+
+  Engineering Undergrad at Duke University
+  Class of 2019
+  </pre>
+</div></footer>
+
+<!-- <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5923de867218b50718020ae0');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script> -->
+
+</body>
+</html>

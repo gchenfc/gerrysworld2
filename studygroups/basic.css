@@ -1,0 +1,19 @@
+h5{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+ul{
+	margin-bottom: 0px;
+}
+p a, ul a{
+	color:#00f;
+}
+p a:visited, ul a:visited{
+	color:#66b;
+}
+ul a:hover, p a:hover{
+	color:#80f;
+}
+h1{
+	margin-top: 64px;
+}

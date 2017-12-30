@@ -1,0 +1,44 @@
+---
+title: Blog Home
+layout: default
+stylesheets: []
+permalink: /blog/index.html
+---
+
+<!-- ********** CONTENT *********** -->
+<div class="wrapper">
+  <h1 id="home-page">Blog</h1>
+  <div class="content">
+    This is a collection of mini-projects, thoughts, and ideas that I happen to stumble upon in my everyday life.<br/>
+  </div>
+
+  <ul class="card-listing">
+    {% assign blogPosts = site.blog | sort: 'date' %}
+    {% for blogPost in blogPosts reversed %}
+      {% if blogPost.shortTitle %}
+        {% assign shortTitle = blogPost.shortTitle %}
+      {% else %}
+        {% assign shortTitle = blogPost.title %}
+      {% endif %}
+      {% assign m = blogPost.date | date: "%B" %}
+      <li class="type-{{blogPost.postType}}">
+        <div class="headerWrap">
+          <h3><a href="{{blogPost.url}}">{{shortTitle}}</a></h3>
+          <p>
+            {% case m %}
+              {% when 'May' or June' or 'July' %} {{m}}
+              {% when 'September' %} Sept.
+              {% else %}{{ blogPost.date | date: "%b" }}.
+            {% endcase %}
+            {{blogPost.date | date: " %-d, %Y"}}
+          </p>
+        </div>
+        <div class="details">
+          <p><a href="blogPost.url">{{blogPost.postBlurb}}</a></p>
+        </div>
+      </li>
+    {% endfor %}
+
+  </ul>
+</div>
+<!-- ********** CONTENT *********** -->

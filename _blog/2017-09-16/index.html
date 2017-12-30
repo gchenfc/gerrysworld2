@@ -1,0 +1,52 @@
+---
+title: "iPhone Charger Cable Repair | Blog"
+shortTitle: "iPhone Charger Cable Repair"
+postType: "miniproject"
+postBlurb: "I had a few worn/broken iPhone charging cables and I thought it might be interesting to cut them open, see the wires inside, and maybe repair them.  I was successful for 2/3 :)"
+date: Sept. 16, 2017
+layout: default
+---
+
+<!-- ********** CONTENT *********** -->
+<div class="blogPost">
+	<a href="charging.JPG"><img src="charging.png" alt="charging phone" style="float:right;" width=30% class="rotate90"/></a>
+  <h1>{{page.shortTitle}}</h1>	
+  <div class="timeStamp">{{page.date | date: "%B %-d, %Y"}}</div>
+  <br/>
+  <content>
+    <h3>Intro</h3>
+    	<p>
+    	I noticed that I had at least 3 broken iPhone charger cables and figured it shouldn't be too hard to just cut them open and re-connect the broken wires to save myself a couple dollars on iphone chargers.  I told myself I would spend no longer than an hour playing around with it, because in the end I could just buy them fore ~$1.50 anyway so it wouldn't be worth the time to spend very long with it.  Mostly I wanted to see what was inside these cables in case I ever wanted to splice one into a different connector for some future electronics project.</p>
+    	<a href="diagram.png"><img src="diagram.png" alt="wires no heat shrink" style="margin:0 auto" width=70%/></a>
+
+	    <div style="clear:both;"></div>
+    <h4>Side Note</h4>
+    	<p> I had cut a 30-pin iPhone cable apart maybe 4-5 years ago with the same intent to try to fix it and found it to be way too confusing and gave up.  Maybe now that I have more experience it will be easier!</p>
+    <h3>Cable 1</h3>
+    	<p> This first cable was the easiest.  I noticed that it had some green oxidation on the phone-side contacts and scraped it a bit with a utility knife.  Checking the continuity on a voltmeter I found that the connections to ground and VCC were indeed now working.  I cleaned it up a bit more and plugged it in for a test.  It worked!  Success!</p>
+    	<div class="wrapper">
+	    	<a href="scratchedOffErosion.JPG"><img src="scratchedOffErosion.png" alt="fixed erosion cable 1" style="float:left" width=34%/></a>
+	    	<a href="scratchedOffErosion2.JPG"><img src="scratchedOffErosion2.png" alt="fixed erosion cable 2" style="float:left" width=30%/></a>
+    	</div>
+	    <div style="clear:both;"></div>
+	<h3>Cable 2</h3>
+		<a href="wiresNoShrink.JPG"><img src="wiresNoShrink.png" alt="wires no heat shrink" style="float:right" width=20%/></a>
+		<p>This one was a bit harder.  Since the cable was very clearly frayed on the phone-side and all the contacts were crystal clear from oxidation, I knew it had to be some wiring issue.  I cut the cable completely close to the phone-side and started probing.</p>
+		<p>
+		I had a strong suspicion the metal shielding was grounded, but when I probed around, I couldn't find continuity between the shielding and the USB side ground so I thought maybe there was another break somewhere down the line.  I cut closer to the USB but after probing again more, I found out that there actually was continuity and I <a href="wiresDone.JPG"><img src="wiresDone.png" alt="wires with heat shrink" style="float:left" width=20%/></a>just didn't notice because I was using one alligator clip from the power supply instead of the multimeter by accident (oops!).  In any case, by this point I figured out that the only connection issue was for the ground wire between the phone port and where I cut.  I had to pry a bit further on the port to finally get to where I found continuity to the ground pin/contact.  I carefully soldered the ground and VCC pins to some standard 26ishAWG wire and heat shrank it.  I shorted the data cables since I wanted this only as a dedicated charger and didn't want to run another two wires.  <a href="USBsideDone.JPG"><img src="USBsideDone.png" alt="wires with heat shrink" style="float:right" width=20%/></a>As extra protection, I put a glob of epoxy around the solder joints between the small and large heat shrinks.
+		</p>
+		<p>
+		I decided to just leave out the original white cable and use the black and red wires for the coolness factor.  I soldered the other (USB) side and heat shrank.  I intended to put a larger heat shrink around this side too, but I "forgot" to put on the heat shrink before soldering.  I actually just thought the phone-side connector was thin enough to slide the heat shrink over but I misjudged.  Instead I used electrical tape and that worked fine.
+		</p>
+	
+	<h3>Cable 3</h3><a href="fail.JPG"><img src="fail.png" alt="failed wire" style="float:left" width=27%/></a>
+		<p>This final cable was a failure.  I cut fairly close to the phone-side connector and couldn't get continuity in the red wire.  I peeled/cut more and still couldn't get continuity.  More and still nada.  Eventually, I cut apart the entire connector down to the "circit board" and there was still no continuity.  *sigh*  Well you win some and you lose some.  Still a cool experience to see the inside of this connector, and on the bright side I got a "USB breakout" wire out of it!</p>
+	<h3>Reflection</h3>
+		<p>I had a fun time ripping apart these cables and I was pretty satisfied to have resurrected 2 out of 3 of them!  I learned that I do indeed have the skills to disect USB cables and also learned that generally USB cables have 3 or 4 wires (white/green=data +/- and red/black=VCC/GND but sometimes black is omitted for cheap cables) tucked inside a shielding foil which is inside a mess of structural wire - all grounded.  I also learned the pinout of an iphone cable, which although not terribly useful, was still kind of neat to see that it's not super complicated.</p>
+	<a href="charging.JPG"><img src="charging.png" alt="charging phone" style="margin:0 auto;" width=60%/></a>
+	<div style="clear:both;"></div>
+
+  </content>
+
+</div>
+<!-- ********** CONTENT *********** -->

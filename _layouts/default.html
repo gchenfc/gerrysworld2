@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="{{site.description}} | {{page.description}}">
+<link rel="icon" 
+      type="image/png" 
+      href="/img/icon.png">
+<title>{{page.title}} | {{site.title}}</title>
+<link rel="canonical" href="http://gerrysworld.com{{page.url}}">
+<link rel="stylesheet" href="/css/common.css">
+{% for stylesheet in page.stylesheets %}
+<link rel="stylesheet" href="{{stylesheet}}">
+{% endfor %}
+
+{% include googleAnalytics.html %}
+
+</head>
+<body>
+
+<header class="header">
+  <div class="wrapper">
+    <div class="about">
+      <h1 id="websiteTitle"><a href="/">Gerry's World</a></h1>
+      <p id="aboutLine">A glimpse into my life</p>
+    </div>
+  </div>
+
+  {% include navBar.html %}
+
+</header>
+
+<!-- ********** CONTENT *********** -->
+    {{ content }}
+<!-- ********** CONTENT *********** -->
+
+<footer class="footer"><div class="wrapper">
+  <pre>
+  Gerry Chen
+  412-956-3047
+  gerry.chen@duke.edu
+
+  Engineering Undergrad at Duke University
+  Class of 2019
+  </pre>
+</div>
+</footer>
+
+</body>
+</html>

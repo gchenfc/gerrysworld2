@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="Tri Phi Secret Santa">
+<link rel="icon" 
+      type="image/png" 
+      href="./img/icon.png">
+
+<title>Secret Santa</title>
+<!-- <link rel="canonical" href="http://gerrysworld.com"> -->
+
+<link rel="stylesheet" href="./css/common.css">
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAYzAWfNZH9AD-dymoGDBcX2DBdSfxJymU",
+    authDomain: "secretsanta-gerry.firebaseapp.com",
+    databaseURL: "https://secretsanta-gerry.firebaseio.com",
+    projectId: "secretsanta-gerry",
+    storageBucket: "secretsanta-gerry.appspot.com",
+    messagingSenderId: "828834450349"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+
+  <script type="text/javascript">
+      initApp = function() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            var displayName = user.displayName;
+            var uid = user.uid;
+
+            document.getElementById("myName").textContent = displayName;
+
+            var db = firebase.database();
+            db.ref("users/"+uid).once("value", function(snap){
+              console.log(snap.val())
+              console.log(snap.val().person)
+              db.ref("targets/"+snap.val().person).once("value",function(snap2){
+                document.getElementById("targetName").textContent = snap2.val()+"!!!";
+
+                document.getElementById("from").setAttribute("src",snap.val().photoUrl);
+
+                db.ref("people/"+snap2.val()).once("value",function(snapp){
+                  // alert(snapp.val())
+                  db.ref("users/"+snapp.val()).once("value",function(snap3){
+                    // alert(snap3.val())
+                    if (snap3.val()!==null){
+                      document.getElementById("to").setAttribute("src",snap3.val().photoUrl);
+                    }
+                    else{
+                      document.getElementById("to").setAttribute("src","images/"+snap2.val()+".JPG");
+                    }
+                  })
+                });
+              }, function(err){
+                alert("failed to retrieve target - are you trying to be sneaky?  if so, nice try, but the authentication is cryptographically secure!  if not, it must be a bug - Ask Gerry for help");
+              });
+            }, function(err){
+              alert("failed to retrieve self name... Ask Gerry for help");
+            });
+          } else {
+            window.location.href = "index.html"
+          }
+        });
+      }
+
+      window.addEventListener('load', function() {
+        initApp()
+      });
+    </script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="wrapper" style="padding-bottom: 1px;">
+    <div class="about">
+      <h1 id="websiteTitle" align="center"><a href="./" style="background-color:rgba(0,255,0,.7);padding:10px;border-radius:20px;font-size: 150%;line-height: 6rem;">Tri Phi <i>Secret Santa</i></a></h1>
+    </div>
+  </div>
+
+</header>
+<nav class="main" style="margin-bottom: -10px">
+  </nav>
+
+<!-- ********** CONTENT *********** -->
+<div class="wrapper">
+  <div>
+    <h1 id="home-page" align="center">Welcome to our Secret Santa assignment page!</h1><br />
+
+    <div class="triCol">
+      <div class="pics-col">
+        <ul>
+          <li><img src="./images/Andres.JPG" /></li>
+          <li><img src="./images/Arjun.JPG" /></li>
+          <li><img src="./images/Cassandra.JPG" /></li>
+          <li><img src="./images/Emily.JPG" /></li>
+          <li><img src="./images/Gerry.JPG" /></li>
+          <li><img src="./images/Isabella.JPG" /></li>
+          <li><img src="./images/Kelly.JPG" /></li>
+          <li><img src="./images/Olivia.JPG" /></li>
+        </ul>
+      </div>
+
+    <div class="middle-col">
+      <p>Welcome <label id="myName">???</label>!  Your giftee is...</p>
+
+      <h1 id="targetName" align="center">???</h1>
+
+      <!-- Sign out button/script -->
+      <script type="text/javascript">
+        signOut = function() {
+          firebase.auth().signOut().then(function() {
+            console.log('Signed Out');
+          }, function(error) {
+            console.error('Sign Out Error', error);
+          });
+        }
+      </script>
+      <div align="center" style="margin-bottom: -50px;">
+      <button type="button" align="center" onclick=signOut()>Sign Out</button>
+      </div>
+
+      <img src="img/santaHat2.png" style="float:left;position:relative;left:5%;bottom:-9%;width:20%"./>
+        <p style="clear: both;">
+      <div id="images" align="center" style="align-items: center">
+        <img id="from" src="img/santaHat.png" style="float:left" width=40%/>
+        <img id="to" src="img/santaHat.png" style="float:right" width=40%/>
+        <p style="clear: both;">
+      </div>
+    </div>
+
+    <div class="pics-col">
+        <ul>
+          <li><img src="./images/Olivia.JPG" /></li>
+          <li><img src="./images/Kelly.JPG" /></li>
+          <li><img src="./images/Isabella.JPG" /></li>
+          <li><img src="./images/Gerry.JPG" /></li>
+          <li><img src="./images/Emily.JPG" /></li>
+          <li><img src="./images/Cassandra.JPG" /></li>
+          <li><img src="./images/Arjun.JPG" /></li>
+          <li><img src="./images/Andres.JPG" /></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ********** CONTENT *********** -->
+
+<footer class="footer">
+  <div class="pics-row">
+    <ul>
+      <li><img src="./images/Andres.JPG" /></li>
+      <li><img src="./images/Arjun.JPG" /></li>
+      <li><img src="./images/Cassandra.JPG" /></li>
+      <li><img src="./images/Emily.JPG" /></li>
+      <li><img src="./images/Gerry.JPG" /></li>
+      <li><img src="./images/Isabella.JPG" /></li>
+      <li><img src="./images/Kelly.JPG" /></li>
+      <li><img src="./images/Olivia.JPG" /></li>
+    </ul>
+  </div>
+  <div class="wrapper" style="padding:5px 10px;margin:10px auto;width:90%">
+    <p style="float:left">Gerry Chen</p>
+    <p style="float:right">gerry.chen@duke.edu</p>
+        <p style="clear: both;">
+</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="Tri Phi Secret Santa">
+<link rel="icon" 
+      type="image/png" 
+      href="./img/icon.png">
+
+<title>Secret Santa</title>
+<!-- <link rel="canonical" href="http://gerrysworld.com"> -->
+
+<link rel="stylesheet" href="./css/common.css">
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAYzAWfNZH9AD-dymoGDBcX2DBdSfxJymU",
+    authDomain: "secretsanta-gerry.firebaseapp.com",
+    databaseURL: "https://secretsanta-gerry.firebaseio.com",
+    projectId: "secretsanta-gerry",
+    storageBucket: "secretsanta-gerry.appspot.com",
+    messagingSenderId: "828834450349"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+
+    <script type="text/javascript">
+      var usersave;
+      // FirebaseUI config.
+      successfulSignIn = function(currentUser, credential, redirectUrl){
+        return false;
+      };
+      function configFire(){
+        var uiConfig = {
+          callbacks: {signInSuccess: successfulSignIn},
+          signInSuccessUrl: "assignment.html",
+          signInOptions: [
+            // Leave the lines as is for the providers you want to offer your users.
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+            firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            firebase.auth.PhoneAuthProvider.PROVIDER_ID
+          ]
+        };
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+      }
+
+    </script>
+    <script type="text/javascript">
+      initApp = function() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          console.log(user)
+          if (user) {
+            // check if already registered
+            firebase.database().ref("users/"+user.uid).once('value', function(snapshot) {
+              if(snapshot.val()!==null){
+                window.location.href = "assignment.html"
+              }
+              else{
+                document.getElementById("namestuff").setAttribute(
+              "style","visibility:visible;position:static;")
+                document.getElementById("firebaseui-auth-container").setAttribute(
+              "style","visibility: hidden; position: absolute; top: -9999px;")
+              }
+            }).catch(function(error){
+              alert("Something bad happened while forwarding your registration status - Ask Gerry for help")
+            });
+
+            usersave = user;
+          }
+          else{
+            configFire();
+            document.getElementById("firebaseui-auth-container").setAttribute(
+              "style","visibility:visible;position:static;border-style: solid;border-width: 3px;border-color:red")
+          }
+        }, function(error) {
+          console.log(error);
+        });
+      };
+
+      window.addEventListener('load', function() {
+        initApp()
+      });
+    </script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="wrapper" style="padding-bottom: 1px;">
+    <div class="about">
+      <h1 id="websiteTitle" align="center"><a href="./" style="background-color:rgba(0,255,0,.7);padding:10px;border-radius:20px;font-size: 150%;line-height: 6rem;">Tri Phi <i>Secret Santa</i></a></h1>
+    </div>
+  </div>
+
+</header>
+<nav class="main" style="margin-bottom: -10px">
+  </nav>
+
+<!-- ********** CONTENT *********** -->
+<div class="wrapper">
+  <div>
+    <h1 id="home-page" align="center">Welcome to our Secret Santa assignment page!</h1><br />
+
+    <div class="triCol">
+      <div class="pics-col">
+        <ul>
+          <li><img src="./images/Andres.JPG" /></li>
+          <li><img src="./images/Arjun.JPG" /></li>
+          <li><img src="./images/Cassandra.JPG" /></li>
+          <li><img src="./images/Emily.JPG" /></li>
+          <li><img src="./images/Gerry.JPG" /></li>
+          <li><img src="./images/Isabella.JPG" /></li>
+          <li><img src="./images/Kelly.JPG" /></li>
+          <li><img src="./images/Olivia.JPG" /></li>
+        </ul>
+      </div>
+
+    <div class="middle-col">
+      <p>Register/Log-in to view your assignment.  Once your identity is assigned to an account, that account will permanently be assigned to your name and you must always use the same account to view your assignment.  Assignments have been predetermined and you can view yours as soon as you sign in!  Enjoy - let me know if you have any issues and happy holidays :)</p>
+      
+      <script type="text/javascript" src="names.js"></script>
+      <script type="text/javascript">
+        function registerPerson(){
+          var user = usersave;
+
+          var selector = document.getElementById("nameselect");
+          var name = selector.options[selector.selectedIndex].value;
+
+          if (name==0){
+            alert("Please select a valid name");
+            return;
+          }
+
+          var db = firebase.database();
+          var personToSet = {};
+          personToSet[name] = user.uid;
+
+          // check if already registered
+          db.ref("users/"+user.uid).once('value', function(snapshot) {
+            if(snapshot.val()!==null){
+              alert("NOPE.  You've already registered as "+snapshot.val().person+"!  Get outta here!")
+              return;
+            }
+          }).catch(function(error){
+            alert("Something bad happened while checking your registration status - Ask Gerry for help")
+          });
+
+          db.ref("people/"+name).set(user.uid).then(function(){
+            console.log("person Data saved successfully.");
+              db.ref("users/"+user.uid).set({name:user.displayName,email:user.email,photoUrl:user.photoURL,provider:user.providerData,person:name}).then(function(){
+              console.log("uid Data saved successfully.");
+              window.location.href = "assignment.html";
+            }).catch(function(error) {
+              alert("uid Data could not be saved." + error);
+            });
+          }).catch(function(error) {
+            console.log(error)
+            db.ref("people/"+name).once("value",function(snap) {
+              db.ref("users/"+snap.val()).once("value",function(snap2){
+                snap2=snap2.val();
+                alert(name + " has already been registered to " + snap2.name +" ("+snap2.email+") via "+snap2.provider[0].providerId);
+              }).catch(function(error){
+                alert("error reading users/"+snap.val());
+              });
+            }).catch(function(error){
+              alert("error reading people/"+name);
+            });
+          });
+        }
+
+        function createDropdownNames(){
+          var myData = names;
+          opts = document.getElementById("nameselect");
+          for (var i=0;i<myData.length;i++){
+            var option = document.createElement("option");
+            option.text=names[i];
+            option.value=names[i];
+            opts.appendChild(option);
+          }
+        }
+      </script>
+      <div align="center" id="namestuff" style="visibility: hidden; position: absolute; top: -9999px;">
+        Who are you?
+        <select id="nameselect">
+          <option value="0"></option>
+        </select> <br />
+        <button id="go" onclick=registerPerson() >Register</button>
+        <script type="text/javascript">
+          signOut = function() {
+            firebase.auth().signOut().then(function() {
+              console.log('Signed Out');
+              window.location.href = "index.html";
+            }, function(error) {
+              console.error('Sign Out Error', error);
+            });
+          }
+        </script>
+        <br />
+        <button type="button" align="center" onclick=signOut()>Sign Out</button>
+      </div>
+      <div id="firebaseui-auth-container" align="center" style="visibility: hidden; position: absolute; top: -9999px;">First Sign In:
+      </div>
+      <script type="text/javascript">
+        
+        createDropdownNames()
+      </script>
+
+      <img src="./img/snowman.png" width=40% />
+    </div>
+
+    <div class="pics-col">
+        <ul>
+          <li><img src="./images/Olivia.JPG" /></li>
+          <li><img src="./images/Kelly.JPG" /></li>
+          <li><img src="./images/Isabella.JPG" /></li>
+          <li><img src="./images/Gerry.JPG" /></li>
+          <li><img src="./images/Emily.JPG" /></li>
+          <li><img src="./images/Cassandra.JPG" /></li>
+          <li><img src="./images/Arjun.JPG" /></li>
+          <li><img src="./images/Andres.JPG" /></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ********** CONTENT *********** -->
+
+<footer class="footer">
+  <div class="pics-row">
+    <ul>
+      <li><img src="./images/Andres.JPG" /></li>
+      <li><img src="./images/Arjun.JPG" /></li>
+      <li><img src="./images/Cassandra.JPG" /></li>
+      <li><img src="./images/Emily.JPG" /></li>
+      <li><img src="./images/Gerry.JPG" /></li>
+      <li><img src="./images/Isabella.JPG" /></li>
+      <li><img src="./images/Kelly.JPG" /></li>
+      <li><img src="./images/Olivia.JPG" /></li>
+    </ul>
+  </div>
+  <div class="wrapper" style="padding:5px 10px;margin:10px auto;width:90%">
+    <p style="float:left">Gerry Chen</p>
+    <p style="float:right">gerry.chen@duke.edu</p>
+        <p style="clear: both;">
+</div>
+</footer>
+
+</body>
+</html>

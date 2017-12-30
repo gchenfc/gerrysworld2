@@ -1,0 +1,19 @@
+.blogPost {
+  max-width: 780px; 
+  width:90%;
+  margin: auto;}
+
+.blogPost h3,h4,h5{
+  margin-top: 13px;
+}
+.blogPost p{
+  margin: 0 0 1rem;
+  text-align: justify;
+}
+.blogPost img{
+  margin: 15px;
+}
+
+.blogPost .timeStamp {
+  color:#888;
+}

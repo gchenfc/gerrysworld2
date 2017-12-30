@@ -1,0 +1,23 @@
+<nav class="main">
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About&nbsp;Me</a></li>
+      <li><a href="/activities">Activities/Experiences</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- narrow screen menu -->
+  <script>
+    if (window.innerWidth<650) {
+      var el = document.getElementById("aboutLine")
+      el.parentNode.removeChild(el);
+      document.getElementById("websiteTitle").style.paddingBottom="1rem";
+      var men = document.getElementsByClassName("main");
+      for (i=0;i<men.length;i++){
+        men[i].parentNode.removeChild(men[i]);
+      }
+      document.write('<nav class="auxMenu"><ul class="nav"><li class="dropdown"><a href="javascript:void(0)">Menu</a><div class="dropdown-content"><a href="/">Home</a><a href="/about">About&nbsp;Me</a><a href="/activities">Activities/Experiences</a><a href="/projects">Projects</a><a href="/blog">Blog</a></div></li></ul></nav>');
+    }
+  </script>

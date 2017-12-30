@@ -1,0 +1,32 @@
+\def\fileversion{PSNFSS 2.4.1}
+\def\filedate{26.2.93}
+\immediate\write\sixt@@n{File: `garamond.sty' \fileversion\space <\filedate> (SPQR)}
+% Sebastian Rahtz
+% 12 Cygnet Street, York Y02 1AG
+%
+%spqr@uk.ac.york.minster
+\@ifundefined{selectfont}
+     {\@latexerr{`garamond' style option can only be used
+                  with the new font selection scheme}\@eha
+      \endinput}{}
+%
+\ifx\declare@font\undefined
+  \input{psnfss.sup}\fi
+%
+\def\load@courier{%
+\postscript@fontdef{Courier}{courier}%
+{pcrr}{pcrro}{pcrb}{pcrbo}{pcrr}{pcrr}
+}
+\def\load@optima{%
+\postscript@fontdef{Optima}{optima}%
+{popr}{popro}{popb}{popbo}{poprc}{popro}
+}
+\def\load@garamond{%
+\postscript@fontdef{Garamond}{garamond}%
+{pgml}{pgmli}{pgmb}{pgmbi}{pgmlc}{pgmlo}%
+}
+\romanfont{garamond}
+\sansfont{optima}
+\typewriterfont{courier}
+\extra@def{courier}{\hyphenchar #1\m@ne}{}
+\endinput

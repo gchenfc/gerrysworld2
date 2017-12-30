@@ -1,0 +1,40 @@
+.bio {
+  display: grid;
+  max-width: 1150px;
+  grid-gap: 1rem; 
+  /*background-image: url(/img/tiny_grid.png);*/
+  justify-content: center;}
+.biopic {
+  justify-self: center;
+  max-width: 200px;
+}
+.biotext{
+  justify-self: center;
+}
+
+@media screen and (min-width: 640px) {
+  .bio {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 1fr 3fr; 
+    grid-template-areas:
+      "left right"
+      "lower lower";
+    justify-items: center;}
+  .biopic {
+    float: left;
+    /*width: 30%;*/
+  }
+  .biotext{
+    float: right;
+    /*width: 70%;*/
+  }
+}
+
+
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
+}

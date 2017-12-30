@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="Gerry Chen's personal website - Projects - Doodlebot">
+<link rel="icon" 
+      type="image/png" 
+      href="/img/icon.png">
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107206610-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107206610-1');
+</script>
+<title>Gerry's World - Project Doodlebot</title>
+<link rel="canonical" href="http://gerrysworld.com/projects/Doodlebot/">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/projectPost.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrapper">
+    <div class="about">
+      <h1 id="websiteTitle"><a href="/">Gerry's World</a></h1>
+      <p id="aboutLine">A glimpse into my life</p>
+    </div>
+  </div>
+
+  <nav class="main">
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About&nbsp;Me</a></li>
+      <li><a href="/activities">Activities/Experiences</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- narrow screen menu -->
+  <script>
+    if (window.innerWidth<650) {
+      var el = document.getElementById("aboutLine")
+      el.parentNode.removeChild(el);
+      document.getElementById("websiteTitle").style.paddingBottom="1rem";
+      var men = document.getElementsByClassName("main");
+      for (i=0;i<men.length;i++){
+        men[i].parentNode.removeChild(men[i]);
+      }
+      document.write('<nav class="auxMenu"><ul class="nav"><li class="dropdown"><a href="javascript:void(0)">Menu</a><div class="dropdown-content"><a href="/">Home</a><a href="/about">About&nbsp;Me</a><a href="/activities">Activities/Experiences</a><a href="/projects">Projects</a><a href="/blog">Blog</a></div></li></ul></nav>');
+    }
+  </script>
+
+</header>
+
+<!-- ********** CONTENT *********** -->
+<div class="projectPost">
+  <a href="/projects/Doodlebot/writing_middle.png"><img src="/projects/Doodlebot/writing_middle_smaller.png" alt="doodlebot in the middle of writing a message" align="right" width=30%/></a>
+  <h1>Doodlebot</h1>
+  <div class="timeStamp">Summer, 2016</div>
+  <div class="content">
+    <h2> Intro </h2>
+      <p>Doodlebot was an independent project with the goal of learning the basics of using microcontrollers, motors, and control systems.  While there have since been some commercial products which seem to have applied the same core design to more useful applications (<a href="http://www.goliathcnc.com/">Goliath CNC</a>, <a href="http://www.zutalabs.com/">ZUtA portable printer</a>, <a href="https://shapertools.com/">Shaper Router</a>), my objective was much more fun/experience based.  I wanted to create a simple robot which could draw on any flat surface using a pen.  The project was completed start to finish during the summer of 2016 and took around 3 weeks of on/off work and 8 from-scratch code iterations for the slave Arduino alone (6 for the master and a couple for the computer controlling the master).  I have lots of ideas for improvements which I'll explain at the end and which maybe I'll get around to doing someday.</p>
+      <h4> *Disclosure* </h4>
+        <p>I regret to announce that I hadn't fully documented the project when I worked on it so most intermediate progress has been lost to time including but not limited to code, schematics, previous mechanical designs, etc.  Instead, this post will discuss the features of the bot, whatever resources I can scrounge up (I think I may have even deleted the code to run it), and my takeaways from the project.  Enjoy :)</p>
+      <div style="text-align:center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JjV2MU6Ndro" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+    <h2> Overview of Features </h2>
+      <h3> Text Entry </h3>
+        <a href="/projects/Doodlebot/stringMessage.png"><img src="/projects/Doodlebot/stringMessage_smaller.png" alt="message to send to the Arduino to write" align="right" width=30%/></a>
+        <p> The Doodlebot is capable of writing pretty much any text-based message hassle-free.  It automatically computes font paths, line endings, and everything else based on default font size and width specifications.  The font size and paper width are of course easily customizable.</p>
+        <p> The font, unfortunately, is not so easily customizable.  I actually programmed in the bezier/spline curves by hand for every single letter (upper+lower) and some of the most common punctuation marks.  It was painstaking and imperfect.  One of 
+        <a href="/projects/Doodlebot/fontOpts.png"><img src="/projects/Doodlebot/fontOpts_smaller.png" alt="font and line width options constants" align="left" width=30%/></a>
+        the things I would really liked to have done if I was more serious about the project would be to be able to import font files (eg .ttf file) automatically, but that would have gotten into not only the computer-y "standards"-y world of file encoding, but also would bring up the additional problem of how to convert a solid, thick line into a single, infinitely thin vector line.  The importation of font files is something which would have been really cool but ultimately would take more time that it'd be worth for me.</p>
+      <h3> Drawing entry </h3>
+        <a href="/projects/Doodlebot/bezierEditor.png"><img src="/projects/Doodlebot/bezierEditor_smaller.png" alt="bezier editor program" align="right" width=30%/></a>
+        <p> In addition to the text entry, the bot can also draw specified shapes.  The shapes are drawn in a program I wrote in Processing (a Java variant) which then converts the drawing into the pseudo-g-code I invented/use for the robot's commands (which I, by the way, had done before ever learning that g-code was a thing).  The program and the g-code generated can be seen in the screenshot to the right.  Unfortunately, I have lost the actual robot so I can't show the robot drawing that actual picture, but I hope you can trust me that it actually can draw it.
+
+      <div style="text-align:center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YdeKEftMAwc" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div style="text-align:center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Aq3quqoAcMk" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+  </div>
+</div>
+<!-- ********** CONTENT *********** -->
+
+<footer class="footer"><div class="wrapper">
+  <pre style="margin:0">
+  Gerry Chen
+  412-956-3047
+  gerry.chen@duke.edu
+
+  Engineering Undergrad at Duke University
+  Class of 2019
+  </pre>
+</div></footer>
+
+<!-- <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5923de867218b50718020ae0');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script> -->
+
+</body>
+</html>

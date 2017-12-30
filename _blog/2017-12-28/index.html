@@ -1,0 +1,127 @@
+---
+title: "Cost Analysis: Residential Heating"
+postType: "random"
+postBlurb: "During the winter, electric and natural gas heating are two prevalent methods of heating.  Which is more cost effective?"
+date: Dec. 28, 2017
+---
+
+<!-- ********** CONTENT *********** -->
+<h3>Intro</h3>
+  <p> On the way home to Pittsburgh for winter break, I stopped by my girlfriend's house in NOVA for a couple days and noticed that they used electric space heaters for much of their heating needs.  Initially, I thought this had to be less cost effective, but decided to do a cost analysis to investigate.  Electricity, natural gas, heating oil, and propane were compared and I found that, in Pennsylvania, natural gas heating is most economical, as expected.  The other forms of fuel weren't far behind but electric heating was around 84% more expensive per unit heat.  I made an online calculator as well so that you can enter your own, local utility costs!</p>
+<h3>Assumptions:</h3>
+  <ul>
+    <li> Electric heaters are around 100% efficient because any electrical losses are typically lost as heat, which isn't really a loss for a heater...</li>
+    <li> Furnace efficiencies are taken from <a href="https://en.wikipedia.org/wiki/Annual_fuel_use_efficiency">Wikipedia</a>.  Example: natural gas heating is on the order of 95% <a href="https://en.wikipedia.org/wiki/Annual_fuel_use_efficiency">AFUE</a> efficient for latest-technology homes.  This is just a rough estimate and should be investigated further before taking this analysis too seriously.</li>
+    <li> Lower Heating Value (LHV) is used in conjunction with the AFUE efficiency to determine input energy.</li>
+    <li> Utility costs are based on PA averages. </li>
+  </ul>
+<h3>Utility Costs</h3>
+  <style>
+    .leftTable td, .leftTable th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+  </style>
+  <div style="max-width: 100%;overflow: auto;">
+  <table style="text-overflow: left;margin-bottom: 10px;" class="leftTable">
+    <tr><th>Utility</th><th>Price</th><th>Source</th></tr>
+    <tr><td>Electricity</td><td>14.69 &cent/kWh</td><td><a href="https://www.eia.gov/electricity/monthly/current_month/epm.pdf">eia.gov</a></td></tr>
+    <tr><td>Natural Gas</td><td>17.52 $/(1000 ft<sup>3</sup>)</td><td><a href="https://www.eia.gov/dnav/ng/ng_pri_sum_a_EPG0_PRS_DMcf_m.htm">eia.gov</a></td></tr>
+    <tr><td>Heating Oil</td><td>2.636 $/gal*</td><td><a href="https://www.eia.gov/petroleum/heatingoilpropane/">eia.gov</a></td></tr>
+    <tr><td>Propane</td><td>3.167 $/gal*</td><td><a href="https://www.eia.gov/petroleum/heatingoilpropane/">eia.gov</a></td></tr>
+  </table>
+  *US liquid gallon
+  </div>
+<h3>Calculations</h3>
+  <p>Using <a href="https://www.wolframalpha.com/input/?i=((17.52+$)%2F(1000+ft%5E3))%2F(LHV+of+natural+gas)%2F(95%25)+to+$%2FBTU" target="_blank">WorlfamAlpha</a>, the cost per BTU of heat could be computed for each utility type.</p>
+  <div style="width: 70%;margin:10px auto;">
+    <img src="calcs.png" />
+  </div>
+  <style>
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+  </style>
+  <div style="margin:20px auto;text-align: center"><div style="max-width:100%;display: inline-block; margin-bottom: 0px">
+  <table align="left" style="margin-bottom: 0px">
+    <tr><th>Utility</th><th>Cost per (10<sup>5</sup>BTU)</th></tr>
+    <tr><td>Electricity</td><td>$4.31</td></tr>
+    <tr><td>Natural Gas</td><td style="background-color: #ddeedd">$2.22</td></tr>
+    <tr><td>Heating Oil</td><td>$2.24</td></tr>
+    <tr><td>Propane</td><td>$3.64</td></tr>
+  </table>
+  </div></div>
+  <div style="clear:both"></div>
+  <h4>Calculator</h4>
+    <style type="text/css">
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+      input[type="number"] {
+          -moz-appearance: textfield;
+      }
+      input {
+        margin-bottom: 0px;
+      }
+    </style>
+    <div style="text-align: center;width:100%;margin-bottom: 0px">
+    <div style="border: 2px solid #dddddd;display: inline-block;max-width: 100%;overflow: auto;margin-bottom: 0px;">
+      <table align="left" style="width: 0px; margin-bottom: 0px;">
+        <tr><th>Utility</th><th>Price</th><th>Cost/(10<sup>5</sup>BTU)</th></tr>
+        <tr>
+          <td>Electricity</td>
+          <td style="text-align: left";><input type="number" id="electricCost" value="14.69" oninput="electric()" style="max-width: 3rem;" /> &cent/kWh</td>
+          <td>$<label id="electricResult"></label></td>
+        </tr>
+        <tr>
+          <td>Natural Gas</td>
+          <td style="text-align: left";><input type="number" id="natgasCost" value="17.52" oninput="gas()" style="max-width: 3rem;" /> $/MCF</td>
+          <td>$<label id="natgasResult"></label></td>
+        </tr>
+        <tr>
+          <td>Heating Oil</td>
+          <td style="text-align: left;"><input type="number" id="heatoilCost" value="2.636" oninput="oil()" style="max-width: 3rem;" /> $/gal*</td>
+          <td>$<label id="heatoilResult"></label></td>
+        </tr>
+        <tr>
+          <td>Propane</td>
+          <td style="text-align: left;""><input type="number" id="propaneCost" value="3.167" oninput="prop()" style="max-width: 3rem;" /> $/gal*</td>
+          <td>$<label id="propaneResult"></label></td>
+        </tr>
+        <tr></tr>
+      </table><br />
+    </div><br />*US liquid gallon</div>
+    <script type="text/javascript">
+      function electric(){
+        var p = document.getElementById("electricCost").value;
+        document.getElementById("electricResult").innerHTML = Math.round(p*0.2931*1000)/1000;
+      }
+      function gas(){
+        var p = document.getElementById("natgasCost").value;
+        document.getElementById("natgasResult").innerHTML = Math.round(p*0.1267*1000)/1000;
+      }
+      function oil(){
+        var p = document.getElementById("heatoilCost").value;
+        document.getElementById("heatoilResult").innerHTML = Math.round(p/1.385/.85*1000)/1000;
+      }
+      function prop(){
+        var p = document.getElementById("propaneCost").value;
+        document.getElementById("propaneResult").innerHTML = Math.round(p*1.033/.9*1000)/1000;
+      }
+      electric();
+      gas();
+      oil();
+      prop();
+    </script>
+<h3>Discussion</h3>
+  <p>Although natural gas was the most economical, utility cost and furnace efficiency are both factors which affect which fuel is most economical.</p>
+  <p>In western PA, we have a lot of natural gas wells.  In fact, I'd bet there are 2 or 3 within 1 mile of my suburban house, hence the low cost of natural gas.  In other geographical locations, it is very likely that other fuel sources are cheaper or even that fuel is so expensive that it exceeds the cost for equivalent electricity.  This is certainly relevant to take into account.</p>
+  <p>The values were all based on latest technology furnaces, but many older houses likely still use older, less efficient furnaces.  efficiencies drop around 10% for "standard efficiency" natural gas and propane furnaces and possibly more for very old heating oil furnaces.
+<h3>Conclusion</h3>
+  <p>I found in a preliminary estimate that, for my area, natural gas is indeed the most economical choice for residential heating.</p>
+<!-- ********** CONTENT *********** -->

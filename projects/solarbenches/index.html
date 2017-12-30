@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="Gerry Chen's personal website - Projects - Solar Benches">
+<link rel="icon" 
+      type="image/png" 
+      href="/img/icon.png">
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107206610-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107206610-1');
+</script>
+<title>Gerry's World - Project Solar Benches</title>
+<link rel="canonical" href="http://gerrysworld.com/projects/solarbenches/">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/projectPost.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrapper">
+    <div class="about">
+      <h1 id="websiteTitle"><a href="/">Gerry's World</a></h1>
+      <p id="aboutLine">A glimpse into my life</p>
+    </div>
+  </div>
+
+  <nav class="main">
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About&nbsp;Me</a></li>
+      <li><a href="/activities">Activities/Experiences</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- narrow screen menu -->
+  <script>
+    if (window.innerWidth<650) {
+      var el = document.getElementById("aboutLine")
+      el.parentNode.removeChild(el);
+      document.getElementById("websiteTitle").style.paddingBottom="1rem";
+      var men = document.getElementsByClassName("main");
+      for (i=0;i<men.length;i++){
+        men[i].parentNode.removeChild(men[i]);
+      }
+      document.write('<nav class="auxMenu"><ul class="nav"><li class="dropdown"><a href="javascript:void(0)">Menu</a><div class="dropdown-content"><a href="/">Home</a><a href="/about">About&nbsp;Me</a><a href="/activities">Activities/Experiences</a><a href="/projects">Projects</a><a href="/blog">Blog</a></div></li></ul></nav>');
+    }
+  </script>
+
+</header>
+
+<!-- ********** CONTENT *********** -->
+<div class="projectPost">
+  <h1>Solar Benches</h1>
+  <div class="timeStamp">Spring, 2016 - Present</div>
+  <div class="content">
+
+    <img src="meDemonstrating.png" alt="Me talking about the solar benches project at the smart home" width=90% style="margin:0 auto"/>
+
+    <div class="wrapper" style="margin:50px auto -30px auto;">
+    <h5 align=center>*DISCLAIMER*</h5>
+    <p align=center> The content of this page was adapted from a summary funding proposal and does not include detailed information about the project.  I'll update it soon to more thoroughly discuss the state of affairs.  In the interim, you can also check out the <a href="http://dukesmarthome.com/#projects">Duke Smart Home</a> projects page! </p>
+    </div>
+
+    <h2>Introduction</h2>
+    <p>Solar Benches is a project I'm leading to bring solar powered phone chargers and night-time reading lights to outdoor benches throughout campus.</p>
+    <p>The purpose of the solar benches project is twofold: to extend the functionality of the swinging/rocker benches on campus and to promote clean energy.  The project was originally commissioned by DSG and involves the installation of solar panels on the roofs of the benches set up to power night-time working lights and phone chargers.  The hope is to allow people to make use of the benches during hours they would ordinarily not be able to as well as to prominently display solar technology in a transparent fashion so as to excite students about solar power.  Future plans include, but are not limited to, energy usage data collection and 120V AC outlets.</p>
+
+    <h2>Current State of Progress</h2>
+    <p>As of September 2017, two benches have been successfully installed on west campus on McClendon Tower and in Few Quad.  The one on McClendon has been in use the entire summer and the one on Few Quad was installed the first couple weeks of school.  The McClendon Tower bench has been performing very well except for the fact that the phone charger contacts tend to oxidize quickly.  We are working on sourcing higher quality chargers and on revising the design to minimize their exposures to moisture.  In the interim, we have a team member inspecting and cleaning each week to ensure proper operation.</p>
+
+    <h2>Moving Forward</h2>
+    <p>This coming semester, we have two primary goals.  First and foremost, we want to install more benches to increase visibility.  This includes refining the installation process to get to a point where we can make a step-by-step tutorial which can be carried out by HRL or any other entity.  The second goal is to add functionality and reduce cost in future installations by adding laptop chargers, finding better batteries, and finding cheaper, more modular solar panels.</p>
+
+    <h2> Image Dump </h2>
+    <p> Here's a bunch of unsorted images </p>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      var dir = "/projects/solarbenches/images";
+      var folder="images/"
+
+      $.ajax({
+          //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+          url: dir,
+          success: function (data) {
+              //List all .png file names in the page
+              $(data).find("a").attr("href", function (i, val) {
+                  if( val.match(/\.(jpe?g|JPE?G|png)$/) ) { 
+                      $("body").find("#testing").append( "<img src='"+ folder + val +"' style='border:3px solid #000000;display:block;width:80%;margin:2rem auto' >" );
+                  }
+              });
+          }
+      });
+    </script>
+
+    <div id="testing" style="width:100%;justify-content: center">
+    </div>
+  </div>
+</div>
+<!-- ********** CONTENT *********** -->
+
+<footer class="footer"><div class="wrapper">
+  <pre style="margin:0">
+  Gerry Chen
+  412-956-3047
+  gerry.chen@duke.edu
+
+  Engineering Undergrad at Duke University
+  Class of 2019
+  </pre>
+</div></footer>
+
+<!-- <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5923de867218b50718020ae0');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script> -->
+
+</body>
+</html>

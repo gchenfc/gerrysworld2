@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="Gerry Chen's personal website -  Projects - Magspoof">
+<link rel="icon" 
+      type="image/png" 
+      href="/img/icon.png">
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107206610-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107206610-1');
+</script>
+<title>Gerry's World - Project Magspoof</title>
+<link rel="canonical" href="http://gerrysworld.com/projects/magspoof/">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/projectPost.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrapper">
+    <div class="about">
+      <h1 id="websiteTitle"><a href="/">Gerry's World</a></h1>
+      <p id="aboutLine">A glimpse into my life</p>
+    </div>
+  </div>
+
+  <nav class="main">
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About&nbsp;Me</a></li>
+      <li><a href="/activities">Activities/Experiences</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- narrow screen menu -->
+  <script>
+    if (window.innerWidth<650) {
+      var el = document.getElementById("aboutLine")
+      el.parentNode.removeChild(el);
+      document.getElementById("websiteTitle").style.paddingBottom="1rem";
+      var men = document.getElementsByClassName("main");
+      for (i=0;i<men.length;i++){
+        men[i].parentNode.removeChild(men[i]);
+      }
+      document.write('<nav class="auxMenu"><ul class="nav"><li class="dropdown"><a href="javascript:void(0)">Menu</a><div class="dropdown-content"><a href="/">Home</a><a href="/about">About&nbsp;Me</a><a href="/activities">Activities/Experiences</a><a href="/projects">Projects</a><a href="/blog">Blog</a></div></li></ul></nav>');
+    }
+  </script>
+
+</header>
+
+<!-- ********** CONTENT *********** -->
+<div class="projectPost">
+  <a href="/projects/magspoof/isometric.JPG"><img src="/projects/magspoof/isometric.png" alt="Website screenshot" align="right" width=30%/></a>
+  <h1>Magspoof</h1>
+  <div class="timeStamp">Summer, 2017 - Present</div>
+  <div class="content">
+    <h2> Intro </h2>
+      <p>I am often plagued with the dilemma of forgetting my DukeCard somewhere when going around campus and find myself locked out of buildings and humiliatedly paying for my food with credit card for the rest of the day until I retrieve my card from wherever I left it - if I can retrieve it at all.  I was inspired by a project I had read about years ago by a guy named Samy Kamkar he coined "<a href="https://samy.pl/magspoof/">MagSpoof</a>".  Of course, he was applying his project to credit cards, but I am not quite as frivolous and decided to do it only for my DukeCard.</p>
+    <h2> Investigation </h2>
+      <p>I poked around a bit and found that there are typically 3 "tracks" or regions on a standard magnetic swipe card, though the third is rarely used.  I also learned that all a magnetic card is is a bunch of magnetized bands in a certain pattern to send a bunch of 1's and 0's.  Fortunately, Samy had already figured out all the hard stuff and I just had to apply it to my DukeCard.</p>
+      <p> I started out by aquiring a USB card reader and found my card had actually only contained data on track 2 - none on track 1.  To confirm it wasn't just the card reader, I also scanned some of my credit cards and drivers license and did indeed read other track data on them.  Great!  Furthermore, the only thing on the magnetic stripe was my "DukeCard number" in plaintext!  Note that my card number is also printed on the back of my card, so if I got a glimpse of someone else's card, I could theoretically replicate it.  This gets to security issues I'll discuss later.</p>
+      <div style="justify-content: center">
+      <a href="card.JPG"><img style="min-width:125px;margin:0 auto" src="card.png" alt="My DukeCard" width=60% /></a>
+      </div>
+    <h2> Building the MagSpoof </h2>
+      <p> Samy provided some specs but I had a decent amount of electronics experience and had a random assortment of components on hand already, so I decided to modify his circuits a bit.  I'll update this more later but I'm too lazy to do it right now.
+      <div class="wrapper" style="width:100%">
+        <div style="margin:0 auto;width:80%;">
+          <a href="top.JPG"><img style="float:left;min-width: 125px;" src="top.png" alt="Top view of the MagSpoof" width=45% /></a>
+          <a href="back.JPG"><img style="float:left;min-width: 125px;" src="back.png" alt="Back view of the MagSpoof" width=25% /></a>
+        </div>
+      </div>
+      <div style="clear:both;"></div>
+
+      <div class="wrapper" style="width:100%;float:center;">
+        <div style="margin:0 auto;width:80%;">
+          <a href="eagleSchem.JPG"><img style="float:left;min-width: 125px;" src="eagleSchem.png" alt="Eagle Schematic" width=35% /></a>
+          <a href="eagleBrd.JPG"><img style="float:left;min-width: 125px;" src="eagleBrd.png" alt="Eagle PCB Layout" width=35% /></a>
+        </div>
+      </div>
+      <div style="clear:both;"></div>
+    <h4>*NOTE TO SELF: WRITE MORE STUFF*</h4>
+    <h5> could I have made this a comment? sure. But I never would have read it. </h5>
+    <h2> Current Design Stage </h2>
+      <p>After fiddling for a long long time, I got things working!  Only problem is that it's not super reliable and it's pretty clunky.  I want to shrink it down by applying a few improvements which follow along two general paths:
+      <ul>
+        <li> Smaller MCU (ATtiny10), one FET to replace the ULN motor driver, button cell batteries instead of AAA, and better board layout.  Note that I have made quite a bit of progress on this and have implemented each of these things separately, but for some reason things fell apart when I tried to put them all together.</li>
+        <li> Aux cable input with op-amp and/or FET to drive the electromagnetic coil.  This is where I'm really interested because I won't have to go through a reprogramming to change the card number.  This is good because it's not easy to reprogram an SMD chip soldered onto a populated board and without having programming pins/jumpers for space constaints.  It's also just such an amazing idea that I don't know why I didn't think of it before.  It's basically just like an anti-square card reader.  So handy.  I'm abandoning the first bullet point to pursue this one. </li>
+      </ul>
+      So I have some work to do on that aux cord input, but I hope to finish it in the coming months whenever I get time.  With things getting busier, this project has moved towards the back of my mind and will probably be "on hold" for a couple months.
+      </p>
+      <p> Stay tuned for updates!!! </p>
+  </div>
+</div>
+<!-- ********** CONTENT *********** -->
+
+<footer class="footer"><div class="wrapper">
+  <pre style="margin:0">
+  Gerry Chen
+  412-956-3047
+  gerry.chen@duke.edu
+
+  Engineering Undergrad at Duke University
+  Class of 2019
+  </pre>
+</div></footer>
+
+<!-- <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5923de867218b50718020ae0');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script> -->
+
+</body>
+</html>
