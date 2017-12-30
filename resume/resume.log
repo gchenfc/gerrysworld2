@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 SEP 2017 23:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 DEC 2017 00:15
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -338,29 +338,29 @@ Package ragged2e Info: ABD: executing \RaggedRight on input line 23.
  ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 23.
 
-Underfull \hbox (badness 1264) in paragraph at lines 108--109
+Underfull \hbox (badness 1264) in paragraph at lines 115--116
 []\OT1/cmr/m/n/10.95 Considerable 3D and 2D CAD ex-pe-ri-ence 
  []
 
 
-Overfull \hbox (13.65pt too wide) in paragraph at lines 25--120
+Overfull \hbox (13.65pt too wide) in paragraph at lines 25--127
  [] 
  []
 
 
-Overfull \vbox (17.21455pt too high) has occurred while \output is active []
+Overfull \vbox (13.59793pt too high) has occurred while \output is active []
 
 
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./resume.aux) ) 
 Here is how much of TeX's memory you used:
- 3786 strings out of 493089
- 51635 string characters out of 6134842
- 125338 words of memory out of 5000000
- 7055 multiletter control sequences out of 15000+600000
- 11991 words of font info for 46 fonts, out of 8000000 for 9000
+ 3788 strings out of 493089
+ 51659 string characters out of 6134842
+ 126338 words of memory out of 5000000
+ 7056 multiletter control sequences out of 15000+600000
+ 12337 words of font info for 47 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 42i,19n,28p,421b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,19n,28p,403b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
@@ -368,11 +368,12 @@ m/cmcsc10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb>
-Output written on resume.pdf (1 page, 90266 bytes).
+0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
+.pfb>
+Output written on resume.pdf (1 page, 100394 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 40 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
