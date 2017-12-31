@@ -2,7 +2,7 @@
 ---
 title: "Title Goes Here"
 postType: "random"
-postBlurb: "description goes here"
+description: "description goes here"
 # date: Dec. 28, 2017
 ---
 

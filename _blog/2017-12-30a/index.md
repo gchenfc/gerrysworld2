@@ -1,7 +1,7 @@
 ---
 title: "Migrating to Google firebase"
 postType: "miniproject"
-postBlurb: "After having had such a pleasant experience hosting my Secret Santa site with firebase, I decided to move the entire site over."
+description: "After having had such a pleasant experience hosting my Secret Santa site with firebase, I decided to move the entire site over."
 # date: Dec. 28, 2017
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Migrating to Jekyll"
 postType: "miniproject"
-postBlurb: "To clean up code and make site edits faster and more efficient, I switched over to Jekyll - a layout engine"
+description: "To clean up code and make site edits faster and more efficient, I switched over to Jekyll - a layout engine"
 # date: Dec. 28, 2017
 ---
 
