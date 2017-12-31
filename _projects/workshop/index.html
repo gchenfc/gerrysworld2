@@ -1,0 +1,92 @@
+---
+title: "Workshop/&#8203;Shed"
+description: "I designed and built a workshop from scratch in my backyard as a space for my sister and I."
+status: 'completed'
+displaydate: "August, 2016"
+date: Aug. 10, 2016
+
+image: "cover.png"
+imageAltText: "workshop under construction"
+
+sidepic: "cover.png"
+sidepicfull: "cover.jpg"
+sidepicAltText: "Workshop under construction"
+stylesheets: ["/css/projectPost.css", "/css/slideshowGallery.css"]
+---
+
+<!-- ********** CONTENT *********** -->
+    <h2> Sorry... </h2>
+      <p>This page is currently <i>under construction</i> (unlike the workshop, which is complete).  Check back later!</p>
+    <div style="clear:both;"></div>
+
+<!-- *** BEGIN SLIDESHOW *** -->
+    <div class="slideshow-container">
+      {% assign images = '' | split: '' %}
+      {{images}}
+      {% for image in site.static_files %}
+        {% if image.path contains 'projects/workshop' %}
+          {% assign toAdd = image.path | split:"***" %}
+          {% assign images = images | concat: toAdd %}
+        {% endif %}
+      {% endfor %}
+
+      {% for image in images %}
+          <div class="mySlides fade">
+            <div class="numbertext">{{forloop.index}} / {{forloop.length}}</div>
+            <a href="{{site.baseurl}}{{image}}"><img src="{{site.baseurl}}{{image}}" style="margin:0px auto;max-height: 50vw;"></a>
+            <div class="text"></div>
+          </div>
+      {% endfor %}
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div style="text-align:center">
+      {% for image in images %}
+        <span class="dot" onclick="currentSlide({{forloop.index}})"></span> 
+      {% endfor %}
+    </div>
+    <br />
+<!-- *** END SLIDESHOW *** -->
+
+    <iframe width=40% height="500" style="min-width: 300px" src="https://www.youtube.com/embed/K29l-JW3z_w" frameborder="0" allowfullscreen></iframe>
+
+    <div style="float:right; max-width: 300px;">
+      <img src="left.jpg" style="float:right;min-width: 100px;" width=40%/>
+      <img src="top.jpg" style="float:right;min-width: 100px;" width=40%/>
+      <img src="right.jpg" style="float:right;min-width: 100px;" width=40%/>
+    </div>
+    <div style="clear:both;"></div>
+<!-- ********** CONTENT *********** -->
+
+<!-- slideshow javascript -->
+<script type="text/javascript">
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block"; 
+    dots[slideIndex-1].className += " active";
+  }
+</script>

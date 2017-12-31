@@ -6,7 +6,7 @@
 <link rel="icon" 
       type="image/png" 
       href="/img/icon.png">
-<title>{{page.title}} | Blog | {{site.title}}</title>
+<title>{{page.title}} | Projects | {{site.title}}</title>
 <link rel="canonical" href="http://gerrysworld.com{{page.url}}">
 <link rel="stylesheet" href="/css/common.css">
 {% for stylesheet in page.stylesheets %}
@@ -31,14 +31,17 @@
 </header>
 
 <!-- ********** CONTENT *********** -->
-<div class="blogPost">
+<div class="projectPost">
+  {% if page.sidepic %}
+    <a href="{{page.sidepicfull}}"><img src="{{page.sidepic}}" alt="{{page.sidepicAltText}}" align="right" width=30%/></a>
+  {% else %}
+    <img src="{{page.image}}" alt="{{page.imageAltText}}" align="right" width=30%/>
+  {% endif %}
   <h1>{{page.title}}</h1>
-  <div class="timeStamp">{{page.date | date: "%B %-d, %Y"}}</div>
-  <br/>
-  <content>
+  <div class="timeStamp">{{page.displaydate}}</div>
+  <div class="content">
     {{ content }}
-  </content>
-
+  </div>
 </div>
 <!-- ********** CONTENT *********** -->
 

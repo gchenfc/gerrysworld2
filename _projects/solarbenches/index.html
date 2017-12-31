@@ -1,0 +1,99 @@
+---
+title: "Solar Benches"
+description: "A project to install solar powered phone chargers and night-time LED lighting on campus benches."
+status: 'in progress'
+displaydate: "Spring, 2016 - Present"
+
+image: "thumb.jpeg"
+imageAltText: "Solar Benches installation"
+
+sidepic: "thumb.jpeg"
+sidepicfull: "messyImage.jpg"
+sidepicAltText: "Solar Benches installation"
+
+stylesheets: ["/css/projectPost.css", "/css/slideshowGallery.css"]
+---
+
+<!-- ********** CONTENT *********** -->
+
+    <a href="meDemonstrating.png"><img src="meDemonstrating.png" alt="Me talking about the solar benches project at the smart home" width=60% style="margin:0 auto"/></a>
+
+    <div class="wrapper" style="margin:50px auto -0px auto;">
+    <h5 align=center>*DISCLAIMER*</h5>
+    <p align=center> The content of this page was adapted from a summary funding proposal and does not include detailed information about the project.  I'll update it soon to more thoroughly discuss the state of affairs.  In the interim, you can also check out the <a href="http://dukesmarthome.com/#projects">Duke Smart Home</a> projects page! </p>
+    </div>
+
+    <h2>Introduction</h2>
+    <p>Solar Benches is a project I'm leading to bring solar powered phone chargers and night-time reading lights to outdoor benches throughout campus.</p>
+    <p>The purpose of the solar benches project is twofold: to extend the functionality of the swinging/rocker benches on campus and to promote clean energy.  The project was originally commissioned by DSG and involves the installation of solar panels on the roofs of the benches set up to power night-time working lights and phone chargers.  The hope is to allow people to make use of the benches during hours they would ordinarily not be able to as well as to prominently display solar technology in a transparent fashion so as to excite students about solar power.  Future plans include, but are not limited to, energy usage data collection and 120V AC outlets.</p>
+
+    <h2>Current State of Progress</h2>
+    <p>As of September 2017, two benches have been successfully installed on west campus on McClendon Tower and in Few Quad.  The one on McClendon has been in use the entire summer and the one on Few Quad was installed the first couple weeks of school.  The McClendon Tower bench has been performing very well except for the fact that the phone charger contacts tend to oxidize quickly.  We are working on sourcing higher quality chargers and on revising the design to minimize their exposures to moisture.  In the interim, we have a team member inspecting and cleaning each week to ensure proper operation.</p>
+
+    <h2>Moving Forward</h2>
+    <p>This coming semester, we have two primary goals.  First and foremost, we want to install more benches to increase visibility.  This includes refining the installation process to get to a point where we can make a step-by-step tutorial which can be carried out by HRL or any other entity.  The second goal is to add functionality and reduce cost in future installations by adding laptop chargers, finding better batteries, and finding cheaper, more modular solar panels.</p>
+
+    <h2> Image Dump </h2>
+    <p> Here's a bunch of unsorted images </p>
+    <!-- *** BEGIN SLIDESHOW *** -->
+    <div class="slideshow-container">
+      {% assign images = '' | split: '' %}
+      {{images}}
+      {% for image in site.static_files %}
+        {% if image.path contains 'projects/solarbenches/images' %}
+          {% assign toAdd = image.path | split:"***" %}
+          {% assign images = images | concat: toAdd %}
+        {% endif %}
+      {% endfor %}
+
+      {% for image in images %}
+          <div class="mySlides fade">
+            <div class="numbertext">{{forloop.index}} / {{forloop.length}}</div>
+            <a href="{{site.baseurl}}{{image}}"><img src="{{site.baseurl}}{{image}}" style="margin:0px auto;max-height: 50vw;"></a>
+            <div class="text"></div>
+          </div>
+      {% endfor %}
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div style="text-align:center;">
+      {% for image in images %}
+        <span class="dot" onclick="currentSlide({{forloop.index}})"></span> 
+      {% endfor %}
+    </div>
+    <br />
+    <!-- *** END SLIDESHOW *** -->
+<!-- ********** CONTENT *********** -->
+
+<!-- slideshow javascript -->
+<script type="text/javascript">
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block"; 
+    dots[slideIndex-1].className += " active";
+  }
+</script>

@@ -47,9 +47,18 @@ defaults:
     values:
       layout: "blogPost"
       stylesheets: "/css/blogPost.css"
+  -
+    scope:
+      path: ""
+      type: projects
+    values:
+      layout: projectPost
+      stylesheets: "/css/projectPost.css"
 
 collections:
   blog:
+    output: true
+  projects:
     output: true
 
 # Exclude from processing.

@@ -1,0 +1,75 @@
+---
+title: Projects
+layout: default
+stylesheets: []
+permalink: /projects/index.html
+---
+
+<!-- ********** CONTENT *********** -->
+<div class="wrapper">
+  <h1 id="home-page">Projects</h1>
+    <br/>
+  <div class="content">
+    This page lists some of the projects I've worked on over the years.  These are the ones that are mostly unstructured and done in my free time.  For more structured, academic involvements and projects, see <a href="/activities/">Activities/Experiences</a>.  Enjoy :)
+  </div>
+
+  <!-- ************ IN PROGRESS PROJECTS ************** -->
+  <section class="row-section"><h2>In Progress</h2></section>
+
+  <ul class="projects-list">
+    {% assign projects = site.projects | sort: 'date' %}
+    {% for project in projects reversed %}
+      {% if project.status == 'in progress' %}
+        <li class="project">
+          <header><h3><a href="{{project.url}}">
+            {{project.title}}</a></h3></header>
+
+          <figure class="imagefig">
+            <a href="{{project.url}}"><img src="{{project.url | remove: "/index.html" }}/{{project.image}}" alt="{{project.imageAltText}}" /></a>
+          </figure>
+
+          <div class="description">
+            {{project.description}}
+          </div>
+
+          <div class="timestamp">
+            {{project.displaydate}}
+          </div>
+        </li>
+      {% endif %}
+
+    {% endfor %}
+
+  </ul>
+
+  <!-- ************ COMPLETED PROJECTS ************** -->
+  <section class="row-section"><h2>Comleted</h2></section>
+
+  <ul class="projects-list">
+    {% assign projects = site.projects | sort: 'date' %}
+    {% for project in projects reversed %}
+      {% if project.status == 'completed' %}
+        <li class="project">
+          <header><h3><a href="{{project.url}}">
+            {{project.title}}</a></h3></header>
+
+          <figure class="imagefig">
+            <a href="{{project.url}}"><img src="{{project.url | remove: "/index.html" }}/{{project.image}}" alt="{{project.imageAltText}}" /></a>
+          </figure>
+
+          <div class="description">
+            {{project.description}}
+          </div>
+
+          <div class="timestamp">
+            {{project.displaydate}}
+          </div>
+        </li>
+      {% endif %}
+
+    {% endfor %}
+
+  </ul>
+
+</div>
+<!-- ********** CONTENT *********** -->
