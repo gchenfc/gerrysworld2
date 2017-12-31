@@ -2,7 +2,7 @@
 title: "Migrating to Jekyll"
 postType: "miniproject"
 description: "To clean up code and make site edits faster and more efficient, I switched over to Jekyll - a layout engine"
-# date: Dec. 28, 2017
+date: Dec. 30, 2017
 ---
 
 ## Intro
