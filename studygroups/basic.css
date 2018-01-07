@@ -17,3 +17,31 @@ ul a:hover, p a:hover{
 h1{
 	margin-top: 64px;
 }
+h4{
+  margin:0;
+  margin-top: 5px;
+}
+
+button.accordion {
+  background-color:rgba(100,100,100,.25);
+  cursor:pointer;
+  padding: 4px 8px 8px 8px;
+  width: 100%;
+  border:none;
+  outline:none;
+  text-align: left;
+  margin:10px 0px 0px 0px;
+  transition: max-width 0.4s ease-out;
+  overflow: hidden;
+  max-width:400px;
+}
+div.panel{
+  padding: 0px 18px;
+  /*background-color: rgba(200,200,200,.3);*/
+  background-color:rgba(100,100,100,.25);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, max-width 0.4s ease-out;
+  margin:0;
+  max-width: 400px;
+}

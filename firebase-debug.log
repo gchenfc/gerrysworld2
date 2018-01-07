@@ -1,0 +1,58 @@
+[debug] [2018-01-07T08:33:01.505Z] ----------------------------------------------------------------------
+[debug] [2018-01-07T08:33:01.509Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-01-07T08:33:01.509Z] CLI Version:   3.16.0
+[debug] [2018-01-07T08:33:01.510Z] Platform:      darwin
+[debug] [2018-01-07T08:33:01.510Z] Node Version:  v7.3.0
+[debug] [2018-01-07T08:33:01.511Z] Time:          Sun Jan 07 2018 03:33:01 GMT-0500 (EST)
+[debug] [2018-01-07T08:33:01.511Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-07T08:33:01.575Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-07T08:33:01.575Z] > authorizing via signed-in user
+[debug] [2018-01-07T08:33:01.586Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gerrysworld2  
+  
+ Sun Jan 07 2018 03:33:01 GMT-0500 (EST)
+[debug] [2018-01-07T08:33:02.313Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T08:33:02.315Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gerrysworld2/tokens  
+  
+ Sun Jan 07 2018 03:33:02 GMT-0500 (EST)
+[debug] [2018-01-07T08:33:02.714Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'gerrysworld2'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing _site directory for upload...
+[debug] [2018-01-07T08:33:38.580Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/gerrysworld2/uploads/-L2Ek5sG1C4-O42vFMTG?fileCount=232&message=  
+  
+ Sun Jan 07 2018 03:33:38 GMT-0500 (EST)
+[error] 
+[error] Error: File upload failed: Storage error. Please try again. Failed to upload file "public/resume/Icon\r": Disallowed unicode characters present in object name '%s'
+[debug] [2018-01-07T08:45:19.618Z] Error Context: {
+  "duration": 75361,
+  "fileCount": 193,
+  "ip": "73.154.32.65",
+  "start": 1515314643990,
+  "status": "failed",
+  "statusMessage": "Storage error. Please try again. Failed to upload file \"public/resume/Icon\\r\": Disallowed unicode characters present in object name '%s'",
+  "uid": "102710098150719797363",
+  "uploadedCount": 181,
+  "user": {
+    "email": "gerry.chen2015@gmail.com",
+    "gaiaId": "102710098150719797363",
+    "image": "https://lh5.googleusercontent.com/-hJ8g9qbEbdY/AAAAAAAAAAI/AAAAAAAAAh4/iPYq6MiJBeU/photo.jpg"
+  }
+}
+[debug] [2018-01-07T08:45:19.732Z] <<< HTTP RESPONSE 409
+[debug] [2018-01-07T08:45:19.732Z] <<< HTTP RESPONSE BODY undefined
+[debug] [2018-01-07T08:45:19.733Z] TypeError: Cannot read property 'error' of undefined
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:10:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:45:25)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1163:10)
+    at emitOne (events.js:96:13)
+    at Request.emit (events.js:188:7)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1085:12)
+    at IncomingMessage.g (events.js:292:16)
+[error] 
+[error] Error: An unexpected error has occurred.
