@@ -3,6 +3,7 @@ title: Blog Home
 layout: default
 stylesheets: []
 permalink: /blog/index.html
+comments: true
 ---
 
 <!-- ********** CONTENT *********** -->
@@ -34,7 +35,7 @@ permalink: /blog/index.html
           </p>
         </div>
         <div class="details">
-          <p><a href="blogPost.url">{{blogPost.description}}</a></p>
+          <p><a href="{{blogPost.url}}">{{blogPost.description}}</a></p>
         </div>
       </li>
     {% endfor %}

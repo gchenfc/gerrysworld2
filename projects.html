@@ -3,6 +3,7 @@ title: Projects
 layout: default
 stylesheets: []
 permalink: /projects/index.html
+comments: true
 ---
 
 <!-- ********** CONTENT *********** -->
@@ -21,7 +22,7 @@ permalink: /projects/index.html
     {% for project in projects reversed %}
       {% if project.status == 'in progress' %}
         <li class="project">
-          <header><h3><a href="{{project.url}}">
+          <header><h3><a href="{{project.url}}" style="color:inherit;">
             {{project.title}}</a></h3></header>
 
           <figure class="imagefig">
@@ -29,7 +30,7 @@ permalink: /projects/index.html
           </figure>
 
           <div class="description">
-            {{project.description}}
+            <a href="{{project.url}}" style="text-decoration: none; color:inherit;">{{project.description}}</a>
           </div>
 
           <div class="timestamp">
@@ -50,7 +51,7 @@ permalink: /projects/index.html
     {% for project in projects reversed %}
       {% if project.status == 'completed' %}
         <li class="project">
-          <header><h3><a href="{{project.url}}">
+          <header><h3><a href="{{project.url}}" style="color:inherit;">
             {{project.title}}</a></h3></header>
 
           <figure class="imagefig">
@@ -58,7 +59,7 @@ permalink: /projects/index.html
           </figure>
 
           <div class="description">
-            {{project.description}}
+            <a href="{{project.url}}" style="text-decoration: none; color:inherit;">{{project.description}}</a>
           </div>
 
           <div class="timestamp">

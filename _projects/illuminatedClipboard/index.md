@@ -60,7 +60,7 @@ I used it a few times and it worked surprisingly well!  I wish I had some pictur
 
 ## Issues
 #### Double sided pages
-I think this speaks for itself.  I knew I'd only be able to use single pages when I designed it, but I forgot about the fact that I could also only use single-sided pages.  Oops.  That's ok - it's neater and more organized anyway.  Plus, the whole "saving paper to save the environment" doesn't really make much sense if you think about it anyway.  See <a href="/blog/2018-01-04">this blog post for why</a>.
+I think this speaks for itself.  I knew I'd only be able to use single pages when I designed it, but I forgot about the fact that I could also only use single-sided pages.  Oops.  That's ok - it's neater and more organized anyway.  Plus, the whole "saving paper to save the environment" doesn't really make much sense if you think about it anyway.  See <a href="/blog/2018-01-03">this blog post for why</a>.
 
 #### Falling apart
 The back kept falling off.  Solvable by just gluing the aluminum foil and by screwing the rest together.  I don't think I used screws but I definitely should have.
