@@ -316,17 +316,14 @@ hr {
   margin-top: 3.25rem;
   margin-bottom: 52px;
   margin-bottom: 3.25rem;
-  border: 0;
-  color: #222;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  align-self: center;
   display: block;
-  height: 26px;
-  height: 1.625rem;
+  height: 0px;
   margin-right: auto;
   margin-left: auto;
-  background-size: 100% 26px;
-  background-size: 100% 1.625rem;
-  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #222 11px, #222 15px, transparent 15px, transparent 26px);
-  width: 100px; }
+  width: 90%; }
 
 small {
   line-height: 13px;
