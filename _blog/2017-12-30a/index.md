@@ -5,6 +5,8 @@ description: "After having had such a pleasant experience hosting my Secret Sant
 date: Dec. 30, 2017
 ---
 
+## \*DISCLAIMER\*
+This post has been updated in [this blog post](/blog/2018-01-08).  I switched to Netlify.
 ## Intro
 Google firebase is a plateform geared toward mobile app asset management and storage, but works great for web management and hosting as well.  I used firebase for the database of my <a href="triphi.gerrysworld.com">Secret Santa Site</a> so I decided to also host the secret santa site with firebase's hosting capability.  I was not disappointed.  Following, I decided to move the entire site over.
 
