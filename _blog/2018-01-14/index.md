@@ -54,6 +54,8 @@ Finally, I was a bit annoyed by the length of tubing between the two check valve
 
 <a href="v3.png"><img src="v3.png" alt="vacuum chamber v3" style="width:70%;margin:auto;" /><a href="v3.png">
 
+## \*\*\*UPDATE\*\*\* 1/18/2018
+I just realized you can daisy chain multiple vacuum syringe apparatusses to improve the vacuum.  By setting the exhaust of a second-stage vacuum system as another, weaker, vacuum, the second-stage vacuum can be drawn much lower.  This allows weaker valves and poor "expansion ratios" to be joined together to create better vacuums.  I'm sure this is how very high-performance vacuums and compressors must work.  The only limit to the ability of the vacuum is the resistance of the jar and tubing to resist the vacuum which should be no issue since the maximum pressure differential is only 1atm ~15psi.  I haven't yet tested this because I don't have the need nor a gauge, but I can't see why this wouldn't work other than the hassle of having to switch back and forth between pumping the syringes.
 ## Future Plans
 To be perfectly honest, this works just fine for me and I can't really imagine scenarios where (a) this would be insufficient and (b) the application wouldn't warrant buying a real vacuum chamber/pump.  This is meant to be a quick/dirty tool to play around with and, as such, it works great.  I think small improvements which I would reasonably make include
 * getting a vacuum pressure gauge or putting a positive pressure gauge inside the chamber
