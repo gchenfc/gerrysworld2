@@ -8,8 +8,10 @@
 \usepackage{epstopdf}
 \usepackage[document]{ragged2e}
 
-
 \usepackage{enumitem}
+\usepackage{hyperref}
+\urlstyle{same}
+%\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
@@ -22,12 +24,13 @@
 \setlist[itemize]{leftmargin=2em}
 
 \begin{document}
+\pagenumbering{gobble}
 \thispagestyle{empty}
 \begin{center}\begin{tabular}{c}
 		\Huge \bf Gerry Chen\\
 	\begin{minipage}{\textwidth}
 		\begin{center}
-		\makebox[1.5in]{ 412-956-3047} \hspace{1em}\hspace{1em} \text{www.gerrysworld.com} \hspace{1em}\hspace{1em} \makebox[1.5in]{\text{gerry.chen@duke.edu}}\\
+		\makebox[1.5in]{ 412-956-3047} \hspace{1em}\hspace{1em} \text{\url{https://gerrysworld.com}} \hspace{1em}\hspace{1em} \makebox[1.5in]{\text{\href{mailto:gerry.chen@duke.edu}{gerry.chen@duke.edu}}}\\
 		\end{center}
 	\end{minipage}\\
 	\hline
@@ -72,8 +75,8 @@
 		{\bf Engineer} \hfill {\bf 08/2015 to Present}\\
 		{Duke Electric Vehicles}
 		\begin{itemize}
-			\item Lead the hydrogen fuel cell conversion to build a new hybrid vehicle for 2018 - world record contender
-			\item Design + Manufacture + Test the high power super-cap control board to increase vehicle efficiency 22\%
+			\item Lead the conversion to a hydrogen fuel cell hybrid vehicle for 2018 - \href{http://www.guinnessworldrecords.com/world-records/most-fuel-efficient-vehicle}{Guiness world record} contender
+			\item Design + Manufacture + Test the high power super-cap control board to increase vehicle efficiency by 22\%
 			\item Create an automated testing system resulting in fuel cell efficiency increase from 40\% to 63\%
 			\item Design + Manufacture + Install the carbon fiber inserts to decrease weight and increase modularity
 			\item First place battery-electric prototype team at the 2017 Shell Eco-Marathon achieving 9967 MPGe
@@ -91,11 +94,11 @@
 		{\bf Robotics Motion Planning Intern} \hfill {\bf 01/2017 to Present}\\
 		{Intelligent Motion Labratory - Dr. Kris Hauser}
 		\begin{itemize}
-			\item Work funded by NSF Research Experiences for Undergraduates (REU) to implement a Precision Positioning Unit (PPU) on the Tele-Robotic Intelligent Nursing Assistant (TRINA)
-			\item Coded algorithms for maximal continuous motion range - minimal manipulatability arm configurations
-			\item Conducted tests for translational displacements due to load forces on TRINA-mounted PPU to evaluate algorithms
+			\item Submitted joint paper to IEEE International Conference on Robotics and Automation 2018\\ \noindent
+			(Accepted 01/12/2018) - work funded by NSF Research Experiences for Undergraduates (REU) to implement a Precision Positioning Unit (PPU) on the Tele-Robotic Intelligent Nursing Assistant (TRINA)
+			\item Coded algorithms (Python, C++) for max continuous range - min manipulatability arm configurations
+			\item Conducted tests for displacements due to load forces on TRINA-mounted PPU to evaluate algorithms
 			\item Fabricated polyurethane ``finger'' tip with integrated tactile sensor and 95.7\% actuation success rate
-			\item Submitted joint paper to IEEE International Conference on Robotics and Automation 2018
 		\end{itemize}
 		
 		{\bf Teaching Assistant} \hfill {\bf 08/2016 to Present}\\
