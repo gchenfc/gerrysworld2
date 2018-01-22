@@ -1,0 +1,67 @@
+[debug] [2018-01-18T17:36:50.246Z] ----------------------------------------------------------------------
+[debug] [2018-01-18T17:36:50.249Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-01-18T17:36:50.249Z] CLI Version:   3.16.0
+[debug] [2018-01-18T17:36:50.249Z] Platform:      darwin
+[debug] [2018-01-18T17:36:50.249Z] Node Version:  v7.3.0
+[debug] [2018-01-18T17:36:50.250Z] Time:          Thu Jan 18 2018 12:36:50 GMT-0500 (EST)
+[debug] [2018-01-18T17:36:50.250Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-18T17:36:50.266Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-18T17:36:50.267Z] > authorizing via signed-in user
+[debug] [2018-01-18T17:36:50.269Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-18T17:36:50.269Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/14waJ7jFlWnaCdhqz41gved2eP0IvAj3t4FUmKpjC0E',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Jan 18 2018 12:36:50 GMT-0500 (EST)
+[debug] [2018-01-18T17:36:50.430Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-18T17:36:50.433Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gerrysworld2  
+  
+ Thu Jan 18 2018 12:36:50 GMT-0500 (EST)
+[debug] [2018-01-18T17:36:50.850Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-18T17:36:50.851Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gerrysworld2/tokens  
+  
+ Thu Jan 18 2018 12:36:50 GMT-0500 (EST)
+[debug] [2018-01-18T17:36:51.299Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'gerrysworld2'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing _site directory for upload...
+[debug] [2018-01-18T17:37:05.697Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/gerrysworld2/uploads/-L39L3Bfd_80nLc1yrwS?fileCount=245&message=  
+  
+ Thu Jan 18 2018 12:37:05 GMT-0500 (EST)
+[error] 
+[error] Error: File upload failed: Storage error. Please try again. Failed to upload file "public/resume/Icon\r": Disallowed unicode characters present in object name '%s'
+[debug] [2018-01-18T17:38:02.576Z] Error Context: {
+  "duration": 23867,
+  "fileCount": 206,
+  "ip": "152.3.43.20",
+  "start": 1516297058821,
+  "status": "failed",
+  "statusMessage": "Storage error. Please try again. Failed to upload file \"public/resume/Icon\\r\": Disallowed unicode characters present in object name '%s'",
+  "uid": "102710098150719797363",
+  "uploadedCount": 193,
+  "user": {
+    "email": "gerry.chen2015@gmail.com",
+    "gaiaId": "102710098150719797363",
+    "image": "https://lh5.googleusercontent.com/-hJ8g9qbEbdY/AAAAAAAAAAI/AAAAAAAAAh4/iPYq6MiJBeU/photo.jpg"
+  }
+}
+[debug] [2018-01-18T17:38:02.578Z] <<< HTTP RESPONSE 409
+[debug] [2018-01-18T17:38:02.578Z] <<< HTTP RESPONSE BODY undefined
+[debug] [2018-01-18T17:38:02.579Z] TypeError: Cannot read property 'error' of undefined
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:10:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:45:25)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1163:10)
+    at emitOne (events.js:96:13)
+    at Request.emit (events.js:188:7)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1085:12)
+    at IncomingMessage.g (events.js:292:16)
+[error] 
+[error] Error: An unexpected error has occurred.
