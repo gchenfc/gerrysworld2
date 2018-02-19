@@ -17,7 +17,7 @@ sidepicAltText: "Shelf set up in my room"
 Shelves can be surprisingly expensive to buy online.  The cheapest ones I could find on Amazon were on the order of $30 and were only 3ft tall or so.  Being somewhat crafty, I thought I could do better with the added benefit of customizing the form factor and making the aesthetic match my taste preferences.  Here I detail how I you can make your own!  It's 5 feet tall with platforms every foot and the platforms are 1ft x 1ft.  It's surprisingly sturdy and cost around $20 to make.
 
 ## Shelf overview
-The shelf is composed of 4 copper pipes which support the 5 wooden platforms.  The parts are joined together by 3D printed supports which are in turn fastened via 1/4" bolts.
+The shelf is composed of 4 copper pipes which support the 5 wooden platforms.  The parts are joined together by 3D printed support brackets which are in turn fastened via 1/4" bolts.
 
 It's quite sturdy - I have no qualms about it falling over and don't worry when I bump it, but it does rock for a couple seconds when perturbed.  It also deconstructs well due to the bolted nature (no glued joints) and can be easily transported as 4 rods, 5 12"x12" sheets, and a handful of 3D printed bits.  This was an important design consideration for me as a college student.  I use it next to my bed to hold things like my phone charger, bed lamp, book, etc. and it works a wonder.  Without further ado, let's get started!
 
@@ -46,19 +46,19 @@ Next, drill ~.22" holes along the pipe approximately every foot and starting fro
 Ideally, the holes would also be drilled with very consistent spacing on all 4 pipes, but I found that this was not nearly as critical as having the holes aligned in the twisting direction (which is very very critical!).
 
 <div style="text-align:center">
-<img src="pipeStabilize.JPG" style="width:30%;display:inline-block;"/><img src="drillPipe" style="width:30%;display:inline-block;"/>
+<img src="pipeStabilize.JPG" style="width:30%;display:inline-block;"/><img src="drillPipe.JPG" style="width:30%;display:inline-block;"/>
 </div>
 
 ### Step 3: Drill wood platforms
 Although the wood platforms should fit snugly into the brackets, it certainly makes the structure more secure and permanent to bolt/screw through the bracket/platform.  I fit the brackets into the corners of the platforms and drilled through the prescribed holes.
 
 <div style="text-align: center">
-<img src="drillShelf" style="width:30%;display:inline-block;"><img src="shelves.JPG" style="width:30%;display:inline-block;">
+<img src="drillShelf.JPG" style="width:30%;display:inline-block;"><img src="shelves.JPG" style="width:30%;display:inline-block;">
 </div>
 
 ## Assembly
 ### Step 4: Secure brackets to pipes
-<img src="pipes" style="width:25%;float:right;margin:0em 2em;"/>
+<img src="pipes.JPG" style="width:25%;float:right;margin:0em 2em;"/>
 I would definitely advise securing the brackets to the pipes before securing them to the platforms.  Slide the brackets into their proper positions.  I think it makes sense to have the pipe-support part of the bracket on the bottom so that the platforms are exerting compressive forces on the 3D printed parts, especially since the most logical way to print them causes their weak axis to be in the vertical direction.
 
 Screw the brackets in to secure them.  A nut on the other side shouldn't be necessary since the holes should be tight, effectively tapped by the screws, and the screws are only undergoing shear forces.  Although the brackets have a hole on each side, I only used one and it seems plenty strong.
@@ -66,7 +66,7 @@ Screw the brackets in to secure them.  A nut on the other side shouldn't be nece
 ### Step 5: Secure platforms
 Finally, slide the platforms into the brackets and fanagle all four poles around each platform.  It shouldn't be too difficult to align.  Push the brackets on as far as they'll go and insert the screws.  This may be difficult if the pipe holes were drilled slightly twisted along the pipe, but, depending on the hardness of your wood, forcing the screws in should be doable and I can't really thing of a much better solution.  If it's really difficult, you may opt to instead take out the brackets, screw the screw into the pipe alone, and allow the brackets to rest atop the screws.  This will give them rotational freedom with the downside of also giving them vertical freedom when unloaded.  I think this would significantly reduce stability depending on how tight-fitting your printer printed the brackets, but it may still work just fine.
 <div style="text-align: center">
-<img src="complete1" style="width:25%;display:inline-block;"><img src="complete2.JPG" style="width:25%;display:inline-block;"><img src="complete3.JPG" style="width:25%;display:inline-block;">
+<img src="complete1.JPG" style="width:25%;display:inline-block;"><img src="complete2.JPG" style="width:25%;display:inline-block;"><img src="complete3.JPG" style="width:25%;display:inline-block;">
 </div>
 
 ## Conclusion

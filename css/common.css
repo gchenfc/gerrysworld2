@@ -843,6 +843,13 @@ h1 a:link, h1 a:visited, h1 a:hover, h1 a:visited:hover, h1 a:visited {
   margin: 0;
 }
 
+.card-listing .type-tutorial .headerWrap {
+  background-color: rgba(255, 165, 0, 0.6); }
+.card-listing .type-tutorial:hover .headerWrap {
+  background-color: rgba(255, 165, 0, 0.9); }
+.card-listing .type-tutorial h3:before {
+  content: "Tutorial"; }
+
 .card-listing .type-miniproject .headerWrap {
   background-color: rgba(255, 108, 129, 0.3); }
 .card-listing .type-miniproject:hover .headerWrap {
