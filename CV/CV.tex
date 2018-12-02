@@ -1,0 +1,332 @@
+\documentclass[paper=letter,fontsize=11pt]{scrartcl} % KOMA-article class
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	%\textheight=700px                    % Saving trees ;-)
+%\usepackage{url}
+\usepackage[colorlinks=true,
+linkcolor=blue,
+urlcolor=blue]{hyperref}
+\usepackage{float}
+\usepackage{etaremune}
+\usepackage{wrapfig}
+
+\usepackage{attachfile}
+
+\usepackage{enumitem}
+\setitemize{itemsep=0em}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%\addtolength{\voffset}{-40pt}
+%\addtolength{\textheight}{20pt}
+
+\setlength\topmargin{0pt}
+\addtolength\topmargin{-\headheight}
+\addtolength\topmargin{-\headsep}
+\setlength\oddsidemargin{0pt}
+\setlength\textwidth{\paperwidth}
+\addtolength\textwidth{-2in}
+\setlength\textheight{\paperheight}
+%\addtolength\textheight{-3in}
+\addtolength\textheight{-2in}
+\usepackage{layout}
+
+%%% Custom sectioning}{sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan}{optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[2]{\section*{\uppercase{#1} #2}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name}{birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{				  % Same as \EducationEntry
+	\noindent \textbf{#1} \hfill \par      % Jobname
+	% \colorbox{White}{\bf \color{Black}#2} \par  % Duration
+	% \noindent \textit{#3} \par              % Company
+	\noindent\hangindent=2em\hangafter=0 \small #2 % Description
+	\normalsize \par}  % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{White}{%
+			\bf 
+			\parbox{10em}{%
+			\hfill\color{Black}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{White}{\bf \color{Black}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\PaperEntry}[7]{
+		\noindent #1, ``\href{#7}{#2}", \textit{#3}. \textbf{#4} p #5 (#6).}
+
+\newcommand{\ArxivEntry}[3]{
+		\noindent #1, ``\href{http://arxiv.org/abs/#3}{#2}", \textit{{cond-mat/}#3}.}
+        
+\newcommand{\BookEntry}[4]{
+		\noindent #1, ``\href{#3}{#4}", \textit{#3}.}
+        
+\newcommand{\FundingEntry}[5]{
+        \noindent #1, ``#2", \$#3 (#4, #5).}
+
+\newcommand{\TalkEntry}[4]{
+		\noindent #1, #2, #3 #4}
+
+\newcommand{\ThesisEntry}[5]{
+		\noindent #1 -- #2 #3 ``#4" \textit{#5}}
+
+\newcommand{\CourseEntry}[3]{
+		\noindent \item{#1: \textbf{#2} \\ #3}}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+
+%\layout
+
+% you can upload a photo and include it here...
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\vspace*{-2em}
+		\includegraphics[width=0.2\textwidth]{Gerry.JPG}
+\end{wrapfigure}
+
+\MyName{Gerry Chen}
+\MySlogan{\vspace{-0.1in}\begin{flushright}
+2013 Mohican Ct.\\
+Cheswick, PA 15024\\
+(412) 956-3047\\
+\href{mailto:gerry.chen2015@gmail.com}{gerry.chen2015@gmail.com}\\
+\href{https://gerry-chen.com}{https://gerry-chen.com}
+\end{flushright}}
+
+%\sepspace
+ \NewPart{Overview}{}
+ Interested in robotics perception and computer vision.
+ Duke University class of 2019.
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry{Duke University}{08/2015 to 05/2019}{Pratt School of Engineering}{BSE Electrical \& Computer Engineering, BSE Mechanical Engineering, Math (minor)\\
+3.87/4.00 cumulative GPA, Dean's List every semester}
+
+\NewPart{Research Experience}{}
+\WorkEntry{Power Electronics}{08/2018 to Present}{Duke University - Dr. Stefan Goetz and Dr. Angel Peterchev}{
+	\begin{itemize}
+		\item Implementing FOC motor controller using modular multilever series-parallel converter to reduce noise and losses
+		\item Thermal analysis of battery/converter modules for use in automotive setting
+		\item Electrical losses analysis for MOSFET selection in converter modules
+	\end{itemize}
+}
+\sepspace
+
+\WorkEntry{Fuel Cell Hybrid Vehicle}{08/2017 to 05/2018}{Duke University - Dr. Josiah Knight and Dr. Nico Hotz}{
+	\begin{itemize}
+		\item Optimization of fuel cell operating parameters for use in hybrid vehicle to achieve 58.9\% in-system efficiency (increase from baseline efficiency of 40\%)
+		\item Design and optimization of voltage converter for active supercapacitor load power leveling system resulting in 22\% higher efficiency
+		\item Writing papers for fuel cell optimization, hybrid system integration, and vehicle system level design
+	\end{itemize}
+}
+\sepspace
+
+\WorkEntry{Robotics Motion Planning}{01/2017 to 05/2018}{Intelligent Motion Labratory - Dr. Kris Hauser}{
+	\begin{itemize}
+		\item Applied convolution-based image similarity metrics for database assisted vehicle path planning
+		\item Fabricated silicon and polyurethane cornea models with $<$50um repeatability for use in surgical robot testing
+		\item Submitted joint paper to IEEE International Conference on Robotics and Automation 2018
+(Accepted 01/12/2018) - work funded by NSF Research Experiences for Undergraduates (REU) to implement a Precision Positioning Unit (PPU) on the Tele-Robotic Intelligent Nursing Assistant (TRINA)
+		\item Fabricated polyurethane “finger” tip with integrated tactile sensor and 95.7\% actuation success rate
+	\end{itemize}
+}
+
+%%% Extracurriculars
+%%% ------------------------------------------------------------
+\NewPart{Extracurricular Activities}{}
+
+\WorkEntry{Co-President}{08/2015 to Present}{Duke Electric Vehicles Team}{
+	\begin{itemize}
+		\item World Record (2018): World's most fuel efficient vehicle
+		\item Leading creation of a fully automonous vehicle to allow the vehicle to follow a ``total system energy'' optimized path subject to physical control constraints
+		\item Leading effort towards World's most efficient electric vehicle (2019)
+		\item Co-lead hydrogen fuel cell hybrid vehicle for 2018 to achieve 14,573 MPGe
+		\item Design + Manufacture + Test the high power super-capacitor control board to increase vehicle efficiency by 22\%
+		\item Create an automated testing system resulting in fuel cell efficiency increase from 40\% to 63\%
+		\item Design + Manufacture + Install the carbon fiber inserts to decrease weight and increase modularity
+		\item 2018: 1st place H2, 1st place battery-electric (12,398 MPGe), Technical Innovation Award
+	\end{itemize}
+}
+\sepspace
+
+\WorkEntry{Project Lead}{01/2016 to 01/2018}{Solar Benches}{
+	\begin{itemize}
+		\item Lead technical, financial, and administrative aspcts of augmenting existing campus benches with solar powered night-time task lighting and laptop/phone chargers to raise enthusiasm for clean energy
+		\item Installed 2 test benches on campus after passing safety inspection on an off-site prototype bench
+	\end{itemize}
+}
+
+%%% Skills
+%%% ------------------------------------------------------------
+% \NewPart{Skills}{}
+
+% \SkillsEntry{Programming}{
+% 	\begin{itemize}
+% 		\item Strong command of Matlab and Python
+% 		\item Proficiency in C++, Java, Mathematica, LATEX
+% 		\item Embedded (MCU, FPGA, Jetson) Development
+% 	\end{itemize}
+% }
+
+% \SkillsEntry{CAD}{
+% 	\begin{itemize}
+% 		\item Eagle
+% 		\item SPICE
+% 		\item Solidworks
+% 		\item Autodesk Fusion
+% 	\end{itemize}
+% }
+
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Work History}{}
+
+\WorkEntry{Controls Engineer Intern}{05/2018 to 08/2018}{Deka R\&D - Dirk Van Der Merwe}{
+	\begin{itemize}
+	\item Developed novel 2-wheel balancing control scheme with constrained wheel displacement (patent pending)
+	\item Created multi-system integration over CAN, EtherCAT, RS232 to create hybrid wheeled/legged robot
+	\item Developed stability control of robot w/ powered casters + differential steering to test high speed dynamics
+	\end{itemize}
+}
+\sepspace
+
+\WorkEntry{Robotics Motion Planning Intern}{01/2017 to 05/2018}{Intelligent Motion Labratory - Dr. Kris Hauser}{
+	\begin{itemize}
+	\item Work on PPU for TRINA (see entry in Research Experience)
+	\item Coded (Python, C++) and tested max. continuous range / min. manipulatability arm configurations
+	\end{itemize}
+}
+
+\sepspace
+\WorkEntry{Teaching Assistant}{08/2016 to 05/2018}{Duke University}
+{
+	\begin{itemize}
+		\item \parbox[t]{4.5em}{\bf EGR201:} Mechanics of Statics \hfill Fall 2017
+		\item \parbox[t]{4.5em}{\bf ECE230:} Microelectronics	\hfill Fall 2017
+		\item \parbox[t]{4.5em}{\bf ECE230:} Microelectronics	\hfill Summer 2017
+		\item \parbox[t]{4.5em}{\bf EGR103:} Computational Methods in engineering 	\hfill Fall 2016
+		\item \parbox[t]{4.5em}{\bf CS201: } Data structures and Algorithms 	\hfill Fall 2016
+	\end{itemize}
+}
+
+\sepspace
+\WorkEntry{Tutor}{05/2014 to Present}{Multiple Employers}
+{	
+	\begin{itemize}
+	\setlength\itemsep{0em}
+	\item Duke Academic Resource Center - group instruction:
+		\begin{itemize}
+			  \setlength\itemsep{0em}
+			\item Multivariable Calculus \hfill 08/2016 to Present
+			\item Linear Algebra 		 \hfill 01/2017 to 01/2018
+			\item Differential Equations \hfill 01/2017 to 01/2018
+		\end{itemize}
+	\item Duke Academic Resource Center - individual instruction:
+		\begin{itemize}
+			  \setlength\itemsep{0em}
+			\item Multivariable Calculus \hfill 08/2016 to 05/2017
+			\item Linear Algebra 		 \hfill 08/2016 to 05/2017
+			\item Differential Equations \hfill 08/2016 to 05/2017
+		\end{itemize}
+	\item America Reads America Counts at Duke \hfill 08/2015 to 06/2016
+		\begin{itemize}
+			\item Durham Public Schools
+			\item Math + Reading
+		\end{itemize}
+	\item Kumon Math and Reading Center of Fox Chapel \hfill 05/2014 to 08/2016
+		\begin{itemize}
+			\item personalized curriculum generation for 40+ students
+			\item student performance evaluations
+		\end{itemize}
+	\end{itemize}
+}
+
+% \newpage
+
+\NewPart{Skills}{}
+
+\begin{itemize} %[leftmargin=*]
+	\item Fluency in Matlab, Python, and C++
+	\item Proficiency in Java, \textsc{Mathematica}, \LaTeX
+	\item Embedded Software Development
+	\item Path Planning + Classical Controls
+	\item Eagle, SPICE, Solidworks, Autodesk Fusion
+	\item Experimental design and sensor data acquisition
+\end{itemize}
+
+
+
+%%% Papers
+%%% ------------------------------------------------------------
+
+\NewPart{Conference Papers}{}
+
+\begin{etaremune}
+
+	\item \PaperEntry{F. Wang, \underline{G. Chen}, and K. Hauser}{Robot Button Pressing in Human Environments}{2018 IEEE International Conference on Robotics and Automation (ICRA)}{}{7173-7180}{2018}{http://doi.org/10.1109/ICRA.2018.8463180}
+
+\end{etaremune}
+
+
+% %\NewPart{Pending manuscripts}{\href{http://arxiv.org/find/cond-mat/1/au:+Appelbaum_I/0/1/0/all/0/1}{[arxiv]}}
+% %\begin{itemize}
+% %\item \ArxivEntry{J. Li and \underline{I. Appelbaum}}{D$^-$ donor spin coupling to conduction electrons in silicon}{1308.5621}
+% %\end{itemize}
+
+% \NewPart{Book Chapter}{}
+% \begin{itemize}
+% \item \underline{I. Appelbaum}, \href{http://www.crcpress.com/product/isbn/9781439803776}{``Spin-Polarized Ballistic Hot-Electron Injection and Detection in Hybrid Metal Semiconductor Devices"}, Handbook of Spin Transport and Magnetism (CRC Press, 2011), E.Y. Tsymbal \& I. \v{Z}uti\'c, eds.
+% \end{itemize}
+
+% %\newpage
+
+% \NewPart{Awards}{}
+% \begin{itemize}
+% \item 2016 \href{https://www.aps.org/programs/honors/fellowships/archive-all.cfm?initial=&year=2016&unit_id=DCMP&institution=University+of+Maryland%2C+College+Park}{Fellow, American Physical Society}: “\textit{For advancing the study of spin-polarized electron transport in semiconductors, especially the fundamental processes revealed by coherent and time-resolved spin transport over macroscopic distances in silicon and germanium.}”
+% \end{itemize}
+
+\end{document}
