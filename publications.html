@@ -1,0 +1,50 @@
+---
+title: Publications
+layout: default
+stylesheets: []
+permalink: /publications/index.html
+comments: true
+stylesheets: /css/publication.css
+---
+
+<!-- ********** CONTENT *********** -->
+<div class="wrapper">
+  <h1 id="home-page">Research</h1>
+  <div class="content">
+    Listed below are publications and posters.
+  </div>
+  <br/>
+
+  <!-- ************ IN PROGRESS PROJECTS ************** -->
+    {% assign publications = site.publications | sort: 'year' %}
+    {% for publication in publications reversed %}
+      <div class="publication">
+
+        <div class="publicationrow">
+          <div class="publicationcolumn1">
+            <figure class="imagefig">
+              <img src="{{publication.url | remove: "/index.html" }}/icon.png" alt="{{publication.title}}" style="width: 300px"/>
+            </figure>
+          </div>
+
+          <div class="publicationcolumn2">
+            <header><h3>{{publication.title}}</h3></header>
+            <div class="journal">
+              {{publication.journal}} ({{publication.year}})
+            </div>
+            <div class="author">
+              {{publication.author}}
+            </div>
+            <div class="links">
+              {% if publication.PDF %} [<a class="link-style" href="{{publication.PDF}}">PDF</a>] {% endif %}
+              {% if publication.Poster %} [<a class="link-style" href="{{publication.Poster}}">Poster</a>] {% endif %}
+              {% if publication.Code %} [<a class="link-style" href="{{publication.Code}}">Code</a>] {% endif %}
+              {% if publication.Video %} [<a class="link-style" href="{{publication.Video}}">Video</a>] {% endif %}
+              {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% endif %}
+            </div>
+          </div>
+      </div>
+    {% endfor %}
+
+</div>
+<!-- ********** CONTENT *********** -->
