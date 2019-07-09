@@ -54,6 +54,10 @@
     flex-direction: column;
 }
 
+.wrapper h2 {
+  padding-bottom: 2rem;
+  color: #666;
+}
 .publication h3 {
   margin: 0;
   font-size: 1rem;
@@ -108,7 +112,6 @@
 
 .publicationrow {
 	border-bottom: 1px solid #ddd;
-}
 }
 /* Clear floats after the columns */
 .publicationrow:after {
