@@ -6,7 +6,7 @@ year: "2019"
 date: Jul 9, 2019
 PDF: "Grady2019Vehicle/VPPC2019-Grady-Vehicle.pdf"
 img: "Grady2019Vehicle/icon.png"
-category: "pending"
+category: "proceedings"
 ---
 
 <!--- pages: "7173-7180" --->
