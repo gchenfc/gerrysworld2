@@ -1,5 +1,5 @@
 ---
-title: "A Modular Multilevel Pulsating DC-Link Inverter for Electric Vehicle Drives with Increased Efficiency"
+title: "A Modular Multilevel Pulsating DC-Link Inverter for Electric Vehicle Drives with Increased Efficiency (Pending Acceptance)"
 author: "Zhongxi Li, Aobo Yang, <u>Gerry Chen</u>, Zhiyong Zeng, Angel Peterchev, Stephan Goetz"
 journal: "IEEE International Conference on Robotics and Automation (ICRA)"
 year: "2019"

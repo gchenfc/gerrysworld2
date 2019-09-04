@@ -1,5 +1,5 @@
 ---
-title: "A Study of Energy Losses in the World's Most Fuel-Efficient Vehicle (Pending Acceptance)"
+title: "A Study of Energy Losses in the World's Most Fuel-Efficient Vehicle"
 author: "Patrick Grady, <u>Gerry Chen</u>, Shomik Verma, Aniruddh Marellapudi, Nico Hotz"
 journal: "IEEE Vehicle Power and Propulsion Conference (VPPC)"
 year: "2019"
