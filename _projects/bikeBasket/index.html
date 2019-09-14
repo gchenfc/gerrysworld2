@@ -1,0 +1,99 @@
+---
+title: "Bike Basket"
+description: "A thifty bike basket made in a pinch"
+status: 'completed'
+displaydate: "November, 2015"
+date: November 29, 2015
+
+image: "overview.png"
+imageAltText: "bike basket overview image"
+
+sidepic: "overview.png"
+sidepicfull: "overview.jpg"
+sidepicAltText: "bike basket"
+stylesheets: ["/css/projectPost.css", "/css/slideshowGallery.css"]
+---
+
+<h2>Intro</h2>
+I fixed up a bike my first semester of college at the Durham Bike Co-op and had a great time.  I found, though, that a lot of times I wanted to bike while carrying something small like a to-go lunch or a toolbox or something.  I decided to fashion a makeshift basket for my bike.
+
+<h2>Construction</h2>
+<p>The basket was made from metal coat/shirt hangers (like $10 for 100 hangers on Amazon) and some extra vinyl I had laying around.  The hangers were bent into the appropriate shape and the vinyl sewn onto it.
+
+<h2>Non-idealities</h2>
+<p>The entire installation was not made portable/detachable; the hangers were bent directly around the frame of the bike and the vinyl was sewn around the hangers such that, topologically, it could not be removed.  This was in retrospect a poor decision but did not significantly detract from the utility of the basket and making the basket removable would have sacrificed rigidity.</p>
+
+<p>The construction also looked distinctly "ratchet", but was very functional and unique.  I'd say this was perhaps a plus in preventing bike theft ;)</p>
+
+<p>One thing I would definitely change (and have changed in my future strap-on baskets) is to attach the basket to the back of the bike.  When in the front, the basket makes it quite difficult to lock the bike properly due to the basket running into the bike rack.  One advantage of having the basket front-mounted is being able to see and monitor the payload while riding, but overall I think the inconvenience when locking to a bike rack is significant.</p>
+
+<h2>Conclusions</h2>
+<p>This basket served me surprisingly well - it outlasted my bike actually (3.5 years).  In the end, my bike's pedal assembly failed due to one of the bearing cages having broken causing the bike to be unusable.  Although theoretically repairable, I was ready to move on and fixed up an electric bike from the Duke Electric Vehicles club that had fallen in disrepair.</p>
+
+<p> Overall, I'd consider this project a success.</p>
+
+<h2>Images</h2>
+
+<!-- *** BEGIN SLIDESHOW *** -->
+<div class="slideshow-container">
+  {% assign images = '' | split: '' %}
+  {{images}}
+  {% for image in site.static_files %}
+    {% if image.path contains 'projects/bikeBasket' %}
+      {% assign toAdd = image.path | split:"***" %}
+      {% assign images = images | concat: toAdd %}
+    {% endif %}
+  {% endfor %}
+
+  {% for image in images %}
+      <div class="mySlides fade">
+        <div class="numbertext">{{forloop.index}} / {{forloop.length}}</div>
+        <a href="{{site.baseurl}}{{image}}"><img src="{{site.baseurl}}{{image}}" style="margin:0px auto;max-height: 50vw;"></a>
+        <div class="text"></div>
+      </div>
+  {% endfor %}
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<div style="text-align:center">
+  {% for image in images %}
+    <span class="dot" onclick="currentSlide({{forloop.index}})"></span> 
+  {% endfor %}
+</div>
+<br />
+<!-- *** END SLIDESHOW *** -->
+
+
+
+<!-- slideshow javascript -->
+<script type="text/javascript">
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block"; 
+    dots[slideIndex-1].className += " active";
+  }
+</script>
