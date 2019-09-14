@@ -14,9 +14,19 @@ stylesheets: /css/publication.css
   </div>
   <br />
 
+  <!-- ************ Sort Publications ************** -->
+  {% assign publications = site.publications | sort: 'date' %}
+
   <!-- ************ Pending ************** -->
+  {% assign anyInReview = "false" %}
+  {% for publication in publications reversed %}
+    {% if publication.category == "pending" %}
+      {% assign anyInReview = "true" %}
+    {% endif %}
+  {% endfor %}
+
+  {% if anyInReview=="true" %}
   <h2> In Review </h2>
-    {% assign publications = site.publications | sort: 'year' %}
     {% for publication in publications reversed %}
       {% if publication.category == "pending" %}
         <div class="publication">
@@ -48,10 +58,10 @@ stylesheets: /css/publication.css
         </div>
       {% endif %}
     {% endfor %}
+  {% endif %}
 
   <!-- ************ Conference Proceedigs ************** -->
   <h2> Conference Proceedings </h2>
-    {% assign publications = site.publications | sort: 'year' %}
     {% for publication in publications reversed %}
       {% if publication.category == "proceedings" %}
         <div class="publication">
@@ -86,7 +96,6 @@ stylesheets: /css/publication.css
 
   <!-- ************ Unpublished ************** -->
   <h2> Unpublished </h2>
-    {% assign publications = site.publications | sort: 'year' %}
     {% for publication in publications reversed %}
       {% if publication.category == "unpublished" %}
         <div class="publication">

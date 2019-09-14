@@ -1,7 +1,7 @@
 ---
 title: "DIY Thermostat Controller"
 description: "Shoddy IoT thermostat controller hack for my dorm room"
-status: 'in progress'
+status: 'stale'
 displaydate: "Sept. 14, 2018"
 date: Sept. 14, 2018
 

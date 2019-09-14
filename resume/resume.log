@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 DEC 2018 03:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 SEP 2019 11:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**resume.tex
+**resume
 (./resume.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
@@ -455,29 +455,29 @@ LaTeX Info: Redefining \nameref on input line 26.
 \openout3 = `resume.out'.
 
 
-Overfull \hbox (13.65pt too wide) in paragraph at lines 29--132
+Overfull \hbox (13.65pt too wide) in paragraph at lines 29--141
  [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
 
 (./resume.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 Package rerunfilecheck Info: File `resume.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
  ) 
 Here is how much of TeX's memory you used:
  7297 strings out of 493089
  105632 string characters out of 6134842
- 204361 words of memory out of 5000000
+ 203361 words of memory out of 5000000
  10526 multiletter control sequences out of 15000+600000
  11991 words of font info for 46 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 42i,19n,28p,403b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,19n,28p,399b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -485,7 +485,7 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on resume.pdf (1 page, 88827 bytes).
+Output written on resume.pdf (1 page, 88343 bytes).
 PDF statistics:
  44 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream

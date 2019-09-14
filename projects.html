@@ -14,11 +14,19 @@ comments: true
     This page lists some of the projects I've worked on over the years.  These are the ones that are mostly unstructured and done in my free time.  For more structured, academic involvements and projects, see <a href="/activities/">Activities/Experiences</a>.  Enjoy :)
   </div>
 
+
+  {% assign projects = site.projects | sort: 'date' %}
   <!-- ************ IN PROGRESS PROJECTS ************** -->
+  {% assign anyInProgress = "false" %}
+  {% for project in projects reversed %}
+    {% if project.status == "in progress" %}
+      {% assign anyInProgress = "true" %}
+    {% endif %}
+  {% endfor %}
+
   <section class="row-section"><h2>In Progress</h2></section>
 
   <ul class="projects-list">
-    {% assign projects = site.projects | sort: 'date' %}
     {% for project in projects reversed %}
       {% if project.status == 'in progress' %}
         <li class="project">
@@ -42,12 +50,15 @@ comments: true
     {% endfor %}
 
   </ul>
+  {% if anyInProgress=="false" %}
+    Too busy, none at the moment for side projects!
+  {% endif %}
+
 
   <!-- ************ COMPLETED PROJECTS ************** -->
   <section class="row-section"><h2>Comleted</h2></section>
 
   <ul class="projects-list">
-    {% assign projects = site.projects | sort: 'date' %}
     {% for project in projects reversed %}
       {% if project.status == 'completed' %}
         <li class="project">
@@ -71,6 +82,43 @@ comments: true
     {% endfor %}
 
   </ul>
+
+  <!-- ************ DEAD PROJECTS ************** -->
+  {% assign anyDeadProjects = "false" %}
+  {% for project in projects reversed %}
+    {% if project.status == "stale" %}
+      {% assign anyDeadProjects = "true" %}
+    {% endif %}
+  {% endfor %}
+
+  {% if anyDeadProjects=="true" %}
+  <section class="row-section"><h2>Tabled Indefinitely</h2></section>
+
+  <ul class="projects-list">
+    {% for project in projects reversed %}
+      {% if project.status == 'stale' %}
+        <li class="project">
+          <header><h3><a href="{{project.url}}" style="color:inherit;">
+            {{project.title}}</a></h3></header>
+
+          <figure class="imagefig">
+            <a href="{{project.url}}"><img src="{{project.url | remove: "/index.html" }}/{{project.image}}" alt="{{project.imageAltText}}" /></a>
+          </figure>
+
+          <div class="description">
+            <a href="{{project.url}}" style="text-decoration: none; color:inherit;">{{project.description}}</a>
+          </div>
+
+          <div class="timestamp">
+            {{project.displaydate}}
+          </div>
+        </li>
+      {% endif %}
+
+    {% endfor %}
+
+  </ul>
+  {% endif %}
 
 </div>
 <!-- ********** CONTENT *********** -->

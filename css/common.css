@@ -279,6 +279,17 @@ a {
       color: #222; }
   a:active {
     color: #280680; }
+p a {
+  color: #00F;
+  transition: all .3s; }
+  p a:hover {
+    color: #00a; }
+  p a:visited {
+    color: #808; }
+    p a:visited:hover {
+      color: #80f; }
+  p a:active {
+    color: #280680; }
 
 /* Figures & other elements
    ========================================================================== */

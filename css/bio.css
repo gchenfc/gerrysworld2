@@ -31,6 +31,19 @@
   }
 }
 
+/* Links
+   ========================================================================== */
+a {
+  color: #00F;
+  transition: all .3s; }
+  a:hover {
+    color: #F00; }
+  a:visited {
+    color: #808; }
+    a:visited:hover {
+      color: #F08; }
+  a:active {
+    color: #280680; }
 
 @supports (display: grid) {
   .wrapper > * {
