@@ -431,8 +431,12 @@ p{
 }
 
 .header {
-  background-color: rgba(18, 76, 105, .98);
-  background-image: url("/img/blueTexture.png");
+  background-color: rgba(0, 200, 0, .98);
+  /*background-image: url("/img/blueTexture.png");*/
+  background-image: linear-gradient(130deg, rgba(150,150,255,0.4), 
+                                            rgba(0,0,255,0.8), 
+                                            /*rgba(0,0,205,0.8), */
+                                            rgba(255,0,255,0.8));
   color: #fff;
   padding: .5rem 0 0 0;
   margin: 0; }
@@ -442,8 +446,12 @@ p{
 }
 
 .footer {
-  background-color: rgba(18, 76, 105, .98);
-  background-image: url("/img/blueTexture.png");
+  background-color: rgba(0, 255, 0, .98);
+  /*background-image: url("/img/blueTexture.png");*/
+  background-image: linear-gradient(310deg, rgba(150,150,255,0.4), 
+                                            rgba(150,150,255,0.8), 
+                                            /*rgba(0,0,205,0.8), */
+                                            rgba(255,150,255,0.8));
   color: #000;
   padding: 1rem 0;
   margin: 4rem 0 0 0;
@@ -462,13 +470,13 @@ p{
   border-radius: 3px; }
 
 .main {
-  border-bottom: 1px solid #222;
+  /*border-bottom: 1px solid #222;*/
   background-color: rgba(255, 255, 255, 0.6);
   transition: all;
   transition-duration: .5s; }
 
 .auxMenu {
-  border-bottom: 1px solid #222;
+  /*border-bottom: 1px solid #222;*/
   background-color: rgba(255, 255, 255, 0.6);
   transition: all;
   transition-duration: .5s;
@@ -534,10 +542,21 @@ li.dropdown {
     position: absolute;
     /*background-color: rgb(157,183,195);
     background-color: rgba(255,255,255,.6);*/
-    background: linear-gradient(0deg,rgba(255,255,255,.6),rgba(255,255,255,.6)),url("/img/blueTexture.png") repeat;
+    background-color: rgba(255,255,255,1);
+    background-image: linear-gradient(50deg, rgba(0,0,155,0.4), 
+                                            rgba(0,0,255,0.2), 
+                                            rgba(0,0,255,0.2), 
+                                            /*rgba(0,0,205,0.2), */
+                                            rgba(255,0,255,0.2));
     width:100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+/*
+  background-color: rgba(255, 255, 255, .98);
+  background-image: linear-gradient(130deg, rgba(150,150,255,0.4), 
+                                            rgba(0,0,255,0.8), 
+                                            /*rgba(0,0,205,0.8), */
+                                            rgba(255,0,255,0.8));*/
 }
 .dropdown-content a {
     color: black;
