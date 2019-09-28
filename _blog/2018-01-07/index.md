@@ -19,8 +19,8 @@ A couple weeks ago when I decided I wanted a comment section, I Googled ways to 
 Getting things working is as easy as making an account at Disqus, "Getting Started" with a Disqus site, typing in some info, and copy/pasting the javascript code according to the instructions that came up.
 
 Pretty much everything will run by default, but since I'm using Jekyll (see <a href="/blog/2017-12-30">this blog post</a>), I had the option to set the "page url"s to the appropriate Jekyll variable 
-{% raw %}("https://gerrysworld.com{{page.url}}"){% endraw %}
-, though according to Disqus they use the url by default anyway.  They claim this may cause issues with urls like "https://gerrysworld.com" vs "http://gerrysworld.com" vs "www.gerrysworld.com" vs etc., so I decided to set the page url just in case.
+{% raw %}("https://gerry-chen.com{{page.url}}"){% endraw %}
+, though according to Disqus they use the url by default anyway.  They claim this may cause issues with urls like "https://gerry-chen.com" vs "http://gerry-chen.com" vs "www.gerry-chen.com" vs etc., so I decided to set the page url just in case.
 
 I also added a Jekyll variable "comments" as per their recommendation to specify whether the page should have a comments section or not.  I set in the YAML config file that all blog posts and projects should have comments section by defualt.  I also added comments to the <a href="/studygroups">math study group page</a> because that was a logical thing to do.
 

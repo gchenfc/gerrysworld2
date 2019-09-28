@@ -34,3 +34,5 @@ Other than that, it was a breeze of an installation.  It even recognized that I 
 
 ## Conclusion
 Netlify seems to be a solid choice for hosting static sites, though the speed is a bit concerting.  I'll investigate more later.  Right now, I have a new domain name "gerry-chen.com" hosted by Netlify and the old one "gerrysworld.com" hosted by firebase.  I'll see how they go.
+
+\*EDIT\* gerrysworld.com has been shut down.

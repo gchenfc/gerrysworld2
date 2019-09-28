@@ -8,7 +8,7 @@ date: Dec. 30, 2017
 ## \*DISCLAIMER\*
 This post has been updated in [this blog post](/blog/2018-01-08).  I switched to Netlify.
 ## Intro
-Google firebase is a plateform geared toward mobile app asset management and storage, but works great for web management and hosting as well.  I used firebase for the database of my <a href="triphi.gerrysworld.com">Secret Santa Site</a> so I decided to also host the secret santa site with firebase's hosting capability.  I was not disappointed.  Following, I decided to move the entire site over.
+Google firebase is a plateform geared toward mobile app asset management and storage, but works great for web management and hosting as well.  I used firebase for the database of my <a href="gerry-chen.com/secretSanta">Secret Santa Site</a> so I decided to also host the secret santa site with firebase's hosting capability.  I was not disappointed.  Following, I decided to move the entire site over.
 
 ## Github Pages vs Firebase
 The biggest factor in motivating my transition was the fact that firebase provides free, automatic SSL certificates.  Even though most people may not care or even notice which sites are served over https, it had bugged me from day one that my site would get a nasty red cross through the http - not secured part of the url on Google Chrome.  And who knows, maybe some day I'll have a real reason to need SSL certificates.
