@@ -47,11 +47,15 @@ stylesheets: /css/publication.css
                 {{publication.author}}
               </div>
               <div class="links">
-                {% if publication.PDF %} [<a class="link-style" href="{{publication.PDF}}">PDF</a>] {% endif %}
-                {% if publication.Poster %} [<a class="link-style" href="{{publication.Poster}}">Poster</a>] {% endif %}
-                {% if publication.Code %} [<a class="link-style" href="{{publication.Code}}">Code</a>] {% endif %}
-                {% if publication.Video %} [<a class="link-style" href="{{publication.Video}}">Video</a>] {% endif %}
-                {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% endif %}
+                {% assign mylinks = "false" %}
+                {% if publication.PDF %} [<a class="link-style" href="{{publication.PDF}}">PDF</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.Poster %} [<a class="link-style" href="{{publication.Poster}}">Poster</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.Code %} [<a class="link-style" href="{{publication.Code}}">Code</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.Video %} [<a class="link-style" href="{{publication.Video}}">Video</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if mylinks == "false" %}
+                  <p>Contact me for further information.</p>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -82,11 +86,15 @@ stylesheets: /css/publication.css
                 {{publication.author}}
               </div>
               <div class="links">
-                {% if publication.PDF %} [<a class="link-style" href="{{publication.PDF}}">PDF</a>] {% endif %}
-                {% if publication.Poster %} [<a class="link-style" href="{{publication.Poster}}">Poster</a>] {% endif %}
-                {% if publication.Code %} [<a class="link-style" href="{{publication.Code}}">Code</a>] {% endif %}
-                {% if publication.Video %} [<a class="link-style" href="{{publication.Video}}">Video</a>] {% endif %}
-                {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% endif %}
+                {% assign mylinks = "false" %}
+                {% if publication.PDF %} [<a class="link-style" href="{{publication.PDF}}">PDF</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.Poster %} [<a class="link-style" href="{{publication.Poster}}">Poster</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.Code %} [<a class="link-style" href="{{publication.Code}}">Code</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.Video %} [<a class="link-style" href="{{publication.Video}}">Video</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if mylinks == "false" %}
+                  <p>Contact me for further information.</p>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -116,12 +124,16 @@ stylesheets: /css/publication.css
                 {{publication.author}}
               </div>
               <div class="links">
-                {% if publication.PDF %} [<a class="link-style" href="{{publication.PDF}}">PDF</a>] {% endif %}
-                {% if publication.Slides %} [<a class="link-style" href="{{publication.Slides}}">Slides</a>] {% endif %}
-                {% if publication.Poster %} [<a class="link-style" href="{{publication.Poster}}">Poster</a>] {% endif %}
-                {% if publication.Code %} [<a class="link-style" href="{{publication.Code}}">Code</a>] {% endif %}
-                {% if publication.Video %} [<a class="link-style" href="{{publication.Video}}">Video</a>] {% endif %}
-                {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% endif %}
+                {% assign mylinks = "false" %}
+                {% if publication.PDF %} [<a class="link-style" href="{{publication.PDF}}">PDF</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.Slides %} [<a class="link-style" href="{{publication.Slides}}">Slides</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.Poster %} [<a class="link-style" href="{{publication.Poster}}">Poster</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.Code %} [<a class="link-style" href="{{publication.Code}}">Code</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.Video %} [<a class="link-style" href="{{publication.Video}}">Video</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% assign mylinks = "true" %} {% endif %}
+                {% if mylinks == "false" %}
+                  <p>Contact me for further information.</p>
+                {% endif %}
               </div>
             </div>
           </div>

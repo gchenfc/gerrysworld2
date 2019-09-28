@@ -5,6 +5,8 @@ author: "<u>Gerry Chen</u>, Zhongxi Li, Carol Xia, Raj Borra, Sam Osheroff, Stef
 journal: "Duke University ECE Dept"
 year: "2019"
 date: Apr 18, 2019
-Poster: "ECE_indstuPoster_2019/20190418_ECE_Poster_EV.pdf"
 category: "unpublished"
 ---
+
+
+<!-- Poster: "ECE_indstuPoster_2019/20190418_ECE_Poster_EV.pdf" -->
