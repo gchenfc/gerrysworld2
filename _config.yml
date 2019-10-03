@@ -33,6 +33,7 @@ exclude:
   - "_projects/Doodlebot/fullMessage.MOV"
   - "_projects/Doodlebot/shortTest.MOV"
   - "_projects/*.MOV"
+  - "_publications/Li2019MMSPCvehicle"
 
 defaults:
   -
