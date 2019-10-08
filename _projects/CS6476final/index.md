@@ -15,16 +15,17 @@ stylesheets: ["/css/projectPost.css", "/css/slideshowGallery.css"]
 ---
 
 ## Introduction
-This is the final project for my team's CS6476 (Computer Vision) class.  An excerpt from our [project proposal](proposal.html):
+This is the final project for my team's CS6476 (Computer Vision) class.  Embedded below is a [pdf](proposal.pdf) version of our project proposal but you can also find an html version [here](proposal.html):
 
-> One of the fundamental tasks for robot autonomous navigation is to perceive and digitalize the surrounding 3D environment.[1] To be usable in mobile robot applications, the mapping system needs to fast and densely recover the environment in order to provide sufficient information for navigation.
->
-> Unlike other 3d reconstruction methods that reconstructs the environment as a 3D point cloud, we hope to extract surfels [2, 3, 4] based on extracted superpixels from intensity and depth images and construct a surfel cloud. This approach is introduced by [5] which can greatly reduces the memory burden of mapping system when applied to large-scale missions. More importantly, outliers and noise from low-quality depth maps can be reduced based on extracted superpixels.
-> 
-> The goal of our project is to reproduce results of Wang et al’s, namely implementing superpixel extraction, surfel initialization, and surfel fusion to generate a surfel-based reconstruction given a camera poses from a sparse SLAM implementation. The input to our system will be an RGB-D video stream with accompanying camera poses and the output will be a surfel cloud map of the environment, similar to Figures 4b or 8 of the original paper [5].
-
-## Project Proposal
-Please see our [project proposal](proposal.html)
+<div style="margin:0 auto;text-align: center; grid-area: lower;">
+    <a href="proposal.pdf">
+        <object width="80%" height="700px" data="proposal.pdf">
+            <embed src="proposal.pdf">
+                <p>This browser does not support PDFs. Please download the PDF to view it: <a href="proposal.pdf">Download PDF</a>.</p>
+            </embed>
+        </object>
+    </a>
+</div>
 
 ## Github
 Please see our [github](https://github.com/Alexma3312/Dense-Mapping)
