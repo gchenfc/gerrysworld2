@@ -14,10 +14,10 @@ sidepicAltText: "Image stitching example (uncropped)"
 ---
 
 ## Introduction
-Image stitching is a straightforward operation given point correspondences between two images.  It can be done by first finding the homography matrix *H* from image 1 to 2 then transforming the entirety of image 1 into image 2's coordinate space.
+Image stitching is a straightforward operation given point correspondences between two images.  It can be done by first finding the homography matrix **H** from image 1 to 2 then transforming the entirety of image 1 into image 2's coordinate space.
 
 ## Math
-*H* relates two coordinate frames as follows:
+**H** relates two coordinate frames as follows:
 
 <img src="eq1.png" style="margin:auto;max-width:200px;display:block;"/>
 
@@ -25,17 +25,17 @@ where _w_ is some arbitrary constant (we have to normalize projection into frame
 
 Given a bunch of corresponding points, we can represent the constraints given by the above equation for each pair of points in matrix form,
 
-<img src="eq2.png" style="margin:auto;max-width:200px;display:block;"/>
+<img src="eq2.png" style="margin:auto;max-width:100px;display:block;"/>
 
-where _h_ is the column vector representing the "flattened" form of H and _L_ is some fancy matrix.
+where _h_ is the column vector representing the "flattened" form of **H** and __L__ is some fancy matrix.
 
-Because the correspondences aren't perfect, this will not be exactly 0, so we instead search for the least squares solution.  We can take this as the eigenvector corresponding to the smallest eigenvalue of L.
+Because the correspondences aren't perfect, this will not be exactly 0, so we instead search for the least squares solution.  We can take this as the eigenvector corresponding to the smallest eigenvalue of **L**.
 
 Please see [here](https://filebox.ece.vt.edu/~F15ECE5554ECE4984/resources/Homography.pdf) for the exact equations.
 
 ## Code Overview
 The general idea of the code is to:
-1. calculate H given corresponding point pairs
+1. calculate **H** given corresponding point pairs
 2. calculate the quadrilateral representing image 1 in image 2's space by transforming the 4 corners of image 1 into image 2's space
 3. create a blank canvas (dubbed "new canvas") that can fit both image 1 in image 2's space, and image 2 in image 2's space
 4. paste image 2 into new canvas
