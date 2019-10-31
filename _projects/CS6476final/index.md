@@ -15,9 +15,9 @@ stylesheets: ["/css/projectPost.css", "/css/slideshowGallery.css"]
 ---
 
 ## Introduction
-This is the final project for my team's CS6476 (Computer Vision) class.  Embedded below is a [pdf](proposal.pdf) version of our project proposal but you can also find an html version [here](proposal.html):
+Plesae click [here](main.html): 
 
-<div style="margin:0 auto;text-align: center; grid-area: lower;">
+<!-- <div style="margin:0 auto;text-align: center; grid-area: lower;">
     <a href="proposal.pdf">
         <object width="80%" height="700px" data="proposal.pdf">
             <embed src="proposal.pdf">
@@ -25,7 +25,7 @@ This is the final project for my team's CS6476 (Computer Vision) class.  Embedde
             </embed>
         </object>
     </a>
-</div>
+</div> -->
 
 ## Github
-Please see our [github](https://github.com/Alexma3312/Dense-Mapping)
+Please see our [github](https://github.gatech.edu/sma96/DenseMapping/)
