@@ -1,5 +1,6 @@
 #!/bin/bash
 
-cp ~/Dropbox\ \(GaTech\)/Apps/Overleaf/CS6476-project/main.html ./proposal.html
-cp ~/Dropbox\ \(GaTech\)/Apps/Overleaf/CS6476-project/main.css . # don't change css filename or else html won't find it
-cp ~/Dropbox\ \(GaTech\)/Apps/Overleaf/CS6476-project/main.pdf ./proposal.pdf
+mv index.md index_bak.md
+cp -r ~/GIT_REPOS/DenseMapping/docs/ .
+mv index_bak.md index.md
+mv index.html main.html
