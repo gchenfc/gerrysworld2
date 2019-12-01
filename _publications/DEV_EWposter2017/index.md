@@ -6,5 +6,6 @@ journal: "Duke University Energy Conference"
 year: "2017"
 date: Nov 1, 2017
 Poster: "DEV_EWposter2017/DEV_poster_energyweek.pdf"
+pptx: "DEV_EWposter2017/DEV_poster_energyweek.pptx"
 category: "unpublished"
 ---
