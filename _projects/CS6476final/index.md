@@ -15,7 +15,7 @@ stylesheets: ["/css/projectPost.css", "/css/slideshowGallery.css"]
 ---
 
 ## Introduction
-Plesae click [here](main.html): 
+Plesae find our documentation [here](main.html): 
 
 <!-- <div style="margin:0 auto;text-align: center; grid-area: lower;">
     <a href="proposal.pdf">
@@ -26,6 +26,9 @@ Plesae click [here](main.html):
         </object>
     </a>
 </div> -->
+
+<!-- <div w3-include-html="main.html"></div> -->
+<iframe src="main.html" style="height:800px;width:100%;border-style:solid;"></iframe>
 
 ## Github
 Please see our [github](https://github.gatech.edu/sma96/DenseMapping/)
