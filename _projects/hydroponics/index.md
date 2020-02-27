@@ -25,5 +25,10 @@ sidepicAltText: "Example 3D plant reconstruction"
 # 3D Reconstruction
 [![3D reconstruction of lettuce](denseReconstruction_med.gif)](denseReconstruction_large.gif)
 
+# Cable Robot
+This is the planned next step of the project: the robot arm will be mounted to a cable robot to monitor many plants autonomously.
+
+<iframe src="https://myhub.autodesk360.com/ue2946219/shares/public/SH56a43QTfd62c1cd968ba4b2659ad04cc3e?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+
 # Other media
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LTQs_Olgw5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
