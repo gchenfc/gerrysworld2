@@ -1,7 +1,7 @@
 ---
 title: "Semi-dense Reconstruction Using Surfels"
 description: "A project to replicate the results of Wang, Gao, & Shen's 2019 ICRA paper (image credit to their paper)"
-status: 'in progress'
+status: 'completed'
 displaydate: "Oct, 2019"
 date: Oct 2, 2019
 
