@@ -1,0 +1,13 @@
+plantcapture.mp4 filter=lfs diff=lfs merge=lfs -text
+denseReconstruction_large.gif filter=lfs diff=lfs merge=lfs -text
+circle0_big.gif filter=lfs diff=lfs merge=lfs -text
+circle1_big.gif filter=lfs diff=lfs merge=lfs -text
+plantcapture_slow.gif filter=lfs diff=lfs merge=lfs -text
+plantcapture.gif filter=lfs diff=lfs merge=lfs -text
+circle2.gif filter=lfs diff=lfs merge=lfs -text
+denseReconstruction_med.gif filter=lfs diff=lfs merge=lfs -text
+denseReconstruction_small.gif filter=lfs diff=lfs merge=lfs -text
+plantcapture_small.gif filter=lfs diff=lfs merge=lfs -text
+plantcapture_small_slow.gif filter=lfs diff=lfs merge=lfs -text
+circle0.gif filter=lfs diff=lfs merge=lfs -text
+circle1.gif filter=lfs diff=lfs merge=lfs -text
