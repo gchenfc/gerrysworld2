@@ -1,0 +1,199 @@
+@article{doi:10.1021/acsami.8b11396,
+  author  = {Shin, Gwang Hyuk and Koo, Bondae and Park, Hamin and Woo, Youngjun and Lee, Jae Eun and Choi, Sung-Yool},
+  title   = {Vertical-Tunnel Field-Effect Transistor Based on a Silicon–MoS2 Three-Dimensional–Two-Dimensional Heterostructure},
+  journal = {ACS Applied Materials \& Interfaces},
+  volume  = {10},
+  number  = {46},
+  pages   = {40212-40218},
+  year    = {2018},
+  doi     = {10.1021/acsami.8b11396},
+  url     = { 
+        https://doi.org/10.1021/acsami.8b11396
+    
+},
+  eprint  = { 
+        https://doi.org/10.1021/acsami.8b11396
+    
+}
+}
+
+
+@article{tassa14icra_DDP_limit,
+	Annote = {good overview of DDP
+
+uses active set method: QP, during backwards pass to allow using DDP even when there are control limits.},
+	Author = {Yuval Tassa and Nicolas Mansard and Emanuel Todorov},
+	Date-Added = {2020-03-13 01:55:47 +0000},
+	Date-Modified = {2020-03-13 03:03:54 +0000},
+	Journal = {2014 IEEE International Conference on Robotics and Automation (ICRA)},
+	Pages = {1168-1175},
+	Title = {Control-limited differential dynamic programming},
+	Year = {2014},
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGnCwwXGBkaG1UkbnVsbNMNDg8QExZXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6IREoACgAOiFBWABIAFgAZccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QOS4uLy4uL0Ryb3Bib3ggKEdhVGVjaCkvRHluYW1pY3MvVGFzc2ExNGljcmFfRERQX2xpbWl0LnBkZk8RAZIAAAAAAZIAAgAADE1hY2ludG9zaCBIRAAAAAAAAAAAAAAAAAAAAAAAAABCRAAB/////xlUYXNzYTE0aWNyYV9ERFBfbGltaXQucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAIAAwAACiBjdQAAAAAAAAAAAAAAAAAIRHluYW1pY3MAAgBBLzpVc2VyczpHZXJyeTpEcm9wYm94IChHYVRlY2gpOkR5bmFtaWNzOlRhc3NhMTRpY3JhX0REUF9saW1pdC5wZGYAAA4ANAAZAFQAYQBzAHMAYQAxADQAaQBjAHIAYQBfAEQARABQAF8AbABpAG0AaQB0AC4AcABkAGYADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgA/VXNlcnMvR2VycnkvRHJvcGJveCAoR2FUZWNoKS9EeW5hbWljcy9UYXNzYTE0aWNyYV9ERFBfbGltaXQucGRmAAATAAEvAAAVAAIADP//AADSHB0eH1okY2xhc3NuYW1lWCRjbGFzc2VzXE5TRGljdGlvbmFyeaIeIFhOU09iamVjdAAIABEAGgAkACkAMgA3AEkATABRAFMAWwBhAGgAcAB7AIIAhQCHAIkAjACOAJAAkgCfAKkA5QJ7AoACiwKUAqECpAAAAAAAAAIBAAAAAAAAACEAAAAAAAAAAAAAAAAAAAKt}}
+
+@incollection{agrawal19nips_diff_cvxopt,
+	Annote = {makes convex optimization solver library (cvxpy) differentiable and compatible with tensorflow
+
+allows tuning of hyperparameters in convex optimization problem using ML / gradient descent
+
+ex.
+
+min J(x, u(x))
+s.t. x' = f(x, u(x))
+
+u(x) has some hyperparameters (ie PID gains) -> optimize over those requires optimizing over an optimazion problem.
+
+see agrawal19arxiv_diffcvxopt_ctrl for examples of how this is used for solving optimal control problems},
+	Author = {Agrawal, Akshay and Amos, Brandon and Barratt, Shane and Boyd, Stephen and Diamond, Steven and Kolter, J. Zico},
+	Booktitle = {Advances in Neural Information Processing Systems 32},
+	Date-Added = {2020-03-24 18:11:39 +0000},
+	Date-Modified = {2020-03-24 18:16:14 +0000},
+	Editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
+	Pages = {9562--9574},
+	Publisher = {Curran Associates, Inc.},
+	Title = {Differentiable Convex Optimization Layers},
+	Url = {http://papers.nips.cc/paper/9152-differentiable-convex-optimization-layers.pdf},
+	Year = {2019},
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGnCwwXGBkaG1UkbnVsbNMNDg8QExZXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6IREoACgAOiFBWABIAFgAZccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QPS4uLy4uL0Ryb3Bib3ggKEdhVGVjaCkvRHluYW1pY3MvYWdyYXdhbDE5bmlwc19kaWZmX2N2eG9wdC5wZGZPEQGiAAAAAAGiAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAAAAAAAAQkQAAf////8dYWdyYXdhbDE5bmlwc19kaWZmX2N2eG9wdC5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAACAAMAAAogY3UAAAAAAAAAAAAAAAAACER5bmFtaWNzAAIARS86VXNlcnM6R2Vycnk6RHJvcGJveCAoR2FUZWNoKTpEeW5hbWljczphZ3Jhd2FsMTluaXBzX2RpZmZfY3Z4b3B0LnBkZgAADgA8AB0AYQBnAHIAYQB3AGEAbAAxADkAbgBpAHAAcwBfAGQAaQBmAGYAXwBjAHYAeABvAHAAdAAuAHAAZABmAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABEABIAQ1VzZXJzL0dlcnJ5L0Ryb3Bib3ggKEdhVGVjaCkvRHluYW1pY3MvYWdyYXdhbDE5bmlwc19kaWZmX2N2eG9wdC5wZGYAABMAAS8AABUAAgAM//8AANIcHR4fWiRjbGFzc25hbWVYJGNsYXNzZXNcTlNEaWN0aW9uYXJ5oh4gWE5TT2JqZWN0AAgAEQAaACQAKQAyADcASQBMAFEAUwBbAGEAaABwAHsAggCFAIcAiQCMAI4AkACSAJ8AqQDpAo8ClAKfAqgCtQK4AAAAAAAAAgEAAAAAAAAAIQAAAAAAAAAAAAAAAAAAAsE=},
+	Bdsk-Url-1 = {http://papers.nips.cc/paper/9152-differentiable-convex-optimization-layers.pdf}}
+
+@misc{agrawal19arxiv_diffcvxopt_ctrl,
+	Annote = {examples of how to use agrawal19nips_diff_cvxopt for solving optimal control problems with convex optimization},
+	Archiveprefix = {arXiv},
+	Author = {Akshay Agrawal and Shane Barratt and Stephen Boyd and Bartolomeo Stellato},
+	Date-Added = {2020-03-24 18:11:28 +0000},
+	Date-Modified = {2020-03-24 18:16:04 +0000},
+	Eprint = {1912.09529},
+	Primaryclass = {math.OC},
+	Title = {Learning Convex Optimization Control Policies},
+	Year = {2019},
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGnCwwXGBkaG1UkbnVsbNMNDg8QExZXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6IREoACgAOiFBWABIAFgAZccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QQi4uLy4uL0Ryb3Bib3ggKEdhVGVjaCkvRHluYW1pY3MvYWdyYXdhbDE5YXJ4aXZfZGlmZmN2eG9wdF9jdHJsLnBkZk8RAbQAAAAAAbQAAgAADE1hY2ludG9zaCBIRAAAAAAAAAAAAAAAAAAAAAAAAABCRAAB/////x9hZ3Jhd2FsMTlhcnhpdl9kaWYjRkZGRkZGRkYucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAIAAwAACiBjdQAAAAAAAAAAAAAAAAAIRHluYW1pY3MAAgBKLzpVc2VyczpHZXJyeTpEcm9wYm94IChHYVRlY2gpOkR5bmFtaWNzOmFncmF3YWwxOWFyeGl2X2RpZmZjdnhvcHRfY3RybC5wZGYADgBGACIAYQBnAHIAYQB3AGEAbAAxADkAYQByAHgAaQB2AF8AZABpAGYAZgBjAHYAeABvAHAAdABfAGMAdAByAGwALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAEhVc2Vycy9HZXJyeS9Ecm9wYm94IChHYVRlY2gpL0R5bmFtaWNzL2FncmF3YWwxOWFyeGl2X2RpZmZjdnhvcHRfY3RybC5wZGYAEwABLwAAFQACAAz//wAA0hwdHh9aJGNsYXNzbmFtZVgkY2xhc3Nlc1xOU0RpY3Rpb25hcnmiHiBYTlNPYmplY3QACAARABoAJAApADIANwBJAEwAUQBTAFsAYQBoAHAAewCCAIUAhwCJAIwAjgCQAJIAnwCpAO4CpgKrArYCvwLMAs8AAAAAAAACAQAAAAAAAAAhAAAAAAAAAAAAAAAAAAAC2A==}}
+
+
+
+@misc{ucar,
+	Title = {About Rainbows}}
+
+@misc{young_2018,
+	Author = {Young, Andrew T},
+	Title = {An Introduction to Mirages},
+	Year = {2018}}
+
+@misc{nave,
+	Author = {Nave, Carl Rod},
+	Title = {Blue Sky and Rayleigh Scattering}}
+
+@misc{patwardhan_2019,
+	Author = {Patwardhan, Ramesh},
+	Month = {Jul},
+	Title = {Chapter 6: Can You Tell?},
+	Year = {2019}}
+
+@misc{wikipedia_2019,
+	Month = {Nov},
+	Title = {Dispersion (optics)},
+	Year = {2019}}
+
+@misc{simon_2018,
+	Author = {Simon, Matt},
+	Month = {Sep},
+	Title = {Fantastically Wrong: The Bizarre Mirages That Once Scared the Bejesus Out of Sailors},
+	Year = {2018}}
+
+@misc{wikipedia_2019,
+	Month = {Nov},
+	Title = {Green flash},
+	Year = {2019}}
+
+@misc{zimmermann_2019,
+	Author = {Zimmermann, Kim Ann},
+	Month = {Jan},
+	Title = {Green Flash: The Beautiful and Elusive Sunset Phenomenon},
+	Year = {2019}}
+
+@misc{patel_2018,
+	Author = {Patel, Prashant},
+	Month = {Mar},
+	Title = {Is the sun a blackbody?},
+	Year = {2018}}
+
+@misc{heidorn_1999,
+	Author = {Heidorn, Keith C},
+	Month = {Jul},
+	Title = {Mirages: A Primer},
+	Year = {1999}}
+
+@misc{james_stull_2019,
+	Author = {James, Samantha and Stull, Roland},
+	Month = {Feb},
+	Title = {Optical Phenomena},
+	Year = {2019}}
+
+@misc{wikipedia_2019,
+	Month = {Nov},
+	Title = {Rainbow},
+	Year = {2019}}
+
+@misc{wikipedia_2019,
+	Month = {Nov},
+	Title = {Rayleigh scattering},
+	Year = {2019}}
+
+@misc{nave,
+	Author = {Nave, Carl Rod},
+	Title = {Red Sunset}}
+
+@misc{wikipedia_2019,
+	Month = {Nov},
+	Title = {Snell's law},
+	Year = {2019}}
+
+@misc{degg_2012,
+	Author = {Degg, Richard},
+	Month = {Apr},
+	Title = {Superior Mirage},
+	Year = {2012}}
+
+@misc{nash_2019,
+	Author = {Nash, Andrew},
+	Month = {Jul},
+	Title = {The Green Ray: A Romance of the Scottish Highland},
+	Year = {2019}}
+
+@misc{henderson,
+	Author = {Henderson, Tom},
+	Title = {The Physics Classroom Tutorial}}
+
+@misc{mcphate_2018,
+	Author = {McPhate, Mike},
+	Month = {Apr},
+	Title = {When the California sun turns green},
+	Year = {2018}}
+
+@misc{britt_2014,
+	Author = {Britt, Robert Roy},
+	Month = {Jun},
+	Title = {Why Is the Sky Blue?},
+	Year = {2014}}
+
+@misc{gerbis_2018,
+	Author = {Gerbis, Nicholas},
+	Month = {Mar},
+	Title = {Why is the sky blue?},
+	Year = {2018}}
+
+@misc{scientificamerican_2003,
+	Month = {Apr},
+	Title = {Why is the sky blue?},
+	Year = {2003}}
+
+@misc{earthsky_2018,
+	Month = {Apr},
+	Title = {Why rainbows are curved},
+	Year = {2018}}
+
+@misc{siegel_2017,
+	Author = {Siegel, Ethan},
+	Month = {Sep},
+	Title = {Why The Sky Is Blue, According To Science},
+	Year = {2017}}

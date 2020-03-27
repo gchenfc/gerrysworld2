@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="Gerry's blog | BibTeX-to-HTML Citation Generator">
+<link rel="icon" 
+      type="image/png" 
+      href="/img/icon.png">
+<title>BibTeX-to-HTML Citation Generator | Projects | Gerry's World</title>
+<link rel="canonical" href="https://gerry-chen.com/projects/bibconverter/webpage/index.html">
+<link rel="stylesheet" href="/css/common.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+<!-- <div style="text-align:center; padding-top: 30px;"> -->
+
+<div class="hello" style="padding:10px; box-shadow: 0px 0px 20px 2px #ff51faa8; background-color: #efeedb; max-width:800px; margin: 30px auto;">
+    <h1 align="center" style="margin-top: 0px;">bibtex references generator (IEEE format)</h1>
+    <div id="uploadcontainer" style="float:left; border-style:solid; border-width:thin; padding:20px; margin:40px; margin-top:10px; text-align:center;">
+        <h2 style="margin-top: 0">Upload a bibtex file</h2>
+        <input id="inputfile" type="file" accept=".bib" onchange="onFileChange(this);">
+        <br />
+        <button id="removeimgbutton" onclick="removeImage()" hidden="true">Remove</button>
+        <button id="uploadimgbutton" onclick="uploadImage()" hidden="true">Convert!</button>
+    </div>
+    <div id="resultcontainer" style="float:right; border-style:solid; border-width:thin; padding:20px; margin:40px; margin-top:10px; font-family: times;">
+        <h2 align="center" style="margin-top: 0; text-align:center">Works Cited</h2>
+        <a id="htmllink" hidden="true">Click here to download the bare html!</a>
+        <div id="result" style="font-size: 9pt; line-height: 9pt;"><h3 align="center">Please upload a bib file...</h3></div>
+    </div>
+    <div style="clear:both; margin:0"></div>
+</div>
+
+<!-- </div> -->
+
+</body>
+
+</html>
