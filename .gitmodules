@@ -1,0 +1,3 @@
+[submodule "_projects/bibconverter/bibtest/pandoc-aws-lambda-binary"]
+	path = _projects/bibconverter/bibtest/pandoc-aws-lambda-binary
+	url = git@github.com:gchenfc/pandoc-aws-lambda-binary.git
