@@ -1,6 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1543738341 "resume.tex" "resume.pdf" "resume" 1567610104
-  "./resume.out" 1543738341 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1592853603 "/Users/Gerry/Documents/Important academic stuff/resume/resume.tex" "/Users/Gerry/Documents/Important academic stuff/resume/resume.pdf" "resume" 1592853603
+  "/Users/Gerry/Documents/Important academic stuff/resume/resume.aux" 1592853603 798 120527c3c5e2e10297719b66b6447ed4 ""
+  "/Users/Gerry/Documents/Important academic stuff/resume/resume.tex" 1592853601 7132 43ddc6302914130a52355bad417c06ff ""
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -88,11 +89,13 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "resume.aux" 1543738341 798 120527c3c5e2e10297719b66b6447ed4 ""
-  "resume.out" 1543738341 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "resume.tex" 1543738340 6631 32a69deba4cd936fdba3801e617f801e ""
+  "resume.aux" 1592853603 798 120527c3c5e2e10297719b66b6447ed4 ""
+  "resume.out" 1592853603 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "resume.tex" 1592853601 7132 43ddc6302914130a52355bad417c06ff ""
   (generated)
-  "resume.aux"
-  "resume.out"
+  "/Users/Gerry/Documents/Important academic stuff/resume/resume.log"
   "resume.pdf"
+  "/Users/Gerry/Documents/Important academic stuff/resume/resume.pdf"
   "resume.log"
+  "resume.out"
+  "resume.aux"
