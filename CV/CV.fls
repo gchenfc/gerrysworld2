@@ -2,8 +2,8 @@ PWD /Users/Gerry/Documents/Important academic stuff/CV
 INPUT /usr/local/texlive/2015/texmf.cnf
 INPUT /usr/local/texlive/2015/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT CV.tex
-OUTPUT CV.log
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.tex
+OUTPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.log
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrartcl.cls
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrartcl.cls
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -125,9 +125,9 @@ INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/tools/layout.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/tools/layout.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/sectsty/sectsty.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/sectsty/sectsty.sty
-INPUT CV.aux
-INPUT CV.aux
-OUTPUT CV.aux
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.aux
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.aux
+OUTPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.aux
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/ucs/ucsencs.def
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/ucs/ucsencs.def
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-cmr.cfg
@@ -144,17 +144,17 @@ INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT CV.out
-INPUT CV.out
-INPUT CV.out
-INPUT CV.out
-INPUT ./CV.out
-INPUT ./CV.out
-OUTPUT CV.out
-OUTPUT CV.pdf
-INPUT Gerry.JPG
-INPUT ./Gerry.JPG
-INPUT ./Gerry.JPG
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.out
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.out
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.out
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.out
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.out
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.out
+OUTPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.out
+OUTPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.pdf
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/Gerry.JPG
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/Gerry.JPG
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/Gerry.JPG
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
@@ -216,9 +216,9 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
-INPUT CV.aux
-INPUT ./CV.out
-INPUT ./CV.out
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.aux
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.out
+INPUT /Users/Gerry/Documents/Important academic stuff/CV/CV.out
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
