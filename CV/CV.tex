@@ -50,7 +50,7 @@ urlcolor=blue]{hyperref}
 %%% ------------------------------------------------------------
 \newlength{\spacebox}
 \settowidth{\spacebox}{8888888888}			% Box to align text
-\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+\newcommand{\sepspace}{\vspace*{0em}}		% Vertical space macro
 
 \newcommand{\MyName}[1]{ % Name
 		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
@@ -85,6 +85,16 @@ urlcolor=blue]{hyperref}
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par}
 
+\newcommand{\AwardEntry}[4]{
+	\noindent \textbf{#1} \hfill      % Study
+	\colorbox{White}{%
+		\bf 
+		%
+		\hfill\color{Black}#2} \par  % Date
+	\noindent \textit{#3} \par        % Title
+	\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+	\normalsize \par}
+
 \newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
 		\noindent \textbf{#1} \hfill      % Jobname
 		\colorbox{White}{\bf \color{Black}#2} \par  % Duration
@@ -94,8 +104,10 @@ urlcolor=blue]{hyperref}
 
 \newcommand{\PaperEntry}[7]{
 		\noindent #1, ``\href{#7}{#2}", \textit{#3}. \textbf{#4} p #5 (#6).}
+% \newcommand{\PaperEntryPending}[7]{
+% 		\noindent #1, ``\href{#7}{#2}", \textit{#3}. \textbf{#4} (#6).}
 \newcommand{\PaperEntryPending}[7]{
-		\noindent #1, ``\href{#7}{#2}", \textit{#3}. \textbf{#4} (#6).}
+		\noindent #1, ``\href{#7}{#2}", \textit{#3}. \textbf{#4} (#6). {\bf Pending Review}}
 
 \newcommand{\ArxivEntry}[3]{
 		\noindent #1, ``\href{http://arxiv.org/abs/#3}{#2}", \textit{{cond-mat/}#3}.}
@@ -115,6 +127,19 @@ urlcolor=blue]{hyperref}
 \newcommand{\CourseEntry}[3]{
 		\noindent \item{#1: \textbf{#2} \\ #3}}
 
+\makeatletter
+% \newcommand{\customlabel}[2]{%
+% \protected@write \@auxout {}{\string \newlabel {#1}{{#2}{}}}}
+\newcommand{\customlabelnaked}[2]{%
+	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{\thepage}{#2}{#1}{}} }%
+	\hypertarget{#1}{}
+}
+\newcommand{\customlabel}[2]{%
+	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{\thepage}{#2}{#1}{}} }%
+	\hypertarget{#1}{#2}
+}
+\makeatother
+	
 %%% Begin Document
 %%% ------------------------------------------------------------
 \begin{document}
@@ -143,43 +168,91 @@ Cheswick, PA 15024\\
 \href{https://gerry-chen.com}{https://gerry-chen.com}
 \end{flushright}}
 
+% \begin{center}
+% 	{\Huge \bf Gerry Chen}\\[0.75em]
+% 	\begin{minipage}{\textwidth}
+% 		\begin{center}
+% 		\makebox[1.5in]{ 412-956-3047} \hspace{1em}\hspace{1em} \text{\url{https://gerry-chen.com}} \hspace{1em}\hspace{1em} \makebox[1.5in]{\text{\href{mailto:gerry.chen@duke.edu}{gerry.chen2015@gmail.com}}}\\
+% 		\end{center}
+% 	\end{minipage}\\
+% 	\rule{\linewidth}{1pt}
+% \end{center}
+% 	% \hline
+% 	% \hline
+
 %\sepspace
  \NewPart{Overview}{}
- Interested in robotics dynamics and control.
- Georgia Tech Robotics PhD cohort of 2019.
+ Joint estimation and control for Cable-Driven Parallel Robots (CDPR).\\
+ Georgia Tech Robotics PhD cohort of 2019.\\
+ Secret Security Clearance (Inactive) -- see \ref{work:afrl}
 
 %%% Education
 %%% ------------------------------------------------------------
 \NewPart{Education}{}
 
-\EducationEntry{Georgia Institute of Technology}{08/2019 to Present}{College of Computing}{PhD Robotics under Professor Frank Dellaert}
+\EducationEntry{Georgia Institute of Technology}{08/2019 to Present}{College of Computing}{PhD Robotics under Professor Frank Dellaert studying joint estimation and control using factor graphs\\4.00/4.00 cumulative GPA}
 
 \EducationEntry{Duke University}{08/2015 to 05/2019}{Pratt School of Engineering}{BSE Electrical \& Computer Engineering, BSE Mechanical Engineering, CS (minor), Math (minor)\\
 3.87/4.00 cumulative GPA, Magna Cum Laude}
 
 \NewPart{Publications}{}
 \begin{etaremune}
-	
-	\item \PaperEntryPending{P. Grady, \underline{G. Chen}, S. Verma, A. Marellapudi, N. Hotz}{A Study of Energy Losses in the World’s Most Fuel-Efficient Vehicle}{IEEE Vehicle Power and Propulsion Conference (VPPC)}{}{}{2019}{https://gerry-chen.com/publications/Grady2019Vehicle/VPPC2019-Grady-Vehicle.pdf}
-	\item \PaperEntryPending{Z. Li, A. Yang, \underline{G. Chen}, Z. Zeng, A. Peterchev, S. Goetz}{A Modular Multilevel Pulsating DC-Link Inverter for Electric Vehicle Drives with Increased Efficiency}{IEEE Transactions on Transportation Electrification (TTE)}{In Review}{}{2019}{https://gerry-chen.com/publications/Li2019MMSPCvehicle/2019TTE_ZLi.pdf}
-	\item \PaperEntry{F. Wang, \underline{G. Chen}, and K. Hauser}{Robot Button Pressing in Human Environments}{2018 IEEE International Conference on Robotics and Automation (ICRA)}{}{7173-7180}{2018}{http://doi.org/10.1109/ICRA.2018.8463180}
+	\item \PaperEntryPending{S. Yang, \underline{G. Chen}, Y. Zhang, F. Dellaert, H. Choset}{Equality Constrained Linear Optimal Control With Factor Graphs}{2021 International Conference on Robotics and Automation (ICRA)}{}{}{2021}{https://gerry-chen.com/publications/Yang21pre_ecLQR/Yang20pre_equalityconstrainedLQR.pdf} \label{pub:yang20icra}
+	\item \PaperEntry{P. Grady, \underline{G. Chen}, S. Verma, A. Marellapudi, N. Hotz}{A Study of Energy Losses in the World’s Most Fuel Efficient Vehicle}{IEEE Vehicle Power and Propulsion Conference (VPPC)}{}{1-6}{2019}{https://doi.org/10.1109/VPPC46532.2019.8952212} \label{pub:grady19vppc}
+	% \item \PaperEntryPending{Z. Li, A. Yang, \underline{G. Chen}, Z. Zeng, A. Peterchev, S. Goetz}{A Modular Multilevel Pulsating DC-Link Inverter for Electric Vehicle Drives with Increased Efficiency}{IEEE Transactions on Transportation Electrification (TTE)}{In Review}{}{2019}{https://gerry-chen.com/publications/Li2019MMSPCvehicle/2019TTE_ZLi.pdf}
+	\item \PaperEntry{F. Wang, \underline{G. Chen}, and K. Hauser}{Robot Button Pressing in Human Environments}{2018 IEEE International Conference on Robotics and Automation (ICRA)}{}{7173-7180}{2018}{http://doi.org/10.1109/ICRA.2018.8463180} \label{pub:wang18icra}
 
 \end{etaremune}
 
+\NewPart{Awards}{}
+\AwardEntry{Sigma Xi Honor Society}{08/2020 to Present}
+	{Member}
+	{Sigma Xi, The Scientific Research Honor Society is a non-profit honor society for scientists and engineers.}
+\AwardEntry{Tau Beta Pi Honor Society}{05/2019 to Present}
+	{Member}
+	{Tau Beta Pi is the oldest engineering honor society in the United States.}
+\clearpage
+\AwardEntry{National Science Foundation Graduate Research Fellows Program}{03/2020}
+	{Honorable Mention}
+	{The NSF GRFP recognizes and supports outstanding graduate students in supported STEM disciplines.}
+% guinness
+% \noindent \textbf{Guinness World Records} \par
+% 	\noindent \textit{Most Efficient Prototype Electric Vehicle} \hfill      % Study
+% 						\colorbox{White}{%
+% 							\bf 
+% 							\parbox{10em}{%
+% 							\hfill\color{Black}06/2019}} \par  % Date
+% 	\noindent\hangindent=2em\hangafter=0 \small {President of the Duke Electric Vehicles team that broke the record with 77.98Wh/100km}
+% 	\normalsize \par
+% 	\noindent \textit{Most Fuel-Efficient Vehicle} \hfill
+% 						\colorbox{White}{%
+% 							\bf 
+% 							\parbox{10em}{%
+% 							\hfill\color{Black}07/2018}} \par  % Date
+% 	\noindent\hangindent=2em\hangafter=0 \small {Head of hydrogen fuel cell development for the record breaking fuel cell vehicle achieving 14,573MPGe.} \normalsize \par
+\AwardEntry{Guinness World Records}{06/2019}
+	{Most Efficient Prototype Electric Vehicle}
+	{President of the Duke Electric Vehicles team that broke the record with 77.98Wh/100km.}
+% end guinness
+\AwardEntry{Duke University Electrical and Computer Engineering Department}{05/2019}
+	{Graduation with Departmental Distinction}
+	{Presented for my distinguished research and academic record.}
+\AwardEntry{Guinness World Records}{07/2018}
+	{Most Fuel-Efficient Vehicle}
+	{Head of hydrogen fuel cell development for the record breaking fuel cell vehicle achieving 14,573MPGe.}
+
 \NewPart{Research Experience}{}
 
-\WorkEntry{Robotic Kinodynamics}{08/2019 to Present}{Georgia Institute of Technology - Dr. Frank Dellaert}{
+\WorkEntry{Robotics Estimation and Control}{08/2019 to Present}{Georgia Institute of Technology - Dr. Frank Dellaert}{
 	\begin{itemize}
-		\item Design and control of a cable driven parallel robot for painting graffiti
-		\item Factor graphs (GTSAM) for MPC
+		\item Cable driven parallel robot (CDPR) design and control
 	\end{itemize}
 }
 \sepspace
-\pagebreak
 
 \WorkEntry{Power Electronics}{08/2018 to 05/2019}{Duke University - Dr. Stefan Goetz and Dr. Angel Peterchev}{
 	\begin{itemize}
-		\item Implementing novel FOC motor controller using modular multilever series-parallel converter to self-balance battery cells, reduce noise, increase voltage ratings, and minimize losses
+		\item Implemented novel FOC motor controller using modular multilever series-parallel converter to self-balance battery cells, reduce noise, increase voltage ratings, and minimize losses
 		\item Thermal analysis of battery/converter modules for use in automotive setting
 		\item Electrical losses analysis for MOSFET selection in converter modules
 		\item Installation of novel motor controller in electric vehicle to test practical cell-balancing performance
@@ -191,7 +264,7 @@ Cheswick, PA 15024\\
 	\begin{itemize}
 		\item Optimization of fuel cell operating parameters for use in hybrid vehicle to achieve 58.9\% in-system efficiency (increase from baseline efficiency of 40\%)
 		\item Design and optimization of voltage converter for active supercapacitor load power leveling system resulting in 22\% higher vehicle efficiency
-		\item Writing papers for fuel cell optimization, hybrid system integration, and vehicle system level design
+		\item See Publication \ref{pub:grady19vppc} -- fuel cell vehicle system level design % Writing papers for fuel cell optimization, hybrid system integration, and vehicle system level design
 	\end{itemize}
 }
 \sepspace
@@ -201,45 +274,9 @@ Cheswick, PA 15024\\
 	\begin{itemize}
 		\item Applied convolution-based image similarity metrics for database assisted vehicle path planning
 		\item Fabricated silicon and polyurethane cornea models with $<$50um repeatability for use in surgical robot testing
-		\item Submitted joint paper to IEEE International Conference on Robotics and Automation 2018
-(Accepted 01/12/2018) - work funded by NSF Research Experiences for Undergraduates (REU) to implement a Precision Positioning Unit (PPU) on the Tele-Robotic Intelligent Nursing Assistant (TRINA)
+		\item See Publication \ref{pub:wang18icra} -- work funded by NSF Research Experiences for Undergraduates (REU) to implement a Precision Positioning Unit (PPU) on the Tele-Robotic Intelligent Nursing Assistant (TRINA)
 		\item Redundancy resolution for minimum manipulability / maximum continuous range joint configurations
 		\item Fabricated polyurethane “finger” tip with integrated tactile sensor and 95.7\% actuation success rate
-	\end{itemize}
-}
-
-%%% Extracurriculars
-%%% ------------------------------------------------------------
-\NewPart{Extracurricular Activities}{}
-
-\WorkEntry{Co-President}{08/2015 to 08/2019}{Duke Electric Vehicles Team}{
-	\begin{itemize}
-		\item World Record (2019): World's most efficient electric vehicle - team president
-		\item World Record (2018): World's most fuel efficient vehicle - head of hydrogen system
-		\item Lead creation of a fully autonomous vehicle to allow the vehicle to follow a ``total system energy'' optimized path subject to physical control constraints
-		\item Co-lead hydrogen fuel cell hybrid vehicle for 2018 to achieve 14,573 MPGe
-		\item Design + Manufacture + Test the high power super-capacitor control board to increase vehicle efficiency by 22\%
-		\item Create an automated testing system resulting in fuel cell efficiency increase from 40\% to 63\%
-		\item Design + Manufacture + Install the carbon fiber inserts to decrease weight and increase modularity
-		\item 2018: 1st place H2, 1st place battery-electric (12,398 MPGe), Technical Innovation Award at the Shell Eco-Marathon Americas
-	\end{itemize}
-}
-\sepspace
-\pagebreak
-
-\WorkEntry{CTO}{08/2018 to 05/2019}{Delta Band Inc. - \href{deltatrainer.fit}{deltatrainer.fit}}{
-	\begin{itemize}
-		\item Designed all electrical systems of the strength training workout tracker watch based on machine learning
-		\item Currently on 7th generation electrical boards (Dec 2018)
-		\item Initiating small-scale (100 devices) manufacturing for beta-testing devices to be shipped Jan 2019
-	\end{itemize}
-}
-\sepspace
-
-\WorkEntry{Project Lead}{01/2016 to 01/2018}{Solar Benches}{
-	\begin{itemize}
-		\item Lead technical, financial, and administrative aspcts of augmenting existing campus benches with solar powered night-time task lighting and laptop/phone chargers to raise enthusiasm for clean energy
-		\item Installed 2 test benches on campus after passing safety inspection on an off-site prototype bench
 	\end{itemize}
 }
 
@@ -268,6 +305,8 @@ Cheswick, PA 15024\\
 %%% ------------------------------------------------------------
 \NewPart{Work History}{}
 
+\customlabelnaked{work:afrl}{Integrated Control and Estimation Intern}
+% \WorkEntry{\customlabel{work:afrl}{Integrated Control and Estimation Intern}}{06/2020 to Present}{Air Force Research Laboratory (Eglin AFB) - Dr. Adam Rutkowski} {
 \WorkEntry{Integrated Control and Estimation Intern}{06/2020 to Present}{Air Force Research Laboratory (Eglin AFB) - Dr. Adam Rutkowski} {
 	\begin{itemize}
 		\item Refine collaborative vehicle control with imperfect multi-vehicle trajectory estimations
@@ -345,9 +384,50 @@ Cheswick, PA 15024\\
 	\end{itemize}
 }
 
+%%% Extracurriculars
+%%% ------------------------------------------------------------
+\NewPart{Extracurricular Activities}{}
+
+\WorkEntry{Co-President}{08/2015 to 08/2019}{Duke Electric Vehicles Team}{
+	\begin{itemize}
+		\item World Record (2019): World's most efficient electric vehicle - team president
+		\item World Record (2018): World's most fuel efficient vehicle - head of hydrogen system
+		\item Lead creation of a fully autonomous vehicle to allow the vehicle to follow a ``total system energy'' optimized path subject to physical control constraints
+		\item Co-lead hydrogen fuel cell hybrid vehicle for 2018 to achieve 14,573 MPGe
+		\item Design + Manufacture + Test the high power super-capacitor control board to increase vehicle efficiency by 22\%
+		\item Create an automated testing system resulting in fuel cell efficiency increase from 40\% to 63\%
+		\item Design + Manufacture + Install the carbon fiber inserts to decrease weight and increase modularity
+		\item 2018: 1st place H2, 1st place battery-electric (12,398 MPGe), Technical Innovation Award at the Shell Eco-Marathon Americas
+	\end{itemize}
+}
+\sepspace
+
+\WorkEntry{CTO}{08/2018 to 05/2019}{Delta Band Inc. - \href{deltatrainer.fit}{deltatrainer.fit}}{
+	\begin{itemize}
+		\item Designed all electrical systems of the strength training workout tracker watch based on machine learning
+		\item Currently on 7th generation electrical boards (Dec 2018)
+		\item Initiating small-scale (100 devices) manufacturing for beta-testing devices to be shipped Jan 2019
+	\end{itemize}
+}
+\sepspace
+
+\WorkEntry{Project Lead}{01/2016 to 01/2018}{Solar Benches}{
+	\begin{itemize}
+		\item Lead technical, financial, and administrative aspcts of augmenting existing campus benches with solar powered night-time task lighting and laptop/phone chargers to raise enthusiasm for clean energy
+		\item Installed 2 test benches on campus after passing safety inspection on an off-site prototype bench
+	\end{itemize}
+}
 % \newpage
 
 \NewPart{Relevant Coursework}{}
+\textit{Georgia Institute of Technology}
+	\begin{itemize}
+		\item CS8803 - Probabilistic Graphical Models in Machine Learning
+		\item CS8803 - Mobile Manipulation
+		% \item CS6601 - Artificial Intelligence
+		% \item CS7476 - Advanced Computer Vision
+	\end{itemize}
+\textit{Duke University}
 	\begin{itemize}
 		\item CS520/MATH565 - Numerical Analysis
 		\item ME524 - Finite Element Method
@@ -362,12 +442,12 @@ Cheswick, PA 15024\\
 \NewPart{Skills}{}
 
 \begin{itemize} %[leftmargin=*]
-	\item Fluency in Matlab, Python, and C++
-	\item Proficiency in ROS, Java, \textsc{Mathematica}, \LaTeX
-	\item Embedded Development (MCU, FPGA, Jetson)
+	\item Strong command of C++, Matlab, and Python
+	\item Estimation, Sensor fusion, SLAM
 	\item Path Planning + Classical Controls
+	\item Embedded Software Development
 	\item Eagle, SPICE, Solidworks, Autodesk Fusion
-	\item Experimental design and sensor data acquisition
+	\item Proficiency in ROS, Java, \textsc{Mathematica}, \LaTeX
 \end{itemize}
 
 
