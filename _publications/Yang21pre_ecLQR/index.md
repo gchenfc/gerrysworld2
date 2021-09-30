@@ -7,6 +7,6 @@ date: Nov 2, 2020
 # pages: "7173-7180"
 arxiv: "https://arxiv.org/abs/2011.01360"
 PDF: "Yang21pre_ecLQR/Yang20pre_equalityconstrainedLQR.pdf"
-img: "Yang21pre_ecLQR/icon.png"
+img: "icon.png"
 category: "proceedings"
 ---

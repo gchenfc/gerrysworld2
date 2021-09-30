@@ -4,7 +4,6 @@ author: "Zhongxi Li, Aobo Yang, <u>Gerry Chen</u>, Zhiyong Zeng, Angel Peterchev
 journal: "IEEE Transactions on Transportation Electrification (TTE)"
 year: "2019"
 date: Jul 24, 2019
-img: "Li2019MMSPCvehicle/icon.png"
 category: "rejected"
 ---
 <!-- date is actually summer 2018 but i wanted it to appear higher up -->
