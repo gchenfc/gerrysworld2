@@ -4,6 +4,7 @@ author: "Patrick Grady, <u>Gerry Chen</u>, Shomik Verma, Aniruddh Marellapudi, N
 journal: "IEEE Vehicle Power and Propulsion Conference (VPPC)"
 year: "2019"
 date: Jul 9, 2019
+DOI: "https://doi.org/10.1109/VPPC46532.2019.8952212"
 PDF: "Grady2019Vehicle/VPPC2019-Grady-Vehicle.pdf"
 img: "Grady2019Vehicle/icon.png"
 category: "proceedings"
