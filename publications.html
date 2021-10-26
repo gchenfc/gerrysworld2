@@ -70,7 +70,7 @@ stylesheets: /css/publication.css
   <!-- ************ Conference Proceedigs ************** -->
   <h2> Conference Proceedings </h2>
     {% for publication in publications reversed %}
-      {% if publication.category == "proceedings" %}
+      {% if publication.category == "proceedings" or publication.category == "journal" %}
         <div class="publication">
 
           <div class="publicationrow">
