@@ -4,8 +4,7 @@ author: "Abigail Cohen, <u>Gerry Chen</u>, Eli Berger, Sushmita Warrier, Guanghu
 journal: "ACS ES&T Engineering"
 year: "2021"
 date: Oct 14, 2021
-# arxiv: "https://arxiv.org/abs/2109.06238"
-# PDF: "Chen22icra_GTGraffiti/Chen22icra_GTGraffiti.pdf"
 img: "plantStructure.png"
 category: "journal"
+DOI: "https://doi.org/10.1021/acsestengg.1c00269"
 ---
