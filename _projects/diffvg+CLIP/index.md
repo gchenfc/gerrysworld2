@@ -1,6 +1,6 @@
 ---
 title: "diffvg+CLIP: Generating Painting Trajectories from Text"
-description: "Combining diffvg, a differentiable rasterizer, with a pre-trained CLIP, a language-image encoder, we can optimize for the vector trajectory which produces a painting described by an input sentence."
+description: "Combining diffvg with CLIP, we can produce painting trajectories given a text prompt."
 status: 'completed'
 displaydate: "Fall, 2021"
 date: Dec 9, 2021
