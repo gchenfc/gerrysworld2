@@ -2,7 +2,7 @@
 title: "diffvg+CLIP: Generating Painting Trajectories from Text"
 description: "Combining diffvg with CLIP, we can produce painting trajectories given a text prompt."
 status: 'completed'
-displaydate: "Fall, 2021"
+displaydate: "Dec. 9, 2021"
 date: Dec 9, 2021
 
 image: "a-small-girl-on-the-grass-play_1024strokes_200it.svg"
