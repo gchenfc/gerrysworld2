@@ -45,7 +45,7 @@ end
 
 
 desc "Build steps to be used by ci runner"
-task :cibuild => %w[exif_find_fail]
+task :cibuild => %w[build exif_find_fail]
 
 
 desc "Fail build if there are images under #{$IMAGE_PATH} that contain EXIF data"
