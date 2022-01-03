@@ -25,3 +25,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# exif remover
+# https://erikw.me/blog/tech/removing-exif-data-from-images-in-your-website-with-ci-pipeline/
+group :development do
+  gem 'exiftool_vendored', '~> 12.0', require: false
+end
+
+gem 'rake', '~> 13.0'
