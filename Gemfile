@@ -8,7 +8,8 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.6.3"
+gem "jekyll", "~> 3.9.1"
+gem "kramdown", ">= 2.3.1"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
@@ -25,3 +26,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# exif remover
+# https://erikw.me/blog/tech/removing-exif-data-from-images-in-your-website-with-ci-pipeline/
+group :development do
+  gem 'exiftool_vendored', '~> 12.0', require: false
+end
+
+gem 'rake', '~> 13.0'
