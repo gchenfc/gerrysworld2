@@ -426,7 +426,7 @@ article {
 .content {
   max-width: 780px; }
 
-p{
+p, li {
   text-align: justify;
 }
 
