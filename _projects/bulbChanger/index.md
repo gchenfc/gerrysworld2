@@ -160,9 +160,9 @@ You may have to apply force outward from the chandelier to prevent the entire ch
 Make sure you get the twisting direction correct - this may be tricky if the bulb is pointing up because the directions are flipped (rotate pipe CW to loosen, CCW to tighten).
 
 <!-- https://photos.app.goo.gl/7iZ7MoEbTFxUg7qh7 -->
-<video style="width:50%;float:right;margin-left:4%;" controls>
-<source src="https://video-downloads.googleusercontent.com/AGQNM9JmZWl5OGTJ-zoXVMhyUhLSEYzdx_uL9Gj4hY3q6g28QSuOaB7T_60tacDiyZZTQW5iWIK69lcQlSiGI5IlS4QPqoGPW3YWJUnTe7Cwmskr9Kj-TKFKt0eX4GXgkLE3-L9wriGtjwkARMGCWcGU26_GI5QW8zWXy9r9-ir6zKiARIgxL7t9y5DatTfuSAknqMLqqXAaxJWvkmwiS6oet-4S1BJqLQ6-qBZLCgaSqi7E_xRBabHbIpBbhkcwJh4kJiA37wSknzbcdhExVrulmlOWtjqb_vJbY3TIH6Jz9uiaZ85Iqv_3gxu_4rCGpIi6zzDmVzqochnj59gdvXo-EW-cMdzX7fUf63rA6m_plM2U2NAvo5jzwx_3rqg2cYNJ78FKl-0Za2min9pTUSf7w6oh8I3fqB0iNSSmilaNz9joFwxK9yBh_Ug5YJ4OAF8EgTNtdy_gWvIM7cZm2EZJQio7tuCawtJG9e5a0AVXA7wqnLe_8pTyyhJowhGSU0nc-zLpmHe7JEfY8Y9k2jorXRMJvTNQwqAF8jnCQ-ERkXXrzo59_ehP64z81nt2oBQav-ReTQF3PmXT6vvP5OsyaGbbxBNXP8E8rWb3M3tnDUvF4On3SvrgejuSMnMBW0uifFbByAvdIRhiCn5VE6GDrSGeo6aFu3FIe1Bvwzxu7zzwW3dvGk7BGJdbw6M5bjAMar7ZrsMkFAz0Rgsp8K3OpYEBlBaDtROJqNAFmtomNE_NCfsL0Lia13UZeFhyvBraB8JH0e8EHPmBng-n_7q_J6qwXRMZnv4sisncVj1boj0yqBDxAycGlZCG6SjYJF8kdemf_Q-zF0OOusw6Z0_zs8c2gMfsFqE7SQHmhuwjxQMDvrRNkXD_RQeqrTBnZx4q9I1VCB4lG2HbIyH7w6lOcs115ISXUqFWrd73h6BZpItG58ega84?authuser=0" type="video/mp4" /> 
-</video>
+<div style="position:relative;padding-bottom:88.888%;width:50%;float:right;margin:0;margin-left:4%;">
+<iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;" width="100%" height="100%" src="https://www.youtube.com/embed/vInn8Ppv4u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Results
 
