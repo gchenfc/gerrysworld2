@@ -21,6 +21,9 @@
 
 </head>
 <body>
+<a id="skip-nav" class="skip-nav-link" href="#main-content">
+  Skip to content
+</a>
 
 <header class="header">
   <div class="wrapper">
@@ -35,7 +38,7 @@
 </header>
 
 <!-- ********** CONTENT *********** -->
-<div class="projectPost">
+<div class="projectPost" id="main-content">
   {% if page.sidepic %}
     <a href="{{page.sidepicfull}}"><img src="{{page.sidepic}}" alt="{{page.sidepicAltText}}" align="right" width=30%/></a>
   {% else %}
