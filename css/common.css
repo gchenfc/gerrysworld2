@@ -610,6 +610,31 @@ li.dropdown {
 .subnav li {
   margin-right: 10px; }
 
+
+/***** Accessibility *****/
+.skip-nav-link {
+  position:absolute;
+  transform: translateY(-100%);
+  background-color: white;
+  padding: .5rem 1.5rem;
+  border-bottom-right-radius: 1rem;
+  transition: 100ms;
+}
+.skip-nav-link:link{
+  color:blue;
+}
+.skip-nav-link:visited{
+  color:blue;
+}
+.skip-nav-link:focus {
+  /* position:static;
+  width:auto;
+  height:auto; */
+  transform: translateY(0);
+}
+
+/***** End Accessibility *****/
+
 h1 small {
   display: block;
   padding: 0.5rem 0 0 0;
