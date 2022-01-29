@@ -26,7 +26,6 @@ nav,
 section,
 summary,
 cite,
-code,
 small {
   display: block; }
 
@@ -341,10 +340,6 @@ hr {
 small {
   line-height: 13px;
   line-height: 0.8125rem; }
-
-code {
-  padding: 26px;
-  padding: 1.625rem; }
 
 .attention-grabber {
   font-size: 19.2px;
@@ -828,10 +823,6 @@ h1 small {
     border-radius: 3px;
     padding: .5rem; } }
 
-code {
-  display: inline;
-  padding: 0; }
-
 h1 a:link, h1 a:visited, h1 a:hover, h1 a:visited:hover, h1 a:visited {
   color: #fff;
   text-decoration: none; }
@@ -1027,3 +1018,43 @@ h1 a:link, h1 a:visited, h1 a:hover, h1 a:visited:hover, h1 a:visited {
   position: absolute;
   top: 20px;
   right: 20px; }
+
+/* Code syntax highlighting
+   ========================================================================== */
+
+pre {
+  margin: 0;
+}
+
+/* Make code with line numbers slightly smaller */
+code table * {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+pre.highlight {
+  padding: 2px 8px;
+  margin: 0;
+  border: 1px solid #dddddd;
+}
+
+code td, code th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+code td.code {
+  width: 100%;
+}
+
+code td.code {
+  padding-left: 12px;
+}
+
+code .gutter {
+  text-align: right;
+}
+code table, code tbody, code tr, code td, code th {
+  margin: 0
+}

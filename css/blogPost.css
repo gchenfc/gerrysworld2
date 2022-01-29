@@ -17,3 +17,7 @@
 .blogPost .timeStamp {
   color:#888;
 }
+
+.blogPost div.highlight, div.highlighter-rouge {
+  margin: 0 0 1rem;
+}
