@@ -59,7 +59,7 @@ def is_probably_prime(n):
 
 ## The Test
 
-See [Wikipedia link](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test), especially the [section on small sets of bases](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test#Testing_against_small_sets_of_bases).
+See [Wikipedia link](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test), especially the [section on small sets of bases](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test#Testing_against_small_sets_of_bases).  Also definitely check out the [Numberphile video starring Matt Parker](https://youtu.be/_MscGSN5J6o)!!!
 
 Given a number $$n$$ that you'd like to check is prime or not, first compute the numbers $$d$$ and $$s$$ such that 
 &nbsp;$$ n - 1 = 2^s d$$&nbsp;&nbsp; (in other words, factor out all the powers of 2 from $$n-1$$).  Then, for various different choices of $$a$$, check that:
@@ -93,9 +93,11 @@ When the number $$n$$ to be tested is small, trying all $$a < 2(\ln n)^2$$ is no
 * if $$n$$ < 341,550,071,728,321, it is enough to test $$a$$ = 2, 3, 5, 7, 11, 13, and 17.
 </blockquote>
 
-For example, people have shown through exhaustive testing that, as long as \mathbf{n<1373653}, then $$n$$ is prime *if and only if* the equivalences hold for $$a=2$$ and $$a=3$$!  In other words, you only need to check the equivalences for $$a=2, 3$$ and you're good up to 1373653! (exclamation points used as excited punctuation, not factorials)
+(For a longer list, check out [OEIS](https://oeis.org/A014233))
 
-For a longer list, check out [OEIS](https://oeis.org/A014233).
+For example, people have shown through exhaustive testing that, as long as $$n<1373653$$, then $$n$$ is prime *if and only if* the equivalences hold for $$a=2$$ and $$a=3$$!  In other words, you only need to check the equivalences for $$a=2, 3$$ and you're good up to 1373653! (exclamation points used as excited punctuation, not factorials)
+
+My interpretation, which I (baselessly) believe to be somewhat unique, is that this is almost like a super efficient compression algorithm to store a database of prime numbers.  Some supercomputers crunched away finding a bunch of prime numbers, and rather than storing them as a giant list, you can instead just store the database in the form of a few key numbers ($$a$$).  Then, on our local computer, we don't have to search a giant database to check if a number is prime, we just use the key numbers, using the Miller-Rabin test as the "decompression algorithm".  Just 7 numbers contain the primality information for 341,550,071,728,321 numbers!  Incredible!
 
 Both the code samples [above](#quick-and-dirty-python-code) use these small-number tests instead of using randomly generated values of $$a$$, which is preferable if $$n$$ is larger than the largest guaranteed value.
 
@@ -108,8 +110,8 @@ def is_prime(n):
     return all(n % k != 0 for k in range(2, math.ceil(math.sqrt(n))))
 ```
 
-I felt like there had to be some clever math hacks for more efficient primality checks, especially for the reasonably large numbers I was checking.
+How could this naive implementation be so common?  I felt like there had to be some clever math hacks for more efficient primality checks, especially for the reasonably large numbers I was checking.  Finally, I expected that there should be standard libraries for this but didn't come across them in my brief search. :/
 
-I had come across a couple people mentioning the Miller-Rabin test but it looked pretty complicated.  Finally I gave in and decided to read what this mysterious Miller-Rabin test was and I was elated to discover actually it's really simple!!!
+I had come across a couple posts mentioning the Miller-Rabin test but it looked pretty complicated.  Finally I gave in and decided to read what this mysterious Miller-Rabin test was and I was elated to discover actually it's really simple!!!
 
-
+And even better, I vaguely remembered seeing the [Numberphile video](https://youtu.be/_MscGSN5J6o) about this a couple months ago, so I was really excited about this :).
