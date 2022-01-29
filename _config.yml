@@ -25,6 +25,10 @@ timezone: America/New_York
 
 # Build settings
 markdown: kramdown
+# kramdown: # use {% highlight <language> linenos %} ... {% endhighlight %} instead
+#   syntax_highlighter_opts:
+#     block:
+#       line_numbers: true
 plugins:
   - jekyll-feed
 
