@@ -71,9 +71,25 @@ a^{2^rd} \equiv -1 \pmod{n}, \;\; \forall 0 \le r < s
 \end{cases}
 $$
 
-If any of these equivalences for any choice of $$a < n$$ are **false**, then $$n$$ is **definitely *not* prime**.
+If, for **any** choice of $$a < n$$, **all** of these congruences are **false**, then $$n$$ is **definitely *not* prime**.
 
-If all the equivalences are **true** after checking a bunch of random choices of $$a$$, then we can be reasonably confident that $$n$$ is **probably prime** (but note that, unless we all the possible choices of $$a$$ according to the [Miller test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test#Miller_test) or the test cases described [next](#guaranteed-small-number-tests), we can't be certain $$n$$ is prime).
+If, for **every** $$a$$ tested, **any** the congruences are **true**, then $$n$$ is **probably prime**.
+
+Furthermore, the more random values for $$a$$ we try, the more "probable" it is that $$n$$ is prime (but note that, unless we all the possible choices of $$a$$ according to the [Miller test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test#Miller_test) or the test cases described [next](#guaranteed-small-number-tests), we can't be *certain* $$n$$ is prime).
+
+This pair of contrapositives may be easier to understand:
+
+<p style="width:max-content;max-width:100%;margin:auto;text-align:center;" markdown=1>
+$$n$$ is prime $$\implies$$ **at least one** of the congruences is **true** for **every** $$\mathbf{a}$$
+</p>
+<p style="width:max-content;max-width:100%;margin:auto;text-align:center;" markdown=1>
+*and*
+</p>
+<p style="width:max-content;max-width:100%;margin:auto;text-align:center;" markdown=1>
+**every** equivalence is **false** for **at least one** $$\mathbf{a}$$ $$\implies$$ $$n$$ is **not** prime
+</p>
+<p></p>
+where $$0\le a < n$$.
 
 ## Guaranteed small-number tests
 
@@ -95,7 +111,7 @@ When the number $$n$$ to be tested is small, trying all $$a < 2(\ln n)^2$$ is no
 
 (For a longer list, check out [OEIS](https://oeis.org/A014233))
 
-For example, people have shown through exhaustive testing that, as long as $$n<1373653$$, then $$n$$ is prime *if and only if* the equivalences hold for $$a=2$$ and $$a=3$$!  In other words, you only need to check the equivalences for $$a=2, 3$$ and you're good up to 1373653! (exclamation points used as excited punctuation, not factorials)
+For example, people have shown through exhaustive testing that, as long as $$n<1373653$$, then $$n$$ is prime *if and only if* at least one congruence holds for each of $$a=2$$ and $$a=3$$!  In other words, you only need to check the congruences for $$a=2, 3$$ and you're good up to 1373653! (exclamation points used as excited punctuation, not factorials)
 
 My interpretation, which I (baselessly) believe to be somewhat unique, is that this is almost like a super efficient compression algorithm to store a database of prime numbers.  Some supercomputers crunched away finding a bunch of prime numbers, and rather than storing them as a giant list, you can instead just store the database in the form of a few key numbers ($$a$$).  Then, on our local computer, we don't have to search a giant database to check if a number is prime, we just use the key numbers, using the Miller-Rabin test as the "decompression algorithm".  Just 7 numbers contain the primality information for 341,550,071,728,321 numbers!  Incredible!
 
