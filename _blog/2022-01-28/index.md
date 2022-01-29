@@ -28,6 +28,8 @@ Reproduced below is my [github gist](https://gist.github.com/gchenfc/8b1442554f9
 
 For a more readable and comprehensive version, check out [my other gist](https://gist.github.com/gchenfc/a0efa92e954a609bf031f7da4cc8dd70).
 
+Finally, also check out [rosettacode.org](https://rosettacode.org/wiki/Miller%E2%80%93Rabin_primality_test#Python) for implementations in tons of other languages and tons of other algorithms!  (I just discovered the site and it's amazing!)
+
 {% highlight python linenos %}
 """
 Simple Miller-Rabin Primality Test
