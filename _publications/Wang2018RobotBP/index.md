@@ -1,6 +1,6 @@
 ---
 title: "Robot Button Pressing in Human Environments"
-author: "Fan Wang, <u>Gerry Chen</u>, Kris Hauser"
+author: "Fan Wang*, <u>Gerry Chen</u>*, Kris Hauser"
 journal: "IEEE International Conference on Robotics and Automation (ICRA)"
 year: "2018"
 date: Dec 2, 2018
