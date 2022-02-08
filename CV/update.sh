@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cp CV.pdf GerryChen_CV.pdf
-cp CV.pdf ../GerryChen_CV.pdf
-cp -r ../CV/* ~/Sites/GerrysWorld/CV/
+cp output/CV.pdf GerryChen_CV.pdf
+cp output/CV.pdf ../GerryChen_CV.pdf
+cp -r ../CV/* ~/GIT_REPOS/gerrysworld2/CV/
