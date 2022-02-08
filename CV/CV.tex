@@ -21,6 +21,10 @@ urlcolor=blue]{hyperref}
 \usepackage{enumitem}
 \setitemize{itemsep=0em}
 
+\usepackage{xifthen}% provides \isempty test
+
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+
 \frenchspacing              % Better looking spacings after periods
 \pagestyle{empty}           % No pagenumbers/headers/footers
 
@@ -84,6 +88,14 @@ urlcolor=blue]{hyperref}
 		\noindent \textit{#3} \par        % School
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par}
+
+\newcommand{\HonorEntry}[3][]{
+	\noindent \textbf{#2} \ifthenelse{\isempty{#1}}{}{-- \textit{#1}} \hfill      % Study
+	\colorbox{White}{%
+		\bf 
+		%
+		\hfill\color{Black}#3} \par  % Date
+	\normalsize \par}
 
 \newcommand{\AwardEntry}[4]{
 	\noindent \textbf{#1} \hfill      % Study
@@ -156,13 +168,12 @@ urlcolor=blue]{hyperref}
 % you can upload a photo and include it here...
 \begin{wrapfigure}{l}{0.5\textwidth}
 	\vspace*{-2em}
-		\includegraphics[width=0.2\textwidth]{Gerry.JPG}
+		\includegraphics[width=0.18\textwidth]{Gerry.JPG}
 \end{wrapfigure}
 
 \MyName{Gerry Chen}
 \MySlogan{\vspace{-0.1in}\begin{flushright}
-2013 Mohican Ct.\\
-Cheswick, PA 15024\\
+Robotics PhD Student, Georgia Tech\\
 (412) 956-3047\\
 \href{mailto:gerry.chen2015@gmail.com}{gerry.chen2015@gmail.com}\\
 \href{https://gerry-chen.com}{https://gerry-chen.com}
@@ -182,9 +193,16 @@ Cheswick, PA 15024\\
 
 %\sepspace
  \NewPart{Overview}{}
- Joint estimation and control for Cable-Driven Parallel Robots (CDPR).\\
- Georgia Tech Robotics PhD cohort of 2019.\\
- Secret Security Clearance (Inactive) -- see \ref{work:afrl}
+%  Combined estimation and control for Cable-Driven Parallel Robots (CDPR).\\
+	Combined estimation and optimal control for robotic systems using factor graphs.\\
+%  Georgia Tech Robotics PhD cohort of 2019.\\
+%  Secret Security Clearance (Inactive) -- see \ref{work:afrl} \\
+ \textit{Keywords: Sensor fusion, estimation, optimal control, computer vision, robotics}
+\\ \textbf{Primary Languages:} C++, Python, MATLAB
+
+% \NewPart{Coding Language Proficiencies}{}
+% \textbf{Primary Languages:} C++, MATLAB, Python\\
+% \textbf{Secondary Languages:} ROS, \LaTeX, embedded (C++), Java, \textsc{Mathematica}
 
 %%% Education
 %%% ------------------------------------------------------------
@@ -197,21 +215,27 @@ Cheswick, PA 15024\\
 
 \NewPart{Publications}{}
 \begin{etaremune}
-	\item \PaperEntryPending{S. Yang, \underline{G. Chen}, Y. Zhang, F. Dellaert, H. Choset}{Equality Constrained Linear Optimal Control With Factor Graphs}{2021 International Conference on Robotics and Automation (ICRA)}{}{}{2021}{https://gerry-chen.com/publications/Yang21pre_ecLQR/Yang20pre_equalityconstrainedLQR.pdf} \label{pub:yang20icra}
-	\item \PaperEntry{P. Grady, \underline{G. Chen}, S. Verma, A. Marellapudi, N. Hotz}{A Study of Energy Losses in the World’s Most Fuel Efficient Vehicle}{IEEE Vehicle Power and Propulsion Conference (VPPC)}{}{1-6}{2019}{https://doi.org/10.1109/VPPC46532.2019.8952212} \label{pub:grady19vppc}
+	\item \PaperEntry{\underline{G. Chen}, S. Baek, J. Florez, W. Qian, S. Leigh, S. Hutchinson, and F. Dellaert}{
+		GTGraffiti: Spray Painting Graffiti Art from Human Painting Motions with a Cable Driven Parallel Robot}{IEEE International Conference on Robotics and Automation (ICRA)}{}{3-19}{2022 - in press}{https://arxiv.org/abs/2109.06238} \label{pub:cohen22est}
+	\item \PaperEntry{A. Cohen, \underline{G. Chen}, E. Berger, S. Warrier, G. Lan, E. Grubert, F. Dellaert, Y. Chen}{Dynamically Controlled Environment Agriculture: Integrating Machine Learning and Mechanistic and Physiological Models for Sustainable Food Cultivation}{ACS ES\&T Engineering}{}{3-19}{2022}{https://doi.org/10.1021/acsestengg.1c00269} \label{pub:cohen22est}
+	\item \PaperEntry{S. Yang, \underline{G. Chen}, Y. Zhang, F. Dellaert, H. Choset}{Equality Constrained Linear Optimal Control With Factor Graphs}{2021 International Conference on Robotics and Automation (ICRA)}{}{}{2021}{https://doi.org/10.1109/ICRA48506.2021.9562000} \label{pub:yang20icra}
+	\item \PaperEntry{P. Grady, \underline{G. Chen}, S. Verma, A. Marellapudi, N. Hotz}{A Study of Energy Losses in the World's Most Fuel Efficient Vehicle}{IEEE Vehicle Power and Propulsion Conference (VPPC)}{}{1-6}{2019}{https://doi.org/10.1109/VPPC46532.2019.8952212} \label{pub:grady19vppc}
 	% \item \PaperEntryPending{Z. Li, A. Yang, \underline{G. Chen}, Z. Zeng, A. Peterchev, S. Goetz}{A Modular Multilevel Pulsating DC-Link Inverter for Electric Vehicle Drives with Increased Efficiency}{IEEE Transactions on Transportation Electrification (TTE)}{In Review}{}{2019}{https://gerry-chen.com/publications/Li2019MMSPCvehicle/2019TTE_ZLi.pdf}
 	\item \PaperEntry{F. Wang, \underline{G. Chen}, and K. Hauser}{Robot Button Pressing in Human Environments}{2018 IEEE International Conference on Robotics and Automation (ICRA)}{}{7173-7180}{2018}{http://doi.org/10.1109/ICRA.2018.8463180} \label{pub:wang18icra}
 
 \end{etaremune}
 
-\NewPart{Awards}{}
-\AwardEntry{Sigma Xi Honor Society}{08/2020 to Present}
-	{Member}
-	{Sigma Xi, The Scientific Research Honor Society is a non-profit honor society for scientists and engineers.}
-\AwardEntry{Tau Beta Pi Honor Society}{05/2019 to Present}
-	{Member}
-	{Tau Beta Pi is the oldest engineering honor society in the United States.}
-\clearpage
+\NewPart{Honors and Awards}{}
+% \textcolor{red}{TODO(gerry): check the dates on the honor societies}\\
+\HonorEntry[]{Sigma Xi Honor Society}{08/2020 to Present}
+	% {Sigma Xi, The Scientific Research Honor Society is a non-profit honor society for scientists and engineers.}
+\HonorEntry[NC Gamma Chapter]{Tau Beta Pi Honor Society}{05/2019 to Present}
+	% {Tau Beta Pi is the oldest engineering honor society in the United States.}
+\HonorEntry[Delta Lambda Chapter]{IEEE Eta Kappa Nu Honor Society}{01/2018 to Present}
+	% {Eta Kappa Nu is the honor society of IEEE.}
+\HonorEntry[Pi Iota Chapter]{Pi Tau Sigma Honor Society}{01/2017 to Present}
+	% {Pi Tau Signa is the International Honor Society for Mechanical Engineers.}
+
 \AwardEntry{National Science Foundation Graduate Research Fellows Program}{03/2020}
 	{Honorable Mention}
 	{The NSF GRFP recognizes and supports outstanding graduate students in supported STEM disciplines.}
@@ -245,6 +269,7 @@ Cheswick, PA 15024\\
 
 \WorkEntry{Robotics Estimation and Control}{08/2019 to Present}{Georgia Institute of Technology - Dr. Frank Dellaert}{
 	\begin{itemize}
+		\item Combined estimation and optimal control using factor graphs
 		\item Cable driven parallel robot (CDPR) design and control
 	\end{itemize}
 }
@@ -305,6 +330,15 @@ Cheswick, PA 15024\\
 %%% ------------------------------------------------------------
 \NewPart{Work History}{}
 
+\customlabelnaked{work:zoox}{Software Engineer Intern: Autonomous Vehicle Perception}
+\WorkEntry{Software Engineer Intern: Autonomous Vehicle Perception}{05/2021 to 08/2021}{Zoox - Dr. Subhasis Das} {
+	\begin{itemize}
+		\item Developed smoothing-based tracker for improved object tracking using sensor fusion
+		\item My code achieved improvements in all tracking metrics for use in offline labeling, with 2 patents pending
+	\end{itemize}
+	}
+\sepspace
+
 \customlabelnaked{work:afrl}{Integrated Control and Estimation Intern}
 % \WorkEntry{\customlabel{work:afrl}{Integrated Control and Estimation Intern}}{06/2020 to Present}{Air Force Research Laboratory (Eglin AFB) - Dr. Adam Rutkowski} {
 \WorkEntry{Integrated Control and Estimation Intern}{06/2020 to 08/2020}{Air Force Research Laboratory (Eglin AFB) - Dr. Adam Rutkowski} {
@@ -333,7 +367,7 @@ Cheswick, PA 15024\\
 }
 
 \sepspace
-\WorkEntry{Teaching Assistant}{08/2019 to Present}{Georgia Institute of Technology}
+\WorkEntry{Teaching Assistant}{08/2019 to 12/2019}{Georgia Institute of Technology}
 {
 	\begin{itemize}
 		\item \parbox[t]{4.5em}{\bf CS3630:} Intro Perception \& Robotics \hfill Fall 2019
@@ -422,21 +456,23 @@ Cheswick, PA 15024\\
 \NewPart{Relevant Coursework}{}
 \textit{Georgia Institute of Technology}
 	\begin{itemize}
+		\item CS7643 - Deep Learning
 		\item CS8803 - Probabilistic Graphical Models in Machine Learning
+		\item CS7476 - Advanced Computer Vision
 		\item CS8803 - Mobile Manipulation
-		% \item CS6601 - Artificial Intelligence
-		% \item CS7476 - Advanced Computer Vision
+		\item CS6601 - Artificial Intelligence
+		\item ECE6553 - Optimal Control
 	\end{itemize}
 \textit{Duke University}
 	\begin{itemize}
 		\item CS520/MATH565 - Numerical Analysis
-		\item ME524 - Finite Element Method
+		% \item ME524 - Finite Element Method
 		\item MATH577 - Mathematical Modeling
 		\item MATH216 - Linear Algebra and Diff. Equations
 		\item MATH353 - Ordinary and Partial Diff. Equations
 		\item ECE382/ME344 - Control Systems
-		\item ECE350 - Digital Systems
-		\item ECE280 - Intro to Signals and Systems
+		% \item ECE350 - Digital Systems
+		% \item ECE280 - Intro to Signals and Systems
 	\end{itemize}
 
 \NewPart{Skills}{}
