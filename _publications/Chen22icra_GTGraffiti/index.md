@@ -7,6 +7,7 @@ year: "2022 - in press"
 date: May 23, 2022
 arxiv: "https://arxiv.org/abs/2109.06238"
 PDF: "Chen22icra_GTGraffiti/Chen22icra_GTGraffiti.pdf"
+Video: "https://youtu.be/R4ySYTNGv6s"
 img: "icon.jpg"
 category: "proceedings"
 ---
