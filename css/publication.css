@@ -42,10 +42,12 @@
 
 .publication img {
   border: 0px solid #ccc;
-  padding: 10px;
+  padding: 0 10px 0 0;
   position:relative;
   max-width: 100%;
   order: 1;
+  max-height: 120px;
+  object-fit: contain;
 }
 
 @supports (display: grid) {
