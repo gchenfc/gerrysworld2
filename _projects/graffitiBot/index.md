@@ -5,17 +5,19 @@ status: 'in progress'
 displaydate: "Fall, 2019"
 date: Oct 1, 2019
 
-image: "frame1.png"
+image: "../../publications/Chen22icra_GTGraffiti/icon.jpg"
 imageAltText: "CAD model"
 
-sidepic: "frame1.jpeg"
-sidepicfull: "frame1.jpeg"
+sidepic: "frame1.png"
+sidepicfull: "frame1.png"
 sidepicAltText: "Frame built"
 ---
 
 ## Introduction
 
-<p style="padding-bottom:150px"></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R4ySYTNGv6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- <p style="padding-bottom:150px"></p> -->
 
 <div style="width:100%;height:480px;background-color:black;text-align:center;">
   <video style="height:100%;" controls>
