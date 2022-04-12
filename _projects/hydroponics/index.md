@@ -13,6 +13,9 @@ sidepicfull: "denseReconstruction_large.gif"
 sidepicAltText: "Example 3D plant reconstruction"
 ---
 
+# Poster
+[![poster](4_poster_compressed.svg)](4_poster.pdf) 
+
 # Image Capture Robot Arm
 [![image collection process](plantcapture_small.gif)](plantcapture.mp4) 
 
