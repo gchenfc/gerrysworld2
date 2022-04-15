@@ -28,7 +28,7 @@ I'm planning a day-trip and trying to weight my travel options.  I want to inclu
 
 I normalize everything to dollars to make them more comparable/tangible.
 
-TL;DR: check out my [spreadsheet](https://docs.google.com/spreadsheets/d/1G3o4JAGevMSbBjloDhWEH9Z5UhgJwaeFa2cRryaxBQ4/edit?usp=sharing).
+TL;DR: check out my [spreadsheet](https://docs.google.com/spreadsheets/d/1G3o4JAGevMSbBjloDhWEH9Z5UhgJwaeFa2cRryaxBQ4/edit?usp=sharing).  I decided to bus.
 
 # Cost Calculations
 
@@ -67,6 +67,8 @@ I'm pretty sure these both turn out to be very nearly equivalent.  Let me explai
 
 First, option 2 is easy to calculate: just multiply the (probability of death) by the (sum of all future joys) to figure out how much joy you've lost by exposing yourself to death risk.
 
+$$ \boxed{\text{Cost due to chance of death} = (\text{probability of death}) \cdot (\text{sum of all future joys})} \tag{1}\label{eq:cost_to_chance_of_death} $$
+
 Option 1 is more interesting.  The formula should be something like:
 
 $$ E[\text{no trip}] - E[\text{yes trip}] $$
@@ -94,7 +96,7 @@ So the cost ( cost = -value ) of going on the trip is:
 
 $$ E[\text{no trip}] - E[\text{yes trip}] = P(\text{dying}) V(\text{no trip}) - V(\text{the trip itself}) $$
 
-To do a quick check to see if the trip is worth it in the first place, we calculate $$ P(\text{dying}) V(\text{no trip}) $$ and see if it's reasonable.  To compare different transportation methods, the $$ V(\text{the trip itself}) $$ term will cancel and we just compare $$ P(\text{dying}) V(\text{no trip}) $$ for the different methods.  So in other words, the value of we need to calculate is $$ P(\text{dying}) V(\text{no trip}) $$, or in other words, (probability of death) $$\cdot$$ (sum of all future joys), which is exactly the same as in option 1.  (QED)
+To do a quick check to see if the trip is worth it in the first place, we calculate $$ P(\text{dying}) V(\text{no trip}) $$ and see if it's reasonable.  To compare different transportation methods, the $$ V(\text{the trip itself}) $$ term will cancel and we just compare $$ P(\text{dying}) V(\text{no trip}) $$ for the different methods.  So in other words, the value of we need to calculate is $$ P(\text{dying}) V(\text{no trip}) $$, or in other words, (probability of death) $$\cdot$$ (sum of all future joys), which is exactly the same as Eq. \eqref{eq:cost_to_chance_of_death} in option 2.  (QED)
 
 #### Evaluation
 In section [Chance of death](#chance-of-death) we already calculated $$ P(\text{dying}) $$ so now we just need to calculate $$ V(\text{no trip}) := (\text{sum of all future joys})$$.
@@ -113,7 +115,7 @@ Then I arrive at the figure,
 
 $$ (\text{sum of all future joys}) \approx (9125 \text{ joy-days}) \cdot ($400 / \text{joy-day}) = $3.65 \text{ million} $$
 
-Then obviously the cost of traveling due to chance of death is
+Then the cost of traveling due to chance of death according to Eq. \eqref{eq:cost_to_chance_of_death} is
 
 $$ \boxed{P(\text{dying}) \cdot ($3.65 \text{ million})} $$
 
