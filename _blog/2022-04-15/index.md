@@ -67,7 +67,9 @@ I'm pretty sure these both turn out to be very nearly equivalent.  Let me explai
 
 First, option 2 is easy to calculate: just multiply the (probability of death) by the (sum of all future joys) to figure out how much joy you've lost by exposing yourself to death risk.
 
+<div style="width: 100%; overflow-x: scroll;">
 $$ \boxed{\text{Cost due to chance of death} = (\text{probability of death}) \cdot (\text{sum of all future joys})} \tag{1}\label{eq:cost_to_chance_of_death} $$
+</div>
 
 Option 1 is more interesting.  The formula should be something like:
 
