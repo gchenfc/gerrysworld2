@@ -82,7 +82,9 @@ input[type='checkbox'] {
   margin: 0;
 }
 
-.collapsible-content .content-inner > ul {
+.collapsible-content .content-inner ul {
   margin: 0;
+}
+.collapsible-content .content-inner > ul {
   padding-inline-start: 20px;
 }
