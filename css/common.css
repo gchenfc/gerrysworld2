@@ -1,3 +1,6 @@
+/* Collapsible box */
+@import url("collapsible.css");
+
 @charset "UTF-8";
 /*! Gutenberg reset — adapted from Normalize */
 /*@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);*/
@@ -863,9 +866,6 @@ h1 a:link, h1 a:visited, h1 a:hover, h1 a:visited:hover, h1 a:visited {
   transition: all;
   transition-duration: 1s; }
 
-.card-listing .type-random .headerWrap {
-  background-color: rgba(50, 205, 235, 0.3); }
-
 .card-listing .headerWrap{
   background-color: #fff;
   color: #fff;
@@ -895,6 +895,20 @@ h1 a:link, h1 a:visited, h1 a:hover, h1 a:visited:hover, h1 a:visited {
 .card-listing li p{
   margin: 0;
 }
+
+.card-listing .type-random .headerWrap {
+  background-color: rgba(50, 205, 235, 0.3); }
+.card-listing .type-random:hover .headerWrap {
+  background-color: rgba(50, 205, 235, 0.8); }
+.card-listing .type-random h3:before {
+  content: "Random"; }
+
+.card-listing .type-note-to-self .headerWrap {
+  background-color: rgba(119, 213, 129, 0.3); }
+.card-listing .type-note-to-self:hover .headerWrap {
+  background-color: rgba(119, 213, 129, 0.8); }
+.card-listing .type-note-to-self h3:before {
+  content: "Note to self"; }
 
 .card-listing .type-tutorial .headerWrap {
   background-color: rgba(255, 165, 0, 0.6); }

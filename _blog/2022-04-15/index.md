@@ -19,6 +19,30 @@ date: Apr. 15, 2022
 
 </style>
 
+<div class="wrap-collabsible">
+  <input id="collapsible" class="toggle" type="checkbox" checked> <!-- delete "checked" to default to unchecked -->
+  <label for="collapsible" class="lbl-toggle">Contents</label>
+  <div class="collapsible-content">
+    <div class="content-inner" markdown=1>
+
+- [Background](#background)
+- [Cost Calculations](#cost-calculations)
+  - [Direct Costs](#direct-costs)
+  - [Cost of lost productivity](#cost-of-lost-productivity)
+  - [Cost of death](#cost-of-death)
+    - [Chance of death](#chance-of-death)
+    - [Expected value of days lost](#expected-value-of-days-lost)
+      - [Justification of equivalence](#justification-of-equivalence)
+      - [Evaluation](#evaluation)
+- [Final Cost Tables](#final-cost-tables)
+  - [Transportation](#transportation)
+  - [Lodging](#lodging)
+  - [Final Options](#final-options)
+
+</div>
+  </div>
+</div>
+
 # Background
 I'm planning a day-trip and trying to weight my travel options.  I want to include the following costs:
 
