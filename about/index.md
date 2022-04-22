@@ -12,7 +12,7 @@ stylesheets: /css/bio.css
 
 <section class="bio">
   <div class="biopic"> <figure class="imagefig">
-    <img src="/about/bioPic.jpeg" alt="PICTURE OF GERRY" />
+    <a href="channel_islands.jpg"><img src="/about/bioPic.jpeg" alt="PICTURE OF GERRY" /></a>
   </figure> </div>
 
   <div class="content">
