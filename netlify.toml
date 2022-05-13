@@ -1,4 +1,5 @@
 [[redirects]]
   from = "/cs3630-22summer/*"
   to = "https://cs3630-22summer.netlify.app/:splat"
+  force = true
   status = 200
