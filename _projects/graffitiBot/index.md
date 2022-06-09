@@ -13,10 +13,21 @@ sidepicfull: "frame1.png"
 sidepicAltText: "Frame built"
 ---
 
+## Media Attention!
+
+* [VICE](https://www.vice.com/en/article/5d3myx/scientists-are-training-ai-robots-to-write-graffiti)
+* [TechXplore](https://techxplore.com/news/2022-06-gtgraffiti-robot-human.html)
+* [ZME Science](https://www.zmescience.com/science/graffiti-drawing-robot-developed-234673563/)
+* [research.gatech.edu](https://research.gatech.edu/introducing-gtgraffiti-robot-paints-human?utm_medium=email&utm_source=daily-digest&utm_campaign=2022-06-08&utm_content=news)
+* [News8Plus](https://news8plus.com/introducing-gtgraffiti-the-robot-that-paints-like-a-human/)
+
 ## Introduction
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5dH81DFNipQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/R4ySYTNGv6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Random Stuff
 <!-- <p style="padding-bottom:150px"></p> -->
 
 <div style="width:100%;height:480px;background-color:black;text-align:center;">
