@@ -56,6 +56,9 @@ stylesheets: /css/publication.css
                 {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% assign mylinks = "true" %} {% endif %}
                 {% if publication.arxiv %} [<a class="link-style" href="{{publication.arxiv}}">arXiv</a>] {% assign mylinks = "true" %} {% endif %}
                 {% if publication.zip %} [<a class="link-style" href="{{publication.zip}}">zip</a>] {% assign mylinks = "true" %} {% endif %}
+                {% for link in publication.links %}
+                  [<a class="link-style" href="{{link[1]}}">{{link[0]}}</a>] {% assign mylinks = "true" %}
+                {% endfor %}
                 {% if mylinks == "false" %}
                   <p>Contact me for further information.</p>
                 {% endif %}
@@ -98,6 +101,9 @@ stylesheets: /css/publication.css
                 {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% assign mylinks = "true" %} {% endif %}
                 {% if publication.arxiv %} [<a class="link-style" href="{{publication.arxiv}}">arXiv</a>] {% assign mylinks = "true" %} {% endif %}
                 {% if publication.zip %} [<a class="link-style" href="{{publication.zip}}">zip</a>] {% assign mylinks = "true" %} {% endif %}
+                {% for link in publication.links %}
+                  [<a class="link-style" href="{{link[1]}}">{{link[0]}}</a>] {% assign mylinks = "true" %}
+                {% endfor %}
                 {% if mylinks == "false" %}
                   <p>Contact me for further information.</p>
                 {% endif %}
@@ -140,6 +146,9 @@ stylesheets: /css/publication.css
                 {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% assign mylinks = "true" %} {% endif %}
                 {% if publication.arxiv %} [<a class="link-style" href="{{publication.arxiv}}">arXiv</a>] {% assign mylinks = "true" %} {% endif %}
                 {% if publication.zip %} [<a class="link-style" href="{{publication.zip}}">zip</a>] {% assign mylinks = "true" %} {% endif %}
+                {% for link in publication.links %}
+                  [<a class="link-style" href="{{link[1]}}">{{link[0]}}</a>] {% assign mylinks = "true" %}
+                {% endfor %}
                 {% if mylinks == "false" %}
                   <p>Contact me for further information.</p>
                 {% endif %}
