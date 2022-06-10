@@ -17,5 +17,6 @@ links:
   "TechXplore": "https://techxplore.com/news/2022-06-gtgraffiti-robot-human.html"
   "ZME Science": "https://www.zmescience.com/science/graffiti-drawing-robot-developed-234673563/"
   "research.gatech.edu": "https://research.gatech.edu/introducing-gtgraffiti-robot-paints-human?utm_medium=email&utm_source=daily-digest&utm_campaign=2022-06-08&utm_content=news"
+  "dailystar.co.uk": "https://www.dailystar.co.uk/tech/news/robo-banksy-graffiti-robot-could-27187562"
   "News8Plus": "https://news8plus.com/introducing-gtgraffiti-the-robot-that-paints-like-a-human/"
 ---
