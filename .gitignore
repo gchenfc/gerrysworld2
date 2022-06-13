@@ -5,3 +5,5 @@ _site
 **.DS_Store
 !icon.png
 unused
+CV/output
+!CV/output/CV.pdf
