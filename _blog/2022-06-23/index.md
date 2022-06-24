@@ -2,7 +2,7 @@
 title: "Data Scraping"
 postType: "tutorial"
 description: "A simple data scraping example for the National Geographic Explorers Directory."
-date: Apr. 21, 2022
+date: Jun. 23, 2022
 ---
 
 <style>
