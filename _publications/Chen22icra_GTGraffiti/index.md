@@ -10,6 +10,7 @@ PDF: "Chen22icra_GTGraffiti/Chen22icra_GTGraffiti.pdf"
 Video: "https://youtu.be/R4ySYTNGv6s"
 Poster: "Chen22icra_GTGraffiti/Chen22icra_GTGraffiti_poster.pdf"
 img: "./icon.jpg"
+img_crop: false
 category: "proceedings"
 links:
   "Video 2": "https://youtu.be/5dH81DFNipQ"
