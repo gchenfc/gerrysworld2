@@ -46,13 +46,13 @@ a {
     color: #280680; }
 
 @supports (display: grid) {
-  .wrapper > * {
+  .wrapper1 > * {
     width: auto;
     margin: 0;
   }
 }
 
-.wrapper {
+.wrapper1 {
   max-width: 780px;
 }
 

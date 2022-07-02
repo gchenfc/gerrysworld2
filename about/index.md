@@ -4,7 +4,7 @@ layout: default
 stylesheets: /css/bio.css
 ---
 
-<div class="wrapper" markdown="true">
+<div class="wrapper wrapper1" markdown="true">
 
 <h1 id="home-page" style="margin-top: 64px;">About Me</h1>
 
