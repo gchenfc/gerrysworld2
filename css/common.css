@@ -792,7 +792,9 @@ h1 small {
 }
 
 .project h3 {
-  margin: 0; }
+  margin: 0;
+  text-align: center;
+}
 
 .project header {
   order: 1; }
