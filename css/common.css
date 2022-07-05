@@ -474,6 +474,17 @@ p, li {
   padding: 1rem;
   border-radius: 3px; }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hidden_scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hidden_scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .main {
   /*border-bottom: 1px solid #222;*/
   background-color: rgba(255, 255, 255, 0.6);
