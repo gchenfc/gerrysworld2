@@ -1,5 +1,6 @@
-<footer class="footer"><div class="wrapper">
-  <div style="float:left; display: block; width: max-content;">
+<footer class="footer">
+  <div class="wrapper hidden_scrollbar" style="overflow: auto;">
+  <div style="float:left; display: block; width: max-content; margin: 0;">
     {% for social in site.socials %}
       <a href="{{ social.link }}" target="_blank">
         <img alt="{{ social.name }}" src="{{ social.badge }}" style="margin-left:0px" />
@@ -7,12 +8,13 @@
     {% endfor %}
   </div>
 
-  <pre style="margin-bottom: 0;">
+  <pre style="margin-bottom: 0; overflow: visible;">
   Gerry Chen
   412-956-3O47
   gerry [dot] chen2015 [at] gmail [dot] com
 
   Robotics PhD at Georgia Tech
   Est Graduation: Early 2024</pre>
+</div>
 </div>
 </footer>
