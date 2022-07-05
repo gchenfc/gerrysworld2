@@ -86,6 +86,31 @@ collections:
   publications:
     output: true
 
+socials:
+  - name:   "Twitter"
+    link:   "https://twitter.com/intent/follow?screen_name=gchenfc"
+    badge:  "https://img.shields.io/twitter/follow/gchenfc?style=social&label=Twitter"
+  - name:   "Google Scholar"
+    link:   "https://scholar.google.com/citations?user=JIrOb5QAAAAJ&hl=en"
+    badge:  "https://img.shields.io/badge/Google Scholar-_-_?style=social&logo=googlescholar"
+  - name:   "Github"
+    link:   "https://github.com/gchenfc"
+    badge:  "https://img.shields.io/github/stars/gchenfc?label=Github&style=social"
+  - name:   "ORCID"
+    link:   "https://orcid.org/0000-0002-1026-1760"
+    badge:  "https://img.shields.io/badge/ORCiD-_-_?style=social&logo=orcid"
+  - name:   "LinkedIn"
+    link:   "https://www.linkedin.com/in/gerry-chen/"
+    badge:  "https://img.shields.io/badge/Linkedin-_-_?style=social&logo=linkedin"
+  - name:   "YouTube"
+    link:   "https://www.youtube.com/channel/UCzSX_ITIX4dXFOWZ6XX5JBA"
+    badge:  "https://img.shields.io/youtube/channel/views/UCzSX_ITIX4dXFOWZ6XX5JBA?label=Youtube&style=social"
+  - name:   "Facebook"
+    link:   "https://www.facebook.com/gchenfc"
+    badge:  "https://img.shields.io/badge/Facebook-_-_?style=social&logo=facebook"
+  - name:   "Instagram"
+    link:   "https://www.instagram.com/very_merry_gerry/"
+    badge:  "https://img.shields.io/badge/Instagram-_-_?style=social&logo=instagram"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

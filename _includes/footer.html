@@ -1,10 +1,18 @@
 <footer class="footer"><div class="wrapper">
+  <div style="float:left; display: block; width: max-content;">
+    {% for social in site.socials %}
+      <a href="{{ social.link }}" target="_blank">
+        <img alt="{{ social.name }}" src="{{ social.badge }}" style="margin-left:0px" />
+      </a>
+    {% endfor %}
+  </div>
+
   <pre style="margin-bottom: 0;">
   Gerry Chen
   412-956-3O47
   gerry [dot] chen2015 [at] gmail [dot] com
 
   Robotics PhD at Georgia Tech
-  Cohort of 2019</pre>
+  Est Graduation: Early 2024</pre>
 </div>
 </footer>
