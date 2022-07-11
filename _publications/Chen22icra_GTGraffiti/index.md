@@ -22,3 +22,5 @@ links:
   "dailystar.co.uk": "https://www.dailystar.co.uk/tech/news/robo-banksy-graffiti-robot-could-27187562"
   "News8Plus": "https://news8plus.com/introducing-gtgraffiti-the-robot-that-paints-like-a-human/"
 ---
+
+<meta http-equiv="Refresh" content="0; url='/projects/graffitiBot/'" />
