@@ -1,7 +1,15 @@
 .publicationEntry {
-  max-width: 780px; 
+  max-width: 1200px; 
   width:90%;
   margin: auto;}
+
+.publicationEntry h1 {
+  text-align: center;
+}
+
+.publicationEntry h2 {
+  text-align: center;
+}
 
 .publicationEntry h3,h4,h5{
   margin-top: 13px;
@@ -16,6 +24,18 @@
 
 .publicationEntry .timeStamp {
   color:#888;
+}
+
+.publicationEntry .author {
+  text-align: center;
+  font-size: 18pt;
+  font-weight: normal;
+}
+
+.publicationEntry .journal {
+  text-align: center;
+  /* font-size: 18pt; */
+  font-style: italic;
 }
 
 .publication-listing ul {
@@ -68,6 +88,13 @@
 .publication header {
   order: 2;
   margin: 5px 0;
+}
+
+.publication header h3 a:-webkit-any-link {
+  text-decoration: initial;
+}
+.publication header h3 a {
+  color: #000;
 }
 
 .publication .journal {

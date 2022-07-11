@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="{{site.description}} | {{page.description}}">
+<link rel="icon" 
+      type="image/png" 
+      href="/img/icon.png">
+<title>{{page.title}} | Publications | {{site.title}}</title>
+<link rel="canonical" href="https://gerry-chen.com{{page.url}}">
+<link rel="stylesheet" href="/css/common.css">
+{% for stylesheet in page.stylesheets %}
+<link rel="stylesheet" href="{{stylesheet}}">
+{% endfor %}
+
+{% include googleAnalytics.html %}
+
+{% for js in page.js %}
+<script src="{{js}}"></script>
+{% endfor %}
+
+</head>
+<body>
+<a id="skip-nav" class="skip-nav-link" href="#main-content">
+  Skip to content
+</a>
+
+<header class="header">
+  <div class="wrapper">
+    <div class="about">
+      <h1 id="websiteTitle"><a href="/">Gerry's World</a></h1>
+      <p id="aboutLine">A glimpse into my life</p>
+    </div>
+  </div>
+
+  {% include navBar.html %}
+
+</header>
+
+<!-- ********** CONTENT *********** -->
+<div class="publicationEntry" id="main-content">
+  <h1>{{page.title}}</h1>
+  <h2 class="author">{{page.author}}</h2>
+  <h3 class="journal">{{page.journal}} {{page.year}}</h3>
+  <div class="content">
+    {{ content }}
+  </div>
+  {% include comments.html %}
+</div>
+<!-- ********** CONTENT *********** -->
+
+{% include footer.html %}
+
+ <script id="dsq-count-scr" src="//gerrysworld.disqus.com/count.js" async></script>
+</body>
+</html>
