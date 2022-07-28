@@ -1,18 +1,19 @@
 /***************************************************************************************************
  * USAGE:
- * First, go here:
+ * 1. First, go here:
  *  https://www.publicalbum.org/blog/embedding-google-photos-albums
  * and paste the google photos album link into the box in step 2.
- * Next, Copy-paste the resulting HTML code into your page.
- * Finally, replace the .js filename with this one, i.e.
+ * 2. Next, Copy-paste the resulting HTML code into your page.
+ * 3. Finally, replace the .js filename with this one, i.e.
  * Replace this:
  *  <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
  * with this:
  *  <script src="/scripts/googlephotos_carousel.js" async></script>
+ * Note: the "data-delay" property defines the auto-advance rate in seconds.
+ *       other attributes are ignored.
  **************************************************************************************************/
 
 function advance(div) {
-  console.log(div.getAttribute("autoadvance"), div.getAttribute("pause"));
   if (div.getAttribute("autoadvance") == "true" && div.getAttribute("pause") == "false") {
     const thumbs = div.getElementsByClassName("thumb");
     var i = parseInt(div.getAttribute("index"));
@@ -87,12 +88,12 @@ function replace_carousel(div) {
   div.appendChild(autoplay_link);
   let fwd = document.createElement('button');
   fwd.onclick = function () { thumbs.parentElement.scrollLeft += thumbs.parentElement.clientWidth * 0.5; };
-  fwd.textContent =  "›";
+  fwd.textContent = "›";
   fwd.className = "right scroll";
   div.appendChild(fwd);
   let prev = document.createElement('button');
   prev.onclick = function () { thumbs.parentElement.scrollLeft -= thumbs.parentElement.clientWidth * 0.5; };
-  prev.textContent =  "‹";
+  prev.textContent = "‹";
   prev.className = "left scroll";
   div.appendChild(prev);
 
@@ -106,12 +107,18 @@ function replace_carousel(div) {
   thumbs.setAttribute("pause", false);
   thumbs.setAttribute("autoadvance", true);
   thumbs.children[0].onmouseover(null, true);
+  if (thumbs.getAttribute("data-delay") == null) {
+    thumbs.setAttribute("data-delay", 5);
+  }
   setInterval(function () { advance(thumbs); }, parseFloat(thumbs.getAttribute("data-delay")) * 1000);
 
   // wrap in extra containers
   wrap(document.createElement('section'), div).style.position = "relative";
 }
 
+for (let carousel of document.getElementsByClassName("pa-gallery-player-widget")) {
+  replace_carousel(carousel)
+}
 for (let carousel of document.getElementsByClassName("pa-carousel-widget")) {
   replace_carousel(carousel)
 }
