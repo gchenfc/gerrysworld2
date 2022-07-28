@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+.gallery {
+  background-color: rgba(0, 0, 0, 0.1);
+  background: black;
+  border-radius: 10px;
+  padding: 10px;
+  height: 500px;
+}
+
+.thumbscroll {
+  /* Recommended to also use hidden_scrollbar */
+  padding: 0;
+  margin: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: block;
+  height: 15vw;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.thumbs {
+  padding: 0;
+  margin: 0;
+  width: max-content;
+}
+
+.thumb {
+  float: left;
+  height: 15vw;
+  width: 10vw;
+  margin: 0 5px;
+  background: no-repeat center center;
+  background-size: cover;
+  transition: opacity 200ms;
+}
+
+.gallery .thumb:hover {
+  cursor: pointer;
+}
+
+.gallery .main {
+  float: none;
+  transition: background-image 200ms;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: calc(100% - 15vw - 20px);
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0);
+  background: no-repeat center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Text Labels */
+.gallery .link,
+.gallery .autoplay,
+.gallery .scroll {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.gallery .link:hover,
+.gallery .autoplay:hover,
+.gallery .scroll:hover {
+  color: #aaa;
+  cursor: pointer;
+}
+
+.gallery .autoplay {
+  left: auto;
+  right: 10px;
+  border: none;
+}
+
+.gallery .scroll {
+  width: 5vw;
+  height: 15vw;
+  color: white;
+  top: 10px;
+  bottom: auto;
+  text-align: center;
+  line-height: 15vw;
+  font-size: 6vw;
+  border: none;
+  padding: 0;
+}
+.gallery .scroll:hover {
+  background-color: #ffff
+}
+.gallery .right {
+  right: 0;
+  left: auto;
+  border-top-left-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+}
+.gallery .left {
+  right: auto;
+  left: 0;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+}
+
+/* ******************************************************
+	Responsive Grids
+*********************************************************/
+
+.rt-container {
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.rt-row:before,
+.rt-row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.rt-row:after {
+  clear: both;
+}
+
+[class^="col-rt-"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+}
+
+
+@media (min-width: 768px) {
+  .rt-container {
+    width: 750px;
+  }
+
+  [class^="col-rt-"] {
+    float: left;
+    width: 49.9999999999%;
+  }
+
+  .col-rt-6,
+  .col-rt-12 {
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .rt-container {
+    width: 1170px;
+  }
+
+  .col-rt-1 {
+    width: 16.6%;
+  }
+
+  .col-rt-2 {
+    width: 30.33%;
+  }
+
+  .col-rt-3 {
+    width: 50%;
+  }
+
+  .col-rt-4 {
+    width: 67.664%;
+  }
+
+  .col-rt-5 {
+    width: 83.33%;
+  }
+
+}
