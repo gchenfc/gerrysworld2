@@ -5,7 +5,10 @@
   background: black;
   border-radius: 10px;
   padding: 10px;
-  height: 500px;
+  /* height: 500px; */
+  aspect-ratio: 1/1;
+  width: 100%;
+  max-height: 600px;
 }
 
 .thumbscroll {
@@ -15,7 +18,7 @@
   overflow-x: scroll;
   overflow-y: hidden;
   display: block;
-  height: 15vw;
+  height: min(15vw, 65px);
   position: relative;
   scroll-behavior: smooth;
 }
@@ -28,8 +31,8 @@
 
 .thumb {
   float: left;
-  height: 15vw;
-  width: 10vw;
+  height: min(15vw, 65px);
+  width: min(15vw, 65px);
   margin: 0 5px;
   background: no-repeat center center;
   background-size: cover;
@@ -45,7 +48,7 @@
   transition: background-image 200ms;
   margin: 0 auto;
   margin-top: 20px;
-  height: calc(100% - 15vw - 20px);
+  height: calc(100% - min(15vw, 65px) - 20px);
   width: 90%;
   background-color: rgba(0, 0, 0, 0);
   background: no-repeat center center;
@@ -80,19 +83,20 @@
 }
 
 .gallery .scroll {
-  width: 5vw;
-  height: 15vw;
+  width: min(5vw, 40px);
+  height: min(15vw, 100px);
   color: white;
   top: 10px;
   bottom: auto;
   text-align: center;
-  line-height: 15vw;
-  font-size: 6vw;
+  line-height: min(15vw, 100px);
+  font-size: min(6vw, 40px);
   border: none;
   padding: 0;
+  transition: background-color 200ms;
 }
 .gallery .scroll:hover {
-  background-color: #ffff
+  background-color: #fffa
 }
 .gallery .right {
   right: 0;
