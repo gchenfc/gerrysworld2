@@ -20,6 +20,13 @@ function advance(div) {
     i = (i + 1) % thumbs.length;
     thumbs[i].onmouseover(null, true);
     div.setAttribute("index", i);
+    // correct scroll
+    const x = div.parentElement.scrollLeft;
+    const thisx = thumbs[i].offsetLeft;
+    if (!((x < thisx) && (thisx + thumbs[i].clientWidth < x + div.parentElement.clientWidth))) {
+      div.parentElement.scrollLeft = thisx - div.parentElement.clientWidth * 1 / 3;
+    }
+    console.log(x, thisx, x + div.parentElement.clientWidth - thumbs[i].clientWidth);
   }
 }
 function wrap(wrapper, toWrap) {
