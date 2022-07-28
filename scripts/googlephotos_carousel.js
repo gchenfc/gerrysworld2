@@ -1,3 +1,16 @@
+/***************************************************************************************************
+ * USAGE:
+ * First, go here:
+ *  https://www.publicalbum.org/blog/embedding-google-photos-albums
+ * and paste the google photos album link into the box in step 2.
+ * Next, Copy-paste the resulting HTML code into your page.
+ * Finally, replace the .js filename with this one, i.e.
+ * Replace this:
+ *  <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+ * with this:
+ *  <script src="/scripts/googlephotos_carousel.js" async></script>
+ **************************************************************************************************/
+
 function advance(div) {
   console.log(div.getAttribute("autoadvance"), div.getAttribute("pause"));
   if (div.getAttribute("autoadvance") == "true" && div.getAttribute("pause") == "false") {
