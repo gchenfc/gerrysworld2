@@ -6,9 +6,8 @@ displaydate: "July 18, 2022"
 date: July 18, 2022
 
 image: "demo.gif"
-imageAltText: "CAD model"
+imageAltText: "Me demo-ing raising and lowering the projector screen by pulling the strings."
 
-sidepicAltText: "Me demo-ing raising and lowering the projector screen by pulling the strings."
 stylesheets: ["/css/projectPost.css", "/css/slideshowGallery2.css"]
 ---
 
