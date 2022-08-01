@@ -42,8 +42,43 @@
   <h1>{{page.title}}</h1>
   <h2 class="author">{{page.author}}</h2>
   <h3 class="journal">{{page.journal}} {{page.year}}</h3>
-  <div class="content">
+  <div class="content" style="margin: auto;">
     {{ content }}
+    {% unless page.manual_content %}
+    <hr />
+    <br />
+      <p style="text-align: center">Links:
+        {% assign mylinks = "false" %}
+        {% if page.PDF %} [<a class="link-style" href="../{{page.PDF}}">PDF</a>] {% assign mylinks = "true" %} {% endif %}
+        {% if page.Poster %} [<a class="link-style" href="../{{page.Poster}}">Poster</a>] {% assign mylinks = "true" %} {% endif %}
+        {% if page.pptx %} [<a class="link-style" href="{{page.pptx}}">pptx</a>] {% assign mylinks = "true" %} {% endif %}
+        {% if page.Code %} [<a class="link-style" href="{{page.Code}}">Code</a>] {% assign mylinks = "true" %} {% endif %}
+        {% if page.Video %} [<a class="link-style" href="{{page.Video}}">Video</a>] {% assign mylinks = "true" %} {% endif %}
+        {% if page.DOI %} [<a class="link-style" href="{{page.DOI}}">DOI</a>] {% assign mylinks = "true" %} {% endif %}
+        {% if page.arxiv %} [<a class="link-style" href="{{page.arxiv}}">arXiv</a>] {% assign mylinks = "true" %} {% endif %}
+        {% if page.zip %} [<a class="link-style" href="{{page.zip}}">zip</a>] {% assign mylinks = "true" %} {% endif %}
+        {% for link in page.links %}
+          [<a class="link-style" href="{{link[1]}}">{{link[0]}}</a>] {% assign mylinks = "true" %}
+        {% endfor %}
+        {% if mylinks == "false" %}
+          <p>Contact me for further information.</p>
+        {% endif %}
+        <br />
+        <!-- TODO: figure out how to handle relative vs absolute vs url links -->
+        Please note: some of these links may be broken.  If, for example, the link is supposed to point to:<br />
+        <code>{{site.url}}/absolute_url</code><br />
+        It may instead point to:<br />
+        <code>{{site.url}}/../absolute_url</code><br />
+        or vice-versa.<br />
+        The links on the main <a href="/publications/">publications page</a> should always work, though.
+      </p>
+      {% if page.PDF %}
+        <!-- TODO: figure out how to handle relative vs absolute vs url links -->
+        <object data="../{{page.PDF}}" type="application/pdf" width="100%" style="aspect-ratio: 8.5/11;">
+          <p>In-browser pdf preview failed.  <a href="../{{page.PDF}}">Download PDF</a>.</p>
+        </object>
+      {% endif %}
+    {% endunless %}
   </div>
   {% include comments.html %}
 </div>
