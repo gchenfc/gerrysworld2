@@ -7,4 +7,5 @@ date: Oct. 21, 2022
 PDF: "Chen22iros_cdpr_control/Chen22iros_cdpr_tracking_control.pdf"
 img: "iros_exp1_errors.svg"
 category: "proceedings"
+arxiv: "https://arxiv.org/abs/2208.00916"
 ---
