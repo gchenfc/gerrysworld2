@@ -1,5 +1,5 @@
 ---
-title: "Locally Optimal Estimation and Control of Cable Driven Parallel Robots using Time Varying Linear Quadratic Gaussian (LQG) Control"
+title: "Locally Optimal Estimation and Control of Cable Driven Parallel Robots using Time Varying Linear Quadratic Gaussian Control"
 author: "<u>Gerry Chen</u>, Seth Hutchinson, Frank Dellaert"
 journal: "2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
 year: "2022 - in press"
