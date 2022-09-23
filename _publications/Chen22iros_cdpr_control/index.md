@@ -6,6 +6,7 @@ year: "2022 - in press"
 date: Oct. 21, 2022
 PDF: "Chen22iros_cdpr_control/Chen22iros_cdpr_tracking_control.pdf"
 img: "iros_exp1_errors.svg"
+Video: "https://youtu.be/mpHqBXztF40"
 category: "proceedings"
 arxiv: "https://arxiv.org/abs/2208.00916"
 ---
