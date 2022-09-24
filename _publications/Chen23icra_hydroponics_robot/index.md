@@ -8,6 +8,7 @@ date: May. 2, 2023
 PDF: "Chen23icra_hydroponics_robot/Chen23icra_hydroponics_robot.pdf"
 img: "system_with_plants_3_compressed.jpg"
 category: "proceedings"
-# arxiv: "https://arxiv.org/abs/2208.00916"
+arxiv: "https://arxiv.org/abs/2208.00916"
+Video: "https://youtu.be/D3NuSUnuYfk"
 ---
 
