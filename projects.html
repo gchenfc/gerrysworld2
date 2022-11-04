@@ -34,7 +34,7 @@ comments: true
             {{project.title}}</a></h3></header>
 
           <figure class="imagefig">
-            <a href="{{project.url}}"><img src="{{project.url | remove: "/index.html" }}/{{project.image}}" alt="{{project.imageAltText}}" /></a>
+            <a href="{{project.url}}"><img src="{{ project.image | prepend_project_path_if_relative: project }}" alt="{{project.imageAltText}}" /></a>
           </figure>
 
           <div class="description">
@@ -66,7 +66,7 @@ comments: true
             {{project.title}}</a></h3></header>
 
           <figure class="imagefig">
-            <a href="{{project.url}}"><img src="{{project.url | remove: "/index.html" }}/{{project.image}}" alt="{{project.imageAltText}}" /></a>
+            <a href="{{project.url}}"><img src="{{ project.image | prepend_project_path_if_relative: project }}" alt="{{project.imageAltText}}" /></a>
           </figure>
 
           <div class="description">
@@ -102,7 +102,7 @@ comments: true
             {{project.title}}</a></h3></header>
 
           <figure class="imagefig">
-            <a href="{{project.url}}"><img src="{{project.url | remove: "/index.html" }}/{{project.image}}" alt="{{project.imageAltText}}" /></a>
+            <a href="{{project.url}}"><img src="{{ project.image | prepend_project_path_if_relative: project }}" alt="{{project.imageAltText}}" /></a>
           </figure>
 
           <div class="description">
