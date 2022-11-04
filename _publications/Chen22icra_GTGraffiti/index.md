@@ -29,6 +29,6 @@ links:
   "geektech": "https://geektech.me/a-robot-has-appeared-that-draws-graffiti-like-a-person/"
   "newsfounded": "https://newsfounded.com/zimbabwe/the-robot-that-paints-like-a-human/"
   "100s of Google search results": "https://www.google.com/search?q=%22gtgraffiti%22+%2B+%22gerry%22"
----
 
-<meta http-equiv="Refresh" content="0; url='/projects/graffitiBot/'" />
+redirect_to: "/projects/graffitiBot/"
+---
