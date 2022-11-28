@@ -7,16 +7,17 @@ function update() {
   }
   // copy output to another auxilliary table
   var output = document.getElementById('output');
-  output.innerHTML = '<tr><th>cbsa</th><th>City</th><th>Utility Rate</th><th>Selected</th></tr>';
+  output.innerHTML = '<tr><th>cbsa</th><th>City</th><th>Utility Name</th><th>Utility Rate</th><th>URDB ID</th></tr>';
   for (var select of selects) {
     const source_row = document.getElementById(select.id.replace('select', 'row'));
     var row = document.createElement('tr');
     row.appendChild(source_row.children[0].cloneNode(true));
     row.appendChild(source_row.children[1].cloneNode(true));
+    row.appendChild(source_row.children[2].cloneNode(true));
     var v = document.createElement('td');
     v.innerHTML = select.children[select.selectedIndex].innerHTML;
     row.appendChild(v);
-    row.appendChild(source_row.children[3].cloneNode(true));
+    row.appendChild(source_row.children[4].cloneNode(true));
     output.appendChild(row);
   }
   copyTable();
