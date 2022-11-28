@@ -1,0 +1,15 @@
+td {
+  padding: 2px 10px;
+}
+
+tr:nth-of-type(odd) {
+  background: #ddd
+}
+
+select {
+  background: #FFFFFF80;
+}
+
+button {
+  margin: 10px;
+}

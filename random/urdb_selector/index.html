@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Utility Rate Picker</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <button onclick="copyTable()">Click here to copy the results!</button>
+    <div id="header">
+      <table id="table">
+        <tr>
+          <th>cbsa</th>
+          <th>City</th>
+          <th>Utility Rate</th>
+          <th>URDB ID</th>
+        </tr>
+        <tr id="row 0">
+          <td id="cbsa 0">12060</td>
+          <td>Alpharetta, GA</td>
+          <td>
+            <select id="select 0" onchange="update()">
+              <option value=""></option>
+              <option value="62d7034296022b27a11abb76">Georgia Power Co : Schedule TOU-PEV-9 - Plug-in Electric Vehicle</option>
+              <option value="62d709f2d2aa3878f327ceda">Georgia Power Co : SCHEDULE TOU-RD-6 RESIDENTIAL DEMAND SERVICE</option>
+              <option value="62d70d02299fe74c2030b72f">Georgia Power Co : SCHEDULE TOU-REO-13 TIME OF USE  RESIDENTIAL ENERGY ONLY</option>
+              <option value="62d70f2d146c525e2b34ab96">Georgia Power Co : SCHEDULE R-25 RESIDENTIAL SERVICE</option>
+            </select>
+          </td>
+          <td id="label 0"></td>
+        </tr>
+        <tr id="row 1">
+          <td id="cbsa 1">22180</td>
+          <td>Fayetteville, NC</td>
+          <td>
+            <select id="select 1" onchange="update()">
+              <option value=""></option>
+              <option value="5b6e07f15457a3e949571c6d">City of Public Works Comm- Fayetteville, North Carolina (Utility Company) : Rate Code 101 Residential Service (Single Phase)</option>
+              <option value="5b6e08ad5457a3e432571c6c">City of Public Works Comm- Fayetteville, North Carolina (Utility Company) : Rate Code 101 Residential Service (Three Phase)</option>
+              <option value="5b71d3955457a36817af0aea">City of Public Works Comm- Fayetteville, North Carolina (Utility Company) : Buy All Sell All Residential Single Phase</option>
+              <option value="5b71d4535457a38620af0aea">City of Public Works Comm- Fayetteville, North Carolina (Utility Company) : Buy All Sell All Residential Three Phase</option>
+            </select>
+          </td>
+          <td id="label 1"></td>
+        </tr>
+        <tr id="row 2">
+          <td id="cbsa 2">32580</td>
+          <td>Mission, TX</td>
+          <td>
+            <select id="select 2" onchange="update()">
+              <option value=""></option>
+            </select>
+          </td>
+          <td id="label 2"></td>
+        </tr>
+        <tr id="row 3">
+          <td id="cbsa 3">37340</td>
+          <td>Palm Bay, FL</td>
+          <td>
+            <select id="select 3" onchange="update()">
+              <option value=""></option>
+              <option value="62c44bb9c144060cdb0d6576">Florida Power &amp; Light Co. : RS-1 Residential Service</option>
+              <option value="62c44d84924e2352a30de5d6">Florida Power &amp; Light Co. : RTR-1 Residential TOU Rate (RS-1 w/ TOU Rider)</option>
+            </select>
+          </td>
+          <td id="label 3"></td>
+        </tr>
+        <tr id="row 4">
+          <td id="cbsa 4">44060</td>
+          <td>Spokane, WA</td>
+          <td>
+            <select id="select 4" onchange="update()">
+              <option value=""></option>
+              <option value="539fbf7cec4f024c27d891a3">Modern Electric Water Company : RESIDENTIAL - SCHEDULE 35</option>
+            </select>
+          </td>
+          <td id="label 4"></td>
+        </tr>
+        <tr id="row 5">
+          <td id="cbsa 5">19780</td>
+          <td>West Des Moines, IA</td>
+          <td>
+            <select id="select 5" onchange="update()">
+              <option value=""></option>
+              <option value="55b8e5555457a3ce72995e91">MidAmerican Energy Co (South Dakota) : Rate RS Residential Service</option>
+              <option value="55b8e5fa5457a3e449995e8b">MidAmerican Energy Co (South Dakota) : Rate RSW Residential Water Heating Service</option>
+              <option value="55b8e69c5457a3b74c995e90">MidAmerican Energy Co (South Dakota) : Rate RSH-Residential Space Heating Service</option>
+              <option value="55b8e7345457a3b47d995e8b">MidAmerican Energy Co (South Dakota) : RED Residential, All Electric</option>
+              <option value="55b8e8385457a34427995e8b">MidAmerican Energy Co (South Dakota) : Rate RST-Residential, Time-of-Use Service</option>
+              <option value="59c155295457a30453bbb27c">MidAmerican Energy Co (Illinois) : Rate RS - Residential Service</option>
+              <option value="59c157e15457a39741bbb27c">MidAmerican Energy Co (Illinois) : Rate RS - Residential Service</option>
+              <option value="59c163085457a39741bbb27d">MidAmerican Energy Co (Illinois) : Rate RST - Residential Time-of-Use Service</option>
+              <option value="59c1640b5457a33652bbb280">MidAmerican Energy Co (Illinois) : Rate RST - Residential Time-of-Use Service</option>
+              <option value="6320ad9952367753220a3c97">MidAmerican Energy Co : RATE RS - RESIDENTIAL SERVICE</option>
+              <option value="6320aff236aa971a25425479">MidAmerican Energy Co : RATE GET - GENERAL ENERGY TIME-OF-USE SERVICE (Residential)</option>
+              <option value="6320b4743923e63054586c29">MidAmerican Energy Co : RATE RST - RESIDENTIAL TIME-OF-USE SERVICE</option>
+              <option value="6320b5aaa01f872b1d3a2049">MidAmerican Energy Co : RATE GE - GENERAL ENERGY SERVICE (Residential)</option>
+            </select>
+          </td>
+          <td id="label 5"></td>
+        </tr>
+        <tr id="row 6">
+          <td id="cbsa 6">32580</td>
+          <td>Edinburg, TX</td>
+          <td>
+            <select id="select 6" onchange="update()">
+              <option value=""></option>
+            </select>
+          </td>
+          <td id="label 6"></td>
+        </tr>
+        <tr id="row 7">
+          <td id="cbsa 7">37340</td>
+          <td>Titusville, FL</td>
+          <td>
+            <select id="select 7" onchange="update()">
+              <option value=""></option>
+              <option value="62c44bb9c144060cdb0d6576">Florida Power &amp; Light Co. : RS-1 Residential Service</option>
+              <option value="62c44d84924e2352a30de5d6">Florida Power &amp; Light Co. : RTR-1 Residential TOU Rate (RS-1 w/ TOU Rider)</option>
+            </select>
+          </td>
+          <td id="label 7"></td>
+        </tr>
+        <tr id="row 8">
+          <td id="cbsa 8">12060</td>
+          <td>Sandy Springs, GA</td>
+          <td>
+            <select id="select 8" onchange="update()">
+              <option value=""></option>
+              <option value="62d7034296022b27a11abb76">Georgia Power Co : Schedule TOU-PEV-9 - Plug-in Electric Vehicle</option>
+              <option value="62d709f2d2aa3878f327ceda">Georgia Power Co : SCHEDULE TOU-RD-6 RESIDENTIAL DEMAND SERVICE</option>
+              <option value="62d70d02299fe74c2030b72f">Georgia Power Co : SCHEDULE TOU-REO-13 TIME OF USE  RESIDENTIAL ENERGY ONLY</option>
+              <option value="62d70f2d146c525e2b34ab96">Georgia Power Co : SCHEDULE R-25 RESIDENTIAL SERVICE</option>
+            </select>
+          </td>
+          <td id="label 8"></td>
+        </tr>
+        <tr id="row 9">
+          <td id="cbsa 9">22220</td>
+          <td>Springdale, AR</td>
+          <td>
+            <select id="select 9" onchange="update()">
+              <option value=""></option>
+              <option value="539fbe7dec4f024c27d88713">Southwestern Electric Power Co : 2</option>
+              <option value="58daa2ad5457a3dd273d33cc">Southwestern Electric Power Co (Arkansas) : Electric Heating Appliance Residential Service</option>
+              <option value="58daa4dc5457a3cf273d33cc">Southwestern Electric Power Co (Arkansas) : Residential Service</option>
+              <option value="5911e1fe5457a3c52980a116">Southwestern Electric Power Co (Louisiana) : RS - Residential Service</option>
+              <option value="5d2f8f195457a3d958bef218">Southwestern Electric Power Co (Texas) : Residential Service</option>
+            </select>
+          </td>
+          <td id="label 9"></td>
+        </tr>
+        <tr id="row 10">
+          <td id="cbsa 10">34820</td>
+          <td>North Myrtle Beach, SC</td>
+          <td>
+            <select id="select 10" onchange="update()">
+              <option value=""></option>
+              <option value="5903b6815457a3d617cd3b46">South Carolina Pub Serv Auth : RESIDENTIAL GENERAL SERVICE SCHEDULE RG-17</option>
+              <option value="5903b7285457a3c031cd3b42">South Carolina Pub Serv Auth : RESIDENTIAL TIME-OF-USE RATE SCHEDULE RT-17</option>
+              <option value="5903b7f05457a39a32cd3b42">South Carolina Pub Serv Auth : RESIDENTIAL TRANSITION ADJUSTMENT SCHEDULE RTA-17</option>
+              <option value="5903bb065457a31a34cd3b42">South Carolina Pub Serv Auth : TEMPORARY SERVICE SCHEDULE TP-17</option>
+            </select>
+          </td>
+          <td id="label 10"></td>
+        </tr>
+        <tr id="row 11">
+          <td id="cbsa 11">41700</td>
+          <td>San Antonio, TX</td>
+          <td>
+            <select id="select 11" onchange="update()">
+              <option value=""></option>
+              <option value="62be1a2583dfd842233c2e27">City of San Antonio, Texas (Utility Company) : RA - Residential All-Electric</option>
+              <option value="62be24ebb343c172c34ddab7">City of San Antonio, Texas (Utility Company) : RE - Residential Service</option>
+            </select>
+          </td>
+          <td id="label 11"></td>
+        </tr>
+        <tr id="row 12">
+          <td id="cbsa 12">16700</td>
+          <td>Charleston, SC</td>
+          <td>
+            <select id="select 12" onchange="update()">
+              <option value=""></option>
+              <option value="62c6131ad6d66e154a0fbc05">South Carolina Electric&amp;Gas Co : 2 (Low Use Residential Service)</option>
+              <option value="62c614ae8e77102d816deb6a">South Carolina Electric&amp;Gas Co : 5 (Residential Service Time-Of-Use)</option>
+              <option value="62c617e18e77102d816deb6b">South Carolina Electric&amp;Gas Co : 6 (Residential Service Energy Conservation Rate)</option>
+              <option value="62c61932957b1157960f8dca">South Carolina Electric&amp;Gas Co : 7 (Residential Service Time-Of-Use Demand)</option>
+              <option value="62c61a7fb991f45b3564476e">South Carolina Electric&amp;Gas Co : 8 (Residential Service)</option>
+            </select>
+          </td>
+          <td id="label 12"></td>
+        </tr>
+        <tr id="row 13">
+          <td id="cbsa 13">22220</td>
+          <td>Fayetteville, AR</td>
+          <td>
+            <select id="select 13" onchange="update()">
+              <option value=""></option>
+              <option value="539fbe7dec4f024c27d88713">Southwestern Electric Power Co : 2</option>
+              <option value="58daa2ad5457a3dd273d33cc">Southwestern Electric Power Co (Arkansas) : Electric Heating Appliance Residential Service</option>
+              <option value="58daa4dc5457a3cf273d33cc">Southwestern Electric Power Co (Arkansas) : Residential Service</option>
+              <option value="5911e1fe5457a3c52980a116">Southwestern Electric Power Co (Louisiana) : RS - Residential Service</option>
+              <option value="5d2f8f195457a3d958bef218">Southwestern Electric Power Co (Texas) : Residential Service</option>
+            </select>
+          </td>
+          <td id="label 13"></td>
+        </tr>
+        <tr id="row 14">
+          <td id="cbsa 14">34820</td>
+          <td>Conway, SC</td>
+          <td>
+            <select id="select 14" onchange="update()">
+              <option value=""></option>
+              <option value="53a1a77d5257a3790a077746">Horry Electric Coop Inc : Residential Rate - Single Phase</option>
+              <option value="53a1a8105257a3c80807774c">Horry Electric Coop Inc : 3 Phase Residential Rate</option>
+              <option value="53a1a8db5257a35f0807774d">Horry Electric Coop Inc : Residential Pre-Pay</option>
+              <option value="53a339475257a387290add34">Horry Electric Coop Inc : Residential Demand - Single Phase</option>
+              <option value="53a33a465257a38e290add35">Horry Electric Coop Inc : Residential Demand - Multi-Phase</option>
+              <option value="53a33ed25257a32d270add33">Horry Electric Coop Inc : Net Metering - Residential</option>
+            </select>
+          </td>
+          <td id="label 14"></td>
+        </tr>
+        <tr id="row 15">
+          <td id="cbsa 15">37860</td>
+          <td>Pensacola, FL</td>
+          <td>
+            <select id="select 15" onchange="update()">
+              <option value=""></option>
+              <option value="5da776775457a35d146dbecf">Gulf Power Co : Rate Schedule RS Residential Service</option>
+              <option value="5da777215457a3ef726dbecf">Gulf Power Co : Rate Schedule RSVP Residential Service Variable Pricing Limited Availability Rate</option>
+              <option value="5da778565457a370136dbecf">Gulf Power Co : Rate Schedule RSTOU Residential Service Time-of-Use</option>
+            </select>
+          </td>
+          <td id="label 15"></td>
+        </tr>
+        <tr id="row 16">
+          <td id="cbsa 16">49180</td>
+          <td>Winston, NC</td>
+          <td>
+            <select id="select 16" onchange="update()">
+              <option value=""></option>
+              <option value="57b4a9055457a3b37bded3d1">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Single Phase</option>
+              <option value="57b4aaa65457a3c009ded3d0">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Three Phase</option>
+              <option value="5ab416245457a3ac1ac1d590">Duke Energy Carolinas, LLC (South Carolina) : Residential Service RB; Closed Rate</option>
+              <option value="5d922a455457a36a1961b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Single Phase</option>
+              <option value="5d922ae35457a3511161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Three Phase</option>
+              <option value="5d922b6d5457a36a1961b9f2">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Single Phase</option>
+              <option value="5d922bf35457a3231161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Three Phase</option>
+              <option value="62d84051299fe74c2030b732">Duke Energy Carolinas, LLC : RT (Residential Service Time of Use)</option>
+              <option value="62d8445b832ef939fa3c33a5">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, All-Electric)</option>
+              <option value="62d8458690653574150118f7">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, Standard)</option>
+              <option value="62d84625299fe74c2030b733">Duke Energy Carolinas, LLC : RS (Residential Service)</option>
+              <option value="62d848679496f75cde5abe88">Duke Energy Carolinas, LLC : RE (Residential Electric Water Heating and Space Conditioning)</option>
+              <option value="633f13db6396829fea024998">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Three Phase</option>
+              <option value="633f15b64fb39ae2a5020b0c">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Single Phase</option>
+              <option value="6346f878158894c5ca09f070">Progress Energy Carolinas Inc : Residential Service-Time of Use (R-TOUD-74) - Single Phase</option>
+              <option value="6346fc1faaac33cca90d234d">Progress Energy Carolinas Inc : Residential Time Of Use Schedule (R-TOUD-74) - Three Phase</option>
+              <option value="63470434bf9efecb91080c7c">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Single Phase</option>
+              <option value="63470554158894c5ca09f071">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Three Phase</option>
+              <option value="6377e9dc6d6fefab3c007eae">Duke Energy Carolinas, LLC (South Carolina) : Residential - RS (SC)</option>
+              <option value="6377ea9c1d17d872ea043220">Duke Energy Carolinas, LLC (South Carolina) : Residential Time-of-Use RT</option>
+              <option value="6377eba664cc69859e00ebe6">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star All-Electric ES</option>
+              <option value="6377ec0d8ef50e8ede027001">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star Standard ES</option>
+              <option value="6377eccab89447dea90cbde9">Duke Energy Carolinas, LLC (South Carolina) : Residential Electric Water Heating and Space Conditioning - RE</option>
+            </select>
+          </td>
+          <td id="label 16"></td>
+        </tr>
+        <tr id="row 17">
+          <td id="cbsa 17">22220</td>
+          <td>Rogers, AR</td>
+          <td>
+            <select id="select 17" onchange="update()">
+              <option value=""></option>
+              <option value="539fbe7dec4f024c27d88713">Southwestern Electric Power Co : 2</option>
+              <option value="58daa2ad5457a3dd273d33cc">Southwestern Electric Power Co (Arkansas) : Electric Heating Appliance Residential Service</option>
+              <option value="58daa4dc5457a3cf273d33cc">Southwestern Electric Power Co (Arkansas) : Residential Service</option>
+              <option value="5911e1fe5457a3c52980a116">Southwestern Electric Power Co (Louisiana) : RS - Residential Service</option>
+              <option value="5d2f8f195457a3d958bef218">Southwestern Electric Power Co (Texas) : Residential Service</option>
+            </select>
+          </td>
+          <td id="label 17"></td>
+        </tr>
+        <tr id="row 18">
+          <td id="cbsa 18">34820</td>
+          <td>Myrtle Beach, SC</td>
+          <td>
+            <select id="select 18" onchange="update()">
+              <option value=""></option>
+              <option value="5903b6815457a3d617cd3b46">South Carolina Pub Serv Auth : RESIDENTIAL GENERAL SERVICE SCHEDULE RG-17</option>
+              <option value="5903b7285457a3c031cd3b42">South Carolina Pub Serv Auth : RESIDENTIAL TIME-OF-USE RATE SCHEDULE RT-17</option>
+              <option value="5903b7f05457a39a32cd3b42">South Carolina Pub Serv Auth : RESIDENTIAL TRANSITION ADJUSTMENT SCHEDULE RTA-17</option>
+              <option value="5903bb065457a31a34cd3b42">South Carolina Pub Serv Auth : TEMPORARY SERVICE SCHEDULE TP-17</option>
+            </select>
+          </td>
+          <td id="label 18"></td>
+        </tr>
+        <tr id="row 19">
+          <td id="cbsa 19">37860</td>
+          <td>Brent, FL</td>
+          <td>
+            <select id="select 19" onchange="update()">
+              <option value=""></option>
+              <option value="5da776775457a35d146dbecf">Gulf Power Co : Rate Schedule RS Residential Service</option>
+              <option value="5da777215457a3ef726dbecf">Gulf Power Co : Rate Schedule RSVP Residential Service Variable Pricing Limited Availability Rate</option>
+              <option value="5da778565457a370136dbecf">Gulf Power Co : Rate Schedule RSTOU Residential Service Time-of-Use</option>
+            </select>
+          </td>
+          <td id="label 19"></td>
+        </tr>
+        <tr id="row 20">
+          <td id="cbsa 20">12260</td>
+          <td>Augusta, GA</td>
+          <td>
+            <select id="select 20" onchange="update()">
+              <option value=""></option>
+              <option value="62d7034296022b27a11abb76">Georgia Power Co : Schedule TOU-PEV-9 - Plug-in Electric Vehicle</option>
+              <option value="62d709f2d2aa3878f327ceda">Georgia Power Co : SCHEDULE TOU-RD-6 RESIDENTIAL DEMAND SERVICE</option>
+              <option value="62d70d02299fe74c2030b72f">Georgia Power Co : SCHEDULE TOU-REO-13 TIME OF USE  RESIDENTIAL ENERGY ONLY</option>
+              <option value="62d70f2d146c525e2b34ab96">Georgia Power Co : SCHEDULE R-25 RESIDENTIAL SERVICE</option>
+            </select>
+          </td>
+          <td id="label 20"></td>
+        </tr>
+        <tr id="row 21">
+          <td id="cbsa 21">24860</td>
+          <td>Anderson, SC</td>
+          <td>
+            <select id="select 21" onchange="update()">
+              <option value=""></option>
+              <option value="57b4a9055457a3b37bded3d1">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Single Phase</option>
+              <option value="57b4aaa65457a3c009ded3d0">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Three Phase</option>
+              <option value="5ab416245457a3ac1ac1d590">Duke Energy Carolinas, LLC (South Carolina) : Residential Service RB; Closed Rate</option>
+              <option value="5d922a455457a36a1961b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Single Phase</option>
+              <option value="5d922ae35457a3511161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Three Phase</option>
+              <option value="5d922b6d5457a36a1961b9f2">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Single Phase</option>
+              <option value="5d922bf35457a3231161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Three Phase</option>
+              <option value="62d84051299fe74c2030b732">Duke Energy Carolinas, LLC : RT (Residential Service Time of Use)</option>
+              <option value="62d8445b832ef939fa3c33a5">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, All-Electric)</option>
+              <option value="62d8458690653574150118f7">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, Standard)</option>
+              <option value="62d84625299fe74c2030b733">Duke Energy Carolinas, LLC : RS (Residential Service)</option>
+              <option value="62d848679496f75cde5abe88">Duke Energy Carolinas, LLC : RE (Residential Electric Water Heating and Space Conditioning)</option>
+              <option value="633f13db6396829fea024998">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Three Phase</option>
+              <option value="633f15b64fb39ae2a5020b0c">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Single Phase</option>
+              <option value="6346f878158894c5ca09f070">Progress Energy Carolinas Inc : Residential Service-Time of Use (R-TOUD-74) - Single Phase</option>
+              <option value="6346fc1faaac33cca90d234d">Progress Energy Carolinas Inc : Residential Time Of Use Schedule (R-TOUD-74) - Three Phase</option>
+              <option value="63470434bf9efecb91080c7c">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Single Phase</option>
+              <option value="63470554158894c5ca09f071">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Three Phase</option>
+              <option value="6377e9dc6d6fefab3c007eae">Duke Energy Carolinas, LLC (South Carolina) : Residential - RS (SC)</option>
+              <option value="6377ea9c1d17d872ea043220">Duke Energy Carolinas, LLC (South Carolina) : Residential Time-of-Use RT</option>
+              <option value="6377eba664cc69859e00ebe6">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star All-Electric ES</option>
+              <option value="6377ec0d8ef50e8ede027001">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star Standard ES</option>
+              <option value="6377eccab89447dea90cbde9">Duke Energy Carolinas, LLC (South Carolina) : Residential Electric Water Heating and Space Conditioning - RE</option>
+            </select>
+          </td>
+          <td id="label 21"></td>
+        </tr>
+        <tr id="row 22">
+          <td id="cbsa 22">35840</td>
+          <td>Bradenton, FL</td>
+          <td>
+            <select id="select 22" onchange="update()">
+              <option value=""></option>
+              <option value="62c44bb9c144060cdb0d6576">Florida Power &amp; Light Co. : RS-1 Residential Service</option>
+              <option value="62c44d84924e2352a30de5d6">Florida Power &amp; Light Co. : RTR-1 Residential TOU Rate (RS-1 w/ TOU Rider)</option>
+            </select>
+          </td>
+          <td id="label 22"></td>
+        </tr>
+        <tr id="row 23">
+          <td id="cbsa 23">44060</td>
+          <td>Spokane Valley, WA</td>
+          <td>
+            <select id="select 23" onchange="update()">
+              <option value=""></option>
+              <option value="539fbe68ec4f024c27d88675">Inland Power &amp; Light Company : Residential- Three Phase</option>
+              <option value="539fc3a1ec4f024c27d8be55">Inland Power &amp; Light Company : Residential- Single Phase</option>
+              <option value="59ee17e35457a31d760d792d">Avista Corp : 1 Residential Service</option>
+              <option value="5b0d70565457a30270733305">Avista Corp (Idaho) : Residential Service - Schedule 1</option>
+              <option value="62bcc11395a28461280f9f47">Avista Corp : 22 Residential and Farm Large General Service - Primary</option>
+              <option value="62bcd4bf3681322d041f9ff5">Avista Corp : 12 Residential and Farm General Service - Three Phase</option>
+              <option value="62bcd9b61f474f07516bde78">Avista Corp : 12 Residential and Farm General Service</option>
+              <option value="62bcdb3bc616b33be7779c85">Avista Corp : 1 Residential Service</option>
+              <option value="62bf5cfab8188709345d5afc">Avista Corp : 22 Residential and Farm Large General Service - Secondary</option>
+            </select>
+          </td>
+          <td id="label 23"></td>
+        </tr>
+        <tr id="row 24">
+          <td id="cbsa 24">16740</td>
+          <td>Charlotte, NC</td>
+          <td>
+            <select id="select 24" onchange="update()">
+              <option value=""></option>
+              <option value="57b4a9055457a3b37bded3d1">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Single Phase</option>
+              <option value="57b4aaa65457a3c009ded3d0">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Three Phase</option>
+              <option value="5ab416245457a3ac1ac1d590">Duke Energy Carolinas, LLC (South Carolina) : Residential Service RB; Closed Rate</option>
+              <option value="5d922a455457a36a1961b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Single Phase</option>
+              <option value="5d922ae35457a3511161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Three Phase</option>
+              <option value="5d922b6d5457a36a1961b9f2">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Single Phase</option>
+              <option value="5d922bf35457a3231161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Three Phase</option>
+              <option value="62d84051299fe74c2030b732">Duke Energy Carolinas, LLC : RT (Residential Service Time of Use)</option>
+              <option value="62d8445b832ef939fa3c33a5">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, All-Electric)</option>
+              <option value="62d8458690653574150118f7">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, Standard)</option>
+              <option value="62d84625299fe74c2030b733">Duke Energy Carolinas, LLC : RS (Residential Service)</option>
+              <option value="62d848679496f75cde5abe88">Duke Energy Carolinas, LLC : RE (Residential Electric Water Heating and Space Conditioning)</option>
+              <option value="633f13db6396829fea024998">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Three Phase</option>
+              <option value="633f15b64fb39ae2a5020b0c">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Single Phase</option>
+              <option value="6346f878158894c5ca09f070">Progress Energy Carolinas Inc : Residential Service-Time of Use (R-TOUD-74) - Single Phase</option>
+              <option value="6346fc1faaac33cca90d234d">Progress Energy Carolinas Inc : Residential Time Of Use Schedule (R-TOUD-74) - Three Phase</option>
+              <option value="63470434bf9efecb91080c7c">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Single Phase</option>
+              <option value="63470554158894c5ca09f071">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Three Phase</option>
+              <option value="6377e9dc6d6fefab3c007eae">Duke Energy Carolinas, LLC (South Carolina) : Residential - RS (SC)</option>
+              <option value="6377ea9c1d17d872ea043220">Duke Energy Carolinas, LLC (South Carolina) : Residential Time-of-Use RT</option>
+              <option value="6377eba664cc69859e00ebe6">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star All-Electric ES</option>
+              <option value="6377ec0d8ef50e8ede027001">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star Standard ES</option>
+              <option value="6377eccab89447dea90cbde9">Duke Energy Carolinas, LLC (South Carolina) : Residential Electric Water Heating and Space Conditioning - RE</option>
+            </select>
+          </td>
+          <td id="label 24"></td>
+        </tr>
+        <tr id="row 25">
+          <td id="cbsa 25">24860</td>
+          <td>Greenville, SC</td>
+          <td>
+            <select id="select 25" onchange="update()">
+              <option value=""></option>
+              <option value="57b4a9055457a3b37bded3d1">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Single Phase</option>
+              <option value="57b4aaa65457a3c009ded3d0">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Three Phase</option>
+              <option value="5ab416245457a3ac1ac1d590">Duke Energy Carolinas, LLC (South Carolina) : Residential Service RB; Closed Rate</option>
+              <option value="5d922a455457a36a1961b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Single Phase</option>
+              <option value="5d922ae35457a3511161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Three Phase</option>
+              <option value="5d922b6d5457a36a1961b9f2">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Single Phase</option>
+              <option value="5d922bf35457a3231161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Three Phase</option>
+              <option value="62d84051299fe74c2030b732">Duke Energy Carolinas, LLC : RT (Residential Service Time of Use)</option>
+              <option value="62d8445b832ef939fa3c33a5">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, All-Electric)</option>
+              <option value="62d8458690653574150118f7">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, Standard)</option>
+              <option value="62d84625299fe74c2030b733">Duke Energy Carolinas, LLC : RS (Residential Service)</option>
+              <option value="62d848679496f75cde5abe88">Duke Energy Carolinas, LLC : RE (Residential Electric Water Heating and Space Conditioning)</option>
+              <option value="633f13db6396829fea024998">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Three Phase</option>
+              <option value="633f15b64fb39ae2a5020b0c">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Single Phase</option>
+              <option value="6346f878158894c5ca09f070">Progress Energy Carolinas Inc : Residential Service-Time of Use (R-TOUD-74) - Single Phase</option>
+              <option value="6346fc1faaac33cca90d234d">Progress Energy Carolinas Inc : Residential Time Of Use Schedule (R-TOUD-74) - Three Phase</option>
+              <option value="63470434bf9efecb91080c7c">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Single Phase</option>
+              <option value="63470554158894c5ca09f071">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Three Phase</option>
+              <option value="6377e9dc6d6fefab3c007eae">Duke Energy Carolinas, LLC (South Carolina) : Residential - RS (SC)</option>
+              <option value="6377ea9c1d17d872ea043220">Duke Energy Carolinas, LLC (South Carolina) : Residential Time-of-Use RT</option>
+              <option value="6377eba664cc69859e00ebe6">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star All-Electric ES</option>
+              <option value="6377ec0d8ef50e8ede027001">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star Standard ES</option>
+              <option value="6377eccab89447dea90cbde9">Duke Energy Carolinas, LLC (South Carolina) : Residential Electric Water Heating and Space Conditioning - RE</option>
+            </select>
+          </td>
+          <td id="label 25"></td>
+        </tr>
+        <tr id="row 26">
+          <td id="cbsa 26">34980</td>
+          <td>Franklin, TN</td>
+          <td>
+            <select id="select 26" onchange="update()">
+              <option value=""></option>
+              <option value="5d41c02f5457a31633dc8c3b">Middle Tennessee E M C : Residential</option>
+              <option value="5d9603f55457a3eb0661b9f1">Tennessee Valley Authority (Mississippi) : Residential Service RS</option>
+            </select>
+          </td>
+          <td id="label 26"></td>
+        </tr>
+        <tr id="row 27">
+          <td id="cbsa 27">38860</td>
+          <td>South Portland, ME</td>
+          <td>
+            <select id="select 27" onchange="update()">
+              <option value=""></option>
+              <option value="5af5e6b65457a39534618be9">Central Maine Power Co : R Retired Employee Residential Service Bundled Standard Offer</option>
+              <option value="5af5e7e65457a32733618be8">Central Maine Power Co : R-TOU Retired Employee Residential Service - Time-Of-Use</option>
+              <option value="5af5eb525457a3be35618be7">Central Maine Power Co : R Retired Employee Residential Service Standard Offer</option>
+              <option value="5af5ebf95457a3be35618be8">Central Maine Power Co : R-TOU Retired Employee Residential Service - Time-Of-Use</option>
+              <option value="63052e1f11489c7db0454116">Central Maine Power Co : A Residential Standard Offer Service (Bundled)</option>
+              <option value="63052eaf7cb909074103d1b5">Central Maine Power Co : A Residential Standard Offer Service</option>
+              <option value="63052f7f09fe8305307477c4">Central Maine Power Co : A-TOU Residential Service Time-of-Use</option>
+              <option value="630530300961f50b8261f2f6">Central Maine Power Co : A-TOU Residential Service - Time-of-Use</option>
+              <option value="630530d94623fe71b5779246">Central Maine Power Co : A-TOU-OPTS Residential Service - Optional Time-Of-Use (Super Saver)</option>
+              <option value="6305319388f52935883fb3d5">Central Maine Power Co : A-TOU-OPTS Residential Service - Optional Time-Of-Use (Super Saver)</option>
+            </select>
+          </td>
+          <td id="label 27"></td>
+        </tr>
+        <tr id="row 28">
+          <td id="cbsa 28">12260</td>
+          <td>Richmond County, GA</td>
+          <td>
+            <select id="select 28" onchange="update()">
+              <option value=""></option>
+            </select>
+          </td>
+          <td id="label 28"></td>
+        </tr>
+        <tr id="row 29">
+          <td id="cbsa 29">26620</td>
+          <td>Huntsville, AL</td>
+          <td>
+            <select id="select 29" onchange="update()">
+              <option value=""></option>
+              <option value="5d9603f55457a3eb0661b9f1">Tennessee Valley Authority (Mississippi) : Residential Service RS</option>
+              <option value="637560c7da6b6c4dd6025d0f">City of Huntsville, Alabama (Utility Company) : Schedule RS - Residential</option>
+            </select>
+          </td>
+          <td id="label 29"></td>
+        </tr>
+        <tr id="row 30">
+          <td id="cbsa 30">34980</td>
+          <td>Murfreesboro, TN</td>
+          <td>
+            <select id="select 30" onchange="update()">
+              <option value=""></option>
+              <option value="5b7d975c5457a3fb060a2ad2">City of Murfreesboro, Tennessee (Utility Company) : Residential</option>
+              <option value="5d9603f55457a3eb0661b9f1">Tennessee Valley Authority (Mississippi) : Residential Service RS</option>
+            </select>
+          </td>
+          <td id="label 30"></td>
+        </tr>
+        <tr id="row 31">
+          <td id="cbsa 31">38860</td>
+          <td>Portland, ME</td>
+          <td>
+            <select id="select 31" onchange="update()">
+              <option value=""></option>
+              <option value="5af5e6b65457a39534618be9">Central Maine Power Co : R Retired Employee Residential Service Bundled Standard Offer</option>
+              <option value="5af5e7e65457a32733618be8">Central Maine Power Co : R-TOU Retired Employee Residential Service - Time-Of-Use</option>
+              <option value="5af5eb525457a3be35618be7">Central Maine Power Co : R Retired Employee Residential Service Standard Offer</option>
+              <option value="5af5ebf95457a3be35618be8">Central Maine Power Co : R-TOU Retired Employee Residential Service - Time-Of-Use</option>
+              <option value="63052e1f11489c7db0454116">Central Maine Power Co : A Residential Standard Offer Service (Bundled)</option>
+              <option value="63052eaf7cb909074103d1b5">Central Maine Power Co : A Residential Standard Offer Service</option>
+              <option value="63052f7f09fe8305307477c4">Central Maine Power Co : A-TOU Residential Service Time-of-Use</option>
+              <option value="630530300961f50b8261f2f6">Central Maine Power Co : A-TOU Residential Service - Time-of-Use</option>
+              <option value="630530d94623fe71b5779246">Central Maine Power Co : A-TOU-OPTS Residential Service - Optional Time-Of-Use (Super Saver)</option>
+              <option value="6305319388f52935883fb3d5">Central Maine Power Co : A-TOU-OPTS Residential Service - Optional Time-Of-Use (Super Saver)</option>
+            </select>
+          </td>
+          <td id="label 31"></td>
+        </tr>
+        <tr id="row 32">
+          <td id="cbsa 32">16700</td>
+          <td>North Charleston, SC</td>
+          <td>
+            <select id="select 32" onchange="update()">
+              <option value=""></option>
+              <option value="62c6131ad6d66e154a0fbc05">South Carolina Electric&amp;Gas Co : 2 (Low Use Residential Service)</option>
+              <option value="62c614ae8e77102d816deb6a">South Carolina Electric&amp;Gas Co : 5 (Residential Service Time-Of-Use)</option>
+              <option value="62c617e18e77102d816deb6b">South Carolina Electric&amp;Gas Co : 6 (Residential Service Energy Conservation Rate)</option>
+              <option value="62c61932957b1157960f8dca">South Carolina Electric&amp;Gas Co : 7 (Residential Service Time-Of-Use Demand)</option>
+              <option value="62c61a7fb991f45b3564476e">South Carolina Electric&amp;Gas Co : 8 (Residential Service)</option>
+            </select>
+          </td>
+          <td id="label 32"></td>
+        </tr>
+        <tr id="row 33">
+          <td id="cbsa 33">26900</td>
+          <td>Indianapolis, IN</td>
+          <td>
+            <select id="select 33" onchange="update()">
+              <option value=""></option>
+              <option value="5f4e57ce5457a3357aebd02a">Indianapolis Power &amp; Light Co : RS - Residential - over 325 KWH per month</option>
+              <option value="5f4e57ec5457a33079ebd02a">Indianapolis Power &amp; Light Co : RS - Residential - 0 - 325 KWH per month</option>
+            </select>
+          </td>
+          <td id="label 33"></td>
+        </tr>
+        <tr id="row 34">
+          <td id="cbsa 34">37340</td>
+          <td>Melbourne, FL</td>
+          <td>
+            <select id="select 34" onchange="update()">
+              <option value=""></option>
+              <option value="62c44bb9c144060cdb0d6576">Florida Power &amp; Light Co. : RS-1 Residential Service</option>
+              <option value="62c44d84924e2352a30de5d6">Florida Power &amp; Light Co. : RTR-1 Residential TOU Rate (RS-1 w/ TOU Rider)</option>
+            </select>
+          </td>
+          <td id="label 34"></td>
+        </tr>
+        <tr id="row 35">
+          <td id="cbsa 35">49180</td>
+          <td>Salem, NC</td>
+          <td>
+            <select id="select 35" onchange="update()">
+              <option value=""></option>
+            </select>
+          </td>
+          <td id="label 35"></td>
+        </tr>
+        <tr id="row 36">
+          <td id="cbsa 36">16860</td>
+          <td>Chattanooga, TN</td>
+          <td>
+            <select id="select 36" onchange="update()">
+              <option value=""></option>
+              <option value="58d447205457a3d75bd557f1">City of Chattanooga, Georgia (Utility Company) : Residential</option>
+              <option value="5d1cc9715457a35864a745b5">City of Chattanooga, Tennessee (Utility Company) : Residential</option>
+              <option value="5d9603f55457a3eb0661b9f1">Tennessee Valley Authority (Mississippi) : Residential Service RS</option>
+            </select>
+          </td>
+          <td id="label 36"></td>
+        </tr>
+        <tr id="row 37">
+          <td id="cbsa 37">26900</td>
+          <td>Anderson, IN</td>
+          <td>
+            <select id="select 37" onchange="update()">
+              <option value=""></option>
+              <option value="556611cd5457a38533084543">City of Anderson, Indiana (Utility Company) : Residential</option>
+            </select>
+          </td>
+          <td id="label 37"></td>
+        </tr>
+        <tr id="row 38">
+          <td id="cbsa 38">34980</td>
+          <td>Nashville, TN</td>
+          <td>
+            <select id="select 38" onchange="update()">
+              <option value=""></option>
+              <option value="5d66d4715457a3ed13c68cdd">Nashville Electric Service : RS Residential Service (500 kWh - 4000kWh)</option>
+              <option value="5d66d4e45457a3ed13c68cde">Nashville Electric Service : RS Residential Service (Over 4000kWh)</option>
+              <option value="5d66d5365457a3ee03c68cdd">Nashville Electric Service : RS Residential Service (Less than 500 kWh)</option>
+              <option value="5d9603f55457a3eb0661b9f1">Tennessee Valley Authority (Mississippi) : Residential Service RS</option>
+            </select>
+          </td>
+          <td id="label 38"></td>
+        </tr>
+        <tr id="row 39">
+          <td id="cbsa 39">38940</td>
+          <td>Port St. Lucie, FL</td>
+          <td>
+            <select id="select 39" onchange="update()">
+              <option value=""></option>
+              <option value="62c44bb9c144060cdb0d6576">Florida Power &amp; Light Co. : RS-1 Residential Service</option>
+              <option value="62c44d84924e2352a30de5d6">Florida Power &amp; Light Co. : RTR-1 Residential TOU Rate (RS-1 w/ TOU Rider)</option>
+            </select>
+          </td>
+          <td id="label 39"></td>
+        </tr>
+        <tr id="row 40">
+          <td id="cbsa 40">16740</td>
+          <td>Gastonia, NC</td>
+          <td>
+            <select id="select 40" onchange="update()">
+              <option value=""></option>
+              <option value="539f6e1dec4f024411ecbe9d">City of Gastonia, North Carolina (Utility Company) : SCHEDULE RS - Residential Service</option>
+              <option value="539f6f33ec4f024411eccba3">City of Gastonia, North Carolina (Utility Company) : SCHEDULE RE - Residential All Electric</option>
+              <option value="57b4a9055457a3b37bded3d1">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Single Phase</option>
+              <option value="57b4aaa65457a3c009ded3d0">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Three Phase</option>
+              <option value="5ab416245457a3ac1ac1d590">Duke Energy Carolinas, LLC (South Carolina) : Residential Service RB; Closed Rate</option>
+              <option value="5d922a455457a36a1961b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Single Phase</option>
+              <option value="5d922ae35457a3511161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Three Phase</option>
+              <option value="5d922b6d5457a36a1961b9f2">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Single Phase</option>
+              <option value="5d922bf35457a3231161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Three Phase</option>
+              <option value="62d84051299fe74c2030b732">Duke Energy Carolinas, LLC : RT (Residential Service Time of Use)</option>
+              <option value="62d8445b832ef939fa3c33a5">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, All-Electric)</option>
+              <option value="62d8458690653574150118f7">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, Standard)</option>
+              <option value="62d84625299fe74c2030b733">Duke Energy Carolinas, LLC : RS (Residential Service)</option>
+              <option value="62d848679496f75cde5abe88">Duke Energy Carolinas, LLC : RE (Residential Electric Water Heating and Space Conditioning)</option>
+              <option value="633f13db6396829fea024998">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Three Phase</option>
+              <option value="633f15b64fb39ae2a5020b0c">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Single Phase</option>
+              <option value="6346f878158894c5ca09f070">Progress Energy Carolinas Inc : Residential Service-Time of Use (R-TOUD-74) - Single Phase</option>
+              <option value="6346fc1faaac33cca90d234d">Progress Energy Carolinas Inc : Residential Time Of Use Schedule (R-TOUD-74) - Three Phase</option>
+              <option value="63470434bf9efecb91080c7c">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Single Phase</option>
+              <option value="63470554158894c5ca09f071">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Three Phase</option>
+              <option value="6377e9dc6d6fefab3c007eae">Duke Energy Carolinas, LLC (South Carolina) : Residential - RS (SC)</option>
+              <option value="6377ea9c1d17d872ea043220">Duke Energy Carolinas, LLC (South Carolina) : Residential Time-of-Use RT</option>
+              <option value="6377eba664cc69859e00ebe6">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star All-Electric ES</option>
+              <option value="6377ec0d8ef50e8ede027001">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star Standard ES</option>
+              <option value="6377eccab89447dea90cbde9">Duke Energy Carolinas, LLC (South Carolina) : Residential Electric Water Heating and Space Conditioning - RE</option>
+            </select>
+          </td>
+          <td id="label 40"></td>
+        </tr>
+        <tr id="row 41">
+          <td id="cbsa 41">26900</td>
+          <td>Carmel, IN</td>
+          <td>
+            <select id="select 41" onchange="update()">
+              <option value=""></option>
+              <option value="63483d7e8ff7716dc30e6ab1">Duke Energy Indiana Inc : RS - Residential Service</option>
+            </select>
+          </td>
+          <td id="label 41"></td>
+        </tr>
+        <tr id="row 42">
+          <td id="cbsa 42">35840</td>
+          <td>North Port, FL</td>
+          <td>
+            <select id="select 42" onchange="update()">
+              <option value=""></option>
+              <option value="62c44bb9c144060cdb0d6576">Florida Power &amp; Light Co. : RS-1 Residential Service</option>
+              <option value="62c44d84924e2352a30de5d6">Florida Power &amp; Light Co. : RTR-1 Residential TOU Rate (RS-1 w/ TOU Rider)</option>
+            </select>
+          </td>
+          <td id="label 42"></td>
+        </tr>
+        <tr id="row 43">
+          <td id="cbsa 43">39580</td>
+          <td>Cary, NC</td>
+          <td>
+            <select id="select 43" onchange="update()">
+              <option value=""></option>
+              <option value="57b4a9055457a3b37bded3d1">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Single Phase</option>
+              <option value="57b4aaa65457a3c009ded3d0">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Three Phase</option>
+              <option value="5ab416245457a3ac1ac1d590">Duke Energy Carolinas, LLC (South Carolina) : Residential Service RB; Closed Rate</option>
+              <option value="5d922a455457a36a1961b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Single Phase</option>
+              <option value="5d922ae35457a3511161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Three Phase</option>
+              <option value="5d922b6d5457a36a1961b9f2">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Single Phase</option>
+              <option value="5d922bf35457a3231161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Three Phase</option>
+              <option value="62d84051299fe74c2030b732">Duke Energy Carolinas, LLC : RT (Residential Service Time of Use)</option>
+              <option value="62d8445b832ef939fa3c33a5">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, All-Electric)</option>
+              <option value="62d8458690653574150118f7">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, Standard)</option>
+              <option value="62d84625299fe74c2030b733">Duke Energy Carolinas, LLC : RS (Residential Service)</option>
+              <option value="62d848679496f75cde5abe88">Duke Energy Carolinas, LLC : RE (Residential Electric Water Heating and Space Conditioning)</option>
+              <option value="633f13db6396829fea024998">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Three Phase</option>
+              <option value="633f15b64fb39ae2a5020b0c">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Single Phase</option>
+              <option value="6346f878158894c5ca09f070">Progress Energy Carolinas Inc : Residential Service-Time of Use (R-TOUD-74) - Single Phase</option>
+              <option value="6346fc1faaac33cca90d234d">Progress Energy Carolinas Inc : Residential Time Of Use Schedule (R-TOUD-74) - Three Phase</option>
+              <option value="63470434bf9efecb91080c7c">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Single Phase</option>
+              <option value="63470554158894c5ca09f071">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Three Phase</option>
+              <option value="6377e9dc6d6fefab3c007eae">Duke Energy Carolinas, LLC (South Carolina) : Residential - RS (SC)</option>
+              <option value="6377ea9c1d17d872ea043220">Duke Energy Carolinas, LLC (South Carolina) : Residential Time-of-Use RT</option>
+              <option value="6377eba664cc69859e00ebe6">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star All-Electric ES</option>
+              <option value="6377ec0d8ef50e8ede027001">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star Standard ES</option>
+              <option value="6377eccab89447dea90cbde9">Duke Energy Carolinas, LLC (South Carolina) : Residential Electric Water Heating and Space Conditioning - RE</option>
+            </select>
+          </td>
+          <td id="label 43"></td>
+        </tr>
+        <tr id="row 44">
+          <td id="cbsa 44">16740</td>
+          <td>Concord, NC</td>
+          <td>
+            <select id="select 44" onchange="update()">
+              <option value=""></option>
+              <option value="539fcb10ec4f024d2f540238">City of Concord, North Carolina (Utility Company) : Residential- Energy Star- All- Electric</option>
+              <option value="548b30ed5357a3867cd11dc9">City of Concord, North Carolina (Utility Company) : Residential with Water Heating</option>
+              <option value="548b426a5357a3897cd11dc9">City of Concord, North Carolina (Utility Company) : Residential</option>
+              <option value="548f25b65357a3bd352f2cdb">City of Concord, North Carolina (Utility Company) : Residential- Energy Star- Standard (Schedule ES)</option>
+              <option value="57b4a9055457a3b37bded3d1">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Single Phase</option>
+              <option value="57b4aaa65457a3c009ded3d0">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Three Phase</option>
+              <option value="5ab416245457a3ac1ac1d590">Duke Energy Carolinas, LLC (South Carolina) : Residential Service RB; Closed Rate</option>
+              <option value="5d922a455457a36a1961b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Single Phase</option>
+              <option value="5d922ae35457a3511161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Three Phase</option>
+              <option value="5d922b6d5457a36a1961b9f2">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Single Phase</option>
+              <option value="5d922bf35457a3231161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Three Phase</option>
+              <option value="62d84051299fe74c2030b732">Duke Energy Carolinas, LLC : RT (Residential Service Time of Use)</option>
+              <option value="62d8445b832ef939fa3c33a5">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, All-Electric)</option>
+              <option value="62d8458690653574150118f7">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, Standard)</option>
+              <option value="62d84625299fe74c2030b733">Duke Energy Carolinas, LLC : RS (Residential Service)</option>
+              <option value="62d848679496f75cde5abe88">Duke Energy Carolinas, LLC : RE (Residential Electric Water Heating and Space Conditioning)</option>
+              <option value="633f13db6396829fea024998">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Three Phase</option>
+              <option value="633f15b64fb39ae2a5020b0c">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Single Phase</option>
+              <option value="6346f878158894c5ca09f070">Progress Energy Carolinas Inc : Residential Service-Time of Use (R-TOUD-74) - Single Phase</option>
+              <option value="6346fc1faaac33cca90d234d">Progress Energy Carolinas Inc : Residential Time Of Use Schedule (R-TOUD-74) - Three Phase</option>
+              <option value="63470434bf9efecb91080c7c">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Single Phase</option>
+              <option value="63470554158894c5ca09f071">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Three Phase</option>
+              <option value="6377e9dc6d6fefab3c007eae">Duke Energy Carolinas, LLC (South Carolina) : Residential - RS (SC)</option>
+              <option value="6377ea9c1d17d872ea043220">Duke Energy Carolinas, LLC (South Carolina) : Residential Time-of-Use RT</option>
+              <option value="6377eba664cc69859e00ebe6">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star All-Electric ES</option>
+              <option value="6377ec0d8ef50e8ede027001">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star Standard ES</option>
+              <option value="6377eccab89447dea90cbde9">Duke Energy Carolinas, LLC (South Carolina) : Residential Electric Water Heating and Space Conditioning - RE</option>
+            </select>
+          </td>
+          <td id="label 44"></td>
+        </tr>
+        <tr id="row 45">
+          <td id="cbsa 45">29460</td>
+          <td>Winter Haven, FL</td>
+          <td>
+            <select id="select 45" onchange="update()">
+              <option value=""></option>
+              <option value="5e8e141e5457a34c255cdabf">Tampa Electric Co : RSVP-1 RESIDENTIAL SERVICE VARIABLE PRICING PROGRAM</option>
+              <option value="6261c2e664deb4670613eed7">Tampa Electric Co : RS RESIDENTIAL SERVICE</option>
+            </select>
+          </td>
+          <td id="label 45"></td>
+        </tr>
+        <tr id="row 46">
+          <td id="cbsa 46">37860</td>
+          <td>Ferry Pass, FL</td>
+          <td>
+            <select id="select 46" onchange="update()">
+              <option value=""></option>
+              <option value="5da776775457a35d146dbecf">Gulf Power Co : Rate Schedule RS Residential Service</option>
+              <option value="5da777215457a3ef726dbecf">Gulf Power Co : Rate Schedule RSVP Residential Service Variable Pricing Limited Availability Rate</option>
+              <option value="5da778565457a370136dbecf">Gulf Power Co : Rate Schedule RSTOU Residential Service Time-of-Use</option>
+            </select>
+          </td>
+          <td id="label 46"></td>
+        </tr>
+        <tr id="row 47">
+          <td id="cbsa 47">12060</td>
+          <td>Atlanta, GA</td>
+          <td>
+            <select id="select 47" onchange="update()">
+              <option value=""></option>
+              <option value="62d7034296022b27a11abb76">Georgia Power Co : Schedule TOU-PEV-9 - Plug-in Electric Vehicle</option>
+              <option value="62d709f2d2aa3878f327ceda">Georgia Power Co : SCHEDULE TOU-RD-6 RESIDENTIAL DEMAND SERVICE</option>
+              <option value="62d70d02299fe74c2030b72f">Georgia Power Co : SCHEDULE TOU-REO-13 TIME OF USE  RESIDENTIAL ENERGY ONLY</option>
+              <option value="62d70f2d146c525e2b34ab96">Georgia Power Co : SCHEDULE R-25 RESIDENTIAL SERVICE</option>
+            </select>
+          </td>
+          <td id="label 47"></td>
+        </tr>
+        <tr id="row 48">
+          <td id="cbsa 48">17820</td>
+          <td>Colorado Springs, CO</td>
+          <td>
+            <select id="select 48" onchange="update()">
+              <option value=""></option>
+              <option value="5d260e425457a31715dc1323">City of Colorado Springs, Colorado (Utility Company) : Residential Service Standard Option (EIR)</option>
+              <option value="5d260edf5457a31715dc1324">City of Colorado Springs, Colorado (Utility Company) : Residential Service Time of Day (ETR)</option>
+            </select>
+          </td>
+          <td id="label 48"></td>
+        </tr>
+        <tr id="row 49">
+          <td id="cbsa 49">29460</td>
+          <td>Lakeland, FL</td>
+          <td>
+            <select id="select 49" onchange="update()">
+              <option value=""></option>
+              <option value="53fca89d5257a3764cdbd602">City of Lakeland, Florida (Utility Company) : Residential Service</option>
+              <option value="5400ab875257a3382999cb9c">City of Lakeland, Florida (Utility Company) : Residential Service Time of Day Pre-Smart Meter</option>
+              <option value="5400ad455257a3fb3199cb98">City of Lakeland, Florida (Utility Company) : Residential Service Time of Day with Installed Smart Meter</option>
+              <option value="5400aefa5257a30d3299cb96">City of Lakeland, Florida (Utility Company) : Residential Plug-In Electric Vehicle Service Time-of-Day</option>
+              <option value="5b1177235457a3371a733307">City of Lakeland, Florida (Utility Company) : Residential Service Shift to Save Optional Time of Day</option>
+              <option value="5cddca715457a3603f40c5d1">City of Lakeland, Florida (Utility Company) : Residential Service</option>
+            </select>
+          </td>
+          <td id="label 49"></td>
+        </tr>
+        <tr id="row 50">
+          <td id="cbsa 50">35840</td>
+          <td>Sarasota, FL</td>
+          <td>
+            <select id="select 50" onchange="update()">
+              <option value=""></option>
+              <option value="62c44bb9c144060cdb0d6576">Florida Power &amp; Light Co. : RS-1 Residential Service</option>
+              <option value="62c44d84924e2352a30de5d6">Florida Power &amp; Light Co. : RTR-1 Residential TOU Rate (RS-1 w/ TOU Rider)</option>
+            </select>
+          </td>
+          <td id="label 50"></td>
+        </tr>
+        <tr id="row 51">
+          <td id="cbsa 51">40060</td>
+          <td>Richmond, VA</td>
+          <td>
+            <select id="select 51" onchange="update()">
+              <option value=""></option>
+              <option value="59121bcd5457a3324380a116">Virginia Electric &amp; Power Co (North Carolina) : Dual Fuel Service Residential Schedule 1DF</option>
+              <option value="5d4051e05457a3c26adc8c3b">Virginia Electric &amp; Power Co (North Carolina) : Basic Residential Rate Schedule 1</option>
+              <option value="5d40531f5457a3446ddc8c3b">Virginia Electric &amp; Power Co (North Carolina) : TOU Residential Service Schedule 1P</option>
+              <option value="5d4053fd5457a38664dc8c3b">Virginia Electric &amp; Power Co (North Carolina) : Energy TOU Residential Service Schedule 1T</option>
+              <option value="630e4d320a47bc7666106909">Virginia Electric &amp; Power Co : Residential Schedule 1</option>
+              <option value="630e56b567146473c75a56d7">Virginia Electric &amp; Power Co : EV Residential Electric Vehicle Charging (Experimental)</option>
+              <option value="630e59a1f688857db42515c7">Virginia Electric &amp; Power Co : 1EV Residential Service with Electric Vehicle Charging (Experimental)</option>
+              <option value="630e5b0545ddf42911170c59">Virginia Electric &amp; Power Co : 1W Residential Service (Time Controlled Storage Water Heating)</option>
+              <option value="630e692bf688857db42515c8">Virginia Electric &amp; Power Co : Residential Energy TOU Schedule 1T</option>
+              <option value="630e6c780ffe985205520aa7">Virginia Electric &amp; Power Co : 1S Residential Service (Demand Time-of-Use)</option>
+            </select>
+          </td>
+          <td id="label 51"></td>
+        </tr>
+        <tr id="row 52">
+          <td id="cbsa 52">17900</td>
+          <td>Columbia, SC</td>
+          <td>
+            <select id="select 52" onchange="update()">
+              <option value=""></option>
+              <option value="62c6131ad6d66e154a0fbc05">South Carolina Electric&amp;Gas Co : 2 (Low Use Residential Service)</option>
+              <option value="62c614ae8e77102d816deb6a">South Carolina Electric&amp;Gas Co : 5 (Residential Service Time-Of-Use)</option>
+              <option value="62c617e18e77102d816deb6b">South Carolina Electric&amp;Gas Co : 6 (Residential Service Energy Conservation Rate)</option>
+              <option value="62c61932957b1157960f8dca">South Carolina Electric&amp;Gas Co : 7 (Residential Service Time-Of-Use Demand)</option>
+              <option value="62c61a7fb991f45b3564476e">South Carolina Electric&amp;Gas Co : 8 (Residential Service)</option>
+            </select>
+          </td>
+          <td id="label 52"></td>
+        </tr>
+        <tr id="row 53">
+          <td id="cbsa 53">28940</td>
+          <td>Knoxville, TN</td>
+          <td>
+            <select id="select 53" onchange="update()">
+              <option value=""></option>
+              <option value="5d9603f55457a3eb0661b9f1">Tennessee Valley Authority (Mississippi) : Residential Service RS</option>
+            </select>
+          </td>
+          <td id="label 53"></td>
+        </tr>
+        <tr id="row 54">
+          <td id="cbsa 54">36420</td>
+          <td>Oklahoma City, OK</td>
+          <td>
+            <select id="select 54" onchange="update()">
+              <option value=""></option>
+              <option value="58ffb1315457a3730fcd3b48">Oklahoma Gas &amp; Electric Co : R-VPP Residental Variable Peak Pricing</option>
+              <option value="58ffb2125457a30d75cd3b44">Oklahoma Gas &amp; Electric Co : RT-CPP Residential Time-of-Use with CPP</option>
+              <option value="5b7da2735457a3e5320a2ad1">Oklahoma Gas &amp; Electric Co (Arkansas) : Residential Service (R-1)</option>
+              <option value="5b7dbd9f5457a34b1f0a2ad1">Oklahoma Gas &amp; Electric Co (Arkansas) : Residential Service (R-KW) Demand</option>
+              <option value="5b7dbf4f5457a3132f0a2ad1">Oklahoma Gas &amp; Electric Co (Arkansas) : Residential Service TOU (R-TOU)</option>
+              <option value="6356bdab96f28510680e409e">Oklahoma Gas &amp; Electric Co : R-1 (Residential Service)</option>
+              <option value="6356c69e58c76fdf4b0e0ffe">Oklahoma Gas &amp; Electric Co : Residential Service Time-Of-Use(R-TOU)</option>
+            </select>
+          </td>
+          <td id="label 54"></td>
+        </tr>
+        <tr id="row 55">
+          <td id="cbsa 55">41700</td>
+          <td>New Braunfels, TX</td>
+          <td>
+            <select id="select 55" onchange="update()">
+              <option value=""></option>
+              <option value="539f6fcbec4f024411ecd2e1">City of New Braunfels, Texas (Utility Company) : Residential service</option>
+              <option value="539f72b0ec4f024411ecf41b">City of New Braunfels, Texas (Utility Company) : Residential - Net Metering - Solar</option>
+              <option value="539fc4dbec4f024c27d8cb47">City of New Braunfels, Texas (Utility Company) : Residential - Net Metering - Wind</option>
+            </select>
+          </td>
+          <td id="label 55"></td>
+        </tr>
+        <tr id="row 56">
+          <td id="cbsa 56">19780</td>
+          <td>Des Moines, IA</td>
+          <td>
+            <select id="select 56" onchange="update()">
+              <option value=""></option>
+              <option value="55b8e5555457a3ce72995e91">MidAmerican Energy Co (South Dakota) : Rate RS Residential Service</option>
+              <option value="55b8e5fa5457a3e449995e8b">MidAmerican Energy Co (South Dakota) : Rate RSW Residential Water Heating Service</option>
+              <option value="55b8e69c5457a3b74c995e90">MidAmerican Energy Co (South Dakota) : Rate RSH-Residential Space Heating Service</option>
+              <option value="55b8e7345457a3b47d995e8b">MidAmerican Energy Co (South Dakota) : RED Residential, All Electric</option>
+              <option value="55b8e8385457a34427995e8b">MidAmerican Energy Co (South Dakota) : Rate RST-Residential, Time-of-Use Service</option>
+              <option value="59c155295457a30453bbb27c">MidAmerican Energy Co (Illinois) : Rate RS - Residential Service</option>
+              <option value="59c157e15457a39741bbb27c">MidAmerican Energy Co (Illinois) : Rate RS - Residential Service</option>
+              <option value="59c163085457a39741bbb27d">MidAmerican Energy Co (Illinois) : Rate RST - Residential Time-of-Use Service</option>
+              <option value="59c1640b5457a33652bbb280">MidAmerican Energy Co (Illinois) : Rate RST - Residential Time-of-Use Service</option>
+              <option value="6320ad9952367753220a3c97">MidAmerican Energy Co : RATE RS - RESIDENTIAL SERVICE</option>
+              <option value="6320aff236aa971a25425479">MidAmerican Energy Co : RATE GET - GENERAL ENERGY TIME-OF-USE SERVICE (Residential)</option>
+              <option value="6320b4743923e63054586c29">MidAmerican Energy Co : RATE RST - RESIDENTIAL TIME-OF-USE SERVICE</option>
+              <option value="6320b5aaa01f872b1d3a2049">MidAmerican Energy Co : RATE GE - GENERAL ENERGY SERVICE (Residential)</option>
+            </select>
+          </td>
+          <td id="label 56"></td>
+        </tr>
+        <tr id="row 57">
+          <td id="cbsa 57">32580</td>
+          <td>McAllen, TX</td>
+          <td>
+            <select id="select 57" onchange="update()">
+              <option value=""></option>
+              <option value="54e4de865357a3bb49d712c6">Sharyland Utilities LP : Residential LSP POLR</option>
+              <option value="54e4eb9e5357a35449d712c6">Sharyland Utilities LP : Residential LSP POLR(McAllen Service Area)</option>
+            </select>
+          </td>
+          <td id="label 57"></td>
+        </tr>
+        <tr id="row 58">
+          <td id="cbsa 58">39580</td>
+          <td>Raleigh, NC</td>
+          <td>
+            <select id="select 58" onchange="update()">
+              <option value=""></option>
+              <option value="57b4a9055457a3b37bded3d1">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Single Phase</option>
+              <option value="57b4aaa65457a3c009ded3d0">Progress Energy Carolinas Inc (South Carolina) : Residential Service All Energy Time-of-Use (R-TOUE-38) Three Phase</option>
+              <option value="5ab416245457a3ac1ac1d590">Duke Energy Carolinas, LLC (South Carolina) : Residential Service RB; Closed Rate</option>
+              <option value="5d922a455457a36a1961b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Single Phase</option>
+              <option value="5d922ae35457a3511161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service (RES-55) Three Phase</option>
+              <option value="5d922b6d5457a36a1961b9f2">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Single Phase</option>
+              <option value="5d922bf35457a3231161b9f1">Progress Energy Carolinas Inc (South Carolina) : Residential Service Time-of-Use (R-TOUD-55) Three Phase</option>
+              <option value="62d84051299fe74c2030b732">Duke Energy Carolinas, LLC : RT (Residential Service Time of Use)</option>
+              <option value="62d8445b832ef939fa3c33a5">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, All-Electric)</option>
+              <option value="62d8458690653574150118f7">Duke Energy Carolinas, LLC : ES (Residential Service Energy Star, Standard)</option>
+              <option value="62d84625299fe74c2030b733">Duke Energy Carolinas, LLC : RS (Residential Service)</option>
+              <option value="62d848679496f75cde5abe88">Duke Energy Carolinas, LLC : RE (Residential Electric Water Heating and Space Conditioning)</option>
+              <option value="633f13db6396829fea024998">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Three Phase</option>
+              <option value="633f15b64fb39ae2a5020b0c">Progress Energy Carolinas Inc : Residential Time of Use (R-TOU-74) Single Phase</option>
+              <option value="6346f878158894c5ca09f070">Progress Energy Carolinas Inc : Residential Service-Time of Use (R-TOUD-74) - Single Phase</option>
+              <option value="6346fc1faaac33cca90d234d">Progress Energy Carolinas Inc : Residential Time Of Use Schedule (R-TOUD-74) - Three Phase</option>
+              <option value="63470434bf9efecb91080c7c">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Single Phase</option>
+              <option value="63470554158894c5ca09f071">Progress Energy Carolinas Inc : Residential Service Schedule - RES-74 - Three Phase</option>
+              <option value="6377e9dc6d6fefab3c007eae">Duke Energy Carolinas, LLC (South Carolina) : Residential - RS (SC)</option>
+              <option value="6377ea9c1d17d872ea043220">Duke Energy Carolinas, LLC (South Carolina) : Residential Time-of-Use RT</option>
+              <option value="6377eba664cc69859e00ebe6">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star All-Electric ES</option>
+              <option value="6377ec0d8ef50e8ede027001">Duke Energy Carolinas, LLC (South Carolina) : Residential Service Energy Star Standard ES</option>
+              <option value="6377eccab89447dea90cbde9">Duke Energy Carolinas, LLC (South Carolina) : Residential Electric Water Heating and Space Conditioning - RE</option>
+            </select>
+          </td>
+          <td id="label 58"></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <button onclick="copyTable()">Click here to copy the results!</button>
+      <p>In case automatic copy-paste doesn't work, manually copy-paste this:</p>
+      <table>
+        <tbody id="output">
+          <tr>
+            <th>cbsa</th>
+            <th>City</th>
+            <th>Utility Rate</th>
+            <th>Selected</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
