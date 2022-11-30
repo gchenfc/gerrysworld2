@@ -34,17 +34,17 @@ stylesheets: /css/bio.css
 <div class="sidebyside">
 
 <script>if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-      document.write('<div class="pdfdiv"><div class="pdfdesc">CV</div><a href="/CV/GerryChen_CV.pdf" download><img class="pdfimg" src="/CV/CV.png" alt="tap here to view my CV!"/></a></div>')
+      document.write('<div class="pdfdiv"><div class="pdfdesc"><a href="/CV/GerryChen_CV.pdf">CV</a></div><a href="/CV/GerryChen_CV.pdf"><img class="pdfimg" src="/CV/CV.png" alt="tap here to view my CV!"/></a><div class="pdfdesc"><a href="/CV/GerryChen_CV.pdf" download>Download CV</a></div></div>')
   }
   else{
-    document.write('<div class="pdfdiv"><div class="pdfdesc">CV</div><a href="/CV/GerryChen_CV.pdf"><object class="pdfobj" data="/CV/GerryChen_CV.pdf""></object></a></div>')
+    document.write('<div class="pdfdiv"><div class="pdfdesc"><a href="/CV/GerryChen_CV.pdf">CV</a></div><a href="/CV/GerryChen_CV.pdf"><object class="pdfobj" data="/CV/GerryChen_CV.pdf""></object></a><div class="pdfdesc"><a href="/CV/GerryChen_CV.pdf" download>Download CV</a></div></div>')
   }
   </script>
 <script>if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-      document.write('<div class="pdfdiv"><div class="pdfdesc">Résumé</div><a href="/resume/GerryChen_resume.pdf" download><img class="pdfimg" src="/resume/resume.png" alt="tap here to view my resume!"/></a></div>')
+      document.write('<div class="pdfdiv"><div class="pdfdesc"><a href="/resume/GerryChen_resume.pdf">Résumé</a></div><a href="/resume/GerryChen_resume.pdf"><img class="pdfimg" src="/resume/resume.png" alt="tap here to view my resume!"/></a><div class="pdfdesc"><a href="/resume/GerryChen_resume.pdf" download>Download Résumé</a></div></div>')
   }
   else{
-    document.write('<div class="pdfdiv"><div class="pdfdesc">Résumé</div><a href="/resume/GerryChen_resume.pdf"><object class="pdfobj" data="/resume/GerryChen_resume.pdf""></object></a></div>')
+    document.write('<div class="pdfdiv"><div class="pdfdesc"><a href="/resume/GerryChen_resume.pdf">Résumé</a></div><a href="/resume/GerryChen_resume.pdf"><object class="pdfobj" data="/resume/GerryChen_resume.pdf""></object></a><div class="pdfdesc"><a href="/resume/GerryChen_resume.pdf" download>Download Résumé</a></div></div>')
   }
   </script>
 
