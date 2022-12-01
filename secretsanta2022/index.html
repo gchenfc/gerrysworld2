@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="Chen Family Secret Santa">
+<link rel="icon" 
+      type="image/png" 
+      href="./images/icon.png">
+
+<title>Chen Family Secret Santa</title>
+<!-- <link rel="canonical" href="http://gerry-chen.com"> -->
+
+<link rel="stylesheet" href="./css/common.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+
+</head>
+<body>
+
+<header class="header">
+  <div class="wrapper" style="padding-bottom: 1px;">
+    <div class="about">
+      <h1 id="websiteTitle" align="center"><a href="./" style="background-color:rgba(0,255,0,.7);padding:10px;border-radius:20px;font-size: 150%;line-height: 6rem;">Chen Family <i>Secret Santa</i></a></h1>
+    </div>
+  </div>
+
+</header>
+<nav class="main" style="margin-bottom: -10px">
+  </nav>
+
+<!-- ********** CONTENT *********** -->
+<div class="wrapper">
+  <div>
+    <h1 id="home-page" align="center">Welcome to our Secret Santa assignment page!</h1><br />
+
+    <div class="triCol">
+      <div class="pics-col">
+        <ul>
+          <li><img src="./images/dad.jpeg" /></li>
+          <li><img src="./images/mom.jpeg" /></li>
+        </ul>
+      </div>
+      
+      <div class="middle-col">
+      <img src="./images/christmas.jpeg" width=40% />
+
+      <div style="margin: 50px 0; text-align: center;" id="buttons">
+        <p>Click your name to view your assignment:</p>
+        <!-- Filled-in by javascript -->
+      </div>
+      <div style="margin: 0px 0 100px 0;line-height: 30pt;">
+        <div id="giver" style="text-align: center; margin:0;"></div>
+        <p id="t1" style="visibility: hidden; text-align: center; margin:0;">you are assigned to give a gift to </p>
+        <p id="recipient" style="text-align: center; margin:10px; font-size: 30pt;"></p>
+      </div>
+
+      <div class="pics-row2">
+        <ul>
+          <li><img src="./images/gerry.jpeg" /></li>
+          <li><img src="./images/grandma.jpeg" /></li>
+          <li><img src="./images/hanna.jpeg" /></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pics-col">
+        <ul>
+          <li><img src="./images/fonda.jpeg" /></li>
+          <li><img src="./images/jim.jpeg" /></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ********** CONTENT *********** -->
+
+<footer class="footer">
+  <div class="pics-row">
+    <ul>
+      <li><img src="./images/grandma.jpeg" /></li>
+      <li><img src="./images/dad.jpeg" /></li>
+      <li><img src="./images/mom.jpeg" /></li>
+      <li><img src="./images/fonda.jpeg" /></li>
+      <li><img src="./images/jim.jpeg" /></li>
+      <li><img src="./images/gerry.jpeg" /></li>
+      <li><img src="./images/virginia.jpeg" /></li>
+      <li><img src="./images/hanna.jpeg" /></li>
+      <li><img src="./images/keith.jpeg" /></li>
+    </ul>
+  </div>
+  <div class="wrapper" style="padding:5px 10px;margin:10px auto;width:90%">
+    <p style="float:left">Site created by Gerry Chen</p>
+    <p style="float:right">Updated Dec 1, 2022</p>
+        <p style="clear: both;">
+</div>
+</footer>
+
+<script type="text/javascript" src="assignments.json"></script>
+<script type="text/javascript">
+  buttons = document.getElementById("buttons");
+  var assignments = JSON.parse(data);
+  for (let [giver, receiver] of Object.entries(assignments)) {
+    var button = document.createElement("button");
+    button.style = "margin: 0px 5px; font-size: 14pt;";
+    button.innerHTML = giver;
+    button.onclick = function () {set_assign(giver, receiver)};
+    buttons.appendChild(button);
+  }
+  function set_assign(giver, receiver) {
+    document.getElementById("giver").innerHTML = giver;
+    document.getElementById("recipient").innerHTML = "<u>" + receiver + "</u>.";
+    document.getElementById("t1").style.visibility = "visible";
+  };
+</script>
+</body>
+
+</html>
