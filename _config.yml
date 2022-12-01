@@ -19,7 +19,7 @@ email: gchen328@gatech.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Gerry Chen's personal website - a collection of projects, activities, and ideas.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "gerry-chen.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://gerry-chen.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  gchenfc
 timezone: America/New_York
 
