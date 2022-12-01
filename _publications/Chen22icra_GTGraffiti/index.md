@@ -30,5 +30,5 @@ links:
   "newsfounded": "https://newsfounded.com/zimbabwe/the-robot-that-paints-like-a-human/"
   "100s of Google search results": "https://www.google.com/search?q=%22gtgraffiti%22+%2B+%22gerry%22"
 
-redirect_to: "/projects/graffitiBot/"
+redirect_to: "../projects/graffitiBot/"
 ---
