@@ -730,7 +730,7 @@ h1 small {
     margin: 0 0 0 0;
 
     display: grid;
-    grid-template-columns: repeat(9,minmax(8%,1fr));
+    grid-template-columns: repeat(8,minmax(8%,1fr));
     grid-gap:1rem;
   }
   .pics-row li {
@@ -751,7 +751,7 @@ h1 small {
     margin: 0 0 0 0;
 
     display: grid;
-    grid-template-columns: repeat(9,minmax(40px,1fr));
+    grid-template-columns: repeat(8,minmax(40px,1fr));
     grid-gap:1rem;
   }
   .pics-row li {
