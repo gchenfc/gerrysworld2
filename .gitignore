@@ -7,3 +7,6 @@ _site
 unused
 CV/output/
 !CV/output/CV.pdf
+
+node_modules
+.netlify
