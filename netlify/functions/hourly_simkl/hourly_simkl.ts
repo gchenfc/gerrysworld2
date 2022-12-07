@@ -41,6 +41,7 @@ const myHandler: Handler = async (event: HandlerEvent, context: HandlerContext) 
       'simkl_data': { S: JSON.stringify(all_data) }
     }
   };
+  /*  Wanted to do synchronous "await" version here instead of callback version
   ddb.putItem(query, function (err, data) {
     if (err) {
       console.log("Error", err);
@@ -48,6 +49,16 @@ const myHandler: Handler = async (event: HandlerEvent, context: HandlerContext) 
       console.log("Success ", data);
     }
   });
+  */
+  console.log("about to upload to dynamodb");
+  await new Promise((resolve, reject) => ddb.putItem(query, function (err, data) {
+    if (err) {
+      reject(err);
+    } else {
+      resolve(data);
+    }
+  }));
+  console.log("uploaded to dynamodb");
 
   return {
     statusCode: 200,
