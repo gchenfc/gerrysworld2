@@ -22,7 +22,16 @@ This website is meant to be a showcase of some of the projects I enjoy working o
 <img src="pics/snowman.png" style="width:60%;" />
 
 <div>
-  <h3>Recent Shows/Movies I've Watched</h3>
+  <div style="display:flex; align-items: flex-end; margin:0;">
+    <h3>Recent Shows/Movies I've Watched</h3>
+    <p style="margin: auto 10px 5px auto; text-decoration: underline;
+    background: -webkit-linear-gradient(left, hsla(0, 100%, 50%,0.6),hsla(120, 100%, 50%,0.6));
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    border-radius:5px;
+    padding:2px 4px;
+    "><i>Progress</i></p>
+  </div>
   <div class="simkl_feed hidden_scrollbar" id="simkl_feed">
   </div>
 </div>
