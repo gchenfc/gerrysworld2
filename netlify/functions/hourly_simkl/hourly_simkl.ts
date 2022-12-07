@@ -7,6 +7,7 @@ import fetch from 'node-fetch';
 import AWS from 'aws-sdk';
 
 const myHandler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+  console.log('I am inside the scheduled event handler');
   // First fetch from Simkl
   var all_data = {}
   for (let type of ['anime', 'shows', 'movies']) {
@@ -20,7 +21,10 @@ const myHandler: Handler = async (event: HandlerEvent, context: HandlerContext) 
     });
     const data_type = await response.json();
     all_data[type] = data_type[type];
+    console.log('simkl response:', response);
+    console.log('simkl response:', data_type);
   }
+  console.log('simkl data:', all_data);
 
   // Now upload to AWS
   const ddb = new AWS.DynamoDB({
