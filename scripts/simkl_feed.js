@@ -1,23 +1,31 @@
 // This code reads my Simkl feed cached in DynamoDB and displays it on my website.
 // See also: hourly_simkl.ts and fetch_simkl.ts.
 var div = document.getElementById("simkl_feed");
+var formatted_data = [];
 fetch('/.netlify/functions/fetch_simkl')
   .then(response => response.json())
   .then(data => {
-    // Combine different types of entertainment (anime, shows, movies)
-    formatted_data = [];
-    for (var anime of data.simkl_data.S.anime) {
+    function values(obj) { return Object.keys(obj).map((key) => obj[key]); }
+    // Combine different types of entertainment (anime, shows, movies) & make metadata uniform
+    for (var anime of values(data.simkl_data.S.anime).flat()) {
       anime['md'] = anime.show;
       formatted_data.push(anime);
     }
-    for (var show of data.simkl_data.S.shows) {
+    for (var show of values(data.simkl_data.S.shows).flat()) {
       show['md'] = show.show;
       formatted_data.push(show);
     }
-    for (var movie of data.simkl_data.S.movies) {
+    for (var movie of values(data.simkl_data.S.movies).flat()) {
       movie['md'] = movie.movie;
       formatted_data.push(movie);
     }
+    // Remove duplicates
+    slugs = formatted_data.map((a) => a.md.ids.slug);
+    formatted_data = formatted_data.filter(function (item, pos) {
+      return slugs.indexOf(item.md.ids.slug) == pos;
+    })
+
+    // some convenience "aliases"
     for (var obj of formatted_data) {
       obj['date'] = obj.last_watched_at;
       if (obj.total_episodes_count == 0) {
@@ -29,6 +37,8 @@ fetch('/.netlify/functions/fetch_simkl')
     }
 
     // Sort by date
+    let formatted_data2 = formatted_data.filter((a) => a.date != null);
+    formatted_data = formatted_data2;
     formatted_data.sort((a, b) => -a.date.localeCompare(b.date));
     console.log(formatted_data);
 
@@ -46,7 +56,7 @@ fetch('/.netlify/functions/fetch_simkl')
       item.style.backgroundImage = `url("${obj.img_url}")`;
       item.appendChild(create_elem('p', 'progress', obj.progress));
       item.appendChild(create_elem('p', 'title', obj.md.title));
-      const prog = eval(obj.progress.replace('%', '/100.0'))*120;
+      const prog = eval(obj.progress.replace('%', '/100.0')) * 120;
       // const prog = 0.5 * 120;
       item.children[0].style.backgroundColor = `hsla(${prog}, 100%, 50%,0.6)`;
       // item.appendChild(create_elem('p', 'date', obj.date));
