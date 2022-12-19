@@ -18,7 +18,7 @@ h1 {
 }
 </style>
 
-<div class="wrap-collabsible" style="width:60%; float:left">
+<div class="wrap-collapsible" style="width:60%; float:left">
   <input id="collapsible" class="toggle" type="checkbox" checked> <!-- delete "checked" to default to unchecked -->
   <label for="collapsible" class="lbl-toggle">Table of Contents</label>
   <div class="collapsible-content">
