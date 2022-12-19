@@ -1,0 +1,11 @@
+<div class="wrap-collapsible" id="Table of Contents">
+  <input id="collapsible {{ include.title }}" class="toggle" type="checkbox" {% if include.expanded | default: false %}checked{% endif %}>
+  <label for="collapsible {{ include.title }}" class="lbl-toggle">{{ include.title }}</label>
+  <div class="collapsible-content">
+    <div class="content-inner" markdown=1>
+
+{{ include.content }}
+
+</div>
+  </div>
+</div>
