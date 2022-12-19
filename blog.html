@@ -24,7 +24,7 @@ comments: true
       {% assign m = blogPost.date | date: "%B" %}
       <li class="type-{{blogPost.postType}}">
         <div class="headerWrap">
-          <h3><a href="{{blogPost.url}}">{{shortTitle}}</a></h3>
+          <h3 style="text-align: left;"><a href="{{blogPost.url}}">{{shortTitle}}</a></h3>
           <p>
             {% case m %}
               {% when 'May' or June' or 'July' %} {{m}}
