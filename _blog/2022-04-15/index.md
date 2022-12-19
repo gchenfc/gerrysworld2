@@ -19,7 +19,7 @@ date: Apr. 15, 2022
 
 </style>
 
-<div class="wrap-collabsible">
+<div class="wrap-collapsible">
   <input id="collapsible" class="toggle" type="checkbox" checked> <!-- delete "checked" to default to unchecked -->
   <label for="collapsible" class="lbl-toggle">Contents</label>
   <div class="collapsible-content">

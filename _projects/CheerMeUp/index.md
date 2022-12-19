@@ -13,7 +13,7 @@ imageAltText: "Screenshot of the Alexa Developer console for a generic example s
 
 I wanted to learn about creating Alexa skills, so I created this Alexa skill for Virginia Pan to play pre-recorded audio messages from loved ones to cheer her up.
 
-<div class="wrap-collabsible">
+<div class="wrap-collapsible">
   <input id="collapsible2" class="toggle" type="checkbox"> <!-- delete "checked" to default to unchecked -->
   <label for="collapsible2" class="lbl-toggle">Example Usage</label>
   <div class="collapsible-content">
@@ -50,7 +50,7 @@ or, the faster version,
 </div>
 
 
-<div class="wrap-collabsible">
+<div class="wrap-collapsible">
   <input id="collapsible" class="toggle" type="checkbox" checked> <!-- delete "checked" to default to unchecked -->
   <label for="collapsible" class="lbl-toggle">Table of Contents</label>
   <div class="collapsible-content">
