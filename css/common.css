@@ -180,7 +180,13 @@ html {
   font-family: Open Sans, Arial, Helvetica, Sans-serif;
   color: #222; }
 
-* {
+/* * {
+  line-height: 26px;
+  line-height: 1.625rem;
+  margin: 0px 0px 26px;
+  margin: 0rem 0rem 1.625rem; } */
+
+p, nav, div, header, section {
   line-height: 26px;
   line-height: 1.625rem;
   margin: 0px 0px 26px;
