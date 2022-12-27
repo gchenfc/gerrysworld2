@@ -20,6 +20,8 @@ stylesheets: ["/css/blogPost.css", "style.css"]
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<!-- <iframe src="2022-12-26.html" style="height:800px;width:100%;border-style:solid;"></iframe> -->
+
 
 <!-- <div id="quarto-content" class="page-columns page-rows-contents page-layout-article"> -->
 
