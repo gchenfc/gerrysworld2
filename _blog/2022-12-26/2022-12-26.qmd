@@ -1,0 +1,133 @@
+---
+published: false # qmd collides with jekyll. Don't publish this file.
+title: "Flatulence is shockingly bad for the environment"
+postType: "random"
+description: "CO2-equivalent emissions from human biological processes."
+date: Dec 26, 2022
+stylesheets: ["/css/blogPost.css"]
+bibliography: 2022-12-26.bib
+csl: ../../css/ieee.csl
+format:
+  html:
+    code-fold: true
+---
+
+## Background
+During some holiday sibling banter, the question arose of what biological "emission" (flatulence, eructation, breathing) is worst for the environment.
+This is a non-trivial question because, although e.g. we emit far less volume of flatus than exhaled CO$_2$, the methane is far more potent than CO$_2$ in terms of CO$_2$ equivalent emissions.
+
+## Calculations
+
+For CO$_2$ equivalent conversions, we use the EPA's [Greenhouse Gas Equivalencies Calculator](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator) [@epa_co2e].
+
+Flatulence (@tbl-farts) is calculated using mean compositional percentages (by volume) [@fart_concentration] and mean production rates [@fart_amount].  Then, conversions are applied to arrive at CO$_2$ equivalent emissions.
+
+Breathing (@tbl-breath) is calculated using mean production rates of CO$_2$ and CH$_4$ directly [@breath] and conversions to arrive at CO$_2$ equivalent emissions.
+
+Eructation data was unavailable :(
+
+Results summarized in @tbl-summary.
+
+##### Input Gas Constants
+```{python}
+#| label: gas-constants
+from IPython.display import Markdown
+import pandas as pd
+
+# Gas Constants
+CO2_equivalent = {
+    'H2': 0,
+    'CO2': 1,
+    'CH4': 25,
+    'O2': 0,
+    'N2': 0,
+    } # https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator
+L_PER_MOLE = 22.4  # common knowledge
+DENSITY_G_PER_L = {
+    'H2':  2.016 / L_PER_MOLE,
+    'CO2': 44.01 / L_PER_MOLE,
+    'CH4': 16.04 / L_PER_MOLE,
+    'O2':  16.00 / L_PER_MOLE,
+    'N2':  14.01 / L_PER_MOLE,
+    }  # periodic table
+```
+
+##### Input Flatus (Fart) Data
+```{python}
+#| label: tbl-farts
+#| tbl-cap: Fart Composition and CO2-equivalent Emissions
+
+farts_pct = {'H2': 14.8,
+        'CO2': 34.7,
+        'CH4': 25.0, # see note in discussion
+        'O2': 3.3,
+        'N2': 22.2,
+        } # doi.org/10.1152/ajpgi.1997.272.5.G1028
+gases = list(farts_pct.keys())
+farts_volume_L_per_day = 3 # See discussion
+farts_mass_g_per_day = {gas: DENSITY_G_PER_L[gas] * farts_volume_L_per_day * farts_pct[gas] for gas in gases}
+farts_CO2e_g_per_day = {gas: farts_mass_g_per_day[gas] * CO2_equivalent[gas] for gas in gases}
+farts = pd.DataFrame(
+    data=[farts_pct, farts_mass_g_per_day, farts_CO2e_g_per_day], 
+    index=['% of total volume', 'mass (g/day)', 'CO2-equivalent (g/day)']
+).T
+farts.loc["Total"] = farts.sum()
+
+Markdown(farts.to_markdown(floatfmt=".1f"))
+```
+
+##### Input Breathing Data
+```{python}
+#| label: tbl-breath
+#| tbl-cap: Fart Composition and CO2-equivalent Emissions
+
+# Farts
+breath_pct = {'CO2': '', 'CH4': ''} # Not used, but keeping for consistency
+breath_g_per_day = {
+    'CO2': 28 * 24,
+    'CH4': 2.5e-3 * 24} # doi.org/10.1016/j.scitotenv.2022.155241
+gases = list(breath_g_per_day.keys())
+breath_CO2e_g_per_day = {gas: breath_g_per_day[gas] * CO2_equivalent[gas] for gas in gases}
+breath = pd.DataFrame(
+    data=[breath_pct, breath_g_per_day, breath_CO2e_g_per_day], 
+    index=['% of total volume', 'mass (g/day)', 'CO2-equivalent (g/day)']
+).T
+breath.loc["Total"] = breath.sum()
+
+Markdown(breath.to_markdown(floatfmt='.1f'))
+```
+
+##### Input Eructation (Burp) Data
+
+Data unavailable :(
+
+## Results Summary
+```{python}
+#| label: tbl-summary
+#| tbl-cap: Summary of CO2-equivalent Emissions
+df = pd.concat((farts, breath), axis=0, keys=['Flatulence', 'Breathing'])
+# df.plot.pie(y='CO2-equivalent (g/day)', figsize=(6, 6), autopct='%1.1f%%', title='CO2-equivalent Emissions')
+df2 = df[df.index.get_level_values(1) == 'Total'].iloc[:, [2]]
+df2['% of total'] = df2['CO2-equivalent (g/day)'] / df2['CO2-equivalent (g/day)'].sum() * 100
+df2.loc["Total"] = df2.sum()
+Markdown(df2.to_markdown(floatfmt='.1f'))
+```
+
+To put this in perspective, the average American produces 17.38 metric tons of CO$_2$ equivalent per year [@co2_emissions, 2019], so farting and breathing combined is about 4.7% of that!  Farting alone is about 3.2% of an American's yearly CO$_2$ emissions!  Worldwide carbon emissions per capita are lower at around 6.35 tons/year, making human farting and breathing about 12.8% of global CO$_2$ equivalent emissions!  (See discussion for the caveat, though, that we assume a methane producing person, of which only about 1 in 3 people are, reducing it to about 3.9%).  (Also, there's the caveat that, since our food is grown/raised, our bodies are kind of "carbon neutral" in a sense, but this shouldn't absolve us of our guilt because e.g. farmland fixes less carbon than fallowed land).
+
+## Discussion
+
+As one may expect, humans are highly diverse so these numbers often have very large standard deviations.
+
+Notably, CH$_4$ concentration in both flatulence and breath is highly bimodal, with most people producing virtually no methane but some small percentage (about a third [@ch4]) of people producing significantly more [@fart_concentration, @ch4].  For sake of fun, I assume that the hypothetical person in question is in the latter category: a "methane producer" as it is referred to in the literature.  For flatulence, I use a "reasonable" value of 25% methane (instead of the 5.6% mean) [@fart_concentration], then, to hack-ily make the percentages add up to 100 again, I reduced the H$_2$ percentage from 34.3 to 14.8%, since that was most negatively correlated with CH$_4$.  For breath, from [@breath, Fig. 1], I estimate 2.5 mg/hour.
+
+For the total daily production of flatulence, this is also highly variable, but is reportedly between 16-64 mL/hour [@fart_amount].  Even this is probably an estimate based on citations from the meta-analysis [@ch4], which states studies reporting 2.2, 3.5, and even 10 L/day (10 L/day = 416 mL / hour!).  I'll just call it 3 L/day.
+
+Despite methane exhalation being highly variable (see above), CO$_2$ production from breathing appears have relatively little variation [@breath].  From [@breath, Fig. 1], I estimate 28 g/hour.  Other sources claim CO$_2$ production can also be very well estimated from biomass across a wide range of ectotherm species.
+
+## Conclusions
+Even though a lot of these numbers are highly variable and not particularly reliable, I was surprised to find:
+
+1. There's a pretty big body of literature of the topic of human body emissions!  There's probably 2-dozen papers on the topic of flatulence alone.
+2. Flatulence produces around 2.3x *more* CO$_2$-equivalent emissions than breathing (70% vs 30%), assuming you are a methane producer (~0.3x otherwise).
+3. The average American's farts make up 3.2% of their yearly CO$_2$ emissions, and the average person's farts make up 12.8% of their global CO$_2$ emissions (assuming they are a methane producer).
