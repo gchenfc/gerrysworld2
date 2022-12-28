@@ -9,4 +9,5 @@ img: "iros_exp1_errors.svg"
 Video: "https://youtu.be/mpHqBXztF40"
 category: "proceedings"
 arxiv: "https://arxiv.org/abs/2208.00916"
+DOI: "https://doi.org/10.1109/IROS47612.2022.9981144"
 ---

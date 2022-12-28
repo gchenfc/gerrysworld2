@@ -7,4 +7,6 @@ date: Oct. 20 2022
 category: "proceedings"
 img: "traj.svg"
 img_crop: false
+DOI: "https://doi.org/10.1109/IROS47612.2022.9982188"
+Video: "https://youtube.com/watch?v=CGEVPst4EwU&si=EnSIkaIECMiOmarE"
 ---
