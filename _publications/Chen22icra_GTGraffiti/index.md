@@ -16,6 +16,7 @@ category: "proceedings"
 links:
   "Video 2": "https://youtu.be/R4ySYTNGv6s"
   "VICE": "https://www.vice.com/en/article/5d3myx/scientists-are-training-ai-robots-to-write-graffiti"
+  "ASME": "https://www.asme.org/topics-resources/content/robot-turns-artist-s-commands-to-graffiti"
   "TechXplore": "https://techxplore.com/news/2022-06-gtgraffiti-robot-human.html"
   "ZME Science": "https://www.zmescience.com/science/graffiti-drawing-robot-developed-234673563/"
   "ACM communications": "https://cacm.acm.org/careers/261797-grad-students-develop-robot-that-paints-like-a-human/fulltext"

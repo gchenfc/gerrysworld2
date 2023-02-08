@@ -23,6 +23,7 @@ stylesheets: ["/css/projectPost.css", "/css/publication.css"]
 ## Media Attention!
 
 * [VICE](https://www.vice.com/en/article/5d3myx/scientists-are-training-ai-robots-to-write-graffiti)
+* [ASME](https://www.asme.org/topics-resources/content/robot-turns-artist-s-commands-to-graffiti)
 * [TechXplore](https://techxplore.com/news/2022-06-gtgraffiti-robot-human.html)
 * [ZME Science](https://www.zmescience.com/science/graffiti-drawing-robot-developed-234673563/)
 * [research.gatech.edu](https://research.gatech.edu/introducing-gtgraffiti-robot-paints-human?utm_medium=email&utm_source=daily-digest&utm_campaign=2022-06-08&utm_content=news)
