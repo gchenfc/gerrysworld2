@@ -13,6 +13,7 @@ stylesheets: /css/bio.css
 <section class="bio">
   <div class="biopic"> <figure class="imagefig">
     <a href="channel_islands.jpg"><img src="/about/bioPic.jpeg" alt="PICTURE OF GERRY" /></a>
+    <a href="/business_card/business_card.pdf"><img style="width:100%;max-width:300px;margin-top:10px;border:solid black 1pt;" src="/business_card/business_card.png" /></a>
   </figure> </div>
 
   <div class="content">
