@@ -44,7 +44,7 @@ stylesheets: ["/css/blogPost.css", "style.css"]
 </style>
 
 <!-- Side pic -->
-<video class="sidepic" autoplay muted loop><source src="https://drive.google.com/uc?export=download&id=1ZschsGeySWdWntPb68JUDT74uS277wys" type='video/mp4'></video>
+<video class="sidepic" autoplay muted loop><source src="https://drive.google.com/uc?export=view&id=1ZschsGeySWdWntPb68JUDT74uS277wys" type='video/mp4'></video>
 
 # Introduction
 
@@ -92,7 +92,7 @@ and you might also need `conda install pytorch-cuda=11.7 cuda-toolkit=11.7.1 -c 
 # Input Video
 The input video I used is shown below:
 <video class="gdriveVideo" preload="auto" autoplay loop muted controls>
-   <source src="https://drive.google.com/uc?export=download&id=1fiHSxnGYoG84ZMcaFZk6k9uUUE3Xu3Wj" type='video/mp4'>
+   <source src="https://drive.google.com/uc?export=view&id=1fiHSxnGYoG84ZMcaFZk6k9uUUE3Xu3Wj" type='video/mp4'>
 </video>
 Note that I shot this on my iPhone at 240fps ("slow-mo") to try to reduce motion blur.  I also have another video shot at the usual 30fps, but didn't test to see if the results were better/worse, though I doubt it makes much of a difference.  Then I downsampled the 240fps down to 30fps with `ffmpeg -i input.mp4 -r 30 output.mp4` and preprocessed using nerfstudio's
 ```sh
@@ -110,16 +110,16 @@ I tried both with the full 305 frames (default) and with only 50 frames (as in t
 ### Zoom 1
 
 <!-- Zoom 1 -->
-<video class="gdriveVideo wide" preload="auto" autoplay muted loop controls><source src="https://drive.google.com/uc?export=download&id=1_9fI3NNlJ7SMgR2jmcdvWBbIOvHfm_sW" type='video/mp4'></video>
+<video class="gdriveVideo wide" preload="auto" autoplay muted loop controls><source src="https://drive.google.com/uc?export=view&id=1_9fI3NNlJ7SMgR2jmcdvWBbIOvHfm_sW" type='video/mp4'></video>
 
 
 ### Zoom 2
 Left: 50 frames, Right: 305 frames
-<video class="gdriveVideo fullwide" preload="auto" autoplay loop muted controls><source src="https://drive.google.com/uc?export=download&id=1E1pTK3r1bnPCTZf4A7ofurNpoClWks4g" type='video/mp4'></video>
+<video class="gdriveVideo fullwide" preload="auto" autoplay loop muted controls><source src="https://drive.google.com/uc?export=view&id=1E1pTK3r1bnPCTZf4A7ofurNpoClWks4g" type='video/mp4'></video>
 
 ### Circle
 Left: 50 frames, Right: 305 frames
-<video class="gdriveVideo fullwide" preload="auto" autoplay loop muted controls><source src="https://drive.google.com/uc?export=download&id=1qWuDxu85q9tUbYJb0HQn3QoPQIvBRsGS" type='video/mp4'></video>
+<video class="gdriveVideo fullwide" preload="auto" autoplay loop muted controls><source src="https://drive.google.com/uc?export=view&id=1qWuDxu85q9tUbYJb0HQn3QoPQIvBRsGS" type='video/mp4'></video>
 
 <br />
 
@@ -130,20 +130,20 @@ Comparing the left (every 6th frame) and the right, the only difference appears 
 Generated using nerfstudio.
 
 <div class="gdriveVideo fullwide row" markdown="1">
-  <div class="column"><img style="width:100%;margin:0;" src="https://drive.google.com/uc?export=download&id=1DJ7DQbRCJa-RrvFmPnhcBvA6ZJS-GxRu" /></div>
-  <div class="column"><img style="width:100%;margin:0;" src="https://drive.google.com/uc?export=download&id=1YCfQDeb7ztvSwzFB0XLZHN7tWUCcAVbY" /></div>
-  <div class="column"><img style="width:100%;margin:0;" src="https://drive.google.com/uc?export=download&id=1erH1Shb6pVJAdTTHrQMkrIzLg4XNsGe1" /></div>
+  <div class="column"><img style="width:100%;margin:0;" src="https://drive.google.com/uc?export=view&id=1DJ7DQbRCJa-RrvFmPnhcBvA6ZJS-GxRu" /></div>
+  <div class="column"><img style="width:100%;margin:0;" src="https://drive.google.com/uc?export=view&id=1YCfQDeb7ztvSwzFB0XLZHN7tWUCcAVbY" /></div>
+  <div class="column"><img style="width:100%;margin:0;" src="https://drive.google.com/uc?export=view&id=1erH1Shb6pVJAdTTHrQMkrIzLg4XNsGe1" /></div>
 </div>
 
 
-[Download ply file, 50 frames version](https://drive.google.com/uc?export=download&id=1otfPZVwXkSMDja772OBwJgMdst7BhHb9)  
-[Download ply file, 305 frames version](https://drive.google.com/uc?export=download&id=1NZVJMPZ0Ob2TiGvn4Z_vbICpmr95oOQL)  
+[Download ply file, 50 frames version](https://drive.google.com/uc?export=view&id=1otfPZVwXkSMDja772OBwJgMdst7BhHb9)  
+[Download ply file, 305 frames version](https://drive.google.com/uc?export=view&id=1NZVJMPZ0Ob2TiGvn4Z_vbICpmr95oOQL)  
 (may take a second after clicking to begin download)
 
 ## Evaluation Images
 
 Left: Ground Truth, Right: NeRF view synthesis (305 frames)
-<div class="gdriveVideo wide"><img style="width: 100%; margin:0;" src="https://drive.google.com/uc?export=download&id=1O102jWFlDpvtombVrUAQAv1sHhR9koCB"></div>
+<div class="gdriveVideo wide"><img style="width: 100%; margin:0;" src="https://drive.google.com/uc?export=view&id=1O102jWFlDpvtombVrUAQAv1sHhR9koCB"></div>
 
 Observe that the NeRF result is a bit pixelated / not max quality.  Probably somewhere I forgot to change a default setting and it's using downsampled images, or the network config I'm using is just too small, or the non-centered scene is causing poor numerical issues since the majority of the "interesting" bits of the scene are actually outside the [-1, 1] scene box.
 
@@ -153,7 +153,7 @@ Training (on RTX 3080) achieved decent results after just a few seconds, very go
 
 [wandb link](https://wandb.ai/gchenfc/nerf_personal/runs/ue1jqbvv?workspace=user-gchenfc)
 
-<div class="gdriveVideo wide"><img style="width: 100%; margin:0;" src="https://drive.google.com/uc?export=download&id=1XEJAUIyIvpa3KfE_1XH1SaR2IjFNwT2J"></div>
+<div class="gdriveVideo wide"><img style="width: 100%; margin:0;" src="https://drive.google.com/uc?export=view&id=1XEJAUIyIvpa3KfE_1XH1SaR2IjFNwT2J"></div>
 
 # Conclusions
 
