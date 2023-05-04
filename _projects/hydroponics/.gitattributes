@@ -11,3 +11,6 @@ plantcapture_small.gif filter=lfs diff=lfs merge=lfs -text
 plantcapture_small_slow.gif filter=lfs diff=lfs merge=lfs -text
 circle0.gif filter=lfs diff=lfs merge=lfs -text
 circle1.gif filter=lfs diff=lfs merge=lfs -text
+denseReconstruction_large_transparent.gif filter=lfs diff=lfs merge=lfs -text
+denseReconstruction_med_transparent.gif filter=lfs diff=lfs merge=lfs -text
+denseReconstruction_small_transparent.gif filter=lfs diff=lfs merge=lfs -text
