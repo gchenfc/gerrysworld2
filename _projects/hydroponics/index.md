@@ -5,10 +5,10 @@ status: 'in progress'
 displaydate: "Fall, 2019 - Present"
 date: Sept 1, 2019
 
-image: "denseReconstruction_small.gif"
+image: "denseReconstruction_small_transparent.gif"
 imageAltText: "Example 3D plant reconstruction"
 
-sidepic: "denseReconstruction_small.gif"
+sidepic: "denseReconstruction_small_transparent.gif"
 sidepicfull: "denseReconstruction_large.gif"
 sidepicAltText: "Example 3D plant reconstruction"
 stylesheets: ["/css/projectPost.css", "/css/publication.css"]
@@ -83,7 +83,7 @@ stylesheets: ["/css/projectPost.css", "/css/publication.css"]
 <br style="clear: both" />
 
 # 3D Reconstruction
-[![3D reconstruction of lettuce](denseReconstruction_med.gif)](denseReconstruction_large.gif)
+[![3D reconstruction of lettuce][med_gif]][large_gif]
 
 # Cable Robot
 This is the planned next step of the project: the robot arm will be mounted to a cable robot to monitor many plants autonomously.
@@ -92,3 +92,8 @@ This is the planned next step of the project: the robot arm will be mounted to a
 
 # Other media
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LTQs_Olgw5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- [med_gif]: https://drive.google.com/uc?id=1ZUm7hk6-Ez89FMNKyuP-ulheR-o4U4uB
+[large_gif]: https://drive.google.com/uc?id=1dKn2jPAbBw_fMV4LGql997pwb_wGa_QW -->
+[med_gif]: denseReconstruction_med_transparent.gif
+[large_gif]: denseReconstruction_large_transparent.gif
