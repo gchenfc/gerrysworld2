@@ -16,6 +16,7 @@ stylesheets: ["/css/projectPost.css", "/css/publication.css"]
 
 <p style="font-size: 20pt; text-decoration: underline;">Table of Contents</p>
 - [Related Publications](#related-publications)
+- [Timelapse](#timelapse)
 - [Poster](#poster)
 - [Image Capture Robot Arm](#image-capture-robot-arm)
 - [Raw Images](#raw-images)
@@ -69,6 +70,12 @@ stylesheets: ["/css/projectPost.css", "/css/publication.css"]
 </div>
   {% endif %}
 {% endfor %}
+
+# Timelapse
+<!-- HTML5 video embedded with autoplay -->
+
+
+[<video class="sidepic" autoplay muted loop style="width:90%; max-width:800px; margin:auto; display:block;"><source src="hydro_keystone_rot.mp4" type='video/mp4'></video>](hydro_keystone_rot.mp4)
 
 # Poster
 [![poster](../../publications/Chen23icra_hydroponics_robot/poster_icra_gerry_small.svg)](../../publications/Chen23icra_hydroponics_robot/poster_icra_gerry.pdf) 
