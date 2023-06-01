@@ -10,5 +10,6 @@ img: "system_with_plants_3_compressed.jpg"
 category: "proceedings"
 arxiv: "https://arxiv.org/abs/2209.08690"
 Video: "https://youtu.be/D3NuSUnuYfk"
+Poster: "Chen23icra_hydroponics_robot/poster_icra_gerry.pdf"
 ---
 
