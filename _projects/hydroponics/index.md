@@ -71,7 +71,20 @@ stylesheets: ["/css/projectPost.css", "/css/publication.css"]
 {% endfor %}
 
 # Poster
-[![poster](4_poster_compressed.svg)](4_poster.pdf) 
+[![poster](../../publications/Chen23icra_hydroponics_robot/poster_icra_gerry_small.svg)](../../publications/Chen23icra_hydroponics_robot/poster_icra_gerry.pdf) 
+
+<!-- Dropdown -->
+<div class="wrap-collapsible">
+  <input id="collapsible" class="toggle" type="checkbox"> <!-- delete "checked" to default to unchecked -->
+  <label for="collapsible" class="lbl-toggle">Old Poster</label>
+  <div class="collapsible-content">
+    <div class="content-inner" markdown=1>
+
+[![poster](4_poster_compressed.svg)](4_poster.pdf)
+
+</div>
+  </div>
+</div>
 
 # Image Capture Robot Arm
 [![image collection process](plantcapture_small.gif)](plantcapture.mp4) 
