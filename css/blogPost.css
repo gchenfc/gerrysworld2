@@ -10,6 +10,9 @@
   margin: 0 0 1rem;
   text-align: justify;
 }
+.blogPost blockquote p {
+  margin: 0;
+}
 .blogPost img{
   margin: 15px;
 }
