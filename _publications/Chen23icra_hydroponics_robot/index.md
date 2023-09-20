@@ -3,11 +3,12 @@ title: "A Hybrid Cable-Driven Robot for Non-Destructive Leafy Plant
 Monitoring and Mass Estimation using Structure from Motion"
 author: "<u>Gerry Chen</u>, Harsh Muriki, Cédric Pradalier, Yongsheng Chen, and Frank Dellaert"
 journal: "2023 IEEE International Conference on Robotics and Automation (ICRA)"
-year: "2023 - in press"
+year: "2023"
 date: May. 2, 2023
 PDF: "Chen23icra_hydroponics_robot/Chen23icra_hydroponics_robot.pdf"
 img: "system_with_plants_3_compressed.jpg"
 category: "proceedings"
+DOI: "https://doi.org/10.1109/ICRA48891.2023.10161045"
 arxiv: "https://arxiv.org/abs/2209.08690"
 Video: "https://youtu.be/D3NuSUnuYfk"
 Poster: "Chen23icra_hydroponics_robot/poster_icra_gerry.pdf"
