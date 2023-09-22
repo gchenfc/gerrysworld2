@@ -8,6 +8,6 @@ PDF: "Chen24icra_qopp/Chen24icra_qopp.pdf"
 img: "topp_vs_qopp.svg"
 category: "pending"
 arxiv: "https://arxiv.org/abs/2309.10176"
-# Video: "https://youtu.be/D3NuSUnuYfk"
+Video: "https://youtu.be/MSK--soXtRY"
 ---
 
