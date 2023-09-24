@@ -83,7 +83,7 @@ const renderCalendar_ = (year, daysTag, currentDateTag) => {
 };
 const renderCalendar = () => {
   for (let i = 0; i < daysTagAll.length; i++) {
-    renderCalendar_(currYear - i, daysTagAll[i], currentDateTagAll[i]);
+    renderCalendar_(currYear - daysTagAll.length + i + 1, daysTagAll[i], currentDateTagAll[i]);
   }
   update_calendar(); // See traffic.js
 };
@@ -139,7 +139,7 @@ function centerScroll() {
 
   // Set the scroll position to the center
   // scrollContainer.scrollLeft = (scrollWidth - clientWidth) / 2;
-  scrollContainer.scrollLeft = 300;
+  scrollContainer.scrollLeft = scrollWidth - clientWidth - 300;
 }
 centerScroll();
 
