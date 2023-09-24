@@ -88,7 +88,7 @@ const renderMegaCalendar = () => {
   // Now render the calendar for each year
   const currYear = new Date().getFullYear();
   for (let i = 0; i < daysTagAll1.length; i++) {
-    renderMegaCalendar_(currYear - i, daysTagAll1[i], currentDateTagAll1[i]);
+    renderMegaCalendar_(currYear - daysTagAll1.length + i + 1, daysTagAll1[i], currentDateTagAll1[i]);
   }
   update_calendar(); // See traffic.js
 };

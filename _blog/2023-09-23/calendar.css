@@ -30,7 +30,7 @@ body{
   right: 0;
 }
 .calendar-container-below {
-  padding-top: 434px; /* Adjust this value to be at least the height of .container */
+  padding-top: 449px; /* Adjust this value to be at least the height of .container */
 }
 
 @media (max-width: 1200px) {
@@ -87,7 +87,7 @@ header .current-date{
 }
 .calendar{
   padding: 20px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 .calendar ul{
   display: flex;

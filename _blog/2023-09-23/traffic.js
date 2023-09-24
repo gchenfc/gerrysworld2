@@ -89,14 +89,16 @@ function parseTsv(content) {
 
       const elem_id = `_${year}-${newDate.getMonth() + 1}-${newDate.getDate()}`;
       const elem = root.getElementById(elem_id);
+      const elems = root.querySelectorAll(`#${elem_id}`);
+      for (const elem of elems) {
       if (!elem) continue; // Not a day in the calendar
+        const number = parseInt(columns[coli].replace(/,/g, ""), 10);
+        const color = colorScale(number, min, max);
+        const numberStr = (number / 1000000).toFixed(2) + "M"; // Convert number to 1.23M
 
-      const number = parseInt(columns[coli].replace(/,/g, ""), 10);
-      const color = colorScale(number, min, max);
-      const numberStr = (number / 1000000).toFixed(2) + "M"; // Convert number to 1.23M
-
-      elem.style.backgroundColor = color;
-      elem.setAttribute("data-after", numberStr);
+        elem.style.backgroundColor = color;
+        elem.setAttribute("data-after", numberStr);
+      }
     }
   }
 }
