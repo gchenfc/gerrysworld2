@@ -48,7 +48,7 @@ function correctDate(year, month, date, currYear) {
   return new Date(year, month - 1, currDate.getDate() + dayDiff);
 }
 
-window.artificial_min = 1500000;
+window.artificial_min = 0;
 
 function parseTsv(content) {
   const root = document.getElementById("shadowHost").shadowRoot;
