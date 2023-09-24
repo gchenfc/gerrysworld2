@@ -77,8 +77,8 @@ Alternatively, if you would like me to update the calendar manually, you can sen
 <button id="all-years" onclick="show1monthAllYears()">Show 1 month but across all years</button>
 <button id="only-one" onclick="show1month1year()">Show only 1 month</button>
 
-<button onclick="artificial_min = 1500000;update_calendar();">[default] Scale min to 1.5M (cut off COVID data)</button>
-<button onclick="artificial_min = 0;update_calendar();">Scale min to 0.09M (put COVID into perspective)</button>
+<button onclick="artificial_min = 0;update_calendar();">[default] Scale min to 0.09M (put COVID into perspective)</button>
+<button onclick="artificial_min = 1500000;update_calendar();">Scale min to 1.5M (cut off COVID data)</button>
 
 ## Observations
 #### General observations
