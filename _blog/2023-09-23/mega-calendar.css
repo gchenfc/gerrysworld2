@@ -1,0 +1,101 @@
+.mega-calendar-container{
+  display: flex;
+  white-space: nowrap;
+
+  /* overflow-x: auto; */
+  position: absolute; /* or absolute */
+  left: 0;
+  right: 0;
+
+  justify-content: center;
+}
+.mega-calendar-container-below {
+  padding-top: 923px; /* Adjust this value to be at least the height of .container */
+}
+
+#allMonthsAllYears {
+  overflow-x: auto;
+  display: flex;
+  max-width: calc(100% - 1.5rem);
+  /* max-width: none; */
+  /* margin: 0 auto; */
+}
+
+.monthnames {
+  /* display: none; */
+}
+.monthname {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  height: 65px;
+  font-size: 0.8rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center; /* Center the text vertically using flexbox */
+  justify-content: center; /* Center the text horizontally using flexbox */
+}
+
+.mega-calendar{
+  width: 145px;
+  min-width: 145px;
+  padding: 10px;
+}
+.mega-calendar .current-date {
+  margin: auto;
+}
+.mega-calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.mega-calendar .weeks{
+  margin-bottom: 20px;
+}
+.mega-calendar .days{
+  /* margin-bottom: 20px; */
+}
+.mega-calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 0.6rem;
+}
+.mega-calendar .days li.month{
+  color: #333;
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+}
+.mega-calendar .days li.break{
+  background-color: #333;
+  width: 100%;
+  height: 1px;
+  padding: 0px;
+}
+.mega-calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+  rotate: -45deg;
+}
+.mega-calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  /* margin-top: 30px; */
+  height: 15px;
+  font-size: 0.6rem;
+  line-height: 15px;
+}
+.mega-calendar .firstweek{
+  border-top: 1px solid #888;
+}
+.mega-calendar .firstday{
+  border-left: 1px solid #888;
+}
+
+.mega-calendar .days li::before{
+  content: none;
+}
+.mega-calendar .days li::after{
+  content: none;
+}
