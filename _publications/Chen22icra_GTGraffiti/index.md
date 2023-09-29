@@ -22,6 +22,7 @@ links:
   "ACM communications": "https://cacm.acm.org/careers/261797-grad-students-develop-robot-that-paints-like-a-human/fulltext"
   "Arduino": "https://blog.arduino.cc/2022/06/09/graffiti-robot-paints-like-a-human/"
   "WSB-TV": "https://www.wsbtv.com/news/local/georgia-tech-student-builds-robot-artist/FPEUYTZ6TFCN5COAONOQWT4SHE/?outputType=amp"
+  "ANF": "https://www.atlantanewsfirst.com/2023/09/29/avant-south-showcases-use-ai-robotics-georgia-tech/"
   "research.gatech.edu": "https://research.gatech.edu/introducing-gtgraffiti-robot-paints-human"
   "dailystar.co.uk": "https://www.dailystar.co.uk/tech/news/robo-banksy-graffiti-robot-could-27187562"
   "News8Plus": "https://news8plus.com/introducing-gtgraffiti-the-robot-that-paints-like-a-human/"
@@ -29,7 +30,6 @@ links:
   "Engineering 360": "https://insights.globalspec.com/article/18822/video-researchers-introduce-their-graffiti-bot"
   "geektech": "https://geektech.me/a-robot-has-appeared-that-draws-graffiti-like-a-person/"
   "newsfounded": "https://newsfounded.com/zimbabwe/the-robot-that-paints-like-a-human/"
-  "100s of Google search results": "https://www.google.com/search?q=%22gtgraffiti%22+%2B+%22gerry%22"
 
 redirect_to: "/projects/graffitiBot/"
 ---
