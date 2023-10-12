@@ -5,4 +5,5 @@ postType: 'miniproject'
 date: "July 4, 2022"
 
 redirect_to: "/projects/geigerDice"
+redirect_from: "/blog/2022-07-04.html"
 ---

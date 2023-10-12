@@ -4,6 +4,7 @@ postType: "random"
 description: "Arrow's Impossibility theorem states that (colloquially): every possible voting system is bad."
 date: Dec 19, 2022
 stylesheets: ["/css/blogPost.css"]
+redirect_from: "/blog/2022-12-19.html"
 ---
 
 This post discusses an interesting illustration (based on [Arrow's Impossibility Theorem]) of how difficult policy is.  We consider a simple example of how even a single decision may not have an "optimal" solution.  Not only is it impossible to "make everyone happy" (that's obvious), but it's not even possible to choose an option which isn't blatantly wrong/unfair.

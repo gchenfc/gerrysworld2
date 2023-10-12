@@ -5,4 +5,5 @@ postType: "miniproject"
 date: July 18, 2022
 
 redirect_to: "/projects/projectorScreen"
+redirect_from: "/blog/2022-07-17.html"
 ---
