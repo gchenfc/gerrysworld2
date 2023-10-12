@@ -4,6 +4,7 @@ postType: "tutorial"
 description: "For fun and practice, I decided to add a feed of my most recently watched movies/shows using serverless (\"lambda\") functions."
 date: Dec 7, 2022
 stylesheets: ["/css/blogPost.css", "/css/simkl_feed.css"]
+redirect_from: "/blog/2022-12-07.html"
 ---
 
 <div class="wrap-collapsible">

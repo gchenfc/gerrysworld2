@@ -4,6 +4,7 @@ postType: "miniproject"
 description: "A fun testing-out of the fold-and-cut theorem: \"that every pattern (plane graph) of straight-line cuts can be made by folding and one complete straight cut.\""
 date: Jun. 18, 2017
 stylesheets: ["/css/blogPost.css", "/css/slideshowGallery2.css"]
+redirect_from: "/blog/2017-06-18.html"
 ---
 
 I'm writing this in July 2022, years after having originally done this, so I can't remember how or why I stumbled across this, but somehow I came across this "fold-and-cut theorem".

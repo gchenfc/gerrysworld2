@@ -4,6 +4,7 @@ postType: "tutorial"
 description: "An easy way to create DIY custom etched/engraved glass, applied to shot glasses."
 date: May 25, 2017
 stylesheets: ["/css/blogPost.css", "/css/slideshowGallery2.css"]
+redirect_from: "/blog/2017-05-25.html"
 ---
 
 Sorry, I lied: this is not really a tutorial (yet).  I'm writing this in July 2022, years after having originally done this, so I can't remember all the details :(.

@@ -4,6 +4,7 @@ postType: "random"
 description: "We collaborated with an artist to paint a sign during the opening ceremony of an art exhibit."
 date: Sept 15, 2022
 stylesheets: ["/css/blogPost.css", "/css/slideshowGallery2.css"]
+redirect_from: "/blog/2022-09-16.html"
 ---
 
 This will be filled in with a writeup/reflection soon.

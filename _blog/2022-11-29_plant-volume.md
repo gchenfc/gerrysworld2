@@ -4,6 +4,7 @@ postType: "random"
 description: "I tried measuring ground-truth plant volume using water displacement but it doesn't work very well."
 date: Nov 30, 2022
 stylesheets: ["/css/blogPost.css", "/css/slideshowGallery2.css"]
+redirect_from: "/blog/2022-11-29.html"
 ---
 
 <img src="https://lh3.googleusercontent.com/tUom-TcMWV5hVHUB5vphuNHG1V2O4P20AbWoubu-d1wuvcqrsURYhkQ2p08FvFA7crgX11kPQ7FuiHzT4SWdQz0HORbPrBjwa5F5TZorrrML6Q_cbPyE08qLMGrEHNeNS-0ZaSYCPtU=w1920-h1080" style="float: right; display: block; margin-top: -5em; max-height: 275px; max-width: min(300px, 40%); aspect-ratio:3024/4032" />

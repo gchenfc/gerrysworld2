@@ -4,6 +4,7 @@ postType: "random"
 description: "I created a pie chart of food waste in the US by category."
 date: Nov 4, 2022
 stylesheets: ["/css/blogPost.css"]
+redirect_from: "/blog/2022-11-04.html"
 ---
 
 I was curious about what contributes most to food waste so I googled it and stumbled upon [this site](https://foodprint.org/issues/the-problem-of-food-waste/).  Very frustratingly, the numbers were buried in text and not in percentages, so I just compiled the numbers and put it into a pie chart.

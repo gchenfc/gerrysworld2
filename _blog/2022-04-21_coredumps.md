@@ -3,6 +3,7 @@ title: "Segfault Coredumps"
 postType: "tutorial"
 description: "Instructions on accessing coredumps from c++ segfaults."
 date: Apr. 21, 2022
+redirect_from: "/blog/2022-04-21.html"
 ---
 
 <div class="wrap-collapsible">
