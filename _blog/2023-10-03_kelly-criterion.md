@@ -3,7 +3,7 @@ title: "Kelly Criterion"
 postType: "random"
 description: "Explaining some supposedly obvious facts (but not obvious to me) about diversification and leverage using the Kelly Criterion (for sizing a bet)."
 date: Oct 3, 2023
-stylesheets: ["/css/blogPost.css", "style.css"]
+stylesheets: ["/css/blogPost.css"]
 redirect_from: "/blog/2023-10-03.html"
 ---
 
