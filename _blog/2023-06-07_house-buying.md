@@ -3,7 +3,7 @@ title: "Renting vs Buying (a house)"
 postType: "random"
 description: "Some random thoughts about renting vs buying from a theoretical perspective."
 date: Jun 7, 2023
-stylesheets: ["/css/blogPost.css", "style.css"]
+stylesheets: ["/css/blogPost.css"]
 redirect_from: "/blog/2023-06-07.html"
 ---
 

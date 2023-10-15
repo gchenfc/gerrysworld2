@@ -3,7 +3,7 @@ title: "Add-1 Task Online Demo"
 postType: "miniproject"
 description: "An implementation of the \"Add-1\" task described in Daniel Kahneman's <i>Thinking Fast and Slow</i>."
 date: Oct 14, 2023
-stylesheets: ["/css/blogPost.css", "style.css"]
+stylesheets: ["/css/blogPost.css"]
 ---
 
 <div class="container-intro">
