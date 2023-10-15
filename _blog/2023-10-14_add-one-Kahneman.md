@@ -164,7 +164,7 @@ Visual depiction of the procedure[^1]:
 </style>
 
 <!-- <div style="height: 150px;">
-<div id="display2"></div>
+<div id="display2">[Demo Runs Here]</div>
 </div> -->
 
 ## Demo
@@ -245,7 +245,7 @@ Visual depiction of the procedure[^1]:
 
 <div id="Main">
   <button onclick="startDemo()" id="start">Start!</button>
-  <div id="display"></div>
+  <div id="display">[Demo Runs Here]</div>
 </div>
 
 <video id="videoElement" style="display: none;" controls></video>
@@ -476,3 +476,7 @@ Visual depiction of the procedure[^1]:
       });
     }
 </script>
+
+<!-- Divider bar for footnotes -->
+---
+### Footnotes
