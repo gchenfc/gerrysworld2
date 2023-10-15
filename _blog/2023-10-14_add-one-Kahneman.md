@@ -2,7 +2,7 @@
 title: "Add-1 Task Online Demo"
 postType: "miniproject"
 description: "An implementation of the \"Add-1\" task described in Daniel Kahneman's <i>Thinking Fast and Slow</i>."
-date: Oct 12, 2023
+date: Oct 14, 2023
 stylesheets: ["/css/blogPost.css", "style.css"]
 ---
 
@@ -84,13 +84,15 @@ The task is described (among other places), on Page 23 of the book [*Attention a
 * The procedure is as follows:
   1. [2s] Receive the which task (listen-think-say or listen-say-say)
   2. [2s] Rest
-  3. [4s] **Listen**: Hear a 4-digit number one digit per second
+  3. [4s] **Listen**: "Hear"[^1] a 4-digit number one digit per second
   4. [1s] Rest
   5. [4s] **Think or Say** the number, except add 1 to each digit, e.g. 1234 -> 2345, or 7932->8043
   6. [1s] Rest
   7. [4s] **Say** the add-1 number (again if you already said it once)
 
-Visual depiction of the procedure:
+[^1]: Actually instead of "hearing" the number, I just display the number of the computer.  This is indeed quite different and IMO much easier than hearing the number.  Drawing from Richard Feynman's observation that we can often multitask with one task using our "visual" system and the other task using our "auditory" system but can**not** multitask if both tasks are using the same system, then displaying the numbers visually means we can read the number with our visual system, (increment is trivial), and "store" the number with our auditory system all while seeing the numbers for the first time.  If, instead, we followed the experiment and listened to the numbers, then I strongly suspect we would not have the bandwidth to both listen and "store" a different number with our auditory system simultaneously.  This difficulty would arise during both the "memorization" and "give-the-answer" phases so the task would be significantly more difficult.  Perhaps if I have time later I can implement a "listen" option.
+
+Visual depiction of the procedure[^1]:
 [![Visual timeline depiction of the add-1 procedure](images/add1_timeline_screenshot.png){: style="width: 100%; margin: 0;" class="alt-timeline" }](images/add1_timeline_screenshot.png)
 
 <div class="container">
