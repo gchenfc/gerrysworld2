@@ -9,7 +9,7 @@ image: "https://github.com/gchenfc/Gerrys-Custom-ASIC-tt05/raw/main/screenshots/
 imageAltText: "Screenshot of the custom silicon chip"
 ---
 
-I stumbled across [Tiny Tapeout](https://tinytapeout.com) this morning on Twitter and, after reading a little bit, thought creating/ordering a design would be a fun Sunday project :)
+I stumbled across [Tiny Tapeout](https://tinytapeout.com) this morning on Twitter and, after reading a little bit, thought creating/ordering a design would be a fun Sunday project :)  It only took 3 hours start-to-finish!
 
 I'm excited to see how this turns out! I'll update this post with photos/videos when I get the chip in the mail in hopefully around a year. :)
 
