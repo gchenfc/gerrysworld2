@@ -122,6 +122,53 @@ stylesheets: /css/publication.css
       {% endif %}
     {% endfor %}
 
+  <!-- ************ Patents ************** -->
+  <h2> Patents </h2>
+  {% for publication in publications reversed %}
+    {% if publication.category == "patent" %}
+      <div class="publication">
+        <div class="publicationrow">
+          <div class="publicationcolumn1">
+            <figure class="imagefig">
+              {% if publication.img contains '://' %}
+                <img src="{{publication.img}}" alt="{{publication.title}}" style="width: 300px; {{publication.img_style}}; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
+              {% else %}
+                <img src="{{publication.url | remove: "/index.html" }}/{% if publication.img %}{{publication.img}}{% else %}icon.png{% endif %}" alt="{{publication.title}}" style="width: 300px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
+              {% endif %}
+            </figure>
+          </div>
+
+          <div class="publicationcolumn2">
+            <header><h3><a href="{{publication.url}}">{{publication.title}}</a></h3></header>
+            <div class="journal">
+              {{publication.assignee}} ({{publication.year}})
+            </div>
+            <div class="author">
+              {{publication.author}}
+            </div>
+            <div class="links">
+              {% assign mylinks = "false" %}
+              {% for patentNumber in publication.PatentNumber %}
+                [<a class="link-style" href="{{patentNumber[1]}}">{{patentNumber[0]}}</a>] {% assign mylinks = "true" %}
+              {% endfor %}
+              {% if publication.PDF %} [<a class="link-style" href="{{publication.PDF}}">PDF</a>] {% assign mylinks = "true" %} {% endif %}
+              {% if publication.Video %} [<a class="link-style" href="{{publication.Video}}">Video</a>] {% assign mylinks = "true" %} {% endif %}
+              {% if publication.DOI %} [<a class="link-style" href="{{publication.DOI}}">DOI</a>] {% assign mylinks = "true" %} {% endif %}
+              {% if publication.arxiv %} [<a class="link-style" href="{{publication.arxiv}}">arXiv</a>] {% assign mylinks = "true" %} {% endif %}
+              {% if publication.zip %} [<a class="link-style" href="{{publication.zip}}">zip</a>] {% assign mylinks = "true" %} {% endif %}
+              {% for link in publication.links %}
+                [<a class="link-style" href="{{link[1]}}">{{link[0]}}</a>] {% assign mylinks = "true" %}
+              {% endfor %}
+              {% if mylinks == "false" %}
+                <p>Contact me for further information.</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
   <!-- ************ Unpublished ************** -->
   <h2> Unpublished </h2>
     {% for publication in publications reversed %}
