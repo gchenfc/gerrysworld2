@@ -34,7 +34,9 @@ stylesheets: /css/publication.css
           <div class="publicationrow">
             <div class="publicationcolumn1">
               <figure class="imagefig">
-                {% if publication.img contains '://' %}
+                {% if publication.img_custom %}
+                  {{publication.img_custom}}
+                {% elsif publication.img contains '://' %}
                   <img src="{{publication.img}}" alt="{{publication.title}}" style="width: 300px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
                 {% else %}
                   <img src="{{publication.url | remove: "/index.html" }}/{% if publication.img %}{{publication.img}}{% else %}icon.png{% endif %}" alt="{{publication.title}}" style="width: 300px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
@@ -83,7 +85,9 @@ stylesheets: /css/publication.css
           <div class="publicationrow">
             <div class="publicationcolumn1">
               <figure class="imagefig">
-                {% if publication.img contains '://' %}
+                {% if publication.img_custom %}
+                  {{publication.img_custom}}
+                {% elsif publication.img contains '://' %}
                   <img src="{{publication.img}}" alt="{{publication.title}}" style="width: 300px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
                 {% else %}
                   <img src="{{publication.url | remove: "/index.html" }}/{% if publication.img %}{{publication.img}}{% else %}icon.png{% endif %}" alt="{{publication.title}}" style="width: 300px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
@@ -130,7 +134,9 @@ stylesheets: /css/publication.css
         <div class="publicationrow">
           <div class="publicationcolumn1">
             <figure class="imagefig">
-              {% if publication.img contains '://' %}
+              {% if publication.img_custom %}
+                {{publication.img_custom}}
+              {% elsif publication.img contains '://' %}
                 <img src="{{publication.img}}" alt="{{publication.title}}" style="width: 300px; {{publication.img_style}}; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
               {% else %}
                 <img src="{{publication.url | remove: "/index.html" }}/{% if publication.img %}{{publication.img}}{% else %}icon.png{% endif %}" alt="{{publication.title}}" style="width: 300px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
@@ -178,7 +184,9 @@ stylesheets: /css/publication.css
           <div class="publicationrow">
             <div class="publicationcolumn1">
               <figure class="imagefig">
-                {% if publication.img contains '://' %}
+                {% if publication.img_custom %}
+                  {{publication.img_custom}}
+                {% elsif publication.img contains '://' %}
                   <img src="{{publication.img}}" alt="{{publication.title}}" style="width: 300px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
                 {% else %}
                   <img src="{{publication.url | remove: "/index.html" }}/{% if publication.img %}{{publication.img}}{% else %}icon.png{% endif %}" alt="{{publication.title}}" style="width: 300px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
