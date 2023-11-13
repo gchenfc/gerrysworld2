@@ -2,7 +2,11 @@ module Jekyll
   class CreateCollapsibleTagBlock < Liquid::Block
 
     # Usage:
-    # {% collapsible TITLE OF THE COLLAPSIBLE [--expanded] [--id=CUSTOM_ID] %}
+    #   {% collapsible TITLE OF THE COLLAPSIBLE [--expanded] [--id=CUSTOM_ID] %}
+    # Note that if the very first content in the page is a collapsible (or any liquid block), you might get an error about "Liquid block containing the excerpt separator "\n\n"".
+    # This is for a feature I'm not currently using (exceprts), but to silence the warning, either:
+    #   1. Remove the blank lines (replace with <br /> or something)
+    #   2. Add this to the front-matter: "excerpt_separator: <!-- excerpt-end -->"
     def initialize(tag_name, markup, tokens)
       super
       args = markup.split(/\s+/)
