@@ -20,6 +20,7 @@ imageAltText: "The Square-1 puzzle was sold in this shape with instructions for 
   - [Step 3: Permute Edges](#step-3:-permute-edges)
   - [Step 4: Permute Corners](#step-4:-permute-corners)
   - [Step 5: Fix Parity](#step-5:-fix-parity)
+- [Conclusion](#conclusion)
 {% endcollapsible %}
 
 {% collapsible Preface %}
@@ -27,9 +28,14 @@ Something like 10 years ago, my mom got be one of these Square-1 Rubik's cube st
 <br />
 Last Christmas, I just randomly picked it up again for a few minutes and realized that actually it wasn't as bad as I thought all those years ago; seems my logical thinking skills have improved.  I gave it a go for 30 minutes or so and made some progress but was still a little ways off from solving it.  
 <br />
-Yesterday, visiting home, I picked it up again and, suddenly started feeling inspired, decided to try to solve it for real this time.  
+Yesterday, visiting home, I picked it up again and, suddenly started feeling inspired, decided to try to solve it for real this time.  4-ish hours later, I finally solved it without looking up any algorithms :)  
 <br />
 This is a writeup of my journey and technique for solving the Square-1 puzzle from scratch, with no prior knowledge of the puzzle.
+<div style="clear:both;" />
+![The Square-1 puzzle scrambled
+](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Square-1_scrambled.jpg/440px-Square-1_scrambled.jpg){: style="width: 40%; float: left;" }
+![The same puzzle in its solved state
+](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Square-1_solved.jpg/440px-Square-1_solved.jpg){: style="width: 40%; float: right;" }
 {% endcollapsible %}
 
 {% collapsible Preliminaries %}
@@ -136,7 +142,7 @@ It's not too bad to get 4-5 levels by hand, but I wrote some [Python code](2_top
 You can try it out below or [here](permutation_solver).
 
 <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
-<script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+<script type="module" src="https://pyscript.net/releases/2023.11.1/core.js" defer></script>
 
 <py-config>
     [[fetch]]
@@ -165,12 +171,21 @@ Procedure:
     from topology import State, IntermediateState
     import topology
 
-    print("Constructing graph...")
-    graph = topology.construct_graph()
-    print("Done constructing graph.")
+    graph = None
+
+    def setup(event):
+        global graph
+        print("Constructing graph...")
+        graph = topology.construct_graph()
+        print("Done constructing graph.")
+        # proxy(None)  # Run once to initialize
+    proxy2 = create_proxy(setup)
+    document.addEventListener('DOMContentLoaded', proxy2)
 
     def process_inputs(event):
         try:
+            if graph is None:
+                setup(event)
             input1_value = document.getElementById('input1').value
             input2_value = document.getElementById('input2').value
             print(f"Got: Input 1: {input1_value}, Input 2: {input2_value}")
@@ -184,8 +199,6 @@ Procedure:
 
     proxy = create_proxy(process_inputs)
     document.getElementById('enterButton').addEventListener('click', proxy)
-    proxy(None)  # Run once to initialize
-
 </py-script>
 
 {% collapsible Usage (Brief Summary / Recap) %}
@@ -238,6 +251,10 @@ I used a simple commutation algorithm:
 Which switches the TLB<->TRB pairs and the TRF<->BRF pairs.  And of course use setup moves to get the pairs into the correct locations, and use multiple iterations as needed.
 
 I found that the easiest way to do this is to follow a method similar to a blindfolded solve: just keep shuffling around 2 pieces while you cycle the other ones around.  For example, if you have a 3-cycle ABC, first swap AB pairs and 2 random (correct) pairs, then swap BC pairs and again the same 2 (now incorrect) pairs.
+
+I also made some diagrams to help me since my cube-tracking-memory is rusty :)
+
+![Sample permutation diagrams](sample_permutation_diagrams.jpg)
 
 {% endcollapsible %}
 
