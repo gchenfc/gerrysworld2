@@ -6,7 +6,7 @@ imageAltText: "The Square-1 puzzle was sold in this shape with instructions for 
 ---
 
 # Intro
-Please refer to [Square-1: A Theoretical Perspective, Step 2: Cubify the Puzzle](./#step-2:-cubify-the-puzzle) for how to decode this into moves.
+Please refer to [Square-1: A Theoretical Perspective, Step 2: Cubify the Puzzle](./#step-2-cubify-the-puzzle) for how to decode this into moves.
 
 This solver helps put edges/corners in the right pattern to make the puzzle into the correct cube shape.
 

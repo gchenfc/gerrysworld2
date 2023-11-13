@@ -9,21 +9,24 @@ image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Square-1_half-
 imageAltText: "The Square-1 puzzle was sold in this shape with instructions for turning it back to a cube. This is halfway through a vertical turn."
 ---
 
+See also: [Python Cubify Assister](./permutation_solver)
+
 {% collapsible Table of Contents --expanded %}
 - [Preface](#preface)
 - [Preliminaries](#preliminaries)
 - [Notation](#notation)
-- [The Strategy](#the-high-level-strategy)
-  - [Step 1: Solve one half of one face](#step-1:-solve-one-half-of-one-face)
-  - [Step 2: Cubify the Puzzle](#step-2:-cubify-the-puzzle)
-    - [Python Cubify Assister](permutation_solver)
-  - [Step 3: Permute Edges](#step-3:-permute-edges)
-  - [Step 4: Permute Corners](#step-4:-permute-corners)
-  - [Step 5: Fix Parity](#step-5:-fix-parity)
+- [The High-Level Strategy](#the-high-level-strategy)
+  - [Step 1: Solve one half of one face](#step-1-solve-one-half-of-one-face)
+  - [Step 2: Cubify the Puzzle](#step-2-cubify-the-puzzle)
+  - [Step 3: Permute Edges](#step-3-permute-edges)
+  - [Step 4: Permute Corners](#step-4-permute-corners)
+  - [Step 5: Fix Parity](#step-5-fix-parity)
 - [Conclusion](#conclusion)
+<!--  -->
 {% endcollapsible %}
 
-{% collapsible Preface %}
+{% collapsible %}
+# Preface
 Something like 10 years ago, my mom got me one of these Square-1 Rubik's cube style puzzles.  At that time, I was already pretty proficient at the standard 3x3 (and some simple variants like 2x2, 4x4, 5x5, pyramid, void) Rubik's cube, but after just a couple minutes, I soon realized that I was in way over my head and I completely gave up for many years.  
 <br />
 Last Christmas, I just randomly picked it up again for a few minutes and realized that actually it wasn't as bad as I thought all those years ago; seems my logical thinking skills have improved.  I gave it a go for 30 minutes or so and made some progress but was still a little ways off from solving it.  
@@ -38,7 +41,8 @@ This is a writeup of my journey and technique for solving the Square-1 puzzle fr
 ](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Square-1_solved.jpg/440px-Square-1_solved.jpg){: style="width: 40%; float: right;" }
 {% endcollapsible %}
 
-{% collapsible Preliminaries %}
+{% collapsible %}
+# Preliminaries
 
 Although initially intimidating, the Square One is actually just composed of 2-faces each with 4-skinny ("edges") and 4-fat ("corners") slices.  This is because
 1. Independence: the middle row pieces are not congruent with any of the top/bottom face pieces,
@@ -56,7 +60,8 @@ Finally, I will mention that I required some computer assistance (which I coded)
 
 {% endcollapsible %}
 
-{% collapsible Notation %}
+{% collapsible %}
+# Notation
 
 When I initially started working this out myself, I used some custom notations, but in the interest of making this more accessible to others, I learned the standard notations just for you ;).   I tried to change everything to standard notation, but let me know if I missed anywhere.  Here's the standard Square-1 notation:
 
@@ -73,7 +78,8 @@ After executing, the cube should look exactly the same except the middle row loo
 
 {% endcollapsible %}
 
-{% collapsible The High-Level Strategy %}
+{% collapsible %}
+# The High-Level Strategy
 
 This is by no means optimal, but it's what I came up with because I felt it would be easiest.  Also, it very likely already exists, but I haven't checked yet because I don't want to spoil the fun.
 
@@ -91,7 +97,8 @@ One major downside with this strategy is that we won't know about parity issues 
 
 {% endcollapsible %}
 
-{% collapsible Step 1: Solve one half of one face %}
+{% collapsible %}
+## Step 1: Solve one half of one face
 
 The objective of this step is to get 4 pieces in the correct locations.  I like to put the bottom-left face in the correct location first since that's the hardest to see, so during the rest of the solve we'll have visibility of what we care about.  So holding the cube with the red face facing you and the white face up, that would be the 4 green pieces on the bottom-left side (GRB corner, GB edge, GBO corner, GO edge).
 
@@ -101,7 +108,8 @@ Generally, though, I assemble the 4-piece chunk on the top face one piece at a t
 
 {% endcollapsible %}
 
-{% collapsible Step 2: Cubify the Puzzle %}
+{% collapsible %}
+## Step 2: Cubify the Puzzle
 
 This part is by far the hardest part of the puzzle IMHO.  The trouble is that, in the scrambled state, edges might be next to other edges and corners might be next to other corners, but we need each face to look like edge-corner-edge-corner-edge-corner-edge-corner.
 
@@ -201,7 +209,9 @@ Procedure:
     document.getElementById('enterButton').addEventListener('click', proxy)
 </py-script>
 
-{% collapsible Usage (Brief Summary / Recap) %}
+{% collapsible %}
+<!-- omit in toc -->
+### Usage (Brief Summary / Recap)
 
 0 = edge, 1 = corner
 
@@ -228,7 +238,8 @@ After executing, the puzzle should now be a cube :)  well, maybe except the midd
 
 {% endcollapsible %}
 
-{% collapsible Step 3: Permute Edges %}
+{% collapsible %}
+## Step 3: Permute Edges
 
 Next, permute the edges to be next to their corresponding corners.  Keep in mind that, although a corner can match with 2 edges, we always want to stay consistent which edge we choose (clockwise or counterclockwise).  I recommend matching each corner to the edge counter-clockwise to it.
 
@@ -238,7 +249,8 @@ At the end of this step, the puzzle should now be almost solved, with just 8 mat
 
 {% endcollapsible %}
 
-{% collapsible Step 4: Permute Corners %}
+{% collapsible %}
+## Step 4: Permute Corners
 
 Getting most of the way through this step should be straightforward, but toward the end you probably need an algorithm.
 
@@ -258,7 +270,8 @@ I also made some diagrams to help me since my cube-tracking-memory is rusty :)
 
 {% endcollapsible %}
 
-{% collapsible Step 5: Fix Parity %}
+{% collapsible %}
+## Step 5: Fix Parity
 
 The final, and most annoying, step is to fix the parity.  Now I'm sure there's nice efficient algorithms to do this, but I didn't want to "cheat" by looking up an algorithm.
 
@@ -303,7 +316,8 @@ For reference, here's the sequences to go back-and-forth between 0101,0101,0101 
 
 {% endcollapsible %}
 
-{% collapsible Conclusion %}
+{% collapsible %}
+# Conclusion
 
 I hope you enjoyed this writeup!  I had a lot of fun solving this puzzle and writing this up.  I'm sure there's a lot of room for improvement, but I'm happy with my solution for now, mainly because I was able to do it without assistance :)
 
