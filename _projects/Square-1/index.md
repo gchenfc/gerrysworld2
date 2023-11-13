@@ -24,7 +24,7 @@ imageAltText: "The Square-1 puzzle was sold in this shape with instructions for 
 {% endcollapsible %}
 
 {% collapsible Preface %}
-Something like 10 years ago, my mom got be one of these Square-1 Rubik's cube style puzzles.  At that time, I was already pretty proficient at the standard 3x3 (and some simple variants like 2x2, 4x4, 5x5, pyramid, void) Rubik's cube, but after just a couple minutes, I soon realized I was in way over my head and I completely gave up for many years.  
+Something like 10 years ago, my mom got me one of these Square-1 Rubik's cube style puzzles.  At that time, I was already pretty proficient at the standard 3x3 (and some simple variants like 2x2, 4x4, 5x5, pyramid, void) Rubik's cube, but after just a couple minutes, I soon realized that I was in way over my head and I completely gave up for many years.  
 <br />
 Last Christmas, I just randomly picked it up again for a few minutes and realized that actually it wasn't as bad as I thought all those years ago; seems my logical thinking skills have improved.  I gave it a go for 30 minutes or so and made some progress but was still a little ways off from solving it.  
 <br />
@@ -42,7 +42,7 @@ This is a writeup of my journey and technique for solving the Square-1 puzzle fr
 
 Although initially intimidating, the Square One is actually just composed of 2-faces each with 4-skinny ("edges") and 4-fat ("corners") slices.  This is because
 1. Independence: the middle row pieces are not congruent with any of the top/bottom face pieces,
-2. Middle Row Permutation: there is are only 2 pieces in the middle row so we don't have to worry about the permutation of the middle row, and
+2. Middle Row Permutation: there are only 2 pieces in the middle row so we don't have to worry about the permutation of the middle row, and
 3. Middle Row Orientation: the orientation of the pieces is easy to flip-flop if we need to at the end with `/(6,0)/(6,0)/` (see notation section below).
 
 Therefore, we can ignore the middle row and just worry about solving the top and bottom faces.  Note that pieces can be moved between the 2 faces (they are not independent of each other).
