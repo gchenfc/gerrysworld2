@@ -266,7 +266,7 @@ I found that the easiest way to do this is to follow a method similar to a blind
 
 I also made some diagrams to help me since my cube-tracking-memory is rusty :)
 
-![Sample permutation diagrams](sample_permutation_diagrams.jpg)
+![Sample permutation diagrams](sample_permutation_diagrams_smol.jpg)
 
 {% endcollapsible %}
 
@@ -324,3 +324,12 @@ I hope you enjoyed this writeup!  I had a lot of fun solving this puzzle and wri
 Please do let me know if you have any questions or comments!  I'd love to hear your thoughts :)
 
 {% endcollapsible %}
+
+<script src="https://cdn.apple-livephotoskit.com/lpk/1/livephotoskit.js"></script>
+
+<div
+    data-live-photo
+    data-photo-src="IMG_2256_smol.jpg"
+    data-video-src="IMG_2256_480p.mp4"
+    style="width: 100%; max-height: 320px; height: 100vw;">
+</div>
