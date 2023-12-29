@@ -14,7 +14,7 @@ comments: true
   </div>
 
   <ul class="card-listing">
-    {% assign blogPosts = site.blog | sort: 'date' %}
+    {% assign blogPosts = site.blog | where_exp: "item", "item.exclude != true" | sort: 'date' %}
     {% for blogPost in blogPosts reversed %}
       {% if blogPost.shortTitle %}
         {% assign shortTitle = blogPost.shortTitle %}
