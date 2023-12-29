@@ -3,7 +3,7 @@ title: "AI Generated Children's Book"
 postType: "miniproject"
 description: "I generated a children's book as a Christmas gift using ChatGPT, DALL-E 3, and some generative photo editing tools."
 date: Dec 24, 2023
-stylesheets: ["/css/blogPost.css"]
+stylesheets: ["/css/blogPost.css", "/css/slideshowGallery2.css"]
 ---
 
 {% collapsible Table of Contents --expanded %}
@@ -26,7 +26,7 @@ This Christmas, I wanted to create an illustrated children's book for a <1 year-
 1. I was eager to try out the new generative AI tools to get a better feel for their capabilities, strengths, weaknesses, etc. and
 2. I thought it would be fun and cute.
 
-You can view a low-res image of the final book [here](book_compressed.pdf)!
+You can view a low-res preview of the final book [here](book_compressed.pdf), or full-res (but not cropped-to-book-trim) images [here](https://photos.app.goo.gl/HNckeK5UG4iWo9457)!
 
 <a href="book_compressed.pdf"><img style="width: 100%;" src="cover.jpg" /></a>
 <!-- embed pdf -->
@@ -154,3 +154,34 @@ Personally, I don't think the book is winning any awards, but I do think this wa
 I placed the order as a same-day hardcover on walmart photos, but it didn't turn out well (the hard cover didn't seem professionally folded).  Last year I used shutterfly for a photobook which was great quality and half the price, so in the future I think I'll use a similar online service - just keep in mind online will take ~2 weeks to arrive.
 
 <img src="book_in_hand.jpg" />
+
+<script src="/scripts/googlephotos_carousel.js" async></script>
+<div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
+  data-link="https://photos.app.goo.gl/HNckeK5UG4iWo9457"
+  data-title="Aven Book"
+  data-description="23 new items · Album by Gerry Chen"
+  data-delay="5">
+  <!-- <object data="https://lh3.googleusercontent.com/pw/ABLVV85-Vjuw8WgTXDgY4GkwwzFE-daoZ8mgMQNmXQV_LI6CIShMrosSjWb8-YHikGLQbvDI6dMwBALvhawWJW79_dLIZOBbs65ZiPK7M7KGjbdMr0zx9DZL=w1920-h1080"></object> -->
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV855vKvQWBTtF6EOhK9blGzINS7KCmDJwMSBYYmksf1pXnik3NRS0B8SrNHdkdFR3ohNFtgAJnHBWg5CVTLn9iYm7pxa0m2SgnmmYESs78_u1UBx55eM=w1920-h1080"></object>
+  <!-- <object data="https://lh3.googleusercontent.com/pw/ABLVV87aunMiTVDEq7izQLuGSFWRoypbNBLaMRth2pMBjUPicjpP7wTkJaXPg6OWOvtvypGzghUuc63t_gjQc-V-4p-MGjAMY85YzSnW0dGre-iGjddwXE8B=w1920-h1080"></object> -->
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV86gsTtZMAX2dkbOJeIdkxul8IB8jqHaU0dSA7ihfrooSVIf6N4lYWQOhv2cSqTfRoQiWuOX7mYSd6POa0WqDwM0opIq87EtxXL5r9CeAqDZkvDnektw=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV86c5-1b1_LnbsgsLH-rBb5tS-qIWY7HBIfe3SDBgjqDXbTEponYX7xavquecs0jHVLZkUeFJbnaMoGai2NTj5-ql_ytH2Vob0S75zvK-uILjvZZfsEI=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV85nksS3N4qguHihAwrey4r60BoyJH4YPSlXNqAP1Ritqu1i_Ik0W0LnwPxbb4V8Ug8cA6PKSDx5P7lj9MsDHFXi1RoJYE5S40J-fZcFuzTVbZ0vh1jH=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV86LRZGqlnqXHxxRLX8CM2TWLYKBtt0uA-tIOZXvkDZhaqx3PXTE73eNdcc9dro6o3PZY-QfpG6CM3Lj8SgvzMws6orMg3JFbmOaDMCrcFsbDRLrRL9B=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV870rG_9pDbJSJ-8GbFQH31Ek6JnkDp1VVYuxlW79cs97bFZINSinjzk0517vrck9s1DLiiesyjh0fZNVFJk6wbxpZDX6I0yp9oHCBktkWowMIqfowvx=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV86-7jxvvcy7GqrBf9ETZZwcmT0RPSmheByrLXOcoJg-iKkAEoH67_oIbMjr3nIx9H-c5Xx6oxCd4GfAeQBXlqUusgAbmuWu4rJQ13vyprWgkQtRDwUR=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV86KVEAt9lvI0BZ5AHEKtFpuVLYaT8yMZt0YFjXeXzt0P9VjpQEoDkBm4mOI9B6Ifwy7nSTI4hWM4ayF2WDbGI2RQUFGg5XppC5Gccy3gR9lGFXQW9AY=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV84AYafVWpWhnBk0mZFwZM2gQHWaiUVQbt9CIWVURhxnh4ir99GnIvAqSq6Dnyky21dahnSD35szCbsVYJgm1Xs9TN7Lwc1Ur_mqh6PxCQIpKJq2ko6K=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV8635de55hwcGRIio7ZmmAk9OJiB3FAQOrsIre9lFQVUMX1fkiumG6Rs_k15927fqHZW5AZH5l6PwN2Wih6J99Np4kmDi3jrGP5u-8wHMKISfHcMYSBu=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV87ANXISBmhxA0g149B8JubDqc3F3gUiVRsTBpmFINdLdONFRHvQENwPODsBvwbpYOrCyoS3WoOufULFbFWUOtfZEtHRy8Fzfx002R2ySc2pOrA494HT=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV87lCiXyA14ice68nnEPA685EACQlgH2QOHDFFfGJz90qZn0SnXt_pbY4T7jh5673N4S8LAn9bmivC61U3cPIgcSsKw2zXPGPN4-E9nUSWlNtG3RIGEL=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV85jFk9aOlRWU981MRACSIKrjhMMh-xwiDcVX0mfrke_tVHweiFwhvSZh7CKbcNrpevnrCDLrVK3R9NQXj6ImCfscYJn6gvBtP8pVOPPWoayKQPuYmtg=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV85QrFfQ_Pz6uiK6m2Sfzg3TWDg2w8HQm-Xkq0H3k1Ifi0RbfRMLwB9wDWmo0k_aYNUnsbRj_FrGzYqbuM45AteqBDTSeD0M7vTBukDMOAUhiQo_dQmV=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV85q-A6liPti1wfSj-kRz7YVtUepvYqVa_QV1wMHqK20Oi5BLMzwdhn_bhvz-_AILgFGijD34WtdSccOVMpifkD8n5qffnoSplKaDfP1OiTzAz-rPh1l=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV846H8tgqKgBBjdfoiA3syHToS6t_ku3RO1vIAW-o8AerT2VlCW2BxBKeImyPXa8K5sEJH5q94JZ57IZrrxqBwSfJTDvqKmYB_Ypa4jZZKp7osWhb5Jy=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV86dbB_WumwSxIgKQcJiX35-zvIlhnOYr_iHgLqnvN17LS3B_DgfQvFauxLOIhD0ifSrPbpHV36VHP-2XRuQdmXk8mRqdfHOWNmZHgEOE3BRJbGOxtX9=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV84leyajMP1NFNYVqbJRIhyRIL9C_3OWQDnGx0IYTpTb6tAAQCbnuRwjos0YIHWIiN-bOcqvhY2d1X3_GhIVAV-miozrE73-ylYnSWy4wNLCv9M0Jp0G=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV87Ovh32wStE4g-_en8eyzBWBWYy3ua3QJnau3e2yu87lOLJv36mp41C3sxoIcmavRZ9JfhQGsmxGi7DwXocZGv72koytvjh_0BcvWvL-048Ceaq74ow=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV84s3JhbtAqaK_u9c2_09ol78R2gnfpA8Y9V_B4yDWgv2s_DXGHBhzJ7DFGNcTx7YC3YH_G-HwfxA2x1kh-7bNJh6-gwsGxeavsq3ZCnX1eD1mGAMhpY=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/ABLVV84qQNz1eJz_dv8qwq-SgG-1Elq7G3GRxKV5M2K3kImi9cqe3cluvqn9ff7c_dYwqaei4BEQa7bRqKP_zjR2yOf2YcGV6tTe1xg6Gt1ATjIr7AvfI70Y=w1920-h1080"></object>
+</div>
