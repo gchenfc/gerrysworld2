@@ -37,6 +37,12 @@
 
 </header>
 
+{% if page.PDF contains '://' %}
+  {% assign pdf_url = page.PDF %}
+{% else %}
+  {% assign pdf_url = "../" | append: page.PDF %}
+{% endif %}
+
 <!-- ********** CONTENT *********** -->
 <div class="publicationEntry" id="main-content">
   <h1>{{page.title}}</h1>
@@ -49,7 +55,7 @@
     <br />
       <p style="text-align: center">Links:
         {% assign mylinks = "false" %}
-        {% if page.PDF %} [<a class="link-style" href="../{{page.PDF}}">PDF</a>] {% assign mylinks = "true" %} {% endif %}
+        {% if page.PDF %} [<a class="link-style" href="{{pdf_url}}">PDF</a>] {% assign mylinks = "true" %} {% endif %}
         {% if page.Poster %} [<a class="link-style" href="../{{page.Poster}}">Poster</a>] {% assign mylinks = "true" %} {% endif %}
         {% if page.pptx %} [<a class="link-style" href="{{page.pptx}}">pptx</a>] {% assign mylinks = "true" %} {% endif %}
         {% if page.Code %} [<a class="link-style" href="{{page.Code}}">Code</a>] {% assign mylinks = "true" %} {% endif %}
@@ -74,9 +80,8 @@
         The links on the main <a href="/publications/">publications page</a> should always work, though.
       </p>
       {% if page.PDF %}
-        <!-- TODO: figure out how to handle relative vs absolute vs url links -->
-        <object data="../{{page.PDF}}" type="application/pdf" width="100%" style="aspect-ratio: 8.5/11;">
-          <p>In-browser pdf preview failed.  <a href="../{{page.PDF}}">Download PDF</a>.</p>
+        <object data="{{pdf_url}}" type="application/pdf" width="100%" style="aspect-ratio: 8.5/11;">
+          <p>In-browser pdf preview failed.  <a href="{{pdf_url}}">Download PDF</a>.</p>
         </object>
       {% endif %}
     {% endunless %}
