@@ -18,7 +18,7 @@ stylesheets: ["/css/blogPost.css", "/css/slideshowGallery2.css"]
     - [Generative edge fill](#generative-edge-fill)
     - [Adding text (not using AI)](#adding-text-not-using-ai)
 - [Concluding Thoughts / Reflections](#concluding-thoughts--reflections)
-
+<!--  -->
 {% endcollapsible %}
 
 # Introduction
