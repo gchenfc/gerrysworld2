@@ -45,8 +45,11 @@ Some notes:
 
 * When clicking upload, actually a Lambda instance presigns an S3 bucket link which gets sent back to the browser and then the browser can upload it to S3
 * CORS - both the client's request ("preflight") and the server's response ("request") matter and must be configured.
-* The converting Lambda function needs a "Layer" containing the [pandoc binaries](./bibtest/pandoc_binaries.zip).  The pre-existing [Serverless App Repository's Lambda Layer](https://github.com/serverlesspub/pandoc-aws-lambda-binary) was great except they didn't include the `pandoc-citeproc` binary, so I recompiled using their scripts and made a new layer.
+* The converting Lambda function needs a "Layer" containing the [pandoc binaries][pandoc_binaries_zip].  The pre-existing [Serverless App Repository's Lambda Layer](https://github.com/serverlesspub/pandoc-aws-lambda-binary) was great except they didn't include the `pandoc-citeproc` binary, so I recompiled using their scripts and made a new layer.
 * Someday maybe I'll add support for additional styles other than just IEEE.  Pandoc/Lambda can already do it easily, it's just a matter of making a dropdown or something to select which style you want.  I'm too lazy and also don't see myself needing other formats for the foreseeable future.
 
 ## Code
 The [code](bibtest) is very disorganized and lacking documentation.  Contact me if you have any questions.
+
+[pandoc_binaries_zip]: https://drive.google.com/file/d/1SLVYL_mUfnv_LgYtt-kUgQKy6oVkVIJc/view?usp=drive_link
+<!-- [pandoc_binaries_zip]: ./bibtest/pandoc_binaries.zip -->

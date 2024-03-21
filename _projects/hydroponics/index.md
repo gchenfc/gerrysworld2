@@ -9,7 +9,7 @@ image: "denseReconstruction_small_transparent.gif"
 imageAltText: "Example 3D plant reconstruction"
 
 sidepic: "denseReconstruction_small_transparent.gif"
-sidepicfull: "denseReconstruction_large.gif"
+sidepicfull: "https://drive.google.com/file/d/1PsD321DjNEJU8XQuRVh8S9o2ukKgJ1Pf/view?usp=drive_link"
 sidepicAltText: "Example 3D plant reconstruction"
 stylesheets: ["/css/projectPost.css", "/css/publication.css"]
 ---
@@ -94,11 +94,15 @@ stylesheets: ["/css/projectPost.css", "/css/publication.css"]
 </div>
 
 # Image Capture Robot Arm
-[![image collection process](plantcapture_small.gif)](plantcapture.mp4) 
+<!-- [![image collection process](plantcapture_small.gif)](plantcapture.mp4)  -->
+<video muted autoplay loop style="width:90%; margin: 0 auto; display: block;">
+  <source src="plantcapture.mp4" type="video/mp4">
+  Your browser does not support the video tag.  Please <a href="plantcapture.mp4">download the video</a>.
+</video>
 
 # Raw Images
-[![images set 0](circle0.gif){:width="200px" style="float: left;"}](circle0_big.gif)
-[![images set 1](circle1.gif){:width="200px" style="float: left;"}](circle1_big.gif)
+[![images set 0](circle0.gif){:width="200px" style="float: left;"}][circle0_big]
+[![images set 1](circle1.gif){:width="200px" style="float: left;"}][circle1_big]
 [![images set 2](circle2.gif){:width="200px" style="float: left;"}](circle2.gif)
 <br style="clear: both" />
 
@@ -113,7 +117,10 @@ This is the planned next step of the project: the robot arm will be mounted to a
 # Other media
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LTQs_Olgw5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<!-- [med_gif]: https://drive.google.com/uc?id=1ZUm7hk6-Ez89FMNKyuP-ulheR-o4U4uB
-[large_gif]: https://drive.google.com/uc?id=1dKn2jPAbBw_fMV4LGql997pwb_wGa_QW -->
+[circle0_big]: https://drive.google.com/file/d/11GFabAPPrxx5cKfWfbCUpIt8cfGcWRlt/view?usp=drive_link
+[circle1_big]: https://drive.google.com/file/d/1jWWJvojVIbn6R_CnY6hIPqQHtMLKTRJ_/view?usp=drive_link
 [med_gif]: denseReconstruction_med_transparent.gif
-[large_gif]: denseReconstruction_large_transparent.gif
+[large_gif]: https://drive.google.com/file/d/1dKn2jPAbBw_fMV4LGql997pwb_wGa_QW/view?usp=sharing
+<!-- [med_gif]: https://drive.google.com/uc?id=1ZUm7hk6-Ez89FMNKyuP-ulheR-o4U4uB
+[large_gif]: https://drive.google.com/uc?id=1dKn2jPAbBw_fMV4LGql997pwb_wGa_QW
+[large_gif]: denseReconstruction_large_transparent.gif -->
