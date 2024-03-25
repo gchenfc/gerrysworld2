@@ -13,6 +13,9 @@ img: "top1.png"
 category: "pending"
 arxiv: "https://arxiv.org/abs/2403.12214"
 Video: "https://youtu.be/8l2xbP-y3sI"
+links:
+  website: "https://www.library.gatech.edu/AIR"
+  Video 2: "https://youtu.be/33vgN5YJYEg"
 ---
 
 <br />
