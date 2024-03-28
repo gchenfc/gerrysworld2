@@ -1,0 +1,39 @@
+<!-- twitter card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@gchenfc" />
+<meta name="twitter:creator" content="@gchenfc" />
+
+<!-- OG base data -->
+<meta property="og:url" content="https://gerry-chen.com{{page.url}}" />
+<meta property="og:title" content="{{page.title}} | {{site.title}}" />
+<meta property="og:description" content="{{site.description}} | {{page.description}}" />
+<meta property="og:site_name" content="Gerry's World" />
+<meta property="og:locale" content="en_US" />
+
+<!-- OG image data -->
+{% if page.image %}
+{% assign imglinkglobal = page.image | prepend_project_path_if_relative: page %}
+{% endif %}
+{% if page.img %}
+{% if page.img contains '://' %}
+{% assign imglinkglobal = page.img %}
+{% else %}
+{% assign imglinkglobal = "https://gerry-chen.com" | append: page.url | remove: "/index.html" | append: "/" | append: page.img %}
+{% endif %}
+{% endif %}
+{% if imglinkglobal %}
+{% else %}
+{% assign imglinkglobal = "https://gerry-chen.com/img/icon.png" %}
+{% endif %}
+<meta property="og:image" content="{{imglinkglobal}}" />
+{% if page.imageAltText %}
+<meta property="og:image:alt" content="{{page.imageAltText}}" />
+{% endif %}
+
+<!-- extra metadata for Slack unfurls -->
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="Gerry Chen" />
+
+<!-- extra metadata — unknown support -->
+<meta property="og:type" content="article" />
+<meta property="article:section" content="Technology" />
