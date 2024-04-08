@@ -33,7 +33,7 @@ Kind of related to my previous post on [renting vs buying](/blog/2023-06-07_hous
 
 Temporarily, we will ignore the risk differential between the stock market and the housing market, but this is a very important point that we must consider later.
 
-{% collapsible --expanded %}
+{% collapsible %}
 ## Parameters to Vary
 * General Parameters:
   * $$R_m$$: Stock Market Return percent (proportion), typically 7%
@@ -109,7 +109,7 @@ A landlord should aim for approximately market ($$R_l$$) returns adjusted for ri
 
 {% endcollapsible %}
 
-{% collapsible --expanded %}
+{% collapsible %}
 ## Cost Equations
 
 ### Owning
@@ -184,30 +184,23 @@ Where subscripts $$_o$$ and $$_r$$ denote the owning and renting scenarios respe
 
 {% endcollapsible %}
 
+{% collapsible Interactive Graph --expanded %}
+<p style="margin: 15px;" markdown=1>
+  (Standalone page available [here](gpt4/index.html).)
+</p>
 
-<!-- Embed gpt4/index.html
-{% include_relative gpt4/index.html %}
+<embed type="text/html" src="gpt4/body.html" width="100%" height="1200px;">
+{% endcollapsible %}
 
- -->
-
-<embed type="text/html" src="gpt4/index.html" width="100%" height="800px;">
-
-
-
-## Cost Equations 2
-
-At time 0:
-* For a house, we have:
-  * Down payment -> upfront cost, goes into real-estate equity at appreciation rate $$R_a$$
-  * **Cost:** $$(D+A)V$$
-  * **Equity:** $$DV$$
-  * **Initial Net Worth:** $$-AV$$
-* For renting, we have no upfront costs, so let's assume:
-  * "Down payment" instead goes into investment equity at apprecation rate $$R_m$$
-  * **Equity:** $$(D+A)V$$
-  * **Initial Net Worth:** $$(D+A)V$$
-
-In steady state:
-* For a house, we have a mortgage which goes partly towards interest (lost) and partly towards principle (equity):
-  * Mortgage 
-
+<style>
+#wrap-collapsible-interactive-graph {
+  width: calc(50vw + 50%);
+  height: fit-content;
+}
+#wrap-collapsible-interactive-graph .toggle:checked + .lbl-toggle + .collapsible-content,
+#wrap-collapsible-interactive-graph .collapsible-content .content-inner {
+  /* max-height: 100vh; */
+  max-height: 1250px;
+  padding: 0;
+}
+</style>

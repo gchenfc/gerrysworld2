@@ -33,6 +33,10 @@ body {
   /* margin-bottom: 10px; */
 }
 
+#inputs input[type="range"] {
+  width: 200px;
+}
+
 #inputs input {
   margin-left: 10px;
 }
