@@ -1,0 +1,125 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<h2>Parameters</h2>
+<div id="inputs">
+  <table id="sliders">
+    <tr>
+      <td><label for="houseValue">House Value \(V\):</label></td>
+      <td><input type="range" id="houseValue" min="100000" max="1000000" step="10000" value="500000"></td>
+      <td>$<input type="number" id="houseValueLabel"></input></td>
+    </tr>
+    <tr>
+      <td><label for="downPayment">Down Payment \(D\):</label></td>
+      <td><input type="range" id="downPayment" min="0" max="100" value="20"></td>
+      <td><input type="number" id="downPaymentLabel"></input>%</td>
+    </tr>
+    <tr>
+      <td><label for="mortgageRate">Mortgage Interest Rate \(R_i\):</label></td>
+      <td><input type="range" id="mortgageRate" min="0" max="10" step="0.1" value="5.5"></td>
+      <td><input type="number" id="mortgageRateLabel"></input>%</td>
+    </tr>
+    <tr>
+      <td><label for="closingPct">Closing Costs \(A\):</label></td>
+      <td><input type="range" id="closingPct" min="0" max="10" step="0.1" value="3.5"></td>
+      <td><input type="number" id="closingPctLabel"></input>% of House Value</td>
+    </tr>
+    <tr>
+      <td><label for="maintenancePct">Maintenance Costs \(P+C\):</label></td>
+      <td><input type="range" id="maintenancePct" min="0" max="10" step="0.1" value="1.6"></td>
+      <td><input type="number" id="maintenancePctLabel"></input>% of House Value</td>
+    </tr>
+    <tr>
+      <td><label for="annualRentPct">Annual Rent \(R_l\):</label></td>
+      <td><input type="range" id="annualRentPct" min="0" max="20" step="0.1" value="7"></td>
+      <td><input type="number" id="annualRentPctLabel"></input>% of House Value</td>
+    </tr>
+    <tr>
+      <td><label for="realEstateAppreciation">Real Estate Appreciation Rate \(R_a\):</label></td>
+      <td><input type="range" id="realEstateAppreciation" min="0" max="20" step="0.1" value="3"></td>
+      <td><input type="number" id="realEstateAppreciationLabel"></input>%</td>
+    </tr>
+    <tr>
+      <td><label for="investmentReturn">Investment Return Rate \(R_m\):</label></td>
+      <td><input type="range" id="investmentReturn" min="0" max="20" step="0.1" value="5"></td>
+      <td><input type="number" id="investmentReturnLabel"></input>%</td>
+    </tr>
+  </table>
+
+  <!-- <table>
+      <tr>
+          <td><label for="houseValue">House Value \(V\):</label></td>
+          <td>$</td>
+          <td><input type="number" id="houseValue" value="300000"></td>
+          <td></td>
+      </tr>
+
+      <tr>
+          <td><label for="downPayment">Down Payment \(D\):</label></td>
+          <td></td>
+          <td><input type="number" id="downPayment" value="20"></td>
+          <td>%</td>
+      </tr>
+
+      <tr>
+          <td><label for="mortgageRate">Mortgage Interest Rate \(R_i\):</label></td>
+          <td></td>
+          <td><input type="number" id="mortgageRate" value="5.5"></td>
+          <td>%</td>
+      </tr>
+
+      <tr>
+          <td><label for="mortgageRate">Closing Costs \(A\):</label></td>
+          <td></td>
+          <td><input type="number" id="closingPct" value="3.5"></td>
+          <td>% of House Value</td>
+      </tr>
+
+      <tr>
+          <td><label for="mortgageRate">Maintenance Costs \(P+C\):</label></td>
+          <td></td>
+          <td><input type="number" id="maintenancePct" value="1.6"></td>
+          <td>% of House Value</td>
+      </tr>
+
+      <tr>
+          <td><label for="annualRent">Annual Rent \(R_l\):</label></td>
+          <td></td>
+          <td><input type="number" id="annualRentPct" value="7"></td>
+          <td>% of House Value</td>
+      </tr>
+
+      <tr>
+          <td><label for="investmentReturn">Real Estate Appreciation Rate \(R_a\):</label></td>
+          <td></td>
+          <td><input type="number" id="realEstateAppreciation" value="3"></td>
+          <td>%</td>
+      </tr>
+
+      <tr>
+          <td><label for="investmentReturn">Investment Return Rate \(R_m\):</label></td>
+          <td></td>
+          <td><input type="number" id="investmentReturn" value="5"></td>
+          <td>%</td>
+      </tr>
+  </table> -->
+
+  <!-- Side-to-side switch for cumulative vs not cumulative -->
+  <div class="switch-div">
+    <label for="cumulative">Cumulative</label>
+    <label class="switch">
+      <input type="checkbox" id="cumulative" checked>
+      <span class="slider round"></span>
+    </label>
+    <label for="notCumulative">Running Monthly Costs (except totals)</label>
+  </div>
+</div>
+
+<h2>Total Cost (Cumulative)</h2>
+<canvas id="costGraph"></canvas>
+<h2>Total Cost (Cumulative)</h2>
+<div id="resultsTable"></div>
+
+<script type="module" src="script.js"></script>

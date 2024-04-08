@@ -50,7 +50,7 @@ module Jekyll
 
       %{
 <a id="#{@id}" />
-<div class="wrap-collapsible">
+<div class="wrap-collapsible" id="wrap-collapsible-#{@id}">
   <input id="collapsible-#{@id}" class="toggle" type="checkbox" #{checked_attr}>
   <label for="collapsible-#{@id}" class="lbl-toggle">#{@title}</label>
   <div class="collapsible-content">

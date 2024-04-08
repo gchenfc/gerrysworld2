@@ -33,6 +33,7 @@ Kind of related to my previous post on [renting vs buying](/blog/2023-06-07_hous
 
 Temporarily, we will ignore the risk differential between the stock market and the housing market, but this is a very important point that we must consider later.
 
+{% collapsible %}
 ## Parameters to Vary
 * General Parameters:
   * $$R_m$$: Stock Market Return percent (proportion), typically 7%
@@ -40,6 +41,7 @@ Temporarily, we will ignore the risk differential between the stock market and t
 * Buy Parameters:
   * $$D$$: Down payment percent (proportion), typically 20%
   * $$R_i$$: Mortgage Interest rate, typically 3-7%
+  * $$A$$: Closing cost percent (proportion), typically 2-5%
   * $$R_a$$: Property Appreciation rate, typically 0-5%
   * Maintenance costs
     * $$P$$: Mortgage-dependent (i.e. PMI aka mortgage insurance for <20% down payment)
@@ -55,8 +57,8 @@ To make things more tractable, let's make the following "nominal" assumptions, a
 * $$R_m = 7\%$$,
 * $$D = 20\%$$,
 * $$R_i = 5.5\%$$,
-* $$P = 0%$$ (no PMI for 20% down payment),
-* $$C = (0.016)V$$
+* $$P = 0\%$$ (no PMI for 20% down payment),
+* $$C = (0.016)V$$.
 
 In case you are curious, here's some details of how I came up with nominals for the more contentious parameters:
 {% collapsible %}
@@ -102,5 +104,103 @@ Also based on the super vague [Google mortgage calculator](https://www.google.co
 
 {% collapsible %}
 ### Rent Price
-A landlord should aim for approximately market ($R_l$) returns adjusted for risk and liquidity.  I've heard from random people that they do typically aim for around 7% annual rent payment 
+A landlord should aim for approximately market ($$R_l$$) returns adjusted for risk and liquidity.  I've heard from random people that they do typically aim for around 7% annual rent payment 
 {% endcollapsible %}
+
+{% endcollapsible %}
+
+{% collapsible %}
+## Cost Equations
+
+### Owning
+<!-- Align math environment -->
+<!-- $$\begin{tabular}{r l}
+1 + 2 &= 3 \\
+4 + 5 &= 6
+\end{tabular}$$ -->
+
+<style>
+
+/* Format the table so that every other tbody is grey */
+thead {
+  background-color: #f0f0f0;
+}
+tbody:last-child td {
+  background-color: #f8f8f8;
+}
+thead th {
+  border-bottom: 2px solid #808080;
+}
+tbody tr:last-child td {
+  border-bottom: 2px solid #808080;
+}
+
+</style>
+
+| Cost | Description | Expression |
+|:--------:|:-------:|:--------|
+| Upfront Costs | (Downpayment) + (closing costs) | $$I ~:= (D + A)V$$ |
+| Ongoing Costs | (Mortgage) + (maintenance) | $$M := m(R_i)(1-D)V + PV + CV$$ |
+|--|--|--|
+| Total equity at time T | (House Value) - (closing costs) - (mortgage principle) | $$E(T) ~:= V(1 + R_a)^T(1 - A) - p(T, R_i)(1-D)V$$ |
+| Total spent at time T | (Upfront Costs) + (Ongoing Costs) $$\cdot$$ T | $$I + 12MT$$ |
+|--|--|--|
+| Net at time T | (Total Equity) - (Total Spent) | $$ E(T) - I - 12MT $$ |
+
+Where $$m(R_i)$$ is the monthly mortgage payment for a 30-year mortgage at interest rate $$R_i$$ (as a proportion of the total borrowed amount $$(1-D)V$$ ), and $$p(T, R_i)$$ is the total principal owed on a mortgage after $$T$$ years at interest rate $$R_i$$ (also as a percentage of the total borrowed amount $$(1-D)V$$).
+
+$$m(R_i)$$ is a standard equation.  Denoting $$r_i:=R_i/12$$, then
+
+$$m(12r_i) = \frac{r_i(1+r_i)^{360}}{(1+r_i)^{360} - 1}.$$
+
+$$p(T, R_i)$$ is also a reasonably standard calculation:
+
+$$\begin{align*}
+  p(T, 12r_i) &= (1+r_i)^{12T} - \frac{(1+r_i)^{12T} - 1}{r_i}m(R_i) \\
+            &= (1+r_i)^{12T} - \frac{(1+r_i)^{12T} - 1}{(1+r_i)^{360} - 1}(1+r_i)^{360}
+\end{align*}$$
+
+
+### Renting
+
+| Cost | Description | Expression |
+|:--------:|:-------:|:--------|
+| Upfront Costs | 0 | $$I ~:= 0$$ |
+| Ongoing Costs | Rent | $$M := R_lV/12$$ |
+|--|--|--|
+| Total spent at time T | (Upfront Costs) + (Ongoing Costs) $$\cdot$$ T | $$I + 12MT$$ |
+| Total equity at time T | 0 | $$E ~:= 0$$ |
+|--|--|--|
+| Net at time T | 0 | $$ E(T) - I - 12MT $$ |
+
+### Investment of excess cash
+
+| Source | Description | Expression |
+|:--------:|:-------:|:--------|
+| Upfront Costs | upfront money saved invested over T years | $$(\max(I_o, I_r) - I)(1+R_m)^T$$ |
+| Ongoing Costs | monthly money saved invested over T years | $$\int_{0}^{T} (\max(M_o, M_r) - M)(1+R_m)^{T-t} dt$$ |
+
+Where subscripts $$_o$$ and $$_r$$ denote the owning and renting scenarios respectively.
+
+{% endcollapsible %}
+
+{% collapsible Interactive Graph --expanded %}
+<p style="margin: 15px;" markdown=1>
+  (Standalone page available [here](gpt4/index.html).)
+</p>
+
+<embed type="text/html" src="gpt4/body.html" width="100%" height="1200px;">
+{% endcollapsible %}
+
+<style>
+#wrap-collapsible-interactive-graph {
+  width: calc(50vw + 50%);
+  height: fit-content;
+}
+#wrap-collapsible-interactive-graph .toggle:checked + .lbl-toggle + .collapsible-content,
+#wrap-collapsible-interactive-graph .collapsible-content .content-inner {
+  /* max-height: 100vh; */
+  max-height: 1250px;
+  padding: 0;
+}
+</style>
