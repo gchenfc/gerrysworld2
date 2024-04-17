@@ -1,0 +1,59 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+.carousel {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-images {
+  width: 100vw;
+  height: 100vh;
+  display: flex; /* Ensure images are in line */
+}
+
+.carousel-images img {
+  width: 100%; /* Default to full width */
+  height: 100vh; /* Default to full viewport height */
+  object-fit: contain; /* Keep aspect ratio, fit within the frame */
+  display: none; /* Hide images initially */
+  transition: 0.5s ease; /* Smooth transition between images */
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none; /* Prevent text selection */
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+}
