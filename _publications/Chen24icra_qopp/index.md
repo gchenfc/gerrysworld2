@@ -8,8 +8,12 @@ PDF: "Chen24icra_qopp/Chen24icra_qopp.pdf"
 img: "topp_vs_qopp.svg"
 category: "proceedings"
 arxiv: "https://arxiv.org/abs/2309.10176"
-Video: "https://youtu.be/MSK--soXtRY"
+# Video: "https://youtu.be/MSK--soXtRY"
 Poster: "Chen24icra_qopp/poster.pdf"
+links:
+  "Code": "https://github.com/gchenfc/gtsam/tree/features/gerry/trajectory_retiming/gtsam_unstable/retiming"
+  "Video": "https://youtu.be/GHjU3fGdKwI"
+  "Video (Abbreviated)": "https://youtu.be/MSK--soXtRY"
 ---
 
 <br />
