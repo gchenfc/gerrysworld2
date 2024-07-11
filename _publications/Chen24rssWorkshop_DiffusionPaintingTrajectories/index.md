@@ -1,14 +1,15 @@
 ---
-title: "Generating Dynamics-Aware Artistic Painting Trajectories with Diffusion"
+title: "Dynamics-Aware Trajectory Generation for Artistic Painting using Diffusion"
 author: "<u>Gerry Chen</u>, Frank Dellaert, and Seth Hutchinson"
 journal: "2024 RSS Workshop: Generative Modeling meets HRI (GenAI-HRI)"
-year: "in review"
-date: Jun 1, 2024
+year: "2024, in press"
+date: Jul 15, 2024
 PDF: "Chen24rssWorkshop_DiffusionPaintingTrajectories/Chen24rssWorkshop_DiffusionPaintingTrajectories.pdf"
-img: "unconditioned_cropped.png"
+img: "graffiti_1.svg"
 # img: "unconditioned_cropped2.png"
 # img: "unconditioned.png"
-category: "pending"
+category: "proceedings"
+Poster: "Chen24rssWorkshop_DiffusionPaintingTrajectories/Chen24rssWorkshop_poster.pdf"
 PDF: "Chen24rssWorkshop_DiffusionPaintingTrajectories/Chen24rssWorkshop_DiffusionPaintingTrajectories.pdf"
 ---
 

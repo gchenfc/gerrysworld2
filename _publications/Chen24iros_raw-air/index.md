@@ -1,8 +1,8 @@
 ---
 title: "Architectural-Scale Artistic Brush Painting with a Hybrid Cable Robot"
 author: "<u>Gerry Chen</u>, Tristan Al-Haddad, Frank Dellaert, and Seth Hutchinson"
-journal: "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2024)"
-year: "in review"
+journal: "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+year: "2024, in press"
 date: Oct. 14, 2024
 PDF: "https://arxiv.org/pdf/2403.12214.pdf"
 # img: "preview.png"
@@ -10,7 +10,7 @@ PDF: "https://arxiv.org/pdf/2403.12214.pdf"
 img: "top1.png"
 # img_custom: >
 #     <img src="Chen24iros_raw-air/Mural_mezzanine_cropped.jpg" alt="Photo of the finished mural" style="width: 300px; margin-top: 10px;"/>
-category: "pending"
+category: "proceedings"
 arxiv: "https://arxiv.org/abs/2403.12214"
 Video: "https://youtu.be/8l2xbP-y3sI"
 links:
