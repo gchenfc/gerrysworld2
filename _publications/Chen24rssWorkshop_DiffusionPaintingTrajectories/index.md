@@ -11,10 +11,23 @@ img: "graffiti_1.svg"
 category: "proceedings"
 Poster: "Chen24rssWorkshop_DiffusionPaintingTrajectories/Chen24rssWorkshop_poster.pdf"
 PDF: "Chen24rssWorkshop_DiffusionPaintingTrajectories/Chen24rssWorkshop_DiffusionPaintingTrajectories.pdf"
+links:
+  Live Demo: "https://demo.gerry-chen.com/diffusion/"
 ---
 
-<br />
-<br />
+---
+
+## [Click here for Live Demo!](https://demo.gerry-chen.com/diffusion/)
+Draw your own shapes and watch the model modify it!
+
+Note: This live demo may or may not be available depending on the current state of the server.  Please reach out if you believe it is not working and you would like me to turn it on.
+
+## [Click here for paper pdf](Chen24rssWorkshop_DiffusionPaintingTrajectories.pdf)
+
+## [Click here for the poster pdf](Chen24rssWorkshop_Poster.pdf)
+[![Poster on "Dynamics-Aware Trajectory Generation for Artistic Painting using Diffusion"](Chen24rssWorkshop_Poster.svg)](Chen24rssWorkshop_Poster.pdf)
+
+---
 
 #### Abstract
 
