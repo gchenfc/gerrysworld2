@@ -9,5 +9,24 @@ How many times have you seen a table in a scientific paper that has so many numb
 
 I usually write python code to add colorizing commands but this time I decided to use ChatGPT to write some javascript code hosted on my website so that I don't have to re-write the python code every time.
 
-<!-- Include colorizer.html -->
-{% include_relative colorizer.html %}
+Compare for example the following before/after:
+
+<table>
+<tr>
+  <td>
+    <h3>Before</h3>
+    <img src="before.png" style="width:calc(100% - 30px);" />
+  </td>
+  <td>
+    <h3>After</h3>
+    <img src="after.png" style="width:calc(100% - 30px);" />
+  </td>
+</tr>
+</table>
+<br />
+
+Access the tool [here](colorizer.html) or by scrolling down.
+
+---
+
+<embed type="text/html" src="colorizer.html" width="100%" height="1200">

@@ -11,7 +11,7 @@
             white-space: pre;
         }
         #customFunctionCode {
-            height: 50px;
+            height: 20px;
         }
         .options {
             margin-bottom: 10px;
@@ -44,8 +44,10 @@
 <body>
 
 <h1>LaTeX Table Colorizer</h1>
+By Gerry Chen
 
 <div class="options">
+    <h2>Options</h2>
     <label>
         <input type="radio" name="colorizeDirection" id="colorizeByColumn" checked>
         Colorize/normalize by Column
@@ -73,13 +75,36 @@
         Custom Function (JavaScript):
         <textarea id="customFunctionCode" placeholder="return x**2.5;"></textarea>
     </label>
+    <label id="outlierLabel">
+        Outlier Rejection Funciton (JavaScript):
+        <button id="outlierLabelShow">Show Code</button><br />
+        <textarea id="outlierRejectionCode" style="display: none;">
+// function filterOutliers(data) {
+  function isOutlier(value, data) {
+    data.sort((a, b) => a - b);
+    const q1 = data[Math.floor((data.length / 4))];
+    const q3 = data[Math.floor((data.length * (3 / 4)))];
+    const iqr = q3 - q1;
+    const lowerBound = q1 - 3.0 * iqr;
+    const upperBound = q3 + 3.0 * iqr;
+    return value < lowerBound || value > upperBound;
+  }
+  let filtered = [...data];
+  do {
+    data = [...filtered];
+    filtered = data.filter((x) => !isOutlier(x, data));
+  } while (filtered.length != data.length);
+  return filtered;
+// }
+        </textarea>
+    </label>
     <label>
         <input type="checkbox" id="alignAmpersands" onclick="processTable()" checked>
         Auto-format output latex
     </label>
 </div>
 
-<h2>Input LaTeX Table</h2>
+<h2>Input LaTeX Table (without \begin or \end)</h2>
 <textarea id="inputTable" placeholder=
 "Base DDPM (no dynamics)                 &   11.25\%  &  49.77\%  &    6.6   &  1506.8  &&   116.4  &  0.57   \\
 Baseline: Decoupled                     &    0.97\%  &   5.27\%  &   12.4   &     0.0  &&   213.1  &  0.20   \\
@@ -96,22 +121,20 @@ Approach 4: Classifier-Free             &    0.44\%  &  10.35\%  &   13.8   &   
 </textarea>
 <button onclick="processTable()">Generate Colorized LaTeX Code</button>
 
-<h2>Preview Table</h2>
+<h2>Configure Directions</h2>
 Click the arrows to change the "sort" direction (&#8593;higher is better / &#8595;lower is better / &#9744;ignore).<br />
 Select the check marks to toggle whether a row/column is ignored (don't color).<br />
 <div id="previewTableContainer"></div>
 
-<h2>Output LaTeX Table</h2>
+<h2>Colorized Output Table</h2>
 <textarea id="outputTable" readonly></textarea>
-
-<h2>Rendered LaTeX Preview (just for reference)</h2>
+<button id="copyButton" onclick="copyToClipboard()">Copy to Clipboard</button>
 <div id="renderedTable" style="white-space: pre;"></div>
 
 <script>
 // Set dummy defaults
 document.addEventListener('DOMContentLoaded', function () {
   updatePreview();
-  document.getElementById("ignore_ROW0").checked = false;
   cycleSortDirection(document.getElementById("sortDirection_COL0"), 0); // none
   cycleSortDirection(document.getElementById("sortDirection_COL1"), 2); // desc
   cycleSortDirection(document.getElementById("sortDirection_COL2"), 2); // desc
@@ -136,6 +159,14 @@ document.getElementById('scalingFunction').addEventListener('change', function()
     }
 });
 
+document.getElementById('outlierLabelShow').addEventListener('click', function() {
+    const button = document.getElementById('outlierLabelShow');
+    const textarea = document.getElementById('outlierRejectionCode');
+    const toShow = button.textContent === 'Show Code';
+    button.textContent = toShow ? 'Hide Code' : 'Show Code';
+    textarea.style.display = toShow ? 'block' : 'none';
+});
+
 window.MathJax = {
     loader: { load: ['[tex]/colortbl', '[tex]/color'] },
     tex: { packages: { '[+]': ['colortbl', 'color'] } }
@@ -154,6 +185,24 @@ document.querySelectorAll('input[name="colorizeDirection"]').forEach(function(ra
 document.getElementById('customFunctionCode').addEventListener('input', function() {
     processTable();
 });
+
+document.getElementById('outlierRejectionCode').addEventListener('input', function() {
+    processTable();
+});
+
+function copyToClipboard() {
+    const outputTable = document.getElementById('outputTable');
+    outputTable.select();
+    outputTable.setSelectionRange(0, 999999999); // For mobile devices
+    document.execCommand("copy");
+
+    // Optional: Change button text to indicate copy was successful
+    const copyButton = document.getElementById('copyButton');
+    copyButton.innerText = "Copied!";
+    setTimeout(() => {
+        copyButton.innerText = "Copy to Clipboard";
+    }, 2000); // Reset text after 2 seconds
+}
 </script>
 
 </body>

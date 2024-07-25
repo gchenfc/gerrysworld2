@@ -31,18 +31,22 @@ function processTable() {
   // const ignoreRows = document.getElementById('ignoreRows').value.split(',').map(num => parseInt(num.trim()) - 1).filter(num => !isNaN(num));
   const scalingFunction = document.getElementById('scalingFunction').value;
   const customFunctionCode = document.getElementById('customFunctionCode').value;
+  const outlierRejectionCode = document.getElementById('outlierRejectionCode').value;
   const isAlignAmpersands = document.getElementById('alignAmpersands').checked;
 
   const [ignoreColumns, ignoreRows] = findIgnoreColumnsRows();
 
   // scaling function converts number to a scalar from [0, 1]
-  const NORMALIZE = (value, min, max) => (value - min) / (max - min);
+  const NORMALIZE = (value, min, max) => Math.max(Math.min((value - min) / (max - min), 1), 0);
   const scalingFun = {
     linear: (x) => x,
     power2: (x) => x ** 2,
     power3: (x) => x ** 3,
     custom: new Function('x', customFunctionCode),
   }[scalingFunction];
+
+  // outlier rejection code
+  const outlierRejectionFun = new Function('data', outlierRejectionCode);
 
   // Parse the input table
   const rows = inputTable.split('\\\\').map(row => row.split('&').map(cell => cell.trim()));
@@ -81,8 +85,9 @@ function processTable() {
   let min, max;
   if (colorizeByRow) {
     for (let i = 0; i < numRows; i++) {
-      min = Math.min(...table[i].filter(value => value !== undefined));
-      max = Math.max(...table[i].filter(value => value !== undefined));
+      const row = outlierRejectionFun(table[i].filter(value => value !== undefined));
+      min = Math.min(...row);
+      max = Math.max(...row);
       for (let j = 0; j < numCols; j++) {
         per_cell_min[i][j] = min;
         per_cell_max[i][j] = max;
@@ -92,8 +97,10 @@ function processTable() {
   } else if (colorizeByColumn) {
     for (let j = 0; j < numCols; j++) {
       let col = table.map(row => row[j]).filter(cell => cell !== undefined);
+      col = outlierRejectionFun(col);
       min = Math.min(...col);
       max = Math.max(...col);
+      console.log(min, max, col);
       for (let i = 0; i < numRows; i++) {
         per_cell_min[i][j] = min;
         per_cell_max[i][j] = max;
@@ -102,6 +109,7 @@ function processTable() {
     }
   } else if (colorizeByAll) {
     let allCells = table.flat().filter(cell => cell !== undefined);
+    allCells = outlierRejectionFun(allCells);
     min = Math.min(...allCells);
     max = Math.max(...allCells);
     for (let i = 0; i < numRows; i++) {
@@ -136,7 +144,7 @@ function processTable() {
           return cell;
       }
       const color = `green!${Math.min(Math.max(value * 100, 0), 100).toFixed(0)}`;
-      return `\\cellcolor{${color}}${cell}`;
+      return `\\cellcolor{${color}}`.padEnd(22, ' ') + cell;
     }).join(' & ');
   }).join('\\\\\n');
 
