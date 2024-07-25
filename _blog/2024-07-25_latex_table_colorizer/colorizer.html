@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online LaTeX Table Colorizer</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 100px;
+            white-space: pre;
+        }
+        #customFunctionCode {
+            height: 20px;
+        }
+        .options {
+            margin-bottom: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: small;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 0px;
+            text-align: center;
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+        .sort-button {
+            cursor: pointer;
+            border: none;
+            padding: 5px;
+            width: 100%;
+            background-color: white;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="colorizer.js"></script>
+</head>
+<body>
+
+<h1>LaTeX Table Colorizer</h1>
+By Gerry Chen
+
+<div class="options">
+    <h2>Options</h2>
+    <label>
+        <input type="radio" name="colorizeDirection" id="colorizeByColumn" checked>
+        Colorize/normalize by Column
+    </label>
+    <label>
+        <input type="radio" name="colorizeDirection" id="colorizeByRow">
+        Colorize/normalize by Row
+    </label>
+    <label>
+        <input type="radio" name="colorizeDirection" id="colorizeByAll">
+        Colorize/normalize by All
+    </label>
+    <br>
+    <label>
+        Scaling Function (x = (value - min) / (max - min)):
+        <select id="scalingFunction" onchange="processTable();">
+            <option value="linear">Linear (green=x)</option>
+            <option value="power2">Squared (green=x^2)</option>
+            <option value="power3">Cubed (green=x^3)</option>
+            <option value="custom">Custom</option>
+        </select>
+    </label>
+    <br>
+    <label id="customFunctionLabel" style="display: none;">
+        Custom Function (JavaScript):
+        <textarea id="customFunctionCode" placeholder="return x**2.5;"></textarea>
+    </label>
+    <label id="outlierLabel">
+        Outlier Rejection Funciton (JavaScript):
+        <button id="outlierLabelShow">Show Code</button><br />
+        <textarea id="outlierRejectionCode" style="display: none;">
+// function filterOutliers(data) {
+  function isOutlier(value, data) {
+    data.sort((a, b) => a - b);
+    const q1 = data[Math.floor((data.length / 4))];
+    const q3 = data[Math.floor((data.length * (3 / 4)))];
+    const iqr = q3 - q1;
+    const lowerBound = q1 - 3.0 * iqr;
+    const upperBound = q3 + 3.0 * iqr;
+    return value < lowerBound || value > upperBound;
+  }
+  let filtered = [...data];
+  do {
+    data = [...filtered];
+    filtered = data.filter((x) => !isOutlier(x, data));
+  } while (filtered.length != data.length);
+  return filtered;
+// }
+        </textarea>
+    </label>
+    <label>
+        <input type="checkbox" id="alignAmpersands" onclick="processTable()" checked>
+        Auto-format output latex
+    </label>
+</div>
+
+<h2>Input LaTeX Table (without \begin or \end)</h2>
+<textarea id="inputTable" placeholder=
+"Base DDPM (no dynamics)                 &   11.25\%  &  49.77\%  &    6.6   &  1506.8  &&   116.4  &  0.57   \\
+Baseline: Decoupled                     &    0.97\%  &   5.27\%  &   12.4   &     0.0  &&   213.1  &  0.20   \\
+Approach 1: Fine-Tuning                 &    0.57\%  &   7.51\%  &   12.4   &     3.0  &&   148.3  &  0.35   \\
+Approach 2: Controls                    &    0.00\%  &   0.00\%  &    6.0   &     0.0  &&   215.0  &  0.08   \\
+Approach 3: Guided                      &    2.25\%  &  34.10\%  &   10.7   &   143.8  &&   301.0  &  0.00   \\
+Approach 4: Classifier-Free             &    0.44\%  &  10.35\%  &   13.8   &     1.9  &&   168.1  &  0.31">
+Base DDPM (no dynamics)                 &   11.25\%  &  49.77\%  &    6.6   &  1506.8  &&   116.4  &  0.57   \\
+Baseline: Decoupled                     &    0.97\%  &   5.27\%  &   12.4   &     0.0  &&   213.1  &  0.20   \\
+Approach 1: Fine-Tuning                 &    0.57\%  &   7.51\%  &   12.4   &     3.0  &&   148.3  &  0.35   \\
+Approach 2: Controls                    &    0.00\%  &   0.00\%  &    6.0   &     0.0  &&   215.0  &  0.08   \\
+Approach 3: Guided                      &    2.25\%  &  34.10\%  &   10.7   &   143.8  &&   301.0  &  0.00   \\
+Approach 4: Classifier-Free             &    0.44\%  &  10.35\%  &   13.8   &     1.9  &&   168.1  &  0.31
+</textarea>
+<button onclick="processTable()">Generate Colorized LaTeX Code</button>
+
+<h2>Configure Directions</h2>
+Click the arrows to change the "sort" direction (&#8593;higher is better / &#8595;lower is better / &#9744;ignore).<br />
+Select the check marks to toggle whether a row/column is ignored (don't color).<br />
+<div id="previewTableContainer"></div>
+
+<h2>Colorized Output Table</h2>
+<textarea id="outputTable" readonly></textarea>
+<button id="copyButton" onclick="copyToClipboard()">Copy to Clipboard</button>
+<div id="renderedTable" style="white-space: pre;"></div>
+
+<script>
+// Set dummy defaults
+document.addEventListener('DOMContentLoaded', function () {
+  updatePreview();
+  cycleSortDirection(document.getElementById("sortDirection_COL0"), 0); // none
+  cycleSortDirection(document.getElementById("sortDirection_COL1"), 2); // desc
+  cycleSortDirection(document.getElementById("sortDirection_COL2"), 2); // desc
+  cycleSortDirection(document.getElementById("sortDirection_COL3"), 2); // desc
+  cycleSortDirection(document.getElementById("sortDirection_COL4"), 2); // desc
+  cycleSortDirection(document.getElementById("sortDirection_COL5"), 0); // none
+  cycleSortDirection(document.getElementById("sortDirection_COL6"), 2); // desc
+  cycleSortDirection(document.getElementById("sortDirection_COL7"), 1); // asc
+  processTable();
+});
+
+function update() {
+  updatePreview();
+  processTable();
+}
+
+document.getElementById('scalingFunction').addEventListener('change', function() {
+    if (this.value === 'custom') {
+        document.getElementById('customFunctionLabel').style.display = 'block';
+    } else {
+        document.getElementById('customFunctionLabel').style.display = 'none';
+    }
+});
+
+document.getElementById('outlierLabelShow').addEventListener('click', function() {
+    const button = document.getElementById('outlierLabelShow');
+    const textarea = document.getElementById('outlierRejectionCode');
+    const toShow = button.textContent === 'Show Code';
+    button.textContent = toShow ? 'Hide Code' : 'Show Code';
+    textarea.style.display = toShow ? 'block' : 'none';
+});
+
+window.MathJax = {
+    loader: { load: ['[tex]/colortbl', '[tex]/color'] },
+    tex: { packages: { '[+]': ['colortbl', 'color'] } }
+};
+
+document.getElementById('inputTable').addEventListener('input', function() {
+    update();
+});
+
+document.querySelectorAll('input[name="colorizeDirection"]').forEach(function(radio) {
+  radio.addEventListener('change', function() {
+    update();
+  });
+});
+
+document.getElementById('customFunctionCode').addEventListener('input', function() {
+    processTable();
+});
+
+document.getElementById('outlierRejectionCode').addEventListener('input', function() {
+    processTable();
+});
+
+function copyToClipboard() {
+    const outputTable = document.getElementById('outputTable');
+    outputTable.select();
+    outputTable.setSelectionRange(0, 999999999); // For mobile devices
+    document.execCommand("copy");
+
+    // Optional: Change button text to indicate copy was successful
+    const copyButton = document.getElementById('copyButton');
+    copyButton.innerText = "Copied!";
+    setTimeout(() => {
+        copyButton.innerText = "Copy to Clipboard";
+    }, 2000); // Reset text after 2 seconds
+}
+</script>
+
+</body>
+</html>
