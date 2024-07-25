@@ -38,6 +38,12 @@
         }
     </style>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+      MathJax = {
+          loader: { load: ['[tex]/colortbl', '[tex]/color'] },
+          tex: { packages: { '[+]': ['colortbl', 'color'] } }
+      };
+    </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="colorizer.js"></script>
 </head>
@@ -166,11 +172,6 @@ document.getElementById('outlierLabelShow').addEventListener('click', function()
     button.textContent = toShow ? 'Hide Code' : 'Show Code';
     textarea.style.display = toShow ? 'block' : 'none';
 });
-
-window.MathJax = {
-    loader: { load: ['[tex]/colortbl', '[tex]/color'] },
-    tex: { packages: { '[+]': ['colortbl', 'color'] } }
-};
 
 document.getElementById('inputTable').addEventListener('input', function() {
     update();
