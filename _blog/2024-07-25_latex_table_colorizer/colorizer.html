@@ -7,7 +7,7 @@
     <style>
         textarea {
             width: 100%;
-            height: 150px;
+            height: 100px;
             white-space: pre;
         }
         #customFunctionCode {
@@ -16,16 +16,36 @@
         .options {
             margin-bottom: 10px;
         }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: small;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 0px;
+            text-align: center;
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+        .sort-button {
+            cursor: pointer;
+            border: none;
+            padding: 5px;
+            width: 100%;
+            background-color: white;
+        }
     </style>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="colorizer.js"></script>
 </head>
 <body>
 
 <h1>LaTeX Table Colorizer</h1>
 
 <div class="options">
-  <!-- Make colorization direction mutually exclusive (can only check rows or columns, not both) -->
     <label>
         <input type="radio" name="colorizeDirection" id="colorizeByColumn" checked>
         Colorize/normalize by Column
@@ -36,22 +56,12 @@
     </label>
     <label>
         <input type="radio" name="colorizeDirection" id="colorizeByAll">
-        Colorize/normalize by Entire Table
-    </label>
-    <br>
-    <label>
-        Ignore Columns:
-        <input type="text" id="ignoreColumns" placeholder="e.g., 1, 3" value="1">
-    </label>
-    <label>
-        Ignore Rows:
-        <input type="text" id="ignoreRows" placeholder="e.g., 1, 3">
+        Colorize/normalize by All
     </label>
     <br>
     <label>
         Scaling Function (x = (value - min) / (max - min)):
-        <br />
-        <select id="scalingFunction">
+        <select id="scalingFunction" onchange="processTable();">
             <option value="linear">Linear (green=x)</option>
             <option value="power2">Squared (green=x^2)</option>
             <option value="power3">Cubed (green=x^3)</option>
@@ -64,12 +74,9 @@
         <textarea id="customFunctionCode" placeholder="return x**2.5;"></textarea>
     </label>
     <label>
-        <input type="checkbox" id="alignAmpersands" checked>
-        Auto-format
+        <input type="checkbox" id="alignAmpersands" onclick="processTable()" checked>
+        Auto-format output latex
     </label>
-    <br />
-    <br />
-    <button onclick="processTable()">Generate Colorized LaTeX Code</button>
 </div>
 
 <h2>Input LaTeX Table</h2>
@@ -79,23 +86,49 @@ Baseline: Decoupled                     &    0.97\%  &   5.27\%  &   12.4   &   
 Approach 1: Fine-Tuning                 &    0.57\%  &   7.51\%  &   12.4   &     3.0  &&   148.3  &  0.35   \\
 Approach 2: Controls                    &    0.00\%  &   0.00\%  &    6.0   &     0.0  &&   215.0  &  0.08   \\
 Approach 3: Guided                      &    2.25\%  &  34.10\%  &   10.7   &   143.8  &&   301.0  &  0.00   \\
-Approach 4: Classifier-Free             &    0.44\%  &  10.35\%  &   13.8   &     1.9  &&   168.1  &  0.31   \\">
+Approach 4: Classifier-Free             &    0.44\%  &  10.35\%  &   13.8   &     1.9  &&   168.1  &  0.31">
 Base DDPM (no dynamics)                 &   11.25\%  &  49.77\%  &    6.6   &  1506.8  &&   116.4  &  0.57   \\
 Baseline: Decoupled                     &    0.97\%  &   5.27\%  &   12.4   &     0.0  &&   213.1  &  0.20   \\
 Approach 1: Fine-Tuning                 &    0.57\%  &   7.51\%  &   12.4   &     3.0  &&   148.3  &  0.35   \\
 Approach 2: Controls                    &    0.00\%  &   0.00\%  &    6.0   &     0.0  &&   215.0  &  0.08   \\
 Approach 3: Guided                      &    2.25\%  &  34.10\%  &   10.7   &   143.8  &&   301.0  &  0.00   \\
-Approach 4: Classifier-Free             &    0.44\%  &  10.35\%  &   13.8   &     1.9  &&   168.1  &  0.31   \\
+Approach 4: Classifier-Free             &    0.44\%  &  10.35\%  &   13.8   &     1.9  &&   168.1  &  0.31
 </textarea>
+<button onclick="processTable()">Generate Colorized LaTeX Code</button>
+
+<h2>Preview Table</h2>
+Click the arrows to change the "sort" direction (&#8593;higher is better / &#8595;lower is better / &#9744;ignore).<br />
+Select the check marks to toggle whether a row/column is ignored (don't color).<br />
+<div id="previewTableContainer"></div>
 
 <h2>Output LaTeX Table</h2>
 <textarea id="outputTable" readonly></textarea>
 
-<h2>Rendered LaTeX Table</h2>
+<h2>Rendered LaTeX Preview (just for reference)</h2>
 <div id="renderedTable" style="white-space: pre;"></div>
 
 <script>
-document.getElementById('scalingFunction').addEventListener('change', function () {
+// Set dummy defaults
+document.addEventListener('DOMContentLoaded', function () {
+  updatePreview();
+  document.getElementById("ignore_ROW0").checked = false;
+  cycleSortDirection(document.getElementById("sortDirection_COL0"), 0); // none
+  cycleSortDirection(document.getElementById("sortDirection_COL1"), 2); // desc
+  cycleSortDirection(document.getElementById("sortDirection_COL2"), 2); // desc
+  cycleSortDirection(document.getElementById("sortDirection_COL3"), 2); // desc
+  cycleSortDirection(document.getElementById("sortDirection_COL4"), 2); // desc
+  cycleSortDirection(document.getElementById("sortDirection_COL5"), 0); // none
+  cycleSortDirection(document.getElementById("sortDirection_COL6"), 2); // desc
+  cycleSortDirection(document.getElementById("sortDirection_COL7"), 1); // asc
+  processTable();
+});
+
+function update() {
+  updatePreview();
+  processTable();
+}
+
+document.getElementById('scalingFunction').addEventListener('change', function() {
     if (this.value === 'custom') {
         document.getElementById('customFunctionLabel').style.display = 'block';
     } else {
@@ -103,164 +136,24 @@ document.getElementById('scalingFunction').addEventListener('change', function (
     }
 });
 
-function processTable() {
-    const inputTable = document.getElementById('inputTable').value;
-    const colorizeByRow = document.getElementById('colorizeByRow').checked;
-    const colorizeByColumn = document.getElementById('colorizeByColumn').checked;
-    const colorizeByAll = document.getElementById('colorizeByAll').checked;
-    const ignoreColumns = document.getElementById('ignoreColumns').value.split(',').map(num => parseInt(num.trim()) - 1).filter(num => !isNaN(num));
-    const ignoreRows = document.getElementById('ignoreRows').value.split(',').map(num => parseInt(num.trim()) - 1).filter(num => !isNaN(num));
-    const scalingFunction = document.getElementById('scalingFunction').value;
-    const customFunctionCode = document.getElementById('customFunctionCode').value;
-    const isAlignAmpersands = document.getElementById('alignAmpersands').checked;
-
-    // scalingFunc should take a value, min, and max, and return a scaled value
-    const NORMALIZE = (value, min, max) => (value - min) / (max - min);
-    const postScalingFunction = {
-        linear: (x) => x,
-        power2: (x) => x ** 2,
-        power3: (x) => x ** 3,
-        custom: new Function('x', customFunctionCode),
-    }[scalingFunction];
-    const scalingFunc = (value, min, max) => postScalingFunction(NORMALIZE(value, min, max));
-
-    const rows = inputTable.split('\\\\').map(row => row.split('&').map(cell => cell.trim()));
-    console.log(rows);
-    const numRows = rows.length;
-    const numCols = rows[0].length;
-
-    // Convert strings to floats
-    let table = [];
-    for (let i = 0; i < numRows; i++) {
-        table.push([]);
-        for (let j = 0; j < numCols; j++) {
-            if (rows[i][j] === undefined) {
-                table[i].push(undefined);
-                continue;
-            }
-            const value = parseFloat(rows[i][j].replace(/[^0-9.-]/g, ''));
-            if (ignoreRows.includes(i) || ignoreColumns.includes(j) || isNaN(value)) {
-                table[i].push(undefined);
-            } else {
-                table[i].push(value);
-            }
-        }
-    }
-    // Compute min and max for each cell in the table
-    let per_cell_min = [], per_cell_max = [];
-    for (let i = 0; i < numRows; i++) {
-        per_cell_min.push([]);
-        per_cell_max.push([]);
-        for (let j = 0; j < numCols; j++) {
-            per_cell_min[i].push(Infinity);
-            per_cell_max[i].push(-Infinity);
-        }
-    }
-    let min, max;
-    if (colorizeByRow) {
-        for (let i = 0; i < numRows; i++) {
-            min = Math.min(...table[i].filter(value => value !== undefined));
-            max = Math.max(...table[i].filter(value => value !== undefined));
-            for (let j = 0; j < numCols; j++) {
-                per_cell_min[i][j] = min;
-                per_cell_max[i][j] = max;
-            }
-        }
-    } else if (colorizeByColumn) {
-        for (let j = 0; j < numCols; j++) {
-            let col = table.map(row => row[j]).filter(cell => cell !== undefined);
-            min = Math.min(...col);
-            max = Math.max(...col);
-            for (let i = 0; i < numRows; i++) {
-                per_cell_min[i][j] = min;
-                per_cell_max[i][j] = max;
-            }
-        }
-    } else if (colorizeByAll) {
-        let allCells = table.flat().filter(cell => cell !== undefined);
-        min = Math.min(...allCells);
-        max = Math.max(...allCells);
-        for (let i = 0; i < numRows; i++) {
-            for (let j = 0; j < numCols; j++) {
-                per_cell_min[i][j] = min;
-                per_cell_max[i][j] = max;
-            }
-        }
-    }
-
-    processedTable = rows.map((row, rowIndex) => {
-        if (ignoreRows.includes(rowIndex)) {
-            return row.join(' & ');
-        }
-        return row.map((cell, colIndex) => {
-            if (ignoreColumns.includes(colIndex)) {
-                return cell;
-            }
-            let value = table[rowIndex][colIndex];
-            if (value === undefined) return cell;
-            value = scalingFunc(value, per_cell_min[rowIndex][colIndex], per_cell_max[rowIndex][colIndex]);
-            const color = `green!${Math.min(Math.max(value * 100, 0), 100).toFixed(0)}`;
-            return `\\cellcolor{${color}}${cell}`;
-        }).join(' & ');
-    }).join('\\\\\n');
-
-    // Align the ampersands
-    if (isAlignAmpersands) {
-        processedTable = alignAmpersands(processedTable);
-    }
-
-    document.getElementById('outputTable').value = processedTable;
-
-    // Render the LaTeX table
-    renderLaTeX(processedTable);
-}
-
-// Function to align ampersands
-function alignAmpersands(table) {
-    const rows = table.split('\\\\\n');
-    const splitRows = rows.map(row => row.split(' & '));
-    const colWidths = [];
-
-    splitRows.forEach(row => {
-        row.forEach((cell, colIndex) => {
-            colWidths[colIndex] = Math.max(colWidths[colIndex] || 0, cell.length);
-        });
-    });
-
-    return splitRows.map(row => {
-        return row.map((cell, colIndex) => {
-            return cell.padEnd(colWidths[colIndex], ' ');
-        }).join(' & ');
-    }).join('\\\\\n');
-}
-
 window.MathJax = {
     loader: { load: ['[tex]/colortbl', '[tex]/color'] },
     tex: { packages: { '[+]': ['colortbl', 'color'] } }
 };
 
-// Function to render LaTeX using MathJax
-function renderLaTeX(latexCode) {
-    const renderedTableDiv = document.getElementById('renderedTable');
-    // renderedTableDiv.innerHTML = `\$begin:math:display$ \\\\begin{array}{l} ${latexCode} \\\\end{array} \\$end:math:display$`;
-    let str = `\$\$ \\begin{array}{ccccccccccccccccccccccccc}\n${latexCode}\n\\end{array} \$\$`;
-    // Replace `{green!##}` with `{rgb(255 ## 255)}
-    str = str.replace(/\\cellcolor{green!([0-9]+)}/g, (_, p1) => {
-        const green = parseInt(p1) / 100;
-        const WHITE = [255, 255, 255];
-        const GREEN = [148.6, 255., 83.0]; // 00A64F
-        const color = WHITE.map((w, i) => w * (1 - green) + GREEN[i] * (green)).map(
-            c => Math.min(255, Math.max(0, Math.round(c))) / 255
-        );
-        return `\\cellcolor[rgb]{${color.join(',')}}`;
-    });
-    renderedTableDiv.innerHTML = str;
-    console.log(renderedTableDiv.innerHTML);
-    console.log("Begin typesetting")
-    MathJax.typeset([renderedTableDiv]);
-    console.log("Done typesetting")
-    // MathJax.typesetPromise([renderedTableDiv]);
-}
+document.getElementById('inputTable').addEventListener('input', function() {
+    update();
+});
+
+document.querySelectorAll('input[name="colorizeDirection"]').forEach(function(radio) {
+  radio.addEventListener('change', function() {
+    update();
+  });
+});
+
+document.getElementById('customFunctionCode').addEventListener('input', function() {
+    processTable();
+});
 </script>
 
 </body>
