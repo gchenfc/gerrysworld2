@@ -9,6 +9,7 @@ img: "topp_vs_qopp.svg"
 category: "proceedings"
 arxiv: "https://arxiv.org/abs/2309.10176"
 # Video: "https://youtu.be/MSK--soXtRY"
+DOI: "https://doi.org/10.1109/ICRA57147.2024.10610854"
 Poster: "Chen24icra_qopp/poster.pdf"
 links:
   "Code": "https://github.com/gchenfc/gtsam/tree/features/gerry/trajectory_retiming/gtsam_unstable/retiming"
