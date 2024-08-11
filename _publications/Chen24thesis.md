@@ -12,6 +12,7 @@ links:
   PDF: "https://www.dropbox.com/scl/fi/yk7idaqtev950ozewkrio/GerryChenThesis.pdf?rlkey=b645kmgbb9bqpyhel6b80y1do&dl=1"
   # Live Demo: "https://demo.gerry-chen.com/diffusion/"
   Defense Live-Stream (Mon Aug 19 @ 1pm-2pm ET): https://youtube.com/live/A9RHRchK8m4?feature=share
+  Defense iCal: "images/GerrysPhDThesisDefense.ics"
 ---
 
 ## Dissertation Defense Logistics

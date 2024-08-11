@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:tzone://Microsoft/Utc
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0000
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T000000
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0000
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN=gerry.chen2015@gmail.com:mailto:gerry.chen2015@gmail.com
+DESCRIPTION:In-person:  Klaus 1315\nVideo call link:  https://youtube.com/live/A9RHRchK8m4?feature=share\n\nDownload thesis.pdf<https://www.dropbox.com/scl/fi/yk7i
+ daqtev950ozewkrio/GerryChenThesis.pdf?rlkey=b645kmgbb9bqpyhel6b80y1do&dl=1
+ >\n\n\nTitle: Rendering\, Replicating\, and Adapting Human Motions on a Ca
+ ble Robot for Artistic Painting\nDate: Monday\, August 19\nTime: 1:00 PM 
+ – 3:00 PM ET\nLocation: Klaus 1315 / youtube<https://youtube.com/live/A9RHRchK8m4?feature=share>\n\nGerry Chen\nRobotics Ph.D. Student\nSchool of Interactiv
+ e Computing\nGeorgia Institute of Technology\n\nCommittee\nDr. Frank Della
+ ert (Co-advisor) – IRIM\, Interactive Computing\, Georgia Institute of T
+ echnology\nDr. Seth Hutchinson (Co-advisor) – IRIM\, Interactive Computi
+ ng\, Georgia Institute of Technology\nDr. Danfei Xu – IRIM\, Interactive
+  Computing\, Georgia Institute of Technology\nDr. Jun Ueda – IRIM\, Mech
+ anical Engineering\, Georgia Institute of Technology\nDr. Jean Oh – Robo
+ tics Institute\, Carnegie Mellon University\n\nAbstract\n\nArtists have co
+ ntinually pushed their crafts to embody the furthest reaches of human capa
+ bilities\, from delicate painting to athletic performances\, highlighting 
+ the potential for robots to emulate these skills. This work aims to study 
+ the task of robot graffiti painting in three parts: rendering\, replicatin
+ g\, and adapting human motions\, ultimately contributing to the fields of 
+ robot art\, cable robot control\, motion planning\, and generative modelin
+ g.\n\nIn this work\, three parts to the problem of artistic painting guide
+ d by human motions are addressed: rendering a digital artwork in paint wit
+ h a cable robot\; replicating human input motions as closely as possible\;
+  and adapting human input motions to accommodate for differences in level 
+ of detail\, style\, and artistic medium. Through the difficult\, interacti
+ on-rich task of robot art\, modern challenges in human-robot collaboration
+  can be studied. In particular\, techniques for robot motion control throu
+ gh natural input interfaces drawn from human motions are developed. Render
+ ing paint requires advances in state estimation and control techniques for
+  fast\, fluid motions on a cable robot. Replicating human motions bridges 
+ the input motions and robot kino-dynamic capabilities\, requiring advances
+  in optimal trajectory retiming techniques. Finally\, adapting goes beyond
+  rote replication by augmenting input motions to better fit the compositio
+ n\, style\, and medium intended by the robot-artist team\, requiring embod
+ iment-specific painting motion generation and sketch retargeting. Put toge
+ ther\, the thesis forms a cohesive body of work producing human-robot pain
+ tings and making novel contributions to the fields of robot art\, human-rob
+ ot collaboration\, and cable robot control.\n
+UID:0cqlk9k99kvrj8ja0ps6532ne6@google.com
+SUMMARY:Gerry's PhD Thesis Defense
+DTSTART:20240819T170000Z
+DTEND:20240819T190000Z
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20240810T230003Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-INTENDEDSTATUS:FREE
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+BEGIN:VALARM
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT30M
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR
