@@ -4,7 +4,6 @@ author: "<u>Gerry Chen</u>, Frank Dellaert, and Seth Hutchinson"
 journal: "2024 RSS Workshop: Generative Modeling meets HRI (GenAI-HRI)"
 year: "2024, in press"
 date: Jul 15, 2024
-PDF: "Chen24rssWorkshop_DiffusionPaintingTrajectories/Chen24rssWorkshop_DiffusionPaintingTrajectories.pdf"
 img: "graffiti_1.svg"
 # img: "unconditioned_cropped2.png"
 # img: "unconditioned.png"
