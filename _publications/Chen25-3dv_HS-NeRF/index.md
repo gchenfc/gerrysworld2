@@ -1,10 +1,10 @@
 ---
 title: "Hyperspectral Neural Radiance Fields"
 author: "<u>Gerry Chen</u>, Sunil Kumar Narayanan, Thomas Gautier Ottou, Benjamin Missaoui, Harsh Muriki, Cédric Pradalier, and Yongsheng Chen"
-journal: "2024 European Conference on Computer Vision (ECCV)"
+journal: "2025 International Conference on 3D Vision (3DV)"
 year: "in review"
-date: Sept. 29, 2024
-PDF: "Chen24eccv_HS-NeRF/Chen24eccv_HS-NeRF.pdf"
+date: Aug. 1, 2024
+PDF: "Chen25-3dv_HS-NeRF/Chen25-3dv_HS-NeRF.pdf"
 category: "pending"
 arxiv: "https://arxiv.org/abs/2403.14839"
 # Video: "https://youtu.be/MSK--soXtRY"
