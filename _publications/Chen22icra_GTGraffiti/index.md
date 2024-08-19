@@ -15,6 +15,8 @@ img_crop: false
 category: "proceedings"
 links:
   "Video 2": "https://youtu.be/R4ySYTNGv6s"
+  "TEDxAtlanta": "https://youtu.be/Lfai3FFxOoY"
+  "TEDxAtlanta (ASL translation)": "https://youtu.be/BEVAqb_IzxI"
   "VICE": "https://www.vice.com/en/article/5d3myx/scientists-are-training-ai-robots-to-write-graffiti"
   "ASME": "https://www.asme.org/topics-resources/content/robot-turns-artist-s-commands-to-graffiti"
   "TechXplore": "https://techxplore.com/news/2022-06-gtgraffiti-robot-human.html"

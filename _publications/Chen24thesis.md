@@ -11,8 +11,10 @@ category: "pending"
 links:
   PDF: "https://www.dropbox.com/scl/fi/yk7idaqtev950ozewkrio/GerryChenThesis.pdf?rlkey=b645kmgbb9bqpyhel6b80y1do&dl=1"
   # Live Demo: "https://demo.gerry-chen.com/diffusion/"
-  Defense Live-Stream (Mon Aug 19 @ 1pm-2pm ET): https://youtube.com/live/A9RHRchK8m4?feature=share
-  Defense iCal: "images/GerrysPhDThesisDefense.ics"
+  Defense <s>Live-Stream</s> Recording: https://youtube.com/live/A9RHRchK8m4?feature=share
+  # Defense iCal: "images/GerrysPhDThesisDefense.ics"
+  "TEDx Talk": "https://youtu.be/Lfai3FFxOoY"
+  "TEDx Talk (ASL translation)": "https://youtu.be/BEVAqb_IzxI"
 ---
 
 ## Dissertation Defense Logistics
