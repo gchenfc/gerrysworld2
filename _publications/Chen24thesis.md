@@ -9,9 +9,11 @@ img: "../images/ATL_small.jpg"
 # img: "unconditioned.png"
 category: "pending"
 links:
-  PDF: "https://www.dropbox.com/scl/fi/yk7idaqtev950ozewkrio/GerryChenThesis.pdf?rlkey=b645kmgbb9bqpyhel6b80y1do&dl=1"
+  PDF: "https://www.dropbox.com/scl/fi/v0crfnn4mo361gejxikwe/GerryChenThesis.pdf?rlkey=z15u1xp2b9lgrud9mvd0fm4fe&dl=1"
+  "Slides (pptx)": https://www.dropbox.com/scl/fi/29emptrhdzbyd0j2z8pra/GerryChen_ThesisDefense.pptx?rlkey=i361s1jdoe1oifrjgl99vgb3c&dl=1
+  "Slides (pdf)": https://www.dropbox.com/scl/fi/mt2adlyso1dwwbvvlz85l/GerryChen_ThesisDefense.pdf?rlkey=eosspkioz0hep67tklqjwjvat&dl=1
   # Live Demo: "https://demo.gerry-chen.com/diffusion/"
-  Defense <s>Live-Stream</s> Recording: https://youtube.com/live/A9RHRchK8m4?feature=share
+  Defense Recording: https://youtube.com/live/A9RHRchK8m4?feature=share
   # Defense iCal: "images/GerrysPhDThesisDefense.ics"
   "TEDx Talk": "https://youtu.be/Lfai3FFxOoY"
   "TEDx Talk (ASL translation)": "https://youtu.be/BEVAqb_IzxI"
