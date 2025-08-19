@@ -1,7 +1,7 @@
 ---
 title: "Geiger Dice"
 description: "A \"truly\" random dice RNG based on Radioactive Decay (a quantum process)"
-status: 'in progress'
+status: 'stale'
 displaydate: "July, 2022"
 date: July 4, 2022
 

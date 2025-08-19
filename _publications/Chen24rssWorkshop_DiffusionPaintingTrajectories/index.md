@@ -12,6 +12,7 @@ Poster: "Chen24rssWorkshop_DiffusionPaintingTrajectories/Chen24rssWorkshop_poste
 PDF: "Chen24rssWorkshop_DiffusionPaintingTrajectories/Chen24rssWorkshop_DiffusionPaintingTrajectories.pdf"
 links:
   Live Demo: "https://demo.gerry-chen.com/diffusion/"
+  Workshop: "https://sites.google.com/view/gai-hri-2024#h.is5zc8lcnuki"
 ---
 
 ---

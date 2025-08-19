@@ -18,7 +18,7 @@ stylesheets: /css/bio.css
 
   <div class="content">
   <div class="biotext"> 
-    Hi! I’m Gerry Chen and I'm currently pursuing a <b>PhD in Robotics</b> under Professor Frank Dellaert at Georgia Tech's College of Computing.  I majored in <b>Electrical and Computer Engineering</b> and <b>Mechanical Engineering</b> with <b>Computer Science</b> and <b>Math</b> minors at Duke University as an undergrad class of 2019.  See my <a href="/CV/GerryChen_CV.pdf">CV</a> and <a href="/resume/GerryChen_resume.pdf">Résumé</a> below.
+    Hi! I’m Gerry Chen and I'm currently working on autonomous driving at Zoox.  I did my <b>PhD in Robotics</b> under Professor Frank Dellaert at Georgia Tech's College of Computing ('24).  I completed my undergrad at Duke University ('19), where I majored in <b>Electrical and Computer Engineering</b> and <b>Mechanical Engineering</b> with <b>Computer Science</b> and <b>Math</b> minors.  See my <a href="/CV/GerryChen_CV.pdf">CV</a> and <a href="/resume/GerryChen_resume.pdf">Résumé</a> below.
   </div>
   <div class="biotext">
     My career interests are in robotic perception paired with dynamics and control.  I have a passion for autonomous machines (i.e. cars, UAVs, search and rescue, etc).

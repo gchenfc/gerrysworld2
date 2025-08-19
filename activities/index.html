@@ -6,11 +6,63 @@ stylesheets: ["/css/common.css", "/css/activity.css"]
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/activity.css">
 
+<style>
+  .button-container {
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #3b82f640, #8b5cf640, #ec489940);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.2s ease;
+  }
+
+  .btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+  }
+</style>
+
 <!-- ********** CONTENT *********** -->
 <div class="wrapper">
   <h1 id="home-page" style="margin-top: 64px;">Activities/&#8203;Experiences</h1>
-    <br/>
-      <section class="row-section" style="padding-bottom: 32px"><h2 style="font-size: 24pt">Current</h2></section>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+    <div style="text-align: center">
+      <b>This page was more relevant in college, but these:
+        <div class="button-container">
+          <a href="/publications" class="btn">Publications</a>
+          <a href="/projects" class="btn">Projects</a>
+          <a href="/blog" class="btn">Blog</a>
+        </div>
+        are now more relevant ways to see what I'm up to!</b>
+    </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <section class="row-section" style="padding-bottom: 32px"><h2 style="font-size: 24pt">Current</h2></section>
+
+      <!-- <hr /> -->
+
+      <section class="row-section" style="padding-bottom: 32px"><h2 style="font-size: 24pt">Past</h2></section>
 
       <section class="activity">
         <div class="activitypic"> <figure class="imagefig">
@@ -78,10 +130,6 @@ stylesheets: ["/css/common.css", "/css/activity.css"]
         </div>
         </div>
       </section>
-
-      <!-- <hr /> -->
-
-      <section class="row-section" style="padding-bottom: 32px"><h2 style="font-size: 24pt">Past</h2></section>
 
       <section class="activity">
         <div class="activitypic"> <figure class="imagefig">

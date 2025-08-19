@@ -1,7 +1,7 @@
 ---
 title: "Chocolate Making"
 description: "Creating chocolate candies in fun shapes using alginate, silicon, clay, vacuum thermo-forming, and more."
-status: 'in progress'
+status: 'completed'
 displaydate: "July, 2022"
 date: July 26, 2022
 

@@ -2,12 +2,12 @@
 title: "Rendering, Replicating, and Adapting Human Motions on a Cable Robot for Artistic Painting"
 author: "<u>Gerry Chen</u>"
 journal: "PhD Thesis"
-year: "2024, in press"
+year: "2024"
 date: Aug 19, 2024
 img: "../images/ATL_small.jpg"
 # img: "unconditioned_cropped2.png"
 # img: "unconditioned.png"
-category: "pending"
+category: "proceedings"
 links:
   PDF: "https://www.dropbox.com/scl/fi/v0crfnn4mo361gejxikwe/GerryChenThesis.pdf?rlkey=z15u1xp2b9lgrud9mvd0fm4fe&dl=1"
   "Slides (pptx)": https://www.dropbox.com/scl/fi/29emptrhdzbyd0j2z8pra/GerryChen_ThesisDefense.pptx?rlkey=i361s1jdoe1oifrjgl99vgb3c&dl=1
@@ -17,6 +17,7 @@ links:
   # Defense iCal: "images/GerrysPhDThesisDefense.ics"
   "TEDx Talk": "https://youtu.be/Lfai3FFxOoY"
   "TEDx Talk (ASL translation)": "https://youtu.be/BEVAqb_IzxI"
+  permalink: "https://hdl.handle.net/1853/76869"
 ---
 
 ## Dissertation Defense Logistics

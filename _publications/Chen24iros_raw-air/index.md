@@ -13,6 +13,7 @@ img: "top1.png"
 category: "proceedings"
 arxiv: "https://arxiv.org/abs/2403.12214"
 Video: "https://youtu.be/8l2xbP-y3sI"
+DOI: "https://doi.org/10.1109/IROS58592.2024.10802489"
 links:
   website: "https://www.library.gatech.edu/AIR"
   Video 2: "https://youtu.be/33vgN5YJYEg"

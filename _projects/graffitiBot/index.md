@@ -1,9 +1,9 @@
 ---
 title: "Graffiti Robot"
-description: "A robot that paints graffiti!"
-status: 'in progress'
-displaydate: "Fall, 2019"
-date: Oct 1, 2019
+description: "A robot that paints graffiti!  (My PhD thesis work)"
+status: 'completed'
+displaydate: "Fall, 2024"
+date: Oct 1, 2024
 
 image: "../../publications/Chen22icra_GTGraffiti/icon.jpg"
 imageAltText: "CAD model"
@@ -45,7 +45,7 @@ stylesheets: ["/css/projectPost.css", "/css/publication.css"]
 ## Related Publications
 {% assign publications = site.publications | sort: 'date' %}
 {% for publication in publications reversed %}
-  {% if publication.title contains "Graffiti" or publication.title contains "Locally Optimal Estimation" %}
+  {% if publication.title contains "Graffiti" or publication.title contains "Locally Optimal Estimation" or publication.title contains "Painting" %}
 <div class="publication">
   <div class="publicationrow">
     <div class="publicationcolumn1">

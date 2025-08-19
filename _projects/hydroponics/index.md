@@ -1,9 +1,9 @@
 ---
 title: "Hydroponics Robot"
-description: "A robot that monitors and maintains a hydroponic rig"
-status: 'in progress'
+description: "A robot that monitors and maintains a hydroponic rig."
+status: 'completed'
 displaydate: "Fall, 2019 - Present"
-date: Sept 1, 2019
+date: Sept 1, 2024
 
 image: "denseReconstruction_small_transparent.gif"
 imageAltText: "Example 3D plant reconstruction"
@@ -27,15 +27,17 @@ stylesheets: ["/css/projectPost.css", "/css/publication.css"]
 # Related Publications
 {% assign publications = site.publications | sort: 'date' %}
 {% for publication in publications reversed %}
-  {% if publication.title contains "Plant" %}
+  {% if publication.title contains "Plant" or publication.title contains "Hyperspectral" %}
 <div class="publication">
   <div class="publicationrow">
     <div class="publicationcolumn1">
       <figure class="imagefig">
-        {% if publication.img contains '://' %}
-          <img src="{{publication.img}}" alt="{{publication.title}}" style="width: 130px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
+        {% if publication.img_custom %}
+          {{publication.img_custom}}
+        {% elsif publication.img contains '://' %}
+          <img src="{{publication.img}}" alt="{{publication.title}}" style="width: 300px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
         {% else %}
-          <img src="{{publication.url | remove: "/index.html" }}/{% if publication.img %}{{publication.img}}{% else %}icon.png{% endif %}" alt="{{publication.title}}" style="width: 130px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
+          <img src="{{publication.url | remove: "/index.html" }}/{% if publication.img %}{{publication.img}}{% else %}icon.png{% endif %}" alt="{{publication.title}}" style="width: 300px; {% if publication.img_crop %}height: 110px; object-fit: cover;{% endif %}"/>
         {% endif %}
       </figure>
     </div>
