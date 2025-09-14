@@ -1,0 +1,83 @@
+.carousel {
+  --height: 420px;           /* set your fixed height */
+  --max-width: 960px;        /* set your max width */
+  --dot-size: 10px;
+  --nav-size: 44px;
+
+  position: relative;
+  height: var(--height);
+  max-width: var(--max-width);
+  margin: 1rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0001;          /* helps hide letterbox while loading */
+}
+
+.carousel .track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 450ms ease;
+  will-change: transform;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+  object-fit: contain;         /* center crop (full-width or full-height as needed) */
+  object-position: center center;
+  user-select: none;
+  -webkit-user-drag: none;
+  margin: auto;
+}
+
+/* Prev/Next buttons */
+.carousel .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--nav-size);
+  height: var(--nav-size);
+  border: none;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.75);
+  color: #111;
+  font-size: 22px;
+  line-height: var(--nav-size);
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+.carousel .nav:hover { background: rgba(255,255,255,0.95); }
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+/* Dots */
+.carousel .dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.carousel .dot {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.carousel .dot[aria-current="true"] {
+  background: #fff;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .carousel .track { transition: none; }
+}
