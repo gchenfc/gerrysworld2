@@ -40,7 +40,7 @@ I asked ChatGPT for advice and searched on Amazon & YouTube, and decided that ju
 ![sagging headliner](https://lh3.googleusercontent.com/pw/AP1GczPttycoEApCPD5RzoHguzUQ2Ue9oeSVfI5X-aENANoaq5eHjx2Ltxz5c0xpeXSHyioG9HwvSYndGGoFwNQyX-BJwYqZiQC7uLWgwSDY_4xMG3W2VRCyhUA4Xd3m81pwGsXY6fzzkYS7gE_isJx3iLv2kg=w1843-h1328-s-no-gm)
 
 ## Materials
-I bought these off Amazon for about $5: [60Pcs Car Roof Headliner Repair Kit, Car Ceiling Fabric Repair, Auto Roof Snap Rivets Retainer with Installation Tool, Universal for Interior Ceiling Cloth Fixing Repair Buckle (Beige Flannelette)](https://a.co/d/2zo1BdT)
+I bought these off Amazon for about $5: [60Pcs Car Roof Headliner Repair Kit, Car Ceiling Fabric Repair, Auto Roof Snap Rivets Retainer with Installation Tool, Universal for Interior Ceiling Cloth Fixing Repair Buckle (Beige Flannelette)](https://amzn.to/4nAF4Ou)
 ![Amazon listing for snap rivets](https://lh3.googleusercontent.com/pw/AP1GczNVDZ87vNs5oVXo9xW0sR9qh9zpytUn8csrZyQPJt6SLkbSJ_wWbsrISzTDoKarajxyUSwqdPgj0CKl9skxlVTuxxWCdV3oiu6r0HJzCHgXHf1mmtWmGTGy_oorB3rR3ZWLlo8C8Y2XEEPdlRFLWGK1_w=w1484-h642-s-no-gm)
 
 ## Installation:
