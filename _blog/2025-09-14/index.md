@@ -4,6 +4,21 @@ postType: "tutorial"
 description: "My car headliner was sagging, so I did a little repair.  Here's how I did it."
 date: Sept 14, 2025
 stylesheets: ["/css/blogPost.css", "/css/slideshowGallery2.css", "/css/simpleCarousel.css"]
+tags:
+  - car maintenance
+  - car headliner
+  - headliner repair
+  - car interior
+  - DIY car headliner
+  - car roof fabric
+  - car roof sagging
+  - car roof repair
+  - auto upholstery
+  - car ceiling fabric
+  - snap rivets
+  - automotive tips
+  - budget car repair
+  - weekend project
 ---
 
 <style>
