@@ -8,7 +8,7 @@
       type="image/png" 
       href="/img/icon.png">
 <title>{{page.title}} | Projects | {{site.title}}</title>
-<link rel="canonical" href="https://gerry-chen.com{{page.url}}">
+<link rel="canonical" href="https://gerry-chen.com{{page.url | replace: 'index.html', ''}}">
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/pygments/default.css">
 {% for stylesheet in page.stylesheets %}
