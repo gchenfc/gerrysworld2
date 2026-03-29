@@ -19,7 +19,7 @@ This website is meant to be a showcase of some of the projects I enjoy working o
 * <a href="/projects">Projects</a> for a list of projects I've worked on,
 * <a href="/blog">Blog</a> for a list of blog posts -->
 
-<img src="pics/snowman.png" style="width:60%;" />
+<img src="pics/snowman.jpg" style="width:60%;" />
 
 <div>
   <div style="display:flex; align-items: flex-end; margin:0;">
