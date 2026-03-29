@@ -24,7 +24,7 @@ stylesheets: ["/css/projectPost.css", "/css/slideshowGallery.css"]
       {% assign images = '' | split: '' %}
       {{images}}
       {% for image in site.static_files %}
-        {% if image.path contains 'projects/workshop' %}
+        {% if image.path contains 'pics/projects/workshop' %}
           {% assign toAdd = image.path | split:"***" %}
           {% assign images = images | concat: toAdd %}
         {% endif %}
