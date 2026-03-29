@@ -39,7 +39,7 @@ I fixed up a bike my first semester of college at the Durham Bike Co-op and had 
   {% assign images = '' | split: '' %}
   {{images}}
   {% for image in site.static_files %}
-    {% if image.path contains 'projects/bikeBasket' %}
+    {% if image.path contains 'pics/projects/bikeBasket' %}
       {% assign toAdd = image.path | split:"***" %}
       {% assign images = images | concat: toAdd %}
     {% endif %}
