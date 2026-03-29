@@ -4,6 +4,7 @@ postType: "idea"
 description: "Can we abuse the \"free IP messaging\" services of many airlines to get rudimentary internet access?"
 stylesheets: ["/css/blogPost.css"]
 redirect_from: ["/blog/2022-08-22.html", "/blog/2022-08-22-airplane-wifi.html"]
+date: Aug 22, 2022
 ---
 
 <!-- from https://stackoverflow.com/a/42257283/9151520 -->
