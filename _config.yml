@@ -40,14 +40,7 @@ exclude:
   - "_projects/Doodlebot/shortTest.MOV"
   - "_projects/*.MOV"
   - "_publications/Li2019MMSPCvehicle"
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - .bundle
-  - .sass-cache
-  - .jekyll-cache
-  - .jekyll-metadata
+  - "_projects/bibconverter/bibtest/output"
 
 defaults:
   -
